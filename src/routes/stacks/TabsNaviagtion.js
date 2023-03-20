@@ -89,6 +89,8 @@ function TabsContainer() {
         }}
         >
         <Tab.Screen name={pagName} component={TenScreen} />
+        <Tab.Screen name={fourteen} component={FourteenScreen} />
+
         {/* <Tab.Screen name={tenName} component={TwelveScreen} /> */}
 
         {/* <Tab.Screen name={tenName} component={ThirteenScreen} /> */}
