@@ -1,0 +1,9 @@
+rootProject.name = 'CPFLMOBILE'
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+
+include ':react-native-fbsdk-next'
+project(':react-native-fbsdk-next').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fbsdk-next/android')
+
+include ':smisdk-android-plugin'
+project(':smisdk-android-plugin').projectDir = new File(settingsDir,'../node_modules/react-native-smisdk-plugin/smisdk-android-plugin')

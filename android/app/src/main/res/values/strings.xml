@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CPFLMOBILE</string>
+    <string name="facebook_app_id">539293381395807</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">211670388495c3fbf40784b1c60235b6</string>
+    <bool name="smisdk_controlled_vpn">false</bool>
+    <bool name="smisdk_start_vpn">true</bool>
+    <bool name="smisdk_show_messaging">true</bool>
+    <string name="smisdk_apikey">ak-ad1e0ef9-60d6-49d9-ad09-0732a6b66723</string>
+</resources>

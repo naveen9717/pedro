@@ -1,0 +1,32 @@
+{
+  "name": "sd-react-native-smisdk-plugin",
+  "version": "1.2.9",
+  "summary": "Datami React native plugin",
+  "description": "sd-react-native-smisdk-plugin",
+  "homepage": "https://github.com/github_account/react-native-rn-smi-sdk",
+  "license": "MIT",
+  "authors": {
+    "Your Name": "yourname@email.com"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/github_account/react-native-rn-smi-sdk.git",
+    "tag": "1.2.9"
+  },
+  "source_files": "ios/**/*.{h,c,m,swift}",
+  "ios": {
+    "preserve_paths": "ios/libsmisdkvpn.a",
+    "vendored_libraries": "ios/libsmisdkvpn.a"
+  },
+  "requires_arc": true,
+  "dependencies": {
+    "React": [
+
+    ]
+  },
+  "xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) VPN_API=1"
+  }
+}
