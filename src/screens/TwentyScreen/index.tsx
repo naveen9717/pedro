@@ -202,8 +202,8 @@ export function TwentyScreen() {
                   <CardMain 
                     key={1}
                     title="Instalaçãão"
-                    status="Yes"
-                    code_install="0123456789"
+                    status={dataMain.data['statusPagamento']}
+                    code_install={dataMain.data['valorContaAtual']}
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
                   /> 
