@@ -9,7 +9,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  FlatList
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -44,7 +45,7 @@ export function TwentyScreen() {
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(false);
   const [date, setDate] = useState('');
-  const [dataSource, setDataSource] = useState({})
+  const [datasource, setDataSource] = useState({})
 
   const [selectedRange, setRange] = useState({});
 
@@ -78,7 +79,7 @@ export function TwentyScreen() {
   });
 
   console.log('Net Info:', netInfo);
-  console.log('dataSource:', dataSource);
+  console.log('dataSource:', datasource);
 
   const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
@@ -207,6 +208,16 @@ export function TwentyScreen() {
                     </TouchableWithoutFeedback>
                    </View>
                  </View>
+                 <FlatList
+                  data={[
+                       {key: 'Rapidez na informação de pagamento no mesmo dia;'},
+                       {key: 'Bloqueio para Novas Ações de Cobrança;'},
+                       {key: 'Agilidade na Baixa de Conta no mesmo dia;'},
+                       {key: 'Não necessidade de abertura de NS para'},
+                       {key: 'Paiva da Cantaa Palias'},
+                      ]}
+                     renderItem={({item}) => <View style={{flexDirection:'row'}}><View style={styles.bullets}></View><Text style={styles.bullettext}>{item.key}</Text></View>}
+                   />
                   <CardChild
                     key={1}
                     title="Conta de energia"

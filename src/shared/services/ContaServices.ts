@@ -9,7 +9,17 @@ class ContaServices {
         return axios.get(`${baseUrl}/conta/conta-atual/`);
     }
     getDataContaList(){
-      return axios.get(`${baseUrl}/conta/conta-atual/${codigoInstalacao}/listar-contas`);
+      // return axios.get(`${baseUrl}/conta/conta-atual/123/listar-contas`);
+      return axios.get(
+        `${baseUrl}/conta/conta-atual/123/listar-contas`,
+        {
+        headers: {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': `91446917bfed4d1b93360901cb5913c7`, // auth token
+        'api-version': `1.0.0`, 
+        },
+        }
+        )
   }
   
 }
