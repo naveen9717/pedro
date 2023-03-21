@@ -88,8 +88,8 @@ function TabsContainer() {
           },
         }}
         >
-        {/* <Tab.Screen name={pagName} component={TenScreen} />
-        <Tab.Screen name={fourteen} component={FourteenScreen} /> */}
+        <Tab.Screen name={pagName} component={TenScreen} />
+        <Tab.Screen name={fourteen} component={FourteenScreen} />
 
         {/* <Tab.Screen name={tenName} component={TwelveScreen} /> */}
 
@@ -97,7 +97,7 @@ function TabsContainer() {
 
         {/* <Tab.Screen name={tenName} component={NinteenScreen} /> */}
         {/* <Tab.Screen name={tenName} component={TwoSevenScreen} /> */}
-        <Tab.Screen name={tenName} component={TwentyScreen} />
+        {/* <Tab.Screen name={tenName} component={TwentyScreen} /> */}
 
         <Tab.Screen name={buttonName} component={WelcomeSegundaVia} />
         
