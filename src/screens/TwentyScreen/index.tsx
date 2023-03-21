@@ -44,9 +44,8 @@ export function TwentyScreen() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(false);
-  const [date, setDate] = useState('');
-  const [datasource, setDataSource] = useState({})
-
+  const [dataMain, setDataMain] = useState({})
+  const [dataSource, setDataSource] = useState([])
   const [selectedRange, setRange] = useState({});
 
 
@@ -79,7 +78,8 @@ export function TwentyScreen() {
   });
 
   console.log('Net Info:', netInfo);
-  console.log('dataSource:', datasource);
+  console.log('dataSource:', dataSource);
+  console.log('dataMain:', dataMain);
 
   const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
@@ -99,8 +99,14 @@ export function TwentyScreen() {
     }
   };
   useEffect(() => {
+    //Get Conat Data List
     ContaServices.getDataContaList().then((res) => {
-      setDataSource({ data: res.data});
+      setDataSource(res.data);
+  });
+  //Get Conat Data Main
+  ContaServices.getDataConta().then((res) => {
+    // console.log('Main',res.data)
+    setDataMain({data: res.data});
   });
   }, []);
 
@@ -128,6 +134,19 @@ export function TwentyScreen() {
     toggleModalPix()
   }
 
+  const renderItem = (data) => {
+    return (
+      <CardChild
+      key={1}
+      title="Conta de energia"
+      status="Aberta"
+      code_install={data.item.pagamentoCodigoBarra}
+      address="Avenida Norte Sul, 1000 - Taquaral
+  Campinas/SP - CEP 13256-558"
+      onPress={handleHome}
+    />
+    )
+}
 
   return (
     <>
@@ -167,7 +186,7 @@ export function TwentyScreen() {
 
             <ScrollView>
               <MainGenericContainer
-                style={{ paddingTop: height * 0.02, height: height }}>
+                style={{ paddingTop: height * 0.02 }}>
                
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
@@ -187,7 +206,8 @@ export function TwentyScreen() {
                     code_install="0123456789"
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
-                  />
+                  /> 
+                  
                  {/* <Text>{new Date('2020-12-28').toLocaleDateString(undefined, { month: 'short'})}</Text> */}
                  <View style={styles.filter}>
                  
@@ -208,17 +228,14 @@ export function TwentyScreen() {
                     </TouchableWithoutFeedback>
                    </View>
                  </View>
+
                  <FlatList
-                  data={[
-                       {key: 'Rapidez na informação de pagamento no mesmo dia;'},
-                       {key: 'Bloqueio para Novas Ações de Cobrança;'},
-                       {key: 'Agilidade na Baixa de Conta no mesmo dia;'},
-                       {key: 'Não necessidade de abertura de NS para'},
-                       {key: 'Paiva da Cantaa Palias'},
-                      ]}
-                     renderItem={({item}) => <View style={{flexDirection:'row'}}><View style={styles.bullets}></View><Text style={styles.bullettext}>{item.key}</Text></View>}
-                   />
-                  <CardChild
+                    data={dataSource}
+                    // ItemSeparatorComponent={FlatListSeparator}
+                    renderItem={item => renderItem(item)}
+                    keyExtractor={item => item.id.toString()}
+                /> 
+                  {/* <CardChild
                     key={1}
                     title="Conta de energia"
                     status="Aberta"
@@ -226,7 +243,7 @@ export function TwentyScreen() {
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
                     onPress={handleHome}
-                  />
+                  /> */}
 
                 </View>
 
