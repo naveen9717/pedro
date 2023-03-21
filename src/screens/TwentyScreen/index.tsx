@@ -98,7 +98,9 @@ export function TwentyScreen() {
     }
   };
   useEffect(() => {
-  
+    ContaServices.getDataContaList().then((res) => {
+      setDataSource({ data: res.data});
+  });
   }, []);
 
   const { height } = Dimensions.get('window');
