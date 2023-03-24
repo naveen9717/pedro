@@ -38,7 +38,7 @@ import ContaServices from '../../shared/services/ContaServices';
 // import getDataContaList from '../../shared/services/ContaServices';
 
 
-export function TwentyScreen() {
+export function InvoiceHome() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();

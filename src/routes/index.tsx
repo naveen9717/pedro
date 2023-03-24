@@ -18,7 +18,7 @@ export function Routes() {
   }, [isConnected]);
 
   // return isConnected ? <HomeStack /> : <NoInternetStack />;
-  // return <HomeStack />;
+  return <HomeStack />;
   // return <NewStack />;
-  return <TabsContainer/>;
+  // return <TabsContainer/>;
 }

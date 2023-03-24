@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect, useContext} from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import {
   Platform,
   StatusBar,
@@ -10,29 +10,25 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
 
-
-import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
-
-import {useTheme} from 'styled-components/native';
-import {MainGenericContainer} from '../../components/Containers/index';
+import { Title, ContainerViewButton } from './styles';
+import { useTheme } from 'styled-components/native';
+import { MainGenericContainer } from '../../components/Containers/index';
 // import Widget from '../../components/Widget';
-import {HeaderCustom} from '../../components/HeaderCustom';
-import {Button} from '../../components/Button';
+import { HeaderCustom } from '../../components/HeaderCustom';
+import { Button } from '../../components/Button';
+import { useNetInfo } from '@react-native-community/netinfo';
+import { useDispatch, useSelector } from 'react-redux';
+import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
+import { ContainerLoading } from '../Login/styles';
+import { Load } from '../../components/Button/styles';
+import { RootState } from '../../redux/reducer';
+import { AlertModal } from '../../components/Modal/AlertModal';
 
-import {useNetInfo} from '@react-native-community/netinfo';
-import {useDispatch, useSelector} from 'react-redux';
-import {AuthContext, AuthContextProps} from '../../contexts/useAuth';
-import {ContainerLoading} from '../Login/styles';
-import {Load} from '../../components/Button/styles';
-import {RootState} from '../../redux/reducer';
-import {AlertModal} from '../../components/Modal/AlertModal';
-
-
-export function FourteenScreen() {
-  const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
+export function InvoiceSendToHome() {
+  const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
@@ -49,7 +45,7 @@ export function FourteenScreen() {
   const handleModal = () => {
     setshowModal(!showModal);
   };
-  const [modalInfo, setModalInfo] = useState<{title: string; msg: string}>({
+  const [modalInfo, setModalInfo] = useState<{ title: string; msg: string }>({
     title: '',
     msg: '',
   });
@@ -60,9 +56,7 @@ export function FourteenScreen() {
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
-
-
-
+ 
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -74,17 +68,17 @@ export function FourteenScreen() {
     }
   };
   useEffect(() => {
-  
+   
   }, []);
 
-  const {height} = Dimensions.get('window');
-  
+  const { height } = Dimensions.get('window');
+
+
   const theme = useTheme();
   const changeStep = (s: number) => {
     setStep(s);
   };
-  const {goBack} = useNavigation();
-  const [btnClick, setBtnClick] = useState(0);
+  const { goBack } = useNavigation();
 
   function handleHome() {
     changeStep(0);
@@ -92,7 +86,7 @@ export function FourteenScreen() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('MinhaContaAtual');
+    navigation.navigate('fourteen' as never);
   };
 
   return (
@@ -104,10 +98,10 @@ export function FourteenScreen() {
         title={modalInfo.title}
       />
       <SafeAreaView
-        style={{flex: 0, backgroundColor: theme.COLORS.BACKGROUND}}
+        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
       />
       {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
-      <SafeAreaView style={{flex: 1, backgroundColor: theme.COLORS.BACKGROUND}}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
             Platform.OS === 'android' ? 'light-content' : 'dark-content'
@@ -133,44 +127,52 @@ export function FourteenScreen() {
 
             <ScrollView>
               <MainGenericContainer
-                style={{paddingTop: height * 0.02, height: height}}>
-               
-                <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
+                style={{ paddingTop: height * 0.02, height: height }}>
+                
+                <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
-                  Conta reenviada para o seu endreço!
+                  Enviar por correspondência
                   </Title>
-                  <Image
-                    source={require('../../assets/images/icOnlineWorking.png')}
-                    style={{width: 250,height: 250}}
-                  />
-                  <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
-                  <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                  <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
-                 </View>
-                   <View style={{marginVertical:15}}>
-                  <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
-                 </View>
-                  <View>
-                  <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
-                  <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
-                  <Text style={styles.smalltext}>sua próxima fatura.</Text>
                   
-                  </View>
+                  <Text style={styles.smalltext}>
+                  O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser
+cobrado em sua próxima fatura.</Text>
+                 
                 </View>
-                
+
+                <View style={{ paddingBottom: height * 0.0324, }}>
+
+                  <Title paddingBottom={height * 0.0216}>
+                  Endereço de entrega
+                  </Title>
+                  
+                  <Text style={styles.mediumtext}>Rua Bemvinda Martins Ceolim, 57 - Terra Nova -</Text>
+                  <Text style={styles.mediumtext}>Itatiba-SP- CEP: 13256-558</Text>
+                </View>
+
                 <ContainerViewButton>
-                
+                 
                   <Button
-                    title="Compartilhar"
-                    type="primary"
+                    title="Reenviar por correspondência"
+                    type="secondary"
                     // onPress={handleSignIn}
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
-                  
+
                 </ContainerViewButton>
+
+                <View style={styles.mTop}>
+                 
+                  <Button
+                   title="Alterar endereço de entrega"
+                   type="primary"
+                   // onPress={handleSignIn}
+                   onPress={handleClick}
+                   isLoading={isLogging}
+                 />
+
+               </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>
             </ScrollView>
@@ -204,7 +206,7 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     flexDirection: 'row',
-    marginBottom: 20,
+    marginVertical: 40,
   },
   checkbox: {
     alignSelf: 'center',
@@ -212,27 +214,15 @@ const styles = StyleSheet.create({
   label: {
     margin: 8,
   },
-  smalltext:{
-    fontSize:12,
+  mTop:{
+    marginVertical:20
   },
-  smallertext:{
-    fontSize:12,
-    textAlign:'center'
+  smalltext: {
+    fontSize: 13,
+    color:'black',
   },
-  largetext:{
-    fontSize:15,
-    fontWeight:'500',
-    color:'#02ade1',
-    textAlign:'center'
+  mediumtext: {
+    fontSize: 14,
+    color:'black',
   },
-  mediumtext:{
-    fontSize:13,
-    textAlign:'center'
-  },
-  mediumtextbold:{
-    fontSize:13,
-    textAlign:'center',
-    fontWeight:'500',
-    marginVertical:5
-  }
 });

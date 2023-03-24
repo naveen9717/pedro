@@ -28,7 +28,7 @@ import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
 
-export function TwelveScreen() {
+export function InvoicePixPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();

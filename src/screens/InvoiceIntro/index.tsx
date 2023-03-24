@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect, useContext} from 'react';
+import React, { useState, useRef, useEffect, useContext } from 'react';
 import {
   Platform,
   StatusBar,
@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 
 import {
@@ -19,42 +19,42 @@ import {
   refresh,
   revoke,
 } from 'react-native-app-auth';
-import {NativeModules} from 'react-native';
+import { NativeModules } from 'react-native';
 import WebView from 'react-native-webview';
 // import {AuthManager} from '../../service/azureB2C/AuthManager';
 // import {AuthConfig} from '../../service/azureB2C';
-import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
-import {Strong} from '../../components/Generic/index';
-import {AccessibilityWidget} from '../../components/AccessibilityWidget';
-import {useTheme} from 'styled-components/native';
-import {MainGenericContainer} from '../../components/Containers/index';
+import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { Strong } from '../../components/Generic/index';
+import { AccessibilityWidget } from '../../components/AccessibilityWidget';
+import { useTheme } from 'styled-components/native';
+import { MainGenericContainer } from '../../components/Containers/index';
 // import Widget from '../../components/Widget';
-import {HeaderCustom} from '../../components/HeaderCustom';
-import {createDate} from '../../helpers/functions/datas';
-import {Button} from '../../components/Button';
-import {api} from '../../service/api';
+import { HeaderCustom } from '../../components/HeaderCustom';
+import { createDate } from '../../helpers/functions/datas';
+import { Button } from '../../components/Button';
+import { api } from '../../service/api';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useNetInfo} from '@react-native-community/netinfo';
-import {useDispatch, useSelector} from 'react-redux';
-import {B2C_DATA, FREE_INTERNET} from '../../redux/actions/actionsTypes';
-import {AuthManager} from '../../service/azureB2C/AuthManager';
-import {DecodedB2cData} from '../../models/b2c/data';
-import {ApiUser} from '../../service/user';
+import { useNetInfo } from '@react-native-community/netinfo';
+import { useDispatch, useSelector } from 'react-redux';
+import { B2C_DATA, FREE_INTERNET } from '../../redux/actions/actionsTypes';
+import { AuthManager } from '../../service/azureB2C/AuthManager';
+import { DecodedB2cData } from '../../models/b2c/data';
+import { ApiUser } from '../../service/user';
 import jwtDecode from 'jwt-decode';
-import {AuthContext, AuthContextProps} from '../../contexts/useAuth';
-import {ContainerLoading} from '../Login/styles';
-import {Load} from '../../components/Button/styles';
-import {RootState} from '../../redux/reducer';
-import {AlertModal} from '../../components/Modal/AlertModal';
+import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
+import { ContainerLoading } from '../Login/styles';
+import { Load } from '../../components/Button/styles';
+import { RootState } from '../../redux/reducer';
+import { AlertModal } from '../../components/Modal/AlertModal';
 
 // import {Spinner} from '../../components/Spinner/styles';
 // import { getBottomSpace } from 'react-native-iphone-x-helper';
-export function PagarInfo() {
-  const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
+export function InvoiceIntro() {
+  const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(false);
+  const [isSelected, setSelection] = useState(true);
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -68,7 +68,7 @@ export function PagarInfo() {
   const handleModal = () => {
     setshowModal(!showModal);
   };
-  const [modalInfo, setModalInfo] = useState<{title: string; msg: string}>({
+  const [modalInfo, setModalInfo] = useState<{ title: string; msg: string }>({
     title: '',
     msg: '',
   });
@@ -96,13 +96,7 @@ export function PagarInfo() {
     });
   };
 
-  const signInAsync = () => {
-    // const handleIsLoading = (value: boolean) => {
-    //   setIsLoading(value);
-    // };
 
-    b2cLogin(dispatch, navigation, setModalInfo, setshowModal);
-  };
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -115,7 +109,7 @@ export function PagarInfo() {
   };
   useEffect(() => {
     const iOSSDPlugin = NativeModules.RnSmiSdk;
-    const {SmiSdkReactModule} = NativeModules;
+    const { SmiSdkReactModule } = NativeModules;
     // saveFreeInternetDate(null);
     const date = new Date();
     getFreeInternetDate();
@@ -129,7 +123,7 @@ export function PagarInfo() {
       //     SmiSdkReactModule.startSponsoredData();
       //   }
       // }
-      const apiResponse = {date: '2022-12-29_00:00'};
+      const apiResponse = { date: '2022-12-29_00:00' };
       let apiDate: Date;
       if (apiResponse?.date) {
         apiDate = createDate(
@@ -138,25 +132,25 @@ export function PagarInfo() {
         ) as Date;
         if (date < apiDate) {
           saveFreeInternetDate(apiDate);
-          dispatch({type: FREE_INTERNET, freeInternet: false});
+          dispatch({ type: FREE_INTERNET, freeInternet: false });
           // if (Platform.OS === 'ios') {
           //   iOSSDPlugin.stopSponsorVpn();
           // } else {
           //   SmiSdkReactModule.stopSponsoredData();
           // }
         } else {
-          dispatch({type: FREE_INTERNET, freeInternet: true});
+          dispatch({ type: FREE_INTERNET, freeInternet: true });
           saveFreeInternetDate(null);
         }
 
         //setar internet gratuita bloqueada
         //desabilitar internet gratuita
       } else {
-        dispatch({type: FREE_INTERNET, freeInternet: true});
+        dispatch({ type: FREE_INTERNET, freeInternet: true });
         saveFreeInternetDate(null);
       }
     } else {
-      dispatch({type: FREE_INTERNET, freeInternet: false});
+      dispatch({ type: FREE_INTERNET, freeInternet: false });
     }
     if (Platform.OS === 'ios') {
       iOSSDPlugin.stopSponsorVpn();
@@ -167,7 +161,7 @@ export function PagarInfo() {
     }
   }, []);
 
-  const {height} = Dimensions.get('window');
+  const { height } = Dimensions.get('window');
   let webViewRef = useRef<any>();
   const viewPageCPFL = () => {
     return (
@@ -211,7 +205,7 @@ export function PagarInfo() {
       } else if (
         !e.loading &&
         e.url ===
-          'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-usuario'
+        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-usuario'
       ) {
         webViewRef?.current?.injectJavaScript(`
         document.getElementsByTagName('ol').item(0).remove();
@@ -219,7 +213,7 @@ export function PagarInfo() {
       } else if (
         !e.loading &&
         e.url ===
-          'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-instalacao'
+        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-instalacao'
       ) {
         webViewRef?.current?.injectJavaScript(`
         document.getElementsByTagName('ol').item(0).remove();
@@ -227,7 +221,7 @@ export function PagarInfo() {
       } else if (
         !e.loading &&
         e.url ===
-          'https://servicosonline.cpfl.com.br/agencia-webapp/#/resultado'
+        'https://servicosonline.cpfl.com.br/agencia-webapp/#/resultado'
       ) {
         webViewRef?.current?.injectJavaScript(`
         document.getElementsByTagName('ol').item(0).remove();
@@ -273,7 +267,7 @@ export function PagarInfo() {
   const changeStep = (s: number) => {
     setStep(s);
   };
-  const {goBack} = useNavigation();
+  const { goBack } = useNavigation();
   const [btnClick, setBtnClick] = useState(0);
 
   function handleHome() {
@@ -282,7 +276,7 @@ export function PagarInfo() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('MinhaContaAtual');
+    navigation.navigate('InvoiceHome' as never);
   };
 
   return (
@@ -294,10 +288,10 @@ export function PagarInfo() {
         title={modalInfo.title}
       />
       <SafeAreaView
-        style={{flex: 0, backgroundColor: theme.COLORS.BACKGROUND}}
+        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
       />
       {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
-      <SafeAreaView style={{flex: 1, backgroundColor: theme.COLORS.BACKGROUND}}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
             Platform.OS === 'android' ? 'light-content' : 'dark-content'
@@ -323,7 +317,7 @@ export function PagarInfo() {
 
             <ScrollView>
               <MainGenericContainer
-                style={{paddingTop: height * 0.02, height: height}}>
+                style={{ paddingTop: height * 0.02, height: height }}>
                 {/* <ContainerViewLogo
                   paddingBottom={height * 0.0541}
                   paddingTop={height * 0.00089}>
@@ -331,45 +325,40 @@ export function PagarInfo() {
                     source={require('../../assets/Logo_CPFL_Energia.png')}
                   />
                 </ContainerViewLogo> */}
-                <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
+                <View style={{ paddingBottom: height * 0.0324, justifyContent: 'center', alignItems: 'center' }}>
                   <Title paddingBottom={height * 0.0216}>
-                  Informações do pagamento solicitada!
+                    Tire sua segunda via aqui!
                   </Title>
                   <Image
-                    source={require('../../assets/images/icOnlineWorking.png')}
-                    style={{width: 250,height: 250}}
+                    source={require('../../assets/images/icQrCode.png')}
+                    style={{ width: 250, height: 250 }}
                   />
-                  <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
-                  <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                  <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
-                 </View>
-                   <View style={{marginVertical:15}}>
-                  <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                  <Text style={styles.mediumtext}>Estamos processando seu pagamento!
-                    Fique tranquilo que em breve será baixada! Caso
-                    receba ações de cobrança, elas serão
-                    automaticamente canceladas!</Text>
-                 </View>
-                  <View>
-                  <Text style={styles.smalltext}>Conta referente a instalação: 039204859</Text>
-                  <Text style={styles.smalltext}>Pagamento solicitado por: Gustavo Risonho Fortunato</Text>
-                  <Text style={styles.smalltext}>Data do pagamento: 12/11/2021 às 13:23:12</Text>
-                  <Text style={styles.smalltext}>Data Prevista:</Text>
-                  <Text style={styles.smalltext}>Método de pagamento: PIX</Text>
-                  </View>
+                  <Label>
+                    Se voce perdeu, nao recebeu sua conta ou precisa
+                    de um comprovante de residência, solicite aqui a
+                    segunda via.</Label>
+                  <Label>O pagamento é rápido e simples e pode ser feito a
+                    qualquer momento!
+                  </Label>
                 </View>
-                
+
                 <ContainerViewButton>
-                
+                  <View style={styles.checkboxContainer}>
+                    <CheckBox
+                      value={isSelected}
+                      onValueChange={setSelection}
+                      style={styles.checkbox}
+                    />
+                    <Text style={styles.label}>Não mostrar mais essa mensagem</Text>
+                  </View>
                   <Button
-                    title="Compartilhar"
-                    type="primary"
+                    title="Iniciar"
+                    type="secondary"
                     // onPress={handleSignIn}
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
-                  
+
                 </ContainerViewButton>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>
@@ -405,7 +394,7 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     flexDirection: 'row',
-    marginBottom: 20,
+    marginVertical: 40,
   },
   checkbox: {
     alignSelf: 'center',
@@ -413,27 +402,4 @@ const styles = StyleSheet.create({
   label: {
     margin: 8,
   },
-  smalltext:{
-    fontSize:12,
-  },
-  smallertext:{
-    fontSize:12,
-    textAlign:'center'
-  },
-  largetext:{
-    fontSize:15,
-    fontWeight:'500',
-    color:'#02ade1',
-    textAlign:'center'
-  },
-  mediumtext:{
-    fontSize:13,
-    textAlign:'center'
-  },
-  mediumtextbold:{
-    fontSize:13,
-    textAlign:'center',
-    fontWeight:'500',
-    marginVertical:5
-  }
 });

@@ -32,7 +32,7 @@ import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
 
 
-export function NinteenScreen() {
+export function InvoiceMinPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();

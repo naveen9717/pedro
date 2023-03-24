@@ -5,21 +5,22 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Screens
 
-import { WelcomeSegundaVia } from '../../screens/WelcomeSegundaVia';
-import { TenScreen } from '../../screens/TenScreen';
+import { InvoiceIntro } from '../../screens/InvoiceIntro';
+import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
 
-import { PagarConta } from '../../screens/PagarConta';
+import { PaymentInvoice } from '../../screens/PaymentInvoice';
 import {HeaderCustom} from '../../components/HeaderCustom';
 import {useWindowDimensions} from 'react-native';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import { TwelveScreen } from '../../screens/TwelveScreen';
-import { ThirteenScreen } from '../../screens/ThirteenScreen';
-import { FourteenScreen } from '../../screens/FourteenScreen';
-import { NinteenScreen } from '../../screens/NinteenScreen';
+import { InvoicePixPayment } from '../../screens/InvoicePixPayment';
+import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
+import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess';
+import { InvoiceMinPayment } from '../../screens/InvoiceMinPayment';
 import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
-import { TwentyScreen } from '../../screens/TwentyScreen';
+import { InvoiceHome } from '../../screens/InvoiceHome';
 import { blue400, grey100 } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
+import { PagarInfo } from '../../screens/InvoiceSolicitedInfo';
 
 //Screen names
 const buttonName = "Início";
@@ -88,8 +89,8 @@ function TabsContainer() {
           },
         }}
         >
-        <Tab.Screen name={pagName} component={TenScreen} />
-        <Tab.Screen name={fourteen} component={FourteenScreen} />
+        <Tab.Screen name={tenName} component={InvoiceIntro} />
+        <Tab.Screen name={pagName} component={InvoiceHome} />
 
         {/* <Tab.Screen name={tenName} component={TwelveScreen} /> */}
 
@@ -99,7 +100,7 @@ function TabsContainer() {
         {/* <Tab.Screen name={tenName} component={TwoSevenScreen} /> */}
         {/* <Tab.Screen name={tenName} component={TwentyScreen} /> */}
 
-        <Tab.Screen name={buttonName} component={WelcomeSegundaVia} />
+        <Tab.Screen name={buttonName} component={InvoiceMinPayment} />
         
 
       </Tab.Navigator>

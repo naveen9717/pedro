@@ -29,10 +29,10 @@ import RegisterStack from './RegisterStack';
 // import {SelectInstallation} from '@screens/SelectInstallation';
 import { LoggedInWebView } from '../../screens/LoggedInWebView';
 import { Welcome } from '../../screens/Welcome';
-import { WelcomeSegundaVia } from '../../screens/WelcomeSegundaVia';
-import { MinhaContaAtual } from '../../screens/MinhaContaAtual';
-import { PagarConta } from '../../screens/PagarConta';
-import { PagarInfo } from '../../screens/PagarInfo';
+import { InvoiceIntro } from '../../screens/InvoiceIntro';
+import { InvoiceHome } from '../../screens/InvoiceHome';
+import { PaymentInvoice } from '../../screens/PaymentInvoice';
+import { InvoiceSolicitedInfo } from '../../screens/InvoiceSolicitedInfo';
 import { ScanScreen } from '../../screens/ScanScreen';
 
 import { Login } from '../../screens/Login';
@@ -123,11 +123,11 @@ export function HomeStack() {
       <Screen name="routesregister" component={RegisterStack} />
       <Screen name="routesLoggedInWV" component={LoggedInWebView} />
       <Screen name="routesrecover" component={StackRecoverPass} />
-      <Screen name="MinhaContaAtual" component={MinhaContaAtual} />
+      <Screen name="InvoiceHome" component={InvoiceHome} />
       <Screen name="Scan" component={ScanScreen} />
-      <Screen name="Info" component={PagarInfo} />
-      <Screen name="PagScan" component={PagarConta} />
-      <Screen name="Pag" component={PagarConta} />
+      <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
+      <Screen name="PaymentInvoice" component={PaymentInvoice} />
+      {/* <Screen name="Pag" component={PagarConta} /> */}
 
       <Screen name="Tabs" component={TabsContainer} />
 

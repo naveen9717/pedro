@@ -58,7 +58,7 @@ import { Card, Paragraph } from 'react-native-paper';
 // import { getBottomSpace } from 'react-native-iphone-x-helper';
 import Modal from "react-native-modal";
 
-export function PagarConta() {
+export function PaymentInvoice() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
