@@ -33,6 +33,8 @@ import { InvoiceIntro } from '../../screens/InvoiceIntro';
 import { InvoiceHome } from '../../screens/InvoiceHome';
 import { PaymentInvoice } from '../../screens/PaymentInvoice';
 import { InvoiceSolicitedInfo } from '../../screens/InvoiceSolicitedInfo';
+import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess';
+
 import { ScanScreen } from '../../screens/ScanScreen';
 
 import { Login } from '../../screens/Login';
@@ -53,10 +55,10 @@ export function HomeStack() {
   return (
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen
-        options={{
-          headerShown: true,
-          header: () => <AccessibilityWidget marginTop={30} />,
-        }}
+        // options={{
+        //   headerShown: true,
+        //   header: () => <AccessibilityWidget marginTop={30} />,
+        // }}
         name="welcome"
         component={Welcome}
       />
@@ -65,8 +67,8 @@ export function HomeStack() {
           headerShown: false,
           header: () => <AccessibilityWidget marginTop={30} />,
         }}
-        name="welcome"
-        component={Welcome}
+        name="TabsContainer"
+        component={TabsContainer}
       /> */}
       <Screen
         options={{
@@ -126,10 +128,12 @@ export function HomeStack() {
       <Screen name="InvoiceHome" component={InvoiceHome} />
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
-      <Screen name="PaymentInvoice" component={PaymentInvoice} />
+      <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
+
+      {/* <Screen name="PaymentInvoice" component={PaymentInvoice} /> */}
       {/* <Screen name="Pag" component={PagarConta} /> */}
 
-      <Screen name="Tabs" component={TabsContainer} />
+      {/* <Screen name="Tabs" component={TabsContainer} /> */}
 
       {/* <Screen name="routesmenu" component={MenuStack} /> */}
       {/* <Screen name="configuration" component={Configuration} /> */}

@@ -305,8 +305,8 @@ export function InvoiceSolicitedInfo() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
@@ -314,12 +314,12 @@ export function InvoiceSolicitedInfo() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
+            />
+            <AccessibilityWidget
             // marginTop={
             //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
             // }
-            /> */}
+            />
 
             <ScrollView>
               <MainGenericContainer

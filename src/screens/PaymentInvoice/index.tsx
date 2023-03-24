@@ -63,16 +63,18 @@ export function PaymentInvoice() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(false);
+  const [isSelected, setSelection] = useState(true);
 
   const [isModalVisible, setModalVisible] = useState(false);
+  const [isModalVisiblePop, setModalVisiblePop] = useState(false);
+
   const [isModalPixVisible, setModalPixVisible] = useState(false);
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
   };
 
   const toggleModalPix = () => {
-    setModalPixVisible(!isModalPixVisible)
+    setModalVisiblePop(!isModalVisiblePop)
   }
 
   const dispatch = useDispatch();
@@ -300,14 +302,15 @@ export function PaymentInvoice() {
   }
 
   const handleClick = () => {
-    toggleModalPix()
+    // toggleModalPix()
     navigation.navigate('Info')
   };
 
 
   function handlePix() {
-    toggleModalPix()
+    // toggleModalPix()
   }
+  
 
   return (
     <>
@@ -376,7 +379,7 @@ export function PaymentInvoice() {
                         </View>
                         <View>
                           <TouchableOpacity
-                            onPress={handleClick}
+                            onPress={toggleModalPix}
                             style={styles.onpress}>
                             <Text style={{ color: 'white' }}>Risco de corte </Text>
                           </TouchableOpacity>
@@ -547,11 +550,6 @@ export function PaymentInvoice() {
                         }}>
 
 
-
-
-
-
-
                         <View
                           style={{
                             flexDirection: 'row',
@@ -693,7 +691,107 @@ export function PaymentInvoice() {
               </View>
 
 
+              <View style={{ flex: 1 }}>
 
+<Modal isVisible={isModalVisiblePop}>
+  <View
+    style={{
+      height: '90%',
+      backgroundColor: 'white',
+      width: '100%'
+    }}>
+    <TouchableWithoutFeedback onPress={toggleModalPix}>
+      <View
+        style={{
+          flex: 1,
+          marginTop: -30,
+          backgroundColor: 'white',
+
+        }}>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            height: '100%',
+            marginTop: 10,
+          }}>
+
+          <View style={[styles.boxcontainer]}>
+            <View style={{ marginVertical: 10 }}>
+              <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
+              <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
+              <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
+              <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
+              <Text style={styles.smalltext}>elétrica.</Text>
+            </View>
+            <View style={{ marginVertical: 10 }}>
+              <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
+              <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
+              <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
+            </View>
+            <View style={{ marginVertical: 10 }}>
+              <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
+              <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
+              <Text style={styles.smalltext}>processamento</Text>
+              <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
+
+            </View>
+
+            <View style={{ marginVertical: 10 }}>
+              <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
+              <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
+              <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
+              <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
+              <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
+              <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
+
+            </View>
+           
+            <ContainerViewButton>
+              <View style={{ marginVertical: 8 }}></View>
+              <Button
+                title="Realizar pagamento"
+                type="secondary"
+                // onPress={handleSignIn}
+                onPress={handleClick}
+                isLoading={isLogging}
+              />
+              <View style={{ marginVertical: 8 }}></View>
+              <Button
+                title="Já realizei o pagamento, preciso religar"
+                type="secondary"
+                // onPress={handleSignIn}
+                onPress={handleClick}
+                isLoading={isLogging}
+              />
+              <View style={{ marginVertical: 8 }}></View>
+              <Button
+                title="Fechar"
+                type="secondary"
+                // onPress={handleSignIn}
+                onPress={handleClick}
+                isLoading={isLogging}
+              />
+              
+              <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
+                 <CheckBox
+                  value={isSelected}
+                  onValueChange={setSelection}
+                  style={styles.checkbox}
+                  tintColors={{ true: '#02ade1', false: 'black' }}
+
+               />
+               <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
+             </View>
+
+            </ContainerViewButton>
+          </View>
+        </View>
+      </View>
+    </TouchableWithoutFeedback>
+  </View>
+</Modal>
+</View>
 
 
             </ScrollView>

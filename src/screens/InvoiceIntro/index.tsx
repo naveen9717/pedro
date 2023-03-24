@@ -163,106 +163,9 @@ export function InvoiceIntro() {
 
   const { height } = Dimensions.get('window');
   let webViewRef = useRef<any>();
-  const viewPageCPFL = () => {
-    return (
-      <WebView
-        originWhitelist={['*']}
-        style={{
-          height: height,
-          marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-        }}
-        source={{
-          // uri: 'https://servicosonlineq.cpfl.com.br:8443/agencia-webapp/#/login-agd?key=XPTO',
-
-          // uri: 'http://cpsdaanav01:8030/validausuario.aspx?key=instalacao=123456&token=XYZ',
-          // uri: 'http://cpsdaanav01:8031/validausuario.aspx?key=XPTO',
-          uri: 'https://www.cpfl.com.br/',
-        }}
-      />
-    );
-  };
-
-  const viewRegisterCPFL = () => {
-    const handlePageChange = (e: WebViewNavigation) => {
-      console.log(e);
-
-      if (
-        // !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-identificacao'
-      ) {
-        setTimeout(() => {
-          webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('h3').item(0).remove();
-        document.getElementsByClassName('navbar navbar-custom navbar-fixed-top navbar-static-top').item(0).remove();
-        document.getElementsByClassName('breadcrumb').item(0).remove();
-        document.getElementsByClassName('rodape').item(0).remove();
-        document.getElementsByClassName('copyright').item(0).querySelector('span').remove();
   
-       
-      `);
-        }, 1800);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-usuario'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-      `);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-instalacao'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-      `);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/resultado'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-        document.getElementById('btnBaixarPdf').remove()
-        document.getElementById('btnVoltar').remove()
-      `);
-      }
-    };
 
-    return (
-      <WebView
-        onNavigationStateChange={handlePageChange}
-        showsHorizontalScrollIndicator={false}
-        automaticallyAdjustContentInsets={true}
-        onMessage={event => {
-          console.log('event: ', event);
-        }}
-        ref={webViewRef}
-        style={{
-          height: height,
-        }}
-        javaScriptEnabled={true}
-        source={{
-          uri: 'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-identificacao',
-        }}
-      />
-    );
-  };
-
-  const webViewRender = (value: number) => {
-    switch (String(value)) {
-      case '1':
-        return viewPageCPFL();
-      case '2':
-        return viewRegisterCPFL();
-
-      default:
-        break;
-    }
-  };
-
+ 
   const theme = useTheme();
   const changeStep = (s: number) => {
     setStep(s);
@@ -287,17 +190,15 @@ export function InvoiceIntro() {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-      <SafeAreaView
-        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
-      />
+     
       {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
-        <StatusBar
+        {/* <StatusBar
           barStyle={
             Platform.OS === 'android' ? 'light-content' : 'dark-content'
           }
-        />
-        {step === 0 ? (
+        /> */}
+  
           <>
             {/* <HeaderCustom
               marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
@@ -307,12 +208,12 @@ export function InvoiceIntro() {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
+              leftAction={'back'}
+            />
+            <AccessibilityWidget
+            marginTop={
+              Platform.OS === 'android' ? StatusBar.currentHeight : 0
+            }
             /> */}
 
             <ScrollView>
@@ -364,23 +265,7 @@ export function InvoiceIntro() {
               </MainGenericContainer>
             </ScrollView>
           </>
-        ) : (
-          <>
-            <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
-            {webViewRender(step)}
-          </>
-        )}
+        
       </SafeAreaView>
     </>
   );

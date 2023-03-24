@@ -35,7 +35,7 @@ import Modal from "react-native-modal";
 import DateRangePicker from "rnv-date-range-picker";
 import moment from 'moment'
 import ContaServices from '../../shared/services/ContaServices';
-// import getDataContaList from '../../shared/services/ContaServices';
+import {AccessibilityWidget} from '../../components/AccessibilityWidget';
 
 
 export function InvoiceHome() {
@@ -168,21 +168,21 @@ export function InvoiceHome() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
-            /> */}
+              leftAction={'back'}
+            /> 
+            <AccessibilityWidget
+             marginTop={
+              Platform.OS === 'android' ? StatusBar.currentHeight : 0
+             }
+            />
 
             <ScrollView>
               <MainGenericContainer
@@ -202,8 +202,10 @@ export function InvoiceHome() {
                   <CardMain 
                     key={1}
                     title="Instalaçãão"
-                    status={dataMain.data['statusPagamento']}
-                    code_install={dataMain.data['valorContaAtual']}
+                    status='statusPagamento'
+                    code_install='03636367'
+                    // status={dataMain.data['statusPagamento']}
+                    // code_install={dataMain.data['valorContaAtual']}
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
                   /> 
