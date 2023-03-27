@@ -191,7 +191,6 @@ export function InvoiceHome() {
             <ScrollView>
               <MainGenericContainer
                 style={{ paddingTop: height * 0.02 }}>
-               
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
                     Minha conta atual
@@ -200,9 +199,7 @@ export function InvoiceHome() {
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
 
                 </View>
-
                 <View style={styles.checkboxContainer}>
-
                   <CardMain 
                     key={1}
                     title="Instalaçãão"
@@ -242,21 +239,11 @@ export function InvoiceHome() {
                     keyExtractor={item => item.id.toString()}
                 /> 
                  </View>
-                  {/* <CardChild
-                    key={1}
-                    title="Conta de energia"
-                    status="Aberta"
-                    code_install="0123456789"
-                    address="Avenida Norte Sul, 1000 - Taquaral
-                Campinas/SP - CEP 13256-558"
-                    onPress={handleHome}
-                  /> */}
 
                 </View>
 
                 {ModalLoading(isLoading)}
               </MainGenericContainer>
-
 
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
@@ -280,12 +267,10 @@ export function InvoiceHome() {
                         }}>
 
                         <View style={{ flex: 1 }}>
-
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 8 }}>
                               <Text style={styles.mediumtextbold}>Filtros</Text>
                               <Text style={styles.smalltext}>Selecione os filtros de instalação</Text>
-                              
                             </View>
                             <ContainerViewButton>
                             <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 8 }}>
@@ -370,7 +355,6 @@ export function InvoiceHome() {
                             </View>
 
                             <ContainerViewButton>
-
                               <Button
                                 title="Aplicar filtros"
                                 type="secondary"
@@ -378,18 +362,14 @@ export function InvoiceHome() {
                                 onPress={handlePix}
                                 isLoading={isLogging}
                               />
-
                             </ContainerViewButton>
                           </View>
-
                         </View>
                       </View>
                     </View>
                   </TouchableWithoutFeedback>
                 </Modal>
-
               </View>
-
             </ScrollView>
           </>
         ) : (

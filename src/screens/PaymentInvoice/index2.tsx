@@ -74,10 +74,6 @@ export function PaymentInvoice() {
   };
 
   const toggleModalPix = () => {
-    setModalPixVisible(!isModalPixVisible)
-  }
-
-  const toggleModalPop = () => {
     setModalVisiblePop(!isModalVisiblePop)
   }
 
@@ -311,7 +307,9 @@ export function PaymentInvoice() {
   };
 
 
-  
+  function handlePix() {
+    // toggleModalPix()
+  }
   
 
   return (
@@ -381,7 +379,7 @@ export function PaymentInvoice() {
                         </View>
                         <View>
                           <TouchableOpacity
-                            onPress={toggleModalPop}
+                            onPress={toggleModalPix}
                             style={styles.onpress}>
                             <Text style={{ color: 'white' }}>Risco de corte </Text>
                           </TouchableOpacity>
@@ -454,7 +452,7 @@ export function PaymentInvoice() {
                               <Text style={styles.white}>Copia e cola</Text>
                             </View>
                             <View style={{ borderBottomColor: '#FCFCFC', borderBottomWidth: 1, flex: 1, width: 200 }} />
-                            <TouchableOpacity onPress={toggleModalPix}>
+                            <TouchableOpacity onPress={handlePix}>
                               <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 20 }} >
                                 <Text style={styles.white}>Ver QR code</Text>
                               </View>
@@ -529,8 +527,6 @@ export function PaymentInvoice() {
 
 
               <View style={{ flex: 1 }}>
-
-
                 <Modal isVisible={isModalVisible} style={{ margin: 0 }}>
                   <View
                     style={{
@@ -550,17 +546,12 @@ export function PaymentInvoice() {
                           paddingVertical: 5,
 
                         }}>
-
-
                         <View
                           style={{
                             flexDirection: 'row',
                             height: '100%',
                             marginTop: 10,
                           }}>
-
-
-
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>
                               <Text style={styles.mediumtextbold}>Pagamento via código de barras</Text>
@@ -622,7 +613,7 @@ export function PaymentInvoice() {
 
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
-                  <TouchableWithoutFeedback onPress={toggleModalPix}>
+                  <TouchableWithoutFeedback onPress={handlePix}>
                     <View
                       style={{
                         height: '70%',
@@ -695,15 +686,15 @@ export function PaymentInvoice() {
 
               <View style={{ flex: 1 }}>
 
-<Modal isVisible={isModalVisiblePop}>
-  <View
-    style={{
-      height: '90%',
-      backgroundColor: 'white',
-      width: '100%'
-    }}>
-    <TouchableWithoutFeedback onPress={toggleModalPix}>
-      <View
+            <Modal isVisible={isModalVisiblePop}>
+              <View
+                style={{
+                       height: '90%',
+                       backgroundColor: 'white',
+                       width: '100%'
+                     }}>
+               <TouchableWithoutFeedback onPress={toggleModalPix}>
+                 <View
         style={{
           flex: 1,
           marginTop: -30,
@@ -755,7 +746,7 @@ export function PaymentInvoice() {
                 title="Realizar pagamento"
                 type="secondary"
                 // onPress={handleSignIn}
-                onPress={toggleModalPop}
+                onPress={handleClick}
                 isLoading={isLogging}
               />
               <View style={{ marginVertical: 8 }}></View>
@@ -763,7 +754,7 @@ export function PaymentInvoice() {
                 title="Já realizei o pagamento, preciso religar"
                 type="secondary"
                 // onPress={handleSignIn}
-                onPress={toggleModalPop}
+                onPress={handleClick}
                 isLoading={isLogging}
               />
               <View style={{ marginVertical: 8 }}></View>
@@ -771,7 +762,7 @@ export function PaymentInvoice() {
                 title="Fechar"
                 type="secondary"
                 // onPress={handleSignIn}
-                onPress={toggleModalPop}
+                onPress={handleClick}
                 isLoading={isLogging}
               />
               

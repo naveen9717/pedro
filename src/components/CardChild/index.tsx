@@ -43,7 +43,7 @@ export default function CardChild({
   // onPress={() => navigate('ListSecondProof')
   return (
    
-     <View style={styles.checkboxContainer}>
+       <View style={styles.checkboxContainer}>
                 <Card style={{backgroundColor:'white'}}>
                 
                     <Card.Content>
