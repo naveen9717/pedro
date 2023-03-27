@@ -120,7 +120,11 @@ export function InvoiceHome() {
   const [btnClick, setBtnClick] = useState(0);
 
   function handleHome() {
-    navigation.navigate('Pag')
+    navigation.navigate('')
+  }
+
+  function handleChild() {
+    navigation.navigate('Meus dados')
   }
 
 
@@ -143,7 +147,7 @@ export function InvoiceHome() {
       code_install={data.item.pagamentoCodigoBarra}
       address="Avenida Norte Sul, 1000 - Taquaral
   Campinas/SP - CEP 13256-558"
-      onPress={handleHome}
+      onPress={handleChild}
     />
     )
 }
@@ -230,13 +234,14 @@ export function InvoiceHome() {
                     </TouchableWithoutFeedback>
                    </View>
                  </View>
-
+                 <View style={{marginVertical:15}}>
                  <FlatList
                     data={dataSource}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.id.toString()}
                 /> 
+                 </View>
                   {/* <CardChild
                     key={1}
                     title="Conta de energia"

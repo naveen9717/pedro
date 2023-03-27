@@ -42,11 +42,7 @@ export default function CardChild({
   const {height} = Dimensions.get('window');
   // onPress={() => navigate('ListSecondProof')
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        paddingTop: height * 0.01,
-      }}>
+   
      <View style={styles.checkboxContainer}>
                 <Card style={{backgroundColor:'white'}}>
                 
@@ -84,7 +80,11 @@ export default function CardChild({
                  <View style={{flexDirection: 'row',  justifyContent: 'space-between',marginVertical:15}}>
             
                     <View>
+                    <TouchableOpacity
+                        onPress={onPress}
+                       >
                         <Text style={styles.second}>Pagar sua Conta</Text>
+                        </TouchableOpacity>
                     </View>
                     <View>
                       <Text style={styles.second}>Detalhamento</Text>
@@ -101,7 +101,6 @@ export default function CardChild({
                </Card>
 
                 </View>
-    </TouchableOpacity>
   );
 }
 

@@ -54,22 +54,22 @@ export function HomeStack() {
   const theme = useTheme();
   return (
     <Navigator screenOptions={{ headerShown: false }}>
-      <Screen
+      {/* <Screen
         // options={{
         //   headerShown: true,
         //   header: () => <AccessibilityWidget marginTop={30} />,
         // }}
-        name="Tabs"
-        component={TabsContainer}
-      />
-      {/* <Screen
+        name="welcome"
+        component={Welcome}
+      /> */}
+      <Screen
         options={{
           headerShown: false,
           header: () => <AccessibilityWidget marginTop={30} />,
         }}
         name="TabsContainer"
         component={TabsContainer}
-      /> */}
+      />
       <Screen
         options={{
           headerShown: false,
@@ -129,6 +129,7 @@ export function HomeStack() {
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
+      {/* <Screen name="PaymentInvoice" component={PaymentInvoice} /> */}
 
       
 

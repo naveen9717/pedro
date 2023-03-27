@@ -29,9 +29,9 @@ import { blue400, grey100 } from 'react-native-paper/lib/typescript/src/styles/t
 import { PagarInfo } from '../../screens/InvoiceSolicitedInfo';
 
 //Screen names
-const buttonName = "Início";
-const pagName = "Serviços";
-const tenName = "Ajuda";
+const InvoiceIn = "Início";
+const PaymentIn = "Serviços";
+const InvoiceMin = "Ajuda";
 const InvoiceSend ="Meus dados";
 
 const Tab = createBottomTabNavigator();
@@ -46,7 +46,7 @@ function TabsContainer() {
   const dimensions = useWindowDimensions();
   return (
       <Tab.Navigator
-        initialRouteName={buttonName}
+        initialRouteName={InvoiceIn}
         
         // screenOptions={{
         //   // headerShown: false,
@@ -112,13 +112,13 @@ function TabsContainer() {
             let iconName;
             let rn = route.name;
 
-            if (rn === buttonName) {
+            if (rn === InvoiceIn) {
               iconName = focused ? 'home' : 'home-outline';
 
-            } else if (rn === pagName) {
+            } else if (rn === PaymentIn) {
               iconName = focused ? 'list' : 'list-outline';
 
-            } else if (rn === tenName) {
+            } else if (rn === InvoiceMin) {
               iconName = focused ? 'person-circle-outline' : 'person-circle-outline';
             }
             else if (rn === InvoiceSend) {
@@ -162,10 +162,11 @@ function TabsContainer() {
           },
         }}
         >
-        <Tab.Screen name={buttonName} component={InvoiceIntro} />
-        <Tab.Screen name={pagName} component={PaymentInvoice} />
-        <Tab.Screen name={tenName} component={InvoiceMinPayment} />
-        <Tab.Screen name={InvoiceSend} component={InvoiceSendToHome} />
+        <Tab.Screen name={InvoiceIn} component={InvoiceIntro} />
+        <Tab.Screen name={PaymentIn} component={PaymentInvoice} />
+        <Tab.Screen name={InvoiceMin} component={InvoiceMinPayment} />
+        <Tab.Screen name={InvoiceSend} component={PaymentInvoice} />
+        {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
 
         {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
 
