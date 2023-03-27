@@ -48,6 +48,12 @@ function TabsContainer() {
   const { goBack } = useNavigation();
   // let history = useHistory();
   const dimensions = useWindowDimensions();
+
+  const handleClick = () => {
+    // toggleModalPix()
+    navigation.goBack()
+    navigation.navigate('InvoiceHome')
+  };
   return (
       <Tab.Navigator
         initialRouteName={InvoiceIn}
@@ -78,7 +84,7 @@ function TabsContainer() {
                 <HeaderCustom
                   // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
                   hideMessage={true}
-                  onBackPress={async () => goBack()}
+                  onBackPress={async () => handleClick()}
                   // onBackPress={() => navigate(-2)}
                   backgroundColor={theme.COLORS.PRIMARY_800}
                   isPrimaryColorDark
@@ -109,7 +115,7 @@ function TabsContainer() {
         }}
         >
         <Tab.Screen name={InvoiceIn} component={InvoiceIntro} />
-        <Tab.Screen name={PaymentIn} component={InvoiceSendToHome} />
+        <Tab.Screen name={PaymentIn} component={InvoiceBillPayment} />
         <Tab.Screen name={InvoiceMin} component={InvoiceMinPayment} />
         <Tab.Screen name={InvoiceSend} component={PaymentInvoice} />
         {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
