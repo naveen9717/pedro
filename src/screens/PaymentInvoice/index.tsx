@@ -165,6 +165,10 @@ export function PaymentInvoice() {
   const { goBack } = useNavigation();
   const [btnClick, setBtnClick] = useState(0);
 
+  const handleClickBack = () => {
+    // toggleModalPix()
+    navigation.navigate('InvoiceHome')
+  };
   function handleHome() {
     changeStep(0);
   }
@@ -201,21 +205,21 @@ export function PaymentInvoice() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
-              onBackPress={async () => goBack()}
+              onBackPress={async () => handleClickBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
-            /> */}
+              leftAction={'back'}
+            /> 
+            <AccessibilityWidget
+            marginTop={
+              Platform.OS === 'android' ? StatusBar.currentHeight : 0
+            }
+            />
 
             <ScrollView>
               <MainGenericContainer

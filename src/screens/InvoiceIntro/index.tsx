@@ -184,12 +184,12 @@ export function InvoiceIntro() {
 
   return (
     <>
-      <AlertModal
+      {/* <AlertModal
         showModal={showModal}
         setShowModal={handleModal}
         msg={modalInfo.msg}
         title={modalInfo.title}
-      />
+      /> */}
      
       {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
@@ -200,8 +200,8 @@ export function InvoiceIntro() {
         /> */}
   
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
@@ -214,7 +214,7 @@ export function InvoiceIntro() {
             marginTop={
               Platform.OS === 'android' ? StatusBar.currentHeight : 0
             }
-            /> */}
+            />
 
             <ScrollView>
               <MainGenericContainer

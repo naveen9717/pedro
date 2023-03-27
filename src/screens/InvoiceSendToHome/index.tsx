@@ -109,8 +109,8 @@ export function InvoiceSendToHome() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
@@ -118,12 +118,12 @@ export function InvoiceSendToHome() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
-            /> */}
+            /> 
+             <AccessibilityWidget
+             marginTop={
+              Platform.OS === 'android' ? StatusBar.currentHeight : 0
+             }
+            />
 
             <ScrollView>
               <MainGenericContainer

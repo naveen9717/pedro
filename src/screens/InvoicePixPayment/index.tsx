@@ -20,6 +20,7 @@ import { MainGenericContainer } from '../../components/Containers/index';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
+import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 
 import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
 import { ContainerLoading } from '../Login/styles';
@@ -109,8 +110,8 @@ export function InvoicePixPayment() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
-              marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+            <HeaderCustom
+              // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
@@ -118,12 +119,12 @@ export function InvoicePixPayment() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
-            /> */}
+            /> 
+            <AccessibilityWidget
+             marginTop={
+              Platform.OS === 'android' ? StatusBar.currentHeight : 0
+              }
+            />
 
             <ScrollView>
               <MainGenericContainer

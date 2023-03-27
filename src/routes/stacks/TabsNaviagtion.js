@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer,useRoute } from '@react-navigation/native';
 import { useNavigate } from "react-router-dom";
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -48,16 +48,18 @@ function TabsContainer() {
   const { goBack } = useNavigation();
   // let history = useHistory();
   const dimensions = useWindowDimensions();
+  const route = useRoute();
 
   const handleClick = () => {
     // toggleModalPix()
+    console.log('routename',route.name);
     navigation.goBack()
     navigation.navigate('InvoiceHome')
   };
   return (
       <Tab.Navigator
         initialRouteName={InvoiceIn}
-        
+        options={{headerShown: false}}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -79,27 +81,27 @@ function TabsContainer() {
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          header: () => (
-                <>
-                <HeaderCustom
-                  // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
-                  hideMessage={true}
-                  onBackPress={async () => handleClick()}
-                  // onBackPress={() => navigate(-2)}
-                  backgroundColor={theme.COLORS.PRIMARY_800}
-                  isPrimaryColorDark
-                  isFocused={false}
-                  // leftOnPress={handleHome}
-                  leftAction={'back'}
+          // header: () => (
+          //       <>
+          //       <HeaderCustom
+          //         // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+          //         hideMessage={true}
+          //         onBackPress={async () => handleClick()}
+          //         // onBackPress={() => navigate(-2)}
+          //         backgroundColor={theme.COLORS.PRIMARY_800}
+          //         isPrimaryColorDark
+          //         isFocused={false}
+          //         // leftOnPress={handleHome}
+          //         leftAction={'back'}
                   
-                />
-                <AccessibilityWidget
-                marginTop={
-                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
-                }
-               />
-               </>
-              ),
+          //       />
+          //       <AccessibilityWidget
+          //       marginTop={
+          //        Platform.OS === 'android' ? StatusBar.currentHeight : 0
+          //       }
+          //      />
+          //      </>
+          //     ),
         })}
         drawerContent={() => <CustomMenuStandard />}
          tabBarOptions={{
@@ -114,10 +116,10 @@ function TabsContainer() {
           },
         }}
         >
-        <Tab.Screen name={InvoiceIn} component={InvoiceIntro} />
-        <Tab.Screen name={PaymentIn} component={InvoiceBillPayment} />
-        <Tab.Screen name={InvoiceMin} component={InvoiceMinPayment} />
-        <Tab.Screen name={InvoiceSend} component={PaymentInvoice} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
+        <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoiceBillPayment} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceMinPayment} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={PaymentInvoice} />
         {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
 
         {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
