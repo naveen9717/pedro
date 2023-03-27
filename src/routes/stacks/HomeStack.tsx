@@ -130,10 +130,9 @@ export function HomeStack() {
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
 
-      {/* <Screen name="PaymentInvoice" component={PaymentInvoice} /> */}
-      {/* <Screen name="Pag" component={PagarConta} /> */}
+      
 
-      {/* <Screen name="Tabs" component={TabsContainer} /> */}
+      <Screen name="Tabs" component={TabsContainer} />
 
       {/* <Screen name="routesmenu" component={MenuStack} /> */}
       {/* <Screen name="configuration" component={Configuration} /> */}
