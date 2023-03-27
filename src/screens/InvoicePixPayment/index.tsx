@@ -87,7 +87,7 @@ export function InvoicePixPayment() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('MinhaContaAtual' as never);
+    navigation.navigate('Meus dados' as never);
   };
 
   return (
@@ -113,12 +113,12 @@ export function InvoicePixPayment() {
             <HeaderCustom
               // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
-              onBackPress={async () => goBack()}
+              onBackPress={async () => handleClick()}
               backgroundColor={theme.COLORS.PRIMARY_800}
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
+              leftAction={'back'}
             /> 
             <AccessibilityWidget
              marginTop={
