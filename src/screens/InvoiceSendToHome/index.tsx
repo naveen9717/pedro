@@ -86,7 +86,7 @@ export function InvoiceSendToHome() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('fourteen' as never);
+    navigation.navigate('InvoiceSendedWithSuccess' as never);
   };
 
   return (
@@ -168,7 +168,7 @@ cobrado em sua próxima fatura.</Text>
                    title="Alterar endereço de entrega"
                    type="primary"
                    // onPress={handleSignIn}
-                   onPress={handleClick}
+                  //  onPress={handleClick}
                    isLoading={isLogging}
                  />
 

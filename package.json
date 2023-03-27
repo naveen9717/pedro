@@ -56,6 +56,7 @@
     "react-native-vector-icons": "^9.2.0",
     "react-native-webview": "^11.25.1",
     "react-redux": "^8.0.5",
+    "react-router-dom": "^6.9.0",
     "redux": "^4.2.0",
     "rnv-date-range-picker": "^1.2.6",
     "styled-components": "^5.3.6",

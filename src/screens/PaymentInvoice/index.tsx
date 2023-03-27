@@ -139,148 +139,12 @@ export function PaymentInvoice() {
     }
   };
   useEffect(() => {
-    const iOSSDPlugin = NativeModules.RnSmiSdk;
-    const { SmiSdkReactModule } = NativeModules;
-    // saveFreeInternetDate(null);
-    const date = new Date();
-    getFreeInternetDate();
-    // if (freeInternetDate) {
-    console.log('free', freeInternetDate);
-    if ((freeInternetDate && date > freeInternetDate) || !freeInternetDate) {
-      // if (!netInfo.isConnected) {
-      //   if (Platform.OS === 'ios') {
-      //     iOSSDPlugin.startSponsorVpn();
-      //   } else {
-      //     SmiSdkReactModule.startSponsoredData();
-      //   }
-      // }
-      const apiResponse = { date: '2022-12-29_00:00' };
-      let apiDate: Date;
-      if (apiResponse?.date) {
-        apiDate = createDate(
-          apiResponse.date.slice(0, 10),
-          apiResponse.date.slice(11, 16),
-        ) as Date;
-        if (date < apiDate) {
-          saveFreeInternetDate(apiDate);
-          dispatch({ type: FREE_INTERNET, freeInternet: false });
-          // if (Platform.OS === 'ios') {
-          //   iOSSDPlugin.stopSponsorVpn();
-          // } else {
-          //   SmiSdkReactModule.stopSponsoredData();
-          // }
-        } else {
-          dispatch({ type: FREE_INTERNET, freeInternet: true });
-          saveFreeInternetDate(null);
-        }
-
-        //setar internet gratuita bloqueada
-        //desabilitar internet gratuita
-      } else {
-        dispatch({ type: FREE_INTERNET, freeInternet: true });
-        saveFreeInternetDate(null);
-      }
-    } else {
-      dispatch({ type: FREE_INTERNET, freeInternet: false });
-    }
-    if (Platform.OS === 'ios') {
-      iOSSDPlugin.stopSponsorVpn();
-      console.log('Desligou ios');
-    } else {
-      SmiSdkReactModule.stopSponsoredData();
-      console.log('Desligou Android');
-    }
+  
   }, []);
 
   const { height } = Dimensions.get('window');
-  let webViewRef = useRef<any>();
-  const viewPageCPFL = () => {
-    return (
-      <WebView
-        originWhitelist={['*']}
-        style={{
-          height: height,
-          marginTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-        }}
-        source={{
-          // uri: 'https://servicosonlineq.cpfl.com.br:8443/agencia-webapp/#/login-agd?key=XPTO',
+ 
 
-          // uri: 'http://cpsdaanav01:8030/validausuario.aspx?key=instalacao=123456&token=XYZ',
-          // uri: 'http://cpsdaanav01:8031/validausuario.aspx?key=XPTO',
-          uri: 'https://www.cpfl.com.br/',
-        }}
-      />
-    );
-  };
-
-  const viewRegisterCPFL = () => {
-    const handlePageChange = (e: WebViewNavigation) => {
-      console.log(e);
-
-      if (
-        // !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-identificacao'
-      ) {
-        setTimeout(() => {
-          webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('h3').item(0).remove();
-        document.getElementsByClassName('navbar navbar-custom navbar-fixed-top navbar-static-top').item(0).remove();
-        document.getElementsByClassName('breadcrumb').item(0).remove();
-        document.getElementsByClassName('rodape').item(0).remove();
-        document.getElementsByClassName('copyright').item(0).querySelector('span').remove();
-  
-       
-      `);
-        }, 1800);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-usuario'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-      `);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-dados-instalacao'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-      `);
-      } else if (
-        !e.loading &&
-        e.url ===
-        'https://servicosonline.cpfl.com.br/agencia-webapp/#/resultado'
-      ) {
-        webViewRef?.current?.injectJavaScript(`
-        document.getElementsByTagName('ol').item(0).remove();
-        document.getElementById('btnBaixarPdf').remove()
-        document.getElementById('btnVoltar').remove()
-      `);
-      }
-    };
-
-    return (
-      <WebView
-        onNavigationStateChange={handlePageChange}
-        showsHorizontalScrollIndicator={false}
-        automaticallyAdjustContentInsets={true}
-        onMessage={event => {
-          console.log('event: ', event);
-        }}
-        ref={webViewRef}
-        style={{
-          height: height,
-        }}
-        javaScriptEnabled={true}
-        source={{
-          uri: 'https://servicosonline.cpfl.com.br/agencia-webapp/#/login/cadastrar-identificacao',
-        }}
-      />
-    );
-  };
 
   const webViewRender = (value: number) => {
     switch (String(value)) {
@@ -310,9 +174,12 @@ export function PaymentInvoice() {
     navigation.navigate('Info')
   };
 
+  const handleClickCopiar = () => {
+    // toggleModalPix()
+    navigation.navigate('InvoiceSolicitedInfo')
+  };
 
-  
-  
+
 
   return (
     <>
@@ -466,41 +333,6 @@ export function PaymentInvoice() {
                     </View>
                   </View>
 
-                  {/* <View style={{flexDirection: 'row'}}>
-                    <Card style={{backgroundColor:'white', borderRadius: 10,flex:1,borderBottomEndRadius:0,borderTopEndRadius:0,marginTop: 2,}}>                
-                      <Card.Content>
-                       <View style={{flexDirection: 'row'}}>
-                        <View>
-                         <Text style={styles.smalltext}>Pagar</Text>
-                         <Text style={styles.smalltext}>com Pix</Text>
-                        <Image
-                        source={require('../../assets/icons/icGroup.png')}
-                         style={styles.icon}
-                         />
-                      </View>
-                    </View>
-                  </Card.Content>
-               </Card>
-
-                <Card style={{backgroundColor:'#02ade1',flex: 2,borderRadius: 10,borderBottomLeftRadius:0,borderBottomStartRadius:0,borderTopLeftRadius:0,marginTop: 2,}}>
-                
-                    <Card.Content>
-                    <View style={styles.container}>
-                   
-                    <View style={{flexDirection: 'column', justifyContent:'space-around'}}>
-                   
-                    <View style={{flexDirection: 'column',  alignItems:'center' ,justifyContent:'center',alignSelf:'center',width:'50%'}}>
-                     <Text style={styles.white}>Copia e cola</Text>
-                     </View>
-                     <View style={{flexDirection: 'column',  alignItems:'center' ,justifyContent:'center',alignContent:'center'}}>
-                     <Text style={styles.white}>Ver QR code</Text>
-                   </View>
-                 </View>
-                 </View>
-                  </Card.Content>
-                  </Card>
-
-                  </View>*/}
                 </View>
 
                 <TouchableWithoutFeedback onPress={toggleModal}>
@@ -518,8 +350,6 @@ export function PaymentInvoice() {
                           <Text style={[styles.bartext, {marginTop:20}]}>Código de</Text>
                           <Text style={[styles.bartext, {marginTop:2, marginBottom:-2}]}>barra</Text>
                         </View>
-
-
                       </View>
                     </Card.Content>
                   </Card>
@@ -529,8 +359,6 @@ export function PaymentInvoice() {
 
 
               <View style={{ flex: 1 }}>
-
-
                 <Modal isVisible={isModalVisible} style={{ margin: 0 }}>
                   <View
                     style={{
@@ -550,7 +378,6 @@ export function PaymentInvoice() {
                           paddingVertical: 5,
 
                         }}>
-
 
                         <View
                           style={{
@@ -656,7 +483,7 @@ export function PaymentInvoice() {
                                 title="Copiar código PIX"
                                 type="secondary"
                                 // onPress={handleSignIn}
-                                onPress={handleClick}
+                                onPress={handleClickCopiar}
                                 isLoading={isLogging}
                               />
 
@@ -800,19 +627,7 @@ export function PaymentInvoice() {
           </>
         ) : (
           <>
-            <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
-            {webViewRender(step)}
+            
           </>
         )}
       </SafeAreaView>

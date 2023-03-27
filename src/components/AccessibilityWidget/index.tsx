@@ -45,7 +45,7 @@ export const AccessibilityWidget: React.FC<Props> = ({marginTop}) => {
   const {width} = Dimensions.get('window');
   return (
     <StyledContainer>
-      <StyledContainerView marginTop={marginTop} onPress={handleToggle}>
+      <StyledContainerView  onPress={handleToggle}>
         <StyledMotiViewButton
           state={animateState}
           style={{width: width * 0.17289}}>

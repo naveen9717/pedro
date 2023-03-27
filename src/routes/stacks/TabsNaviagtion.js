@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
+import { useNavigate } from "react-router-dom";
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
@@ -41,72 +43,15 @@ function TabsContainer() {
   const theme = useTheme();
 
   const {Navigator, Screen} = createDrawerNavigator();
-  const { goBack } = useNavigation();
+  // const navigate = useNavigate();
 
+  const { goBack } = useNavigation();
+  // let history = useHistory();
   const dimensions = useWindowDimensions();
   return (
       <Tab.Navigator
         initialRouteName={InvoiceIn}
         
-        // screenOptions={{
-        //   // headerShown: false,
-        //   tabBarIcon: ({ focused, color, size }) => {
-        //         let iconName;
-        //         let rn = route.name;
-    
-        //         if (rn === buttonName) {
-        //           iconName = focused ? 'grid' : 'grid';
-    
-        //         } else if (rn === pagName) {
-        //           iconName = focused ? 'add-circle' : 'add-circle';
-
-        //         } else if (rn === tenName) {
-        //           iconName = focused ? 'contact' : 'contact';
-
-        //         } else if (rn === InvoiceSend) {
-        //           iconName = focused ? 'contact' : 'contact';
-        //   }
-        //     // You can return any component that you like here!
-        //     return <Ionicons name={iconName} size={size} color={color} />;
-        //   },
-        //   //   },
-        //   drawerType: dimensions.width >= 768 ? 'permanent' : 'front',
-        //   // drawerStyle: {
-        //   //   backgroundColor: theme.COLORS.DRAWER_STYLE,
-        //   // },
-        //   header: () => (
-        //     <>
-        //     <HeaderCustom
-        //       // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
-        //       hideMessage={true}
-        //       onBackPress={async () => goBack()}
-        //       backgroundColor={theme.COLORS.PRIMARY_800}
-        //       isPrimaryColorDark
-        //       isFocused={false}
-        //       // leftOnPress={handleHome}
-        //       leftAction={'back'}
-              
-        //     />
-        //     <AccessibilityWidget
-        //     marginTop={
-        //      Platform.OS === 'android' ? StatusBar.currentHeight : 0
-        //     }
-        //    />
-        //    </>
-        //   ),
-        // }}
-        // drawerContent={() => <CustomMenuStandard />}
-        // tabBarOptions={{
-        //   activeTintColor: '#02ade1',
-        //   inactiveTintColor: 'gray',
-        //   labelStyle: { fontSize: 14, fontWeight:"700",paddingBottom: 5,paddingTop: 5, fontSize: 10 },
-        //   style: { backgroundColor: 'gray', elevation: 0, shadowOpacity: 0, borderTopWidth:2, borderColor:'orange' },
-        //   indicatorStyle: {    borderTopColor: 'teal',
-        //     borderTopWidth: 2,
-        //     flex:1,
-        //     left:"9%"
-        //   },
-        // }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
@@ -134,6 +79,7 @@ function TabsContainer() {
                   // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
                   hideMessage={true}
                   onBackPress={async () => goBack()}
+                  // onBackPress={() => navigate(-2)}
                   backgroundColor={theme.COLORS.PRIMARY_800}
                   isPrimaryColorDark
                   isFocused={false}
@@ -163,7 +109,7 @@ function TabsContainer() {
         }}
         >
         <Tab.Screen name={InvoiceIn} component={InvoiceIntro} />
-        <Tab.Screen name={PaymentIn} component={PaymentInvoice} />
+        <Tab.Screen name={PaymentIn} component={InvoiceSendToHome} />
         <Tab.Screen name={InvoiceMin} component={InvoiceMinPayment} />
         <Tab.Screen name={InvoiceSend} component={PaymentInvoice} />
         {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
