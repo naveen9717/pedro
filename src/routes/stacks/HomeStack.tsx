@@ -59,8 +59,8 @@ export function HomeStack() {
         //   headerShown: true,
         //   header: () => <AccessibilityWidget marginTop={30} />,
         // }}
-        name="welcome"
-        component={Welcome}
+        name="Tabs"
+        component={TabsContainer}
       />
       {/* <Screen
         options={{
@@ -132,7 +132,7 @@ export function HomeStack() {
 
       
 
-      <Screen name="Tabs" component={TabsContainer} />
+      {/* <Screen name="Tabs" component={TabsContainer} /> */}
 
       {/* <Screen name="routesmenu" component={MenuStack} /> */}
       {/* <Screen name="configuration" component={Configuration} /> */}
