@@ -16,6 +16,8 @@ import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { Title, ContainerViewButton } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
+import { AccessibilityWidget } from '../../components/AccessibilityWidget';
+
 // import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { Button } from '../../components/Button';

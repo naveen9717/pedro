@@ -12,7 +12,8 @@ import {
   TouchableOpacity,
   Pressable,
   TouchableHighlight,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  TouchableWithoutFeedbackComponent
 } from 'react-native';
 // Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -181,6 +182,16 @@ export function PaymentInvoice() {
   const handleClickCopiar = () => {
     // toggleModalPix()
     navigation.navigate('InvoiceSolicitedInfo')
+  };
+
+  const handleClickEnviar = () => {
+    // toggleModalPix()
+    navigation.navigate('Ajuda')
+  };
+
+  const handleClickPix = () => {
+    // toggleModalPix()
+    navigation.navigate('Serviços')
   };
 
 
@@ -429,10 +440,10 @@ export function PaymentInvoice() {
                               />
                               <View style={{ marginVertical: 10 }}></View>
                               <Button
-                                title="Enviar por corres pondência"
+                                title="Enviar por correspondência"
                                 type="primary"
                                 // onPress={handleSignIn}
-                                onPress={handleClick}
+                                onPress={handleClickEnviar}
                                 isLoading={isLogging}
 
                               />
@@ -507,7 +518,8 @@ export function PaymentInvoice() {
 
                                 </View>
                                 <View style={styles.bottom}>
-                                  <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text>
+                                <TouchableOpacity onPress={handleClickPix}>
+                                 <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text></TouchableOpacity>
                                 </View>
                               </View>
 
