@@ -189,7 +189,7 @@ export function InvoiceBillPayment() {
 
                 <View style={{flexDirection:'row'}}>
                  
-                <Card style={{ backgroundColor: '#fff', width: '30%',marginHorizontal:10 }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10 }}>
                  <Card.Content>
                       <View>
                          <Image
@@ -201,7 +201,7 @@ export function InvoiceBillPayment() {
                       </View>
                  </Card.Content>
                </Card>
-               <Card style={{ backgroundColor: '#fff', width: '30%',marginHorizontal:10  }}>
+               <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10  }}>
                  <Card.Content>
                       <View>
                          <Image
@@ -214,6 +214,7 @@ export function InvoiceBillPayment() {
                       </View>
                  </Card.Content>
                </Card>
+               <View style={{ flex: 2,marginHorizontal:10  }}></View>
             </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>

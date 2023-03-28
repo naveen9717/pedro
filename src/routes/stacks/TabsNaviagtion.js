@@ -125,10 +125,7 @@ function TabsContainer() {
         <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
-        <Tab.Screen options={{
-          headerShown: false,
-        }}
-         name="Meus dados" component={MainNaviagtor} />   
+        <Tab.Screen options={{headerShown: false}} name="Meus dados" component={MainNaviagtor} />   
       </Tab.Navigator>
   );
 }
