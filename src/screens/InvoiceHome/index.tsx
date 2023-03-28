@@ -44,6 +44,7 @@ export function InvoiceHome() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(false);
+
   const [dataMain, setDataMain] = useState({})
   const [dataSource, setDataSource] = useState([])
   const [selectedRange, setRange] = useState({});
@@ -200,13 +201,14 @@ export function InvoiceHome() {
 
                 </View>
                 <View style={styles.checkboxContainer}>
+                {/* Optional chaining used while api get data*/}
                   <CardMain 
                     key={1}
                     title="Instalaçãão"
                     status='statusPagamento'
                     code_install='03636367'
-                    // status={dataMain.data['statusPagamento']}
-                    // code_install={dataMain.data['valorContaAtual']}
+                    status={dataMain.data?.statusPagamento}
+                    code_install={dataMain.data?.valorContaAtual}
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
                   /> 
