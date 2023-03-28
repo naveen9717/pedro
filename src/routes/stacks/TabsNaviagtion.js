@@ -29,6 +29,7 @@ import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
 import { InvoiceHome } from '../../screens/InvoiceHome';
 import { blue400, grey100 } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
 import { PagarInfo } from '../../screens/InvoiceSolicitedInfo';
+import MainNaviagtor from './MainNavigator';
 
 //Screen names
 const InvoiceIn = "Início";
@@ -124,17 +125,15 @@ function TabsContainer() {
         <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
-        <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={PaymentInvoice} />
+        {/* <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={PaymentInvoice} /> */}
         {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
 
         {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
-
-        <Tab.Screen options={{headerShown: false}} name={InvoiceBill} component={InvoiceBillPayment} />  
-
-
-      
-        
-
+ 
+        <Tab.Screen options={{
+          headerShown: false,
+        }}
+         name="Meus dados" component={MainNaviagtor} />   
       </Tab.Navigator>
   );
 }

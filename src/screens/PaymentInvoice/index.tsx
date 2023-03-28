@@ -157,7 +157,7 @@ export function PaymentInvoice() {
 
   const handleClickBarras = () => {
     // toggleModalPix()
-    navigation.navigate('Meus')
+    navigation.navigate('InvoiceBillPayment')
   };
 
 

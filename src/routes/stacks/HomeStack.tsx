@@ -46,6 +46,7 @@ import { FinishRegistration } from '../../screens/FinishRegistration';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { useTheme } from 'styled-components';
 import TabsContainer from './TabsNaviagtion';
+import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
 
 
 const { Navigator, Screen } = createNativeStackNavigator();
@@ -129,49 +130,10 @@ export function HomeStack() {
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
-      {/* <Screen name="PaymentInvoice" component={PaymentInvoice} /> */}
-
-      
-
-      {/* <Screen name="Tabs" component={TabsContainer} /> */}
-
-      {/* <Screen name="routesmenu" component={MenuStack} /> */}
-      {/* <Screen name="configuration" component={Configuration} /> */}
-      {/* <Screen
-        options={{
-          headerShown: true,
-          header: () => (
-            <>
-              <Header
-                backgroundColor={theme.COLORS.PRIMARY_800}
-                isPrimaryColorDark
-              />
-              <AccessibilityWidget />
-            </>
-          ),
-        }}
-        name="configurationFistAccess"
-        component={ConfigurationFirstAccess}
-      /> */}
+     
       <Screen name="selectInstallation" component={SelectInstallation} />
-      {/* <Screen name="about" component={About} />
-      <Screen name="takeSecondProof" component={TakeSecondProof} />
-      <Screen name="infoPagSecondProof" component={InformationPagSecondProof} />
-      <Screen name="sendByMailSecondProof" component={SendByMailSecondProof} />
-      <Screen name="ListSecondProof" component={ListSecondProof} />
-      <Screen name="minimalAccount" component={MinimalAccount} />
-      <Screen name="paymentMethod" component={PaymentMethod} />
-      <Screen name="infoPagtoByBarCode" component={InfoPagtoByBarCode} />
-      <Screen name="InfoPagtoByPix" component={InfoPagtoByPix} />
-      <Screen name="ViewDownload" component={ViewDownload} />
-      <Screen name="EasyAccount" component={EasyAccount} />
-      <Screen name="UnderstandBill" component={UnderstandBill} />
-      <Screen
-        name="EasyAccountAllInformation"
-        component={EasyAccountAllInformation}
-      />
-      <Screen name="PowerOutage" component={PowerOutageNavigation} />
-      <Screen name="NoInternetLayout" component={NoInternetLayout} /> */}
+      
+      
     </Navigator>
   );
 }
