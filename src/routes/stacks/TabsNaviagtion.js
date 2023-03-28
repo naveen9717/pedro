@@ -129,7 +129,7 @@ function TabsContainer() {
 
         {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
 
-        <Tab.Screen name={InvoiceBill} component={InvoiceBillPayment} />  
+        <Tab.Screen options={{headerShown: false}} name={InvoiceBill} component={InvoiceBillPayment} />  
 
 
       

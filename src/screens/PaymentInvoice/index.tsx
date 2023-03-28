@@ -55,8 +55,6 @@ import { AlertModal } from '../../components/Modal/AlertModal';
 import CardMain from '../../components/CardMain';
 import CardChild from '../../components/CardChild';
 import { Card, Paragraph } from 'react-native-paper';
-// import {Spinner} from '../../components/Spinner/styles';
-// import { getBottomSpace } from 'react-native-iphone-x-helper';
 import Modal from "react-native-modal";
 
 export function PaymentInvoice() {
@@ -105,30 +103,7 @@ export function PaymentInvoice() {
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
-
-  const saveFreeInternetDate = async (value: Date | null) => {
-    // const userLogin = {email, password};
-    await AsyncStorage.setItem('freeInternetDate', JSON.stringify(value));
-  };
-
-  const getFreeInternetDate = async () => {
-    AsyncStorage.getItem('freeInternetDate', (err, result) => {
-      const FREE_INTERNET_DATE: Date = JSON.parse(result);
-      console.log('Free: ', FREE_INTERNET_DATE);
-      if (result && !err) {
-        // return FREE_INTERNET_DATE;
-        setFreeInternetDate(FREE_INTERNET_DATE);
-      }
-    });
-  };
-
-  const signInAsync = () => {
-    // const handleIsLoading = (value: boolean) => {
-    //   setIsLoading(value);
-    // };
-
-    b2cLogin(dispatch, navigation, setModalInfo, setshowModal);
-  };
+ 
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -145,20 +120,6 @@ export function PaymentInvoice() {
 
   const { height } = Dimensions.get('window');
  
-
-
-  const webViewRender = (value: number) => {
-    switch (String(value)) {
-      case '1':
-        return viewPageCPFL();
-      case '2':
-        return viewRegisterCPFL();
-
-      default:
-        break;
-    }
-  };
-
   const theme = useTheme();
   const changeStep = (s: number) => {
     setStep(s);
