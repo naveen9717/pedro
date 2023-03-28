@@ -125,11 +125,6 @@ function TabsContainer() {
         <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
-        {/* <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={PaymentInvoice} /> */}
-        {/* <Tab.Screen name={InvoiceSend} component={PaymentInvoice} /> */}
-
-        {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
- 
         <Tab.Screen options={{
           headerShown: false,
         }}

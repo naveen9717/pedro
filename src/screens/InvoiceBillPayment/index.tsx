@@ -120,7 +120,7 @@ export function InvoiceBillPayment() {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
+              leftAction={'back'}
             />
             <AccessibilityWidget
              marginTop={
