@@ -189,7 +189,7 @@ export function InvoiceBillPayment() {
 
                 <View style={{flexDirection:'row'}}>
                  
-                <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10 }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10,borderRadius:3 }}>
                  <Card.Content>
                       <View>
                          <Image
@@ -201,7 +201,7 @@ export function InvoiceBillPayment() {
                       </View>
                  </Card.Content>
                </Card>
-               <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10  }}>
+               <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10,borderRadius:3   }}>
                  <Card.Content>
                       <View>
                          <Image
