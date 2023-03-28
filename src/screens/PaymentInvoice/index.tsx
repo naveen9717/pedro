@@ -194,6 +194,11 @@ export function PaymentInvoice() {
     navigation.navigate('Serviços')
   };
 
+  const handleClickBarras = () => {
+    // toggleModalPix()
+    navigation.navigate('Meus')
+  };
+
 
 
   return (
@@ -450,7 +455,9 @@ export function PaymentInvoice() {
 
                             </ContainerViewButton>
                             <View style={styles.bottom}>
+                            <TouchableOpacity onPress={handleClickBarras}>
                               <Text style={styles.second}>Como realizar seu pagamento via Código barras?></Text>
+                            </TouchableOpacity>
                             </View>
 
                           </View>

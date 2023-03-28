@@ -35,6 +35,8 @@ const InvoiceIn = "Início";
 const PaymentIn = "Serviços";
 const InvoiceMin = "Ajuda";
 const InvoiceSend ="Meus dados";
+const InvoiceBill ="Meus";
+
 
 const Tab = createBottomTabNavigator();
 
@@ -76,6 +78,9 @@ function TabsContainer() {
             }
             else if (rn === InvoiceSend) {
               iconName = focused ? 'people-circle-outline' : 'people-circle-outline';
+            }
+            else if (rn === InvoiceBill) {
+              iconName = focused ? 'settings-outline' : 'settings-outline';
             }
 
             // You can return any component that you like here!
@@ -124,7 +129,7 @@ function TabsContainer() {
 
         {/* <Tab.Screen name="InvoicePixPayment" component={InvoicePixPayment} />  */}
 
-        {/* <Tab.Screen name="InvoiceBillPayment" component={InvoiceBillPayment} />   */}
+        <Tab.Screen name={InvoiceBill} component={InvoiceBillPayment} />  
 
 
       
