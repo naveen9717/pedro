@@ -276,9 +276,9 @@ const styles = StyleSheet.create({
     marginLeft:10
   },
   smalltextbold: {
-    fontSize: 12,
+    fontSize: 12.5,
     color:'black',
-    fontWeight:'500'
+    fontWeight:'700'
   },
   bullettext: {
     fontSize: 12,
