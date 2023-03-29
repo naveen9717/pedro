@@ -1,0 +1,6 @@
+module Pods_CPFLMOBILE {
+  umbrella header "Pods-CPFLMOBILE-umbrella.h"
+
+  export *
+  module * { export * }
+}

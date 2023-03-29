@@ -14,8 +14,6 @@ import {
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-
-
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
@@ -43,7 +41,6 @@ export function InvoiceHome() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(false);
 
   const [dataMain, setDataMain] = useState({})
   const [dataSource, setDataSource] = useState([])
@@ -60,15 +57,8 @@ export function InvoiceHome() {
     setModalPixVisible(!isModalPixVisible)
   }
 
-
-  const dispatch = useDispatch();
-  function handleSignIn() {
-    navigation.navigate('login' as never);
-  }
   const netInfo = useNetInfo();
-  // function handleSignUp() {
-  //   navigation.navigate('emailverification' as never);
-  // }
+
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);
@@ -82,7 +72,6 @@ export function InvoiceHome() {
   console.log('dataSource:', dataSource);
   console.log('dataMain:', dataMain);
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
@@ -114,11 +103,8 @@ export function InvoiceHome() {
   const { height } = Dimensions.get('window');
  
   const theme = useTheme();
-  const changeStep = (s: number) => {
-
-  };
+  
   const { goBack } = useNavigation();
-  const [btnClick, setBtnClick] = useState(0);
 
   function handleHome() {
     navigation.navigate('')
@@ -161,10 +147,6 @@ export function InvoiceHome() {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-      <SafeAreaView
-        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
-      />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -190,8 +172,7 @@ export function InvoiceHome() {
             />
 
             <ScrollView>
-              <MainGenericContainer
-                style={{ paddingTop: height * 0.02 }}>
+              <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
                     Minha conta atual
@@ -213,7 +194,6 @@ export function InvoiceHome() {
                 Campinas/SP - CEP 13256-558"
                   /> 
                   
-                 {/* <Text>{new Date('2020-12-28').toLocaleDateString(undefined, { month: 'short'})}</Text> */}
                  <View style={styles.filter}>
                  
                  <View style={styles.filterInner}>
@@ -310,8 +290,7 @@ export function InvoiceHome() {
                             <View style={{ marginVertical: 8 }}>
                               <Text style={styles.mediumtextbold}>Período de referência </Text>
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
-                              {/* <Text style={{color:'black'}}>first date: {selectedRange.firstDate}</Text>
-                              <Text>second date: {selectedRange.secondDate}</Text> */}
+                             
                             </View>
 
                             <ContainerViewButton>

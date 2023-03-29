@@ -12,13 +12,10 @@ import {
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
-
 import { Title, ContainerViewButton } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
 import { AccessibilityWidget } from '../../components/AccessibilityWidget';
-
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { Button } from '../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
@@ -40,9 +37,7 @@ export function InvoiceSendToHome() {
     navigation.navigate('login' as never);
   }
   const netInfo = useNetInfo();
-  // function handleSignUp() {
-  //   navigation.navigate('emailverification' as never);
-  // }
+
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);
@@ -99,10 +94,7 @@ export function InvoiceSendToHome() {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-      <SafeAreaView
-        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
-      />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
+    
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -128,9 +120,7 @@ export function InvoiceSendToHome() {
             />
 
             <ScrollView>
-              <MainGenericContainer
-                style={{ paddingTop: height * 0.02, height: height }}>
-                
+              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
                   Enviar por correspondência
@@ -141,9 +131,7 @@ export function InvoiceSendToHome() {
 cobrado em sua próxima fatura.</Text>
                  
                 </View>
-
                 <View style={{ paddingBottom: height * 0.0324, }}>
-
                   <Title paddingBottom={height * 0.0216}>
                   Endereço de entrega
                   </Title>

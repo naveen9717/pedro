@@ -19,41 +19,21 @@ import {
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 
-import {
-  authorize,
-  AuthorizeResult,
-  refresh,
-  revoke,
-} from 'react-native-app-auth';
-import { NativeModules } from 'react-native';
-import WebView from 'react-native-webview';
-// import {AuthManager} from '../../service/azureB2C/AuthManager';
-// import {AuthConfig} from '../../service/azureB2C';
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
-import { Strong } from '../../components/Generic/index';
 import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
 // import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../components/HeaderCustom';
-import { createDate } from '../../helpers/functions/datas';
 import { Button } from '../../components/Button';
-import { api } from '../../service/api';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
-import { B2C_DATA, FREE_INTERNET } from '../../redux/actions/actionsTypes';
-import { AuthManager } from '../../service/azureB2C/AuthManager';
-import { DecodedB2cData } from '../../models/b2c/data';
-import { ApiUser } from '../../service/user';
-import jwtDecode from 'jwt-decode';
 import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
 import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
-import CardMain from '../../components/CardMain';
-import CardChild from '../../components/CardChild';
+
 import { Card, Paragraph } from 'react-native-paper';
 import Modal from "react-native-modal";
 
@@ -80,14 +60,9 @@ export function PaymentInvoice() {
     setModalVisiblePop(!isModalVisiblePop)
   }
 
-  const dispatch = useDispatch();
-  function handleSignIn() {
-    navigation.navigate('login' as never);
-  }
+ 
   const netInfo = useNetInfo();
-  // function handleSignUp() {
-  //   navigation.navigate('emailverification' as never);
-  // }
+
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);
@@ -98,7 +73,6 @@ export function PaymentInvoice() {
   });
 
   console.log('Net Info:', netInfo);
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
@@ -160,8 +134,6 @@ export function PaymentInvoice() {
     navigation.navigate('InvoiceBillPayment')
   };
 
-
-
   return (
     <>
       <AlertModal
@@ -170,10 +142,7 @@ export function PaymentInvoice() {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-      <SafeAreaView
-        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
-      />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
+     
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -199,29 +168,17 @@ export function PaymentInvoice() {
             />
 
             <ScrollView>
-              <MainGenericContainer
-                style={{ paddingTop: height * 0.02, height: height }}>
-                {/* <ContainerViewLogo
-                  paddingBottom={height * 0.0541}
-                  paddingTop={height * 0.00089}>
-                  <Image
-                    source={require('../../assets/Logo_CPFL_Energia.png')}
-                  />
-                </ContainerViewLogo> */}
+              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
+                
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
                     Pagmenta da conta
                   </Title>
-
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
-
                 </View>
-
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
-
                     <Card.Content>
-
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
                           <Text style={styles.smalltext}>Pagmenta da conta</Text>
@@ -252,13 +209,10 @@ export function PaymentInvoice() {
                       </View>
                     </Card.Content>
                   </Card>
-
                 </View>
 
                 <View style={styles.checkboxContainer}>
-
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
-
                   <View style={{ flexDirection: 'row' }}>
                     <View
                       style={{
@@ -292,12 +246,9 @@ export function PaymentInvoice() {
                         borderRadius: 10, borderBottomLeftRadius: 0, borderBottomStartRadius: 0, borderTopLeftRadius: 0, marginTop: 2,
                       }}>
 
-
                       <Card.Content>
                         <View style={styles.container}>
-
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
-
                             <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
                               <Text style={styles.white}>Copia e cola</Text>
                             </View>
@@ -310,16 +261,13 @@ export function PaymentInvoice() {
                           </View>
                         </View>
                       </Card.Content>
-
                     </View>
                   </View>
-
                 </View>
 
                 <TouchableWithoutFeedback onPress={toggleModal}>
 
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
-
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -327,7 +275,6 @@ export function PaymentInvoice() {
                             source={require('../../assets/icons/icBarcode.png')}
                             style={styles.bar}
                           />
-
                           <Text style={[styles.bartext, {marginTop:20}]}>Código de</Text>
                           <Text style={[styles.bartext, {marginTop:2, marginBottom:-2}]}>barra</Text>
                         </View>
@@ -342,12 +289,7 @@ export function PaymentInvoice() {
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalVisible} style={{ margin: 0 }}>
                   <View
-                    style={{
-                      height: '70%',
-                      backgroundColor: 'white',
-                      marginTop: '80%',
-                      width: '100%'
-                    }}>
+                    style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
                     <TouchableWithoutFeedback onPress={toggleModal}>
                       <View
                         style={{
@@ -361,14 +303,7 @@ export function PaymentInvoice() {
                         }}>
 
                         <View
-                          style={{
-                            flexDirection: 'row',
-                            height: '100%',
-                            marginTop: 10,
-                          }}>
-
-
-
+                          style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>
                               <Text style={styles.mediumtextbold}>Pagamento via código de barras</Text>
@@ -413,16 +348,13 @@ export function PaymentInvoice() {
                                 isLoading={isLogging}
 
                               />
-
                             </ContainerViewButton>
                             <View style={styles.bottom}>
                             <TouchableOpacity onPress={handleClickBarras}>
                               <Text style={styles.second}>Como realizar seu pagamento via Código barras?></Text>
                             </TouchableOpacity>
                             </View>
-
                           </View>
-
                         </View>
                       </View>
                     </TouchableWithoutFeedback>
@@ -434,12 +366,7 @@ export function PaymentInvoice() {
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                   <TouchableWithoutFeedback onPress={toggleModalPix}>
                     <View
-                      style={{
-                        height: '70%',
-                        backgroundColor: 'white',
-                        marginTop: '80%',
-                        width: '100%'
-                      }}>
+                      style={{height: '70%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
                       <View
                         style={{
                           flex: 1,
@@ -461,7 +388,6 @@ export function PaymentInvoice() {
                               <Text style={styles.smalltext}>mesmo dia!</Text>
                             </View>
                             <ContainerViewButton>
-
                               <Button
                                 title="Copiar código PIX"
                                 type="secondary"
@@ -469,7 +395,6 @@ export function PaymentInvoice() {
                                 onPress={handleClickCopiar}
                                 isLoading={isLogging}
                               />
-
                             </ContainerViewButton>
 
                             <View style={styles.checkboxContainer}>
@@ -478,23 +403,18 @@ export function PaymentInvoice() {
                               <View >
 
                                 <View style={{ justifyContent: 'center', justifyContent: 'center', alignItems: 'center', }}>
-
                                   <Image
                                     source={require('../../assets/images/QrCodeImage.png')}
                                     style={styles.scanicons}
                                   />
-
                                 </View>
                                 <View style={styles.bottom}>
                                 <TouchableOpacity onPress={handleClickPix}>
                                  <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text></TouchableOpacity>
                                 </View>
                               </View>
-
-
                             </View>
                           </View>
-
                         </View>
                       </View>
                     </View>
@@ -504,31 +424,12 @@ export function PaymentInvoice() {
               </View>
 
 
-              <View style={{ flex: 1 }}>
-
-<Modal isVisible={isModalVisiblePop}>
-  <View
-    style={{
-      height: '90%',
-      backgroundColor: 'white',
-      width: '100%'
-    }}>
-    <TouchableWithoutFeedback onPress={toggleModalPix}>
-      <View
-        style={{
-          flex: 1,
-          marginTop: -30,
-          backgroundColor: 'white',
-
-        }}>
-
-        <View
-          style={{
-            flexDirection: 'row',
-            height: '100%',
-            marginTop: 10,
-          }}>
-
+        <View style={{ flex: 1 }}>
+        <Modal isVisible={isModalVisiblePop}>
+          <View style={{height: '90%',backgroundColor: 'white',width: '100%'}}>
+             <TouchableWithoutFeedback onPress={toggleModalPix}>
+              <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
+              <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
           <View style={[styles.boxcontainer]}>
             <View style={{ marginVertical: 10 }}>
               <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
@@ -557,7 +458,6 @@ export function PaymentInvoice() {
               <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
               <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
               <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
-
             </View>
            
             <ContainerViewButton>
@@ -585,7 +485,6 @@ export function PaymentInvoice() {
                 onPress={toggleModalPop}
                 isLoading={isLogging}
               />
-              
               <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
                  <CheckBox
                   value={isSelected}
@@ -600,14 +499,12 @@ export function PaymentInvoice() {
             </ContainerViewButton>
           </View>
         </View>
-      </View>
-    </TouchableWithoutFeedback>
+       </View>
+      </TouchableWithoutFeedback>
+   </View>
+  </Modal>
   </View>
-</Modal>
-</View>
-
-
-            </ScrollView>
+ </ScrollView>
           </>
         ) : (
           <>

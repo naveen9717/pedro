@@ -4,17 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {
-  Platform,
-  StatusBar
-} from 'react-native';
-// Screens
+
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { useTheme } from 'styled-components/native';
 
 import { InvoiceIntro } from '../../screens/InvoiceIntro';
 import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
-import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 
 import { PaymentInvoice } from '../../screens/PaymentInvoice';
 import {HeaderCustom} from '../../components/HeaderCustom';
@@ -27,8 +22,7 @@ import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess
 import { InvoiceMinPayment } from '../../screens/InvoiceMinPayment';
 import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
 import { InvoiceHome } from '../../screens/InvoiceHome';
-import { blue400, grey100 } from 'react-native-paper/lib/typescript/src/styles/themes/v2/colors';
-import { PagarInfo } from '../../screens/InvoiceSolicitedInfo';
+
 import MainNaviagtor from './MainNavigator';
 
 //Screen names
@@ -46,10 +40,8 @@ function TabsContainer() {
   const theme = useTheme();
 
   const {Navigator, Screen} = createDrawerNavigator();
-  // const navigate = useNavigate();
 
   const { goBack } = useNavigation();
-  // let history = useHistory();
   const dimensions = useWindowDimensions();
   const route = useRoute();
 
@@ -86,28 +78,7 @@ function TabsContainer() {
 
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
-          },
-          // header: () => (
-          //       <>
-          //       <HeaderCustom
-          //         // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
-          //         hideMessage={true}
-          //         onBackPress={async () => handleClick()}
-          //         // onBackPress={() => navigate(-2)}
-          //         backgroundColor={theme.COLORS.PRIMARY_800}
-          //         isPrimaryColorDark
-          //         isFocused={false}
-          //         // leftOnPress={handleHome}
-          //         leftAction={'back'}
-                  
-          //       />
-          //       <AccessibilityWidget
-          //       marginTop={
-          //        Platform.OS === 'android' ? StatusBar.currentHeight : 0
-          //       }
-          //      />
-          //      </>
-          //     ),
+          }
         })}
         drawerContent={() => <CustomMenuStandard />}
          tabBarOptions={{

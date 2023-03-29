@@ -13,9 +13,6 @@ import {
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
-import { NativeModules } from 'react-native';
-import WebView from 'react-native-webview';
-
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
@@ -25,7 +22,6 @@ import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
 import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../components/Button/styles';
@@ -35,15 +31,9 @@ import { Card } from 'react-native-paper';
 
 export function InvoiceBillPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
-  const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(true);
 
-  const dispatch = useDispatch();
-  function handleSignIn() {
-    navigation.navigate('login' as never);
-  }
+
   const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
@@ -60,8 +50,6 @@ export function InvoiceBillPayment() {
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
-
- 
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -89,8 +77,6 @@ export function InvoiceBillPayment() {
   function handleHome() {
     changeStep(0);
   }
-
-  
 
   return (
     <>
@@ -127,11 +113,8 @@ export function InvoiceBillPayment() {
                Platform.OS === 'android' ? StatusBar.currentHeight : 0
              }
             />
-
             <ScrollView>
-              <MainGenericContainer
-                style={{ paddingTop: height * 0.02, height: height }}>
-               
+              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
                   Pagamento por Código de barra
@@ -173,42 +156,33 @@ export function InvoiceBillPayment() {
                   </View>
                 </View>
 
-
                 <View style={{ paddingBottom: height * 0.0324,paddingVertical:15 }}>
-                
                   <Text style={styles.smalltext}>Atenção: Não se esqueça de pagar seu boleto até a</Text>
                   <Text style={styles.smalltext}>data de vencimento original de sua fatura para evitar</Text>
                   <Text style={styles.smalltext}>juros e multa.</Text>
-
-                  
                 </View>
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
-
-                
-
-                <View style={{flexDirection:'row'}}>
+                 <View style={{flexDirection:'row'}}>
                  
-                <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10,borderRadius:3 }}>
+                <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
                  <Card.Content>
                       <View>
                          <Image
                            source={require('../../assets/icons/icBarcode.png')}
                            style={styles.bar}
                           />
-
                          <Text style={styles.bartext}>Pix</Text>
                       </View>
                  </Card.Content>
                </Card>
-               <Card style={{ backgroundColor: '#fff', flex: 2,marginHorizontal:10,borderRadius:3   }}>
+               <Card style={{ backgroundColor: '#fff', flex: 2.2,marginHorizontal:10,borderRadius:3 }}>
                  <Card.Content>
                       <View>
                          <Image
                            source={require('../../assets/icons/icBarcode.png')}
                            style={styles.bar}
                           />
-
                          <Text style={styles.bartext}>Cartão</Text>
                          <Text style={styles.bartext}>de crédito</Text>
                       </View>

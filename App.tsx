@@ -50,14 +50,6 @@ export default function App() {
   const {RNDatamiEventManager} = NativeModules;
   const smisdkiOSEventEmitter = new NativeEventEmitter(RNDatamiEventManager);
 
-  // IOS
-  // iOSSDPlugin.startSponsorVpn();
-  // iOSSDPlugin.stopSponsorVpn();
-
-  // Android
-  // SmiSdkReactModule.startSponsoredData()
-  // stopSponsoredData()
-
   if (Platform.OS === 'android') {
     const onSdStateChange = ({sd_state, sd_reason}: ISmiResult) => {
       setSdSmiResult({sd_state, sd_reason}); // You also can get client_ip and carrier from smiResult
@@ -105,15 +97,7 @@ export default function App() {
     });
   }, []);
 
-  // if (!fontsLoaded) {
-  //   return <AppLoading />;
-  // }
-  // LogBox.ignoreAllLogs(); //Ignore all log notifications
-  // const prefix = Linking.createURL('https:///');
 
-  // const linking = {
-  //   prefixes: [prefix],
-  // };
 
   return (
     <Provider store={store}>

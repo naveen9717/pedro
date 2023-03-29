@@ -11,24 +11,16 @@ import {
   Text,
   
 } from 'react-native';
-// Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-
 
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { Button } from '../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
-import { useDispatch, useSelector } from 'react-redux';
 import { AccessibilityWidget } from '../../components/AccessibilityWidget';
-
 import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
-import { ContainerLoading } from '../Login/styles';
-import { Load } from '../../components/Button/styles';
-import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
 
@@ -38,7 +30,6 @@ export function InvoiceMinPayment() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(false);
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalPixVisible, setModalPixVisible] = useState(false);
@@ -50,14 +41,8 @@ export function InvoiceMinPayment() {
     setModalPixVisible(!isModalPixVisible)
   }
 
-  const dispatch = useDispatch();
-  function handleSignIn() {
-    navigation.navigate('login' as never);
-  }
   const netInfo = useNetInfo();
-  // function handleSignUp() {
-  //   navigation.navigate('emailverification' as never);
-  // }
+ 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);
@@ -68,8 +53,6 @@ export function InvoiceMinPayment() {
   });
 
   console.log('Net Info:', netInfo);
-
- 
 
   
   useEffect(() => {
@@ -108,10 +91,7 @@ export function InvoiceMinPayment() {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-      <SafeAreaView
-        style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
-      />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
+    
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -137,9 +117,7 @@ export function InvoiceMinPayment() {
             />
 
             <ScrollView>
-              <MainGenericContainer
-                style={{ paddingTop: height * 0.02, height: height }}>
-               
+              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
                   Conta Mínima
@@ -151,18 +129,14 @@ export function InvoiceMinPayment() {
 
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
-
                     <Card.Content>
-
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
                           <Text style={styles.smalltext}>Pagmenta da conta</Text>
                           <Text style={styles.amount}>R$ 124.153,58</Text>
                         </View>
-                        
                       </View>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-
                         <View>
                           <Text style={styles.title}>Alberta</Text>
                         </View>
@@ -174,7 +148,6 @@ export function InvoiceMinPayment() {
                           <Text style={styles.first}>Referente à</Text>
                           <Text style={styles.second}>Fevereiro/2022</Text>
                         </View>
-
                       </View>
                     </Card.Content>
                   </Card>
@@ -182,18 +155,13 @@ export function InvoiceMinPayment() {
                 </View>
 
                 <View style={styles.checkboxContainer}>
-
                   <Text style={styles.smalltext}>O valor deste mês não atingiuo valor de R$70,00 e será acumulado sem encargos na próxima conta.</Text>
-
                 </View>
                 <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
-
                   <Text style={styles.smalltext}>Para gerar código para pagamento. </Text>
                   <Text style={styles.label}>Clique aqui> </Text>
-
                 </View>
                 <ContainerViewButton>
-                
                   <Button
                     title="Quero desabilitar essa função"
                     type="primary"
@@ -204,7 +172,6 @@ export function InvoiceMinPayment() {
                   
                 </ContainerViewButton>
                 </MainGenericContainer>
-
             </ScrollView>
           </>
         ) : (
