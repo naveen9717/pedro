@@ -37,14 +37,6 @@ const InvoiceBill ="Meus";
 const Tab = createBottomTabNavigator();
 
 function TabsContainer() {
-  const navigation = useNavigation();
-  const theme = useTheme();
-
-  const {Navigator, Screen} = createDrawerNavigator();
-
-  const { goBack } = useNavigation();
-  const dimensions = useWindowDimensions();
-  const route = useRoute();
 
   return (
       <Tab.Navigator
