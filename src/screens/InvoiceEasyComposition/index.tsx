@@ -180,17 +180,18 @@ export function InvoiceEasyComposition() {
                       endAngle={360}
                       animationType="slide"
                     />
-                    
+                  <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Vencimento: 13/06/2022</Text>
+
                   </View>
                   <View style={{marginVertical:15}}>
-                  
                     <FlatList
                     data={DATA}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.value.toString()}
                    /> 
-               
+                 <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Total: R$ 146,68</Text>
+
                 </View>
                 </View>
                   
