@@ -37,6 +37,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-splash-screen
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
+// react-native-svg
+import com.horcrux.svg.SvgPackage;
 // react-native-touch-id
 import com.rnfingerprint.FingerprintAuthPackage;
 // react-native-vector-icons
@@ -101,6 +103,7 @@ public class PackageList {
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new SplashScreenReactPackage(),
+      new SvgPackage(),
       new FingerprintAuthPackage(),
       new VectorIconsPackage(),
       new RNCWebViewPackage()

@@ -22,6 +22,7 @@ import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess
 import { InvoiceMinPayment } from '../../screens/InvoiceMinPayment';
 import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
 import { InvoiceHome } from '../../screens/InvoiceHome';
+import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
 
 import MainNaviagtor from './MainNavigator';
 
@@ -45,12 +46,6 @@ function TabsContainer() {
   const dimensions = useWindowDimensions();
   const route = useRoute();
 
-  const handleClick = () => {
-    // toggleModalPix()
-    console.log('routename',route.name);
-    navigation.goBack()
-    navigation.navigate('InvoiceHome')
-  };
   return (
       <Tab.Navigator
         initialRouteName={InvoiceIn}
@@ -93,10 +88,10 @@ function TabsContainer() {
           },
         }}
         >
-        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceEasyComposition} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
-        <Tab.Screen options={{headerShown: false}} name="Meus dados" component={MainNaviagtor} />   
+        <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} />   
       </Tab.Navigator>
   );
 }
