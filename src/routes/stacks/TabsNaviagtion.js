@@ -23,6 +23,7 @@ import { InvoiceMinPayment } from '../../screens/InvoiceMinPayment';
 import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
 import { InvoiceHome } from '../../screens/InvoiceHome';
 import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
+import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
 
 import MainNaviagtor from './MainNavigator';
 
@@ -80,7 +81,8 @@ function TabsContainer() {
           },
         }}
         >
-        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceEasyComposition} />
+          {/* Default Screen InvoiceIntro */}
+        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceHistoryChart} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} />   
