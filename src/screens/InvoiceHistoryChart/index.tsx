@@ -100,11 +100,11 @@ export function InvoiceHistoryChart() {
   }
 
   const barData = [
-    {value: 2500,frontColor: '#006DFF',label:'Jan'}, 
-    {value: 3500,frontColor: '#006DFF',label:'Feb'}, 
-    {value: 4500,frontColor: '#006DFF',label:'Mar'}, 
-    {value: 5000,frontColor: '#006DFF',label:'Apr'},
-    {value: 3000,frontColor: '#006DFF',label:'May'}
+    {value: 2500,frontColor: '#02ade1',label:'Jan'}, 
+    {value: 3500,frontColor: '#02ade1',label:'Feb'}, 
+    {value: 4500,frontColor: '#02ade1',label:'Mar'}, 
+    {value: 5000,frontColor: '#02ade1',label:'Apr'},
+    {value: 3000,frontColor: '#02ade1',label:'May'}
   ];
 
   return (
@@ -169,14 +169,14 @@ export function InvoiceHistoryChart() {
                    yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
                    labelWidth={20}
                    xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
-                  //  lineConfig={{
-                  //        color: '#F29C6E',
-                  //        thickness: 3,
-                  //        curved: true,
-                  //        hideDataPoints: true,
-                  //        shiftY: 20,
-                  //        initialSpacing: -30,
-                  //        }} 
+                   lineConfig={{
+                         color: '#0058a0',
+                        //  thickness: 3,
+                        //  curved: true,
+                        //  hideDataPoints: true,
+                        //  shiftY: 20,
+                        //  initialSpacing: -30,
+                  }} 
                  showLine/>
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
@@ -184,7 +184,7 @@ export function InvoiceHistoryChart() {
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                  <Text style={[styles.bar, {backgroundColor:'#000000'}]}></Text>
+                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
@@ -229,14 +229,14 @@ export function InvoiceHistoryChart() {
                    yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
                    labelWidth={20}
                    xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
-                  //  lineConfig={{
-                  //        color: '#F29C6E',
-                  //        thickness: 3,
-                  //        curved: true,
-                  //        hideDataPoints: true,
-                  //        shiftY: 20,
-                  //        initialSpacing: -30,
-                  //        }} 
+                   lineConfig={{
+                         color: '#0058a0',
+                        //  thickness: 3,
+                        //  curved: true,
+                        //  hideDataPoints: true,
+                        //  shiftY: 20,
+                        //  initialSpacing: -30,
+                    }} 
                  showLine/>
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
@@ -244,7 +244,7 @@ export function InvoiceHistoryChart() {
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                  <Text style={[styles.bar, {backgroundColor:'#000000'}]}></Text>
+                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
