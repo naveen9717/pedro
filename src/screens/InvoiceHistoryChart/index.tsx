@@ -155,10 +155,14 @@ export function InvoiceHistoryChart() {
                  </View>
                 <BarChart 
                    data={barData}   
+                   barWidth={30}
+                   initialSpacing={15}
+                   spacing={18}
+                   barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisType={'dashed'}
                    xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray'}}
+                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
                    stepValue={1000}
                    maxValue={6000}
                    noOfSections={5}
@@ -186,8 +190,8 @@ export function InvoiceHistoryChart() {
                   </View>
                  </View>
 
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:20}}>
-                 <View style={{flexDirection:'column'}}>
+                 <View style={styles.bottomtext}>
+                 <View style={{flexDirection:'column',marginTop:5}}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
@@ -211,10 +215,14 @@ export function InvoiceHistoryChart() {
                  </View>
                 <BarChart 
                    data={barData}   
+                   barWidth={30}
+                   initialSpacing={15}
+                   spacing={18}
+                   barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisType={'dashed'}
                    xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray'}}
+                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
                    stepValue={1000}
                    maxValue={6000}
                    noOfSections={5}
@@ -242,8 +250,8 @@ export function InvoiceHistoryChart() {
                   </View>
                  </View>
 
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:20}}>
-                 <View style={{flexDirection:'column'}}>
+                 <View style={styles.bottomtext}>
+                 <View style={{flexDirection:'column',marginTop:5}}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
@@ -300,10 +308,13 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: '600'
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 22,
-    fontWeight: '600'
+  bottomtext: {
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginTop:20,
+    borderTopWidth:1,
+    borderTopColor:'lightgrey'
   },
   smalltext: {
     fontSize: 13,
@@ -319,7 +330,7 @@ const styles = StyleSheet.create({
   mediumtextbold: {
     fontSize: 16,
     fontWeight: '500',
-    marginVertical: 15,
+    marginVertical: 5,
     color: '#02ade1',
   },
   title: {
