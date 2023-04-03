@@ -84,7 +84,7 @@ function TabsContainer() {
           },
         }}
         >
-          {/* Default Screen InvoiceIntro */}
+        {/* Default Screen InvoiceIntro */}
         <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         {/* <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} /> */}
