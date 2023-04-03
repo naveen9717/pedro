@@ -24,8 +24,11 @@ import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
 import { InvoiceHome } from '../../screens/InvoiceHome';
 import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
 import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
+import { InvoiceEasy } from '../../screens/InvoiceEasy';
 
 import MainNaviagtor from './MainNavigator';
+import MainInnerNavigator from './MainInnerNavigator';
+
 
 //Screen names
 const InvoiceIn = "Início";
@@ -82,10 +85,12 @@ function TabsContainer() {
         }}
         >
           {/* Default Screen InvoiceIntro */}
-        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceHistoryChart} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
-        <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} />
-        <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} />   
+        {/* <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} /> */}
+        <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} /> 
+        <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
+  
       </Tab.Navigator>
   );
 }

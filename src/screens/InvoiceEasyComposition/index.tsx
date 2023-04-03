@@ -28,8 +28,8 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../components/Button/styles';
 import {RootState} from '../../redux/reducer';
 import {AlertModal} from '../../components/Modal/AlertModal';
-import { DonutChart } from "react-native-circular-chart";
- 
+import { PieChart } from "react-native-gifted-charts";
+
 
 
 export function InvoiceEasyComposition() {
@@ -107,7 +107,7 @@ export function InvoiceEasyComposition() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('MinhaContaAtual');
+    navigation.navigate('InvoiceEasy');
   };
 
   const renderItem = (data) => {
@@ -156,7 +156,7 @@ export function InvoiceEasyComposition() {
             />
 
             <ScrollView>
-              <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
+              <MainGenericContainer style={{paddingTop: height * 0.02}}>
                  <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
 
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
@@ -167,19 +167,21 @@ export function InvoiceEasyComposition() {
                   <Text style={styles.mediumtextbold}>Composição da sua conta</Text>
                   <Text style={styles.smalltext}>Veja e entenda como é composta sua conta de energia.</Text>
                  </View>
-                 <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
-                   <DonutChart
-                      data={DATA}
-                      strokeWidth={27}
-                      radius={90}
-                      containerWidth={120 * 2}
-                      containerHeight={105 * 2}
-                      type="butt"
-                      startAngle={0}
-                      endAngle={360}
-                      animationType="slide"
-                    />
+                <View style={{flexDirection:'row'}}>
+                   <View style={{marginVertical:15}}>
+                    <PieChart
+                     donut
+                     data={DATA}
+                     showText
+                     textColor="black"
+                     radius={100}
+                     textSize={10}
+                     focusOnPress
+                     showValuesAsLabels
+                     showTextBackground
+                     textBackgroundRadius={15}
+                   />
+
                   <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Vencimento: 13/06/2022</Text>
 
                   </View>
@@ -215,7 +217,8 @@ export function InvoiceEasyComposition() {
                   
                   </View>
                 </View>
-                
+                <View style={{marginVertical:15}}>
+
                 <ContainerViewButton>
                   <Button
                     title="Voltar"
@@ -225,6 +228,7 @@ export function InvoiceEasyComposition() {
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>
+                </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>
             </ScrollView>

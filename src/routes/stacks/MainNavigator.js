@@ -1,13 +1,6 @@
 import * as React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {
-  Platform,
-  StatusBar
-} from 'react-native';
-// Screens
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { useTheme } from 'styled-components/native';
 import { PaymentInvoice } from '../../screens/PaymentInvoice';
 
 import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
