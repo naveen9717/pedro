@@ -114,8 +114,8 @@ const pieData = [
 ];
 
 const HorizontalBarData = [
-  {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '54%'},
-  {value: 280, date:"04/2022",color: '#fecd5b',color2:'#eeeeee', percentage: '70%'},
+  {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
+  {value: 280, date:"04/2022",color: '#fecd5b',color2:'#eeeeee', percentage: '75%',percent:'25%'},
 ];
 
 const renderHorizontalItem = (data) => {
@@ -123,7 +123,7 @@ const renderHorizontalItem = (data) => {
     <View style={{marginVertical:5,}}>
       <View style={{flexDirection:'row',width:'100%',height:30}}>
       <View style={{width:data.item.percentage,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
-      <View style={{width:data.item.percentage,backgroundColor:data.item.color2,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
+      <View style={{width:data.item.percent,backgroundColor:data.item.color2,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
       </View>
       <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
       <Text style={[styles.smalltext,{color:'black'}]}>{data.item.date}</Text>
@@ -134,22 +134,22 @@ const renderHorizontalItem = (data) => {
 }
 
 const HorizontalBarData2 = [
-  {value: 254,name:"ICMS", color: '#80c342',color2:'#fecd5b',color3: 'red',color4: '#eeeeee',  percentage: '25%'},
+  {value: 254,name:"ICMS", color: '#80c342',color2:'#fecd5b',color3: 'red',color4: '#eeeeee',  percentone: '25%',percenttwo:'35%',percentthree:'12%',percentfour:'28%'},
 ];
 
 const renderHorizontalItem2 = (data) => {
   return (
     <View style={{marginVertical:5,}}>
       <View style={{flexDirection:'row',width:'100%',height:30}}>
-      <View style={{width:data.item.percentage,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
-      <View style={{width:data.item.percentage,backgroundColor:data.item.color2}}/>
-      <View style={{width:data.item.percentage,backgroundColor:data.item.color3}}/>
-      <View style={{width:data.item.percentage,backgroundColor:data.item.color4,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
+      <View style={{width:data.item.percentone,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
+      <View style={{width:data.item.percenttwo,backgroundColor:data.item.color2}}/>
+      <View style={{width:data.item.percentthree,backgroundColor:data.item.color3}}/>
+      <View style={{width:data.item.percentfour,backgroundColor:data.item.color4,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
 
 
       </View>
       <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-      <Text style={[styles.smalltext,{color:'black'}]}>{data.item.date}</Text>
+      <Text style={[styles.smalltext,{color:'black'}]}>{data.item.name}</Text>
       <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
       </View>
     </View>
@@ -201,9 +201,9 @@ const renderHorizontalItem2 = (data) => {
                  <SearchBar
                    inputStyle={{backgroundColor: 'white'}}
                    containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
-                   inputContainerStyle={{backgroundColor: 'white'}}
+                   inputContainerStyle={{backgroundColor: 'white',height:40}}
                    placeholderTextColor={'#g5g5g5'}
-                   placeholder={'Search...'}
+                   placeholder={'Searching...'}
                    searchIcon={{color:'#02ade1',size:30,}}
                  />
               </View>
@@ -243,7 +243,7 @@ const renderHorizontalItem2 = (data) => {
                />
                {segment.customStyleIndex === 0
                     && 
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{ marginVertical: 20 }}>
                     <View style={styles.checkboxContainer}>
                     <Card style={{ backgroundColor: 'white' }}>
                       <Card.Content>
@@ -493,7 +493,7 @@ const renderHorizontalItem2 = (data) => {
 
                {segment.customStyleIndex === 1
                     &&                     
-                    <View style={{ marginVertical: 10 }}>
+                    <View style={{ marginVertical: 20 }}>
                     <View style={styles.checkboxContainer}>
                     <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:5}}>
                       <View style={{flexDirection:'column',width:'60%',justifyContent:'space-between'}}>
@@ -707,7 +707,7 @@ const renderHorizontalItem2 = (data) => {
               }
                 
                 {segment.customStyleIndex === 2
-                    && <View style={{ marginVertical: 10 }}>
+                    && <View style={{ marginVertical: 20 }}>
                     <View style={styles.checkboxContainer}>
                     <View style={{flexDirection:'row',marginVertical:5}}>
                       <View style={{flexDirection:'column',width:'100%',alignContent:'center',alignItems:'center'}}>

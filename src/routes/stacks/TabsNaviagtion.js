@@ -1,16 +1,11 @@
 import * as React from 'react';
-import { NavigationContainer,useRoute } from '@react-navigation/native';
-import { useNavigate } from "react-router-dom";
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { useTheme } from 'styled-components/native';
-
 import { InvoiceIntro } from '../../screens/InvoiceIntro';
 import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
-
 import { PaymentInvoice } from '../../screens/PaymentInvoice';
 import {HeaderCustom} from '../../components/HeaderCustom';
 import {useWindowDimensions} from 'react-native';
@@ -85,11 +80,12 @@ function TabsContainer() {
         }}
         >
         {/* Default Screen InvoiceIntro */}
+        <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
+
         <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
         <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
         {/* <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} /> */}
         <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} /> 
-        <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
   
       </Tab.Navigator>
   );
