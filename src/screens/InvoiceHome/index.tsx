@@ -125,6 +125,10 @@ export function InvoiceHome() {
     toggleModalPix()
   }
 
+  function handleClickHist() {
+    navigation.navigate('InvoiceHistoryChart')
+    }
+
   const renderItem = (data) => {
     return (
       <CardChild
@@ -213,6 +217,20 @@ export function InvoiceHome() {
                     </TouchableWithoutFeedback>
                    </View>
                  </View>
+
+                 <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
+                 
+                 <View>
+                   <Text style={styles.filtertext}>Baixar todas faturas</Text>
+                 </View>
+                 <View>
+                 <TouchableWithoutFeedback onPress={handleClickHist}>
+                   <Text style={styles.second}>Ver histórico de consumo></Text>
+                   </TouchableWithoutFeedback>
+                 </View>
+
+                 </View>
+
                  <View style={{marginVertical:15}}>
                  <FlatList
                     data={dataSource}

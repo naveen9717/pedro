@@ -22,7 +22,7 @@ import { HeaderCustom } from '../../components/HeaderCustom';
 import { useTheme } from 'styled-components';
 import TabsContainer from './TabsNaviagtion';
 import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
-
+import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 
@@ -59,6 +59,8 @@ export function HomeStack() {
       <Screen name="routesLoggedInWV" component={LoggedInWebView} />
       <Screen name="routesrecover" component={StackRecoverPass} />
       <Screen name="InvoiceHome" component={InvoiceHome} />
+      <Screen name="InvoiceHistoryChart" component={InvoiceHistoryChart} />
+
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
