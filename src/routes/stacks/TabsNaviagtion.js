@@ -20,9 +20,12 @@ import { InvoiceHome } from '../../screens/InvoiceHome';
 import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
 import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
 import { InvoiceEasy } from '../../screens/InvoiceEasy';
+import { Screen3 } from '../../screens/Screen3';
+
 
 import MainNaviagtor from './MainNavigator';
 import MainInnerNavigator from './MainInnerNavigator';
+import OtherInnerNavigator from './OtherInnerNavigator';
 
 
 //Screen names
@@ -31,6 +34,8 @@ const PaymentIn = "Serviços";
 const InvoiceMin = "Ajuda";
 const InvoiceSend ="Meus dados";
 const InvoiceBill ="Meus";
+const Screen = "Início";
+
 
 
 const Tab = createBottomTabNavigator();
@@ -80,11 +85,10 @@ function TabsContainer() {
         }}
         >
         {/* Default Screen InvoiceIntro */}
+        <Tab.Screen options={{headerShown: false}} name={Screen} component={Screen3} />
         <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
+        <Tab.Screen options={{headerShown: false}} name={InvoiceBill} component={OtherInnerNavigator} /> 
 
-        <Tab.Screen options={{headerShown: false}} name={InvoiceIn} component={InvoiceIntro} />
-        <Tab.Screen options={{headerShown: false}} name={PaymentIn} component={InvoicePixPayment} />
-        {/* <Tab.Screen options={{headerShown: false}} name={InvoiceMin} component={InvoiceSendToHome} /> */}
         <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} /> 
   
       </Tab.Navigator>

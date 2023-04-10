@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { InvoiceEasy } from '../../screens/InvoiceEasy';
 import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
+import { Screen3 } from '../../screens/Screen3';
 
 
 const Stack = createNativeStackNavigator();

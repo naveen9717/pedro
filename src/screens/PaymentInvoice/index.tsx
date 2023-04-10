@@ -121,7 +121,7 @@ export function PaymentInvoice() {
 
   const handleClickEnviar = () => {
     // toggleModalPix()
-    navigation.navigate('Ajuda')
+    navigation.navigate('InvoiceSendToHome')
   };
 
   const handleClickPix = () => {
