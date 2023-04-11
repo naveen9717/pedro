@@ -253,11 +253,11 @@ export function InvoiceHistoryChart() {
                  <View style={styles.bottomtext}>
                  <View style={{flexDirection:'column',marginTop:5}}>
                   <Text style={styles.smalltext}>Última fatura</Text>
-                  <Text style={styles.mediumtextbold}>R$ 237,00</Text>
+                  <Text style={styles.mediumtextbold}>240kWh</Text>
                   </View>
                   <View style={{flexDirection:'column'}}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
-                  <Text style={styles.mediumtextbold}>R$ 200,00</Text>
+                  <Text style={styles.mediumtextbold}>200kWh</Text>
                   </View>
                  </View>
                   

@@ -22,8 +22,7 @@ import {InvoiceSolicitedInfo} from '../../screens/InvoiceSolicitedInfo';
 import {ScanScreen} from '../../screens/ScanScreen';
 import {PagScanScreen} from '../../screens/PagScanScreen';
 export default function NewStack() {
-  // const navigation = useNavigation();
-  // const {COLORS} = useTheme();
+
 
   const {Navigator, Screen} = createDrawerNavigator();
   const dimensions = useWindowDimensions();
@@ -61,5 +60,3 @@ export default function NewStack() {
   );
 }
 
-// name="finishregistration"
-// component={FinishRegistration}

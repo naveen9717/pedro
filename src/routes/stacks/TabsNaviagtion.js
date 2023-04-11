@@ -26,6 +26,7 @@ import { Screen3 } from '../../screens/Screen3';
 import MainNaviagtor from './MainNavigator';
 import MainInnerNavigator from './MainInnerNavigator';
 import OtherInnerNavigator from './OtherInnerNavigator';
+import FirstTabNavigator from './FirstTabNavigator';
 
 
 //Screen names
@@ -85,7 +86,7 @@ function TabsContainer() {
         }}
         >
         {/* Default Screen InvoiceIntro */}
-        <Tab.Screen options={{headerShown: false}} name={Screen} component={Screen3} />
+        <Tab.Screen options={{headerShown: false}} name={Screen} component={FirstTabNavigator} />
         <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceBill} component={OtherInnerNavigator} /> 
 

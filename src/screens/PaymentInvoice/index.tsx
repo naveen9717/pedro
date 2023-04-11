@@ -245,7 +245,6 @@ export function PaymentInvoice() {
                         flex: 2.9,
                         borderRadius: 10, borderBottomLeftRadius: 0, borderBottomStartRadius: 0, borderTopLeftRadius: 0, marginTop: 2,
                       }}>
-
                       <Card.Content>
                         <View style={styles.container}>
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
@@ -282,7 +281,6 @@ export function PaymentInvoice() {
                     </Card.Content>
                   </Card>
                 </TouchableWithoutFeedback>
-
               </MainGenericContainer>
 
 

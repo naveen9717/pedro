@@ -83,7 +83,7 @@ export function HeaderCustom({
         <ContainerBadge style={{left: width * 0.9, position: 'absolute'}}>
           {hideMessage ? (
             <>
-              <ContainerBadgeView size={10} />
+              {/* <ContainerBadgeView size={10} /> */}
               <Image resizeMode="contain" source={icBell} />
             </>
           ) : null}
