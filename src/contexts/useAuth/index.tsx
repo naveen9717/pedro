@@ -39,7 +39,6 @@ export interface AuthContextProps {
     setModalInfo: (data: SetModalInfo) => void,
     setShowModal: (show: boolean) => void,
     // handleIsLoading: (value: boolean) => void,
-
     // params: {
     //   UsuarioEmail: string;
     //   UsuarioSenha: string;

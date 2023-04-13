@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {boxShadowCard} from '../../helpers/functions/utils';
 import { Card, Paragraph } from 'react-native-paper';
+import Moment from 'moment';
 
 
 import {
@@ -28,7 +29,8 @@ type Props = {
   status: string;
   title: string;
   code_install: string;
-  address: string;
+  mesReferencia: string;
+  dataVencimento:string;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
 };
 
@@ -36,7 +38,8 @@ export default function CardChild({
   status,
   title,
   code_install,
-  address,
+  dataVencimento,
+  mesReferencia,
   onPress,
 }: Props) {
   const {height} = Dimensions.get('window');
@@ -47,19 +50,12 @@ export default function CardChild({
                 <Card style={{backgroundColor:'white'}}>
                 
                     <Card.Content>
-                    
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
                       <View>
                         <Text style={styles.smalltext}>{title}</Text>
                         <Text style={styles.amount}>R$ 124.153,58</Text>
                       </View>
-                     {/* <View>
-                      <TouchableOpacity
-                      //  onPress={handleClick}
-                       style={styles.onpress}>
-                       <Text style={{color:'white'}}>Risco de corte </Text>
-                      </TouchableOpacity>
-                    </View> */}
+                    
                   </View>
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
             
@@ -68,11 +64,11 @@ export default function CardChild({
                     </View>
                     <View>
                       <Text style={styles.first}>Vencimento</Text>
-                      <Text style={styles.second}>13/03/2022</Text>
+                      <Text style={styles.second}>{Moment(dataVencimento).format('DD/MM/YYYY')}</Text>
                     </View>
                   <View>
                      <Text style={styles.first}>Referente à</Text>
-                     <Text style={styles.second}>Fevereiro/2022</Text>
+                     <Text style={styles.second}>Fevereiro{mesReferencia}</Text>
                    </View>
             
                  </View>
@@ -95,12 +91,10 @@ export default function CardChild({
                     style={styles.icon}
                   />
                    </View>
-            
                  </View>
                   </Card.Content>
                </Card>
-
-                </View>
+            </View>
   );
 }
 

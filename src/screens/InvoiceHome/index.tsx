@@ -134,10 +134,10 @@ export function InvoiceHome() {
       <CardChild
       key={1}
       title="Conta de energia"
-      status="Aberta"
+      status={data.item.statusPagamento}
       code_install={data.item.pagamentoCodigoBarra}
-      address="Avenida Norte Sul, 1000 - Taquaral
-  Campinas/SP - CEP 13256-558"
+      mesReferencia={data.item.mesReferencia}
+      dataVencimento={data.item.dataVencimento}
       onPress={handleChild}
     />
     )

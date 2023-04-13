@@ -64,7 +64,6 @@ export function HomeStack() {
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
       <Screen name="selectInstallation" component={SelectInstallation} />
       
-      
     </Navigator>
   );
 }
