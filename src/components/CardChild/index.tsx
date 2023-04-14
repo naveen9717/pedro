@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 import {
   Dimensions,
@@ -7,11 +7,13 @@ import {
   TouchableOpacity,
   View,
   StyleSheet,
-  Image
+  Image,
+  TouchableWithoutFeedback
 } from 'react-native';
 import {boxShadowCard} from '../../helpers/functions/utils';
-import { Card, Paragraph } from 'react-native-paper';
+import { Card, Menu,IconButton,Button,Provider } from 'react-native-paper';
 import Moment from 'moment';
+import SimplePopupMenu from 'react-native-simple-popup-menu'
 
 
 import {
@@ -43,21 +45,41 @@ export default function CardChild({
   onPress,
 }: Props) {
   const {height} = Dimensions.get('window');
-  // onPress={() => navigate('ListSecondProof')
+  const items = [
+    { id: 'edit', label: 'Entenda sobre seu parcelament' },
+  ];
   return (
    
        <View style={styles.checkboxContainer}>
+         
+        
+
                 <Card style={{backgroundColor:'white'}}>
-                
+                <Card.Title
+                  // title=""
+                  subtitle={title}
+                  // rightStyle={{backgroundColor:'#02ade1'}}
+                  right={(props) => 
+                      <SimplePopupMenu
+                      items={items}
+                      style={styles.label}
+                      onCancel={() => console.log('onCancel')}>
+                      <Text><IconButton {...props} icon="dots-vertical" containerColor="#02ade1"
+                      iconColor="#FFF"  /></Text>
+                  </SimplePopupMenu>
+                    }
+                      >
+              </Card.Title>
+      
                     <Card.Content>
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
                       <View>
-                        <Text style={styles.smalltext}>{title}</Text>
+                        {/* <Text style={styles.smalltext}>{title}</Text> */}
                         <Text style={styles.amount}>R$ 124.153,58</Text>
                       </View>
                     
                   </View>
-                    <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
+                    <View style={styles.borderBottom}>
             
                     <View>
                         <Text style={styles.title}>{status}</Text>
@@ -105,6 +127,14 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'flex-start' 
   },
+  borderBottom:{
+     flexDirection: 'row', 
+     justifyContent: 'space-between',
+     borderColor:'#f4f4f4',
+     borderBottomWidth:1,
+     borderTopWidth:1,
+     paddingVertical:7
+  },
   checkboxContainer: {
     marginBottom: 20,
   },
@@ -137,8 +167,8 @@ const styles = StyleSheet.create({
     fontSize:13,
     fontWeight:'600',
     marginTop:10,
-    backgroundColor:'orange',
-    color:'red',
+    backgroundColor:'#e1e874',
+    color:'#04704e',
     paddingVertical: 2,
     paddingHorizontal: 15,
     borderRadius:5
