@@ -11,10 +11,15 @@ import {
   TouchableWithoutFeedback
 } from 'react-native';
 import {boxShadowCard} from '../../helpers/functions/utils';
-import { Card, Menu,IconButton,Button,Provider } from 'react-native-paper';
+import { Card,IconButton } from 'react-native-paper';
 import Moment from 'moment';
-import SimplePopupMenu from 'react-native-simple-popup-menu'
-
+import {
+  Menu,
+  MenuProvider,
+  MenuOptions,
+  MenuOption,
+  MenuTrigger,
+} from 'react-native-popup-menu';
 
 import {
   StyledCardContent,
@@ -52,21 +57,22 @@ export default function CardChild({
    
        <View style={styles.checkboxContainer}>
          
-        
-
                 <Card style={{backgroundColor:'white'}}>
                 <Card.Title
                   // title=""
                   subtitle={title}
                   // rightStyle={{backgroundColor:'#02ade1'}}
                   right={(props) => 
-                      <SimplePopupMenu
-                      items={items}
-                      style={styles.label}
-                      onCancel={() => console.log('onCancel')}>
-                      <Text><IconButton {...props} icon="dots-vertical" containerColor="#02ade1"
-                      iconColor="#FFF"  /></Text>
-                  </SimplePopupMenu>
+                     
+                      <MenuProvider style={{flexDirection: 'column'}}>
+                     <Menu style={{ height: 50 }}>
+                      <MenuTrigger><IconButton {...props} icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></MenuTrigger>
+                     <MenuOptions>
+                    <MenuOption value={1} text='Entenda sobre seu parcelamento' customStyles={optionStyles}/>
+                     </MenuOptions>
+                    </Menu>
+                    </MenuProvider>
+                 
                     }
                       >
               </Card.Title>
@@ -120,6 +126,16 @@ export default function CardChild({
   );
 }
 
+const optionStyles = {
+  optionWrapper: {
+    backgroundColor: 'white',
+    zIndex:100
+  },
+  optionText: {
+    color:'#02ade1',
+    fontWeight:'600'
+  },
+};
 const styles = StyleSheet.create({
   container: {
    
