@@ -21,16 +21,8 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 
-import {
-  StyledCardContent,
-  StyledViewStatus,
-  StyledContentStatus,
-  StyledCardBoxShadow,
-  StyledTextStatus,
-  StyledInstallCode,
-  StyledAddress,
-  StyledText,
-} from './styles';
+import { Tooltip } from 'react-native-elements';
+
 
 type Props = {
   status: string;
@@ -64,15 +56,8 @@ export default function CardChild({
                   // rightStyle={{backgroundColor:'#02ade1'}}
                   right={(props) => 
                      
-                      <MenuProvider style={{flexDirection: 'column'}}>
-                     <Menu style={{ height: 50 }}>
-                      <MenuTrigger><IconButton {...props} icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></MenuTrigger>
-                     <MenuOptions>
-                    <MenuOption value={1} text='Entenda sobre seu parcelamento' customStyles={optionStyles}/>
-                     </MenuOptions>
-                    </Menu>
-                    </MenuProvider>
-                 
+                    <Tooltip popover={<View><Text style={styles.labels}>Entenda sobre seu</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton {...props} icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
+                     
                     }
                       >
               </Card.Title>
@@ -126,16 +111,7 @@ export default function CardChild({
   );
 }
 
-const optionStyles = {
-  optionWrapper: {
-    backgroundColor: 'white',
-    zIndex:100
-  },
-  optionText: {
-    color:'#02ade1',
-    fontWeight:'600'
-  },
-};
+
 const styles = StyleSheet.create({
   container: {
    
@@ -153,6 +129,14 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  popovershadow:{
+    backgroundColor:"#fcfcfc",
+    borderRadius:0, 
+    paddingVertical: 10,
+    shadowColor: 'black',
+    shadowOpacity: 0.9,
+    elevation: 10,
   },
   checkbox: {
     alignSelf: 'center',
@@ -172,6 +156,12 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color:'black',
     
+  },
+  labels: {
+    margin: 1,
+    fontSize:12,
+    color:'#02ade1',
+    fontWeight:'600'
   },
    mediumtext: {
     fontSize: 18,
