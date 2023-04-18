@@ -138,6 +138,9 @@ export function InvoiceHome() {
       code_install={data.item.pagamentoCodigoBarra}
       mesReferencia={data.item.mesReferencia}
       dataVencimento={data.item.dataVencimento}
+      parcelamentoD={data.item.parcelamentoDisponivel}
+      temParcelamentoEmA={data.item.temParcelamentoEmAberto}
+
       onPress={handleChild}
     />
     )
@@ -181,9 +184,7 @@ export function InvoiceHome() {
                   <Title paddingBottom={height * 0.0216}>
                     Minha conta atual
                   </Title>
-
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
-
                 </View>
                 <View style={styles.checkboxContainer}>
                 {/* Optional chaining used while api get data*/}
@@ -204,7 +205,6 @@ export function InvoiceHome() {
                    <Text style={styles.filtertext}>Status: Todos</Text>
                  </View>
                  <View style={styles.filterInner}>
-                   
                    <Text style={styles.filtertext}>Período: {moment(selectedRange.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange.secondDate, 'YYY-MM-DD').format('DD/MM')}</Text>
                  </View>
                    
@@ -237,9 +237,8 @@ export function InvoiceHome() {
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.id.toString()}
-                /> 
+                 /> 
                  </View>
-
                 </View>
 
                 {ModalLoading(isLoading)}

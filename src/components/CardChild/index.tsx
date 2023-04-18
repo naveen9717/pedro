@@ -23,13 +23,14 @@ import {
 
 import { Tooltip } from 'react-native-elements';
 
-
 type Props = {
   status: string;
   title: string;
   code_install: string;
   mesReferencia: string;
   dataVencimento:string;
+  temParcelamentoEmA:Boolean;
+  parcelamentoD:Boolean;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
 };
 
@@ -39,59 +40,69 @@ export default function CardChild({
   code_install,
   dataVencimento,
   mesReferencia,
+  parcelamentoD,
+  temParcelamentoEmA,
   onPress,
 }: Props) {
   const {height} = Dimensions.get('window');
-  const items = [
-    { id: 'edit', label: 'Entenda sobre seu parcelament' },
-  ];
+
+  const renderConditionalText=() =>{
+    if (status === "Paga") {
+      return  <Text style={styles.pagaV}>{status}</Text>;
+    }
+    else if (status !== "Paga" || Moment(dataVencimento).format('DD/MM/YYYY')> new Date().toString() ) {
+      return  <Text style={styles.vencidaV}>Vencida</Text>;
+    }
+    else {
+      return  <Text style={styles.abertaV}>Aberta</Text>;
+    }
+   }
+
+   const renderToggle=() =>{
+    if (parcelamentoD == true || temParcelamentoEmA == true) {
+      return  <Tooltip popover={<View><Text style={styles.labels}>Entenda sobre seu</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
+      ;
+    }
+    else {
+      return  null;
+    }
+   }
+
   return (
    
        <View style={styles.checkboxContainer}>
-         
                 <Card style={{backgroundColor:'white'}}>
                 <Card.Title
                   // title=""
                   subtitle={title}
                   // rightStyle={{backgroundColor:'#02ade1'}}
                   right={(props) => 
-                     
-                    <Tooltip popover={<View><Text style={styles.labels}>Entenda sobre seu</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton {...props} icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
-                     
+                    renderToggle()
                     }
-                      >
-              </Card.Title>
-      
-                    <Card.Content>
+                    >
+                </Card.Title>
+                  <Card.Content>
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
                       <View>
                         {/* <Text style={styles.smalltext}>{title}</Text> */}
                         <Text style={styles.amount}>R$ 124.153,58</Text>
                       </View>
-                    
                   </View>
-                    <View style={styles.borderBottom}>
-            
-                    <View>
-                        <Text style={styles.title}>{status}</Text>
-                    </View>
+                    <View style={styles.borderBottom} >
+                      {renderConditionalText()}
                     <View>
                       <Text style={styles.first}>Vencimento</Text>
                       <Text style={styles.second}>{Moment(dataVencimento).format('DD/MM/YYYY')}</Text>
                     </View>
                   <View>
                      <Text style={styles.first}>Referente à</Text>
-                     <Text style={styles.second}>Fevereiro{mesReferencia}</Text>
+                     <Text style={styles.second}>Feverei {mesReferencia}</Text>
                    </View>
-            
                  </View>
 
                  <View style={{flexDirection: 'row',  justifyContent: 'space-between',marginVertical:15}}>
-            
                     <View>
-                    <TouchableOpacity
-                        onPress={onPress}
-                       >
+                    <TouchableOpacity onPress={onPress}>
                         <Text style={styles.second}>Pagar sua Conta</Text>
                         </TouchableOpacity>
                     </View>
@@ -111,7 +122,6 @@ export default function CardChild({
   );
 }
 
-
 const styles = StyleSheet.create({
   container: {
    
@@ -121,12 +131,38 @@ const styles = StyleSheet.create({
   },
   borderBottom:{
      flexDirection: 'row', 
-     justifyContent: 'space-between',
-     borderColor:'#f4f4f4',
-     borderBottomWidth:1,
-     borderTopWidth:1,
-     paddingVertical:7
+     justifyContent: 'space-between'
   },
+  pagaV:{
+    fontSize:13,
+    fontWeight:'600',
+    marginTop:10,
+    backgroundColor:'#e1e874',
+    color:'#04704e',
+    paddingVertical: 2,
+    paddingHorizontal: 15,
+    borderRadius:5
+  },
+  vencidaV:{
+    fontSize:13,
+    fontWeight:'600',
+    marginTop:10,
+    backgroundColor:'#f8b1ab',
+    color:'#c0161b',
+    paddingVertical: 2,
+    paddingHorizontal: 15,
+    borderRadius:5
+},
+abertaV:{
+  fontSize:13,
+    fontWeight:'600',
+    marginTop:10,
+    backgroundColor:'#fed26c',
+    color:'#f15e38',
+    paddingVertical: 2,
+    paddingHorizontal: 15,
+    borderRadius:5
+},
   checkboxContainer: {
     marginBottom: 20,
   },
@@ -185,7 +221,6 @@ const styles = StyleSheet.create({
     backgroundColor:'maroon',
     borderRadius:5
   },
-
   first:{
     color:'black'
   },
@@ -211,6 +246,5 @@ const styles = StyleSheet.create({
   bar:{
     width:40,
     height: 30,
-
   }
 });
