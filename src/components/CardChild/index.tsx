@@ -31,6 +31,7 @@ type Props = {
   dataVencimento:string;
   temParcelamentoEmA:Boolean;
   parcelamentoD:Boolean;
+  valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
 };
 
@@ -42,6 +43,7 @@ export default function CardChild({
   mesReferencia,
   parcelamentoD,
   temParcelamentoEmA,
+  valorContaAtual,
   onPress,
 }: Props) {
   const {height} = Dimensions.get('window');
@@ -71,11 +73,12 @@ export default function CardChild({
   return (
    
        <View style={styles.checkboxContainer}>
-                <Card style={{backgroundColor:'white'}}>
+                <Card style={{backgroundColor:'#FFFFFF'}}>
                 <Card.Title
                   // title=""
                   subtitle={title}
-                  // rightStyle={{backgroundColor:'#02ade1'}}
+                  subtitleStyle={{fontSize:16,fontWeight:'700',color:"#717171"}}
+                  style={{marginVertical:0}}
                   right={(props) => 
                     renderToggle()
                     }
@@ -85,7 +88,7 @@ export default function CardChild({
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
                       <View>
                         {/* <Text style={styles.smalltext}>{title}</Text> */}
-                        <Text style={styles.amount}>R$ 124.153,58</Text>
+                        <Text style={styles.amount}>R$ {valorContaAtual}</Text>
                       </View>
                   </View>
                     <View style={styles.borderBottom} >
@@ -131,7 +134,13 @@ const styles = StyleSheet.create({
   },
   borderBottom:{
      flexDirection: 'row', 
-     justifyContent: 'space-between'
+     justifyContent: 'space-between',
+     borderTopColor:"#f1f1f1",
+     borderWidth:1,
+     borderBottomColor:"#f1f1f1",
+     borderLeftColor:'white',
+     borderRightColor:'white',
+     paddingVertical:8
   },
   pagaV:{
     fontSize:13,
@@ -185,8 +194,9 @@ abertaV:{
   },
   amount: {
     marginBottom: 10,
-    fontSize: 22,
-    fontWeight:'600'
+    fontSize: 24,
+    fontWeight:'600',
+    color:"#717171"
   },
   smalltext: {
     fontSize: 13,

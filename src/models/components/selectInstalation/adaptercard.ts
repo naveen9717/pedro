@@ -22,5 +22,5 @@ const transformCardApi = (
 };
 
 export const ICardAdapter = {
-  transformCardApi,
+transformCardApi,
 };

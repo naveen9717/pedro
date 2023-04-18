@@ -28,7 +28,9 @@ type Props = {
   status: string;
   title: string;
   code_install: string;
+  parcelamentoD:Boolean;
   address: string;
+  valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
 };
 
@@ -37,22 +39,32 @@ export default function CardMain({
   title,
   code_install,
   address,
+  parcelamentoD,
+  valorContaAtual,
   onPress,
 }: Props) {
   const {height} = Dimensions.get('window');
-  // onPress={() => navigate('ListSecondProof')
+
+
+  const renderText=() =>{
+    if (parcelamentoD === true ) {
+      return   <View style={styles.bottomview}><Text style={{color:'white',textAlign:'center'}}>Parcelamento disponivel <Image
+      source={require('../../assets/icons/right-arrow.png')}
+      style={styles.icon}
+    /></Text></View>
+      ;
+    }
+    else {
+      return  null;
+    }
+   }
+
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={{
-        paddingTop: height * 0.01,
-      }}>
+    <TouchableOpacity onPress={onPress} style={{paddingTop: height * 0.01,}}>
      
          <View style={{marginBottom:20}}>
                 <Card style={{backgroundColor:'white'}}>
-                
                     <Card.Content>
-                    
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
                       <View>
                         <Text style={styles.smalltext}>{title}</Text>
@@ -65,7 +77,7 @@ export default function CardMain({
                        <Text style={{color:'white'}}>Trocar instalação <Image
                     source={require('../../assets/icons/right-arrow.png')}
                     style={styles.icon}
-                  /></Text>
+                     /></Text>
                       </TouchableOpacity>
                     </View>
                   </View>
@@ -76,21 +88,13 @@ export default function CardMain({
                     <StyledAddress numberOfLines={2}>{address}</StyledAddress>
                     </View>
                     
-            
                  </View>
-
-            
                  <View style={{alignItems:'center'}}>
-
                    <Text style={styles.smalltext}>Total de débitos em aberto</Text>
-                  <Text style={styles.amount}>R$ 15.8283,58</Text>
-               </View>
-         
-            
-                 <View style={styles.bottomview}><Text style={{color:'white',textAlign:'center'}}>Parcelamento disponivel <Image
-                    source={require('../../assets/icons/right-arrow.png')}
-                    style={styles.icon}
-                  /></Text></View>
+                   <Text style={styles.amount}>R$ {valorContaAtual}</Text>
+                </View>
+        
+                 {renderText()}
                   </Card.Content>
                </Card>
 

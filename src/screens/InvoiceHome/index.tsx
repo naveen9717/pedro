@@ -132,15 +132,15 @@ export function InvoiceHome() {
   const renderItem = (data) => {
     return (
       <CardChild
-      key={1}
+      key={data.item?.mesReferencia}
       title="Conta de energia"
-      status={data.item.statusPagamento}
-      code_install={data.item.pagamentoCodigoBarra}
-      mesReferencia={data.item.mesReferencia}
-      dataVencimento={data.item.dataVencimento}
-      parcelamentoD={data.item.parcelamentoDisponivel}
-      temParcelamentoEmA={data.item.temParcelamentoEmAberto}
-
+      status={data.item?.statusPagamento}
+      code_install={data.item?.pagamentoCodigoBarra}
+      mesReferencia={data.item?.mesReferencia}
+      dataVencimento={data.item?.dataVencimento}
+      parcelamentoD={data.item?.parcelamentoDisponivel}
+      temParcelamentoEmA={data.item?.temParcelamentoEmAberto}
+      valorContaAtual={data.item?.valorContaAtual}
       onPress={handleChild}
     />
     )
@@ -192,9 +192,10 @@ export function InvoiceHome() {
                     key={1}
                     title="Instalaçãão"
                     status='statusPagamento'
-                    code_install='03636367'
+                    code_install={dataMain.data?.codigoInstalacao}
                     status={dataMain.data?.statusPagamento}
-                    code_install={dataMain.data?.valorContaAtual}
+                    parcelamentoD={dataMain.data?.parcelamentoDisponivel}
+                    valorContaAtual={dataMain.data?.valorContaAtual}
                     address="Avenida Norte Sul, 1000 - Taquaral
                 Campinas/SP - CEP 13256-558"
                   /> 
@@ -207,7 +208,6 @@ export function InvoiceHome() {
                  <View style={styles.filterInner}>
                    <Text style={styles.filtertext}>Período: {moment(selectedRange.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange.secondDate, 'YYY-MM-DD').format('DD/MM')}</Text>
                  </View>
-                   
                    <View style={styles.iconouter}>
                      <TouchableWithoutFeedback onPress={handlePix}>
                       <Image
@@ -219,7 +219,6 @@ export function InvoiceHome() {
                  </View>
 
                  <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
-                 
                  <View>
                    <Text style={styles.filtertext}>Baixar todas faturas</Text>
                  </View>
@@ -228,7 +227,6 @@ export function InvoiceHome() {
                    <Text style={styles.second}>Ver histórico de consumo></Text>
                    </TouchableWithoutFeedback>
                  </View>
-
                  </View>
 
                  <View style={{marginVertical:15}}>
@@ -262,7 +260,6 @@ export function InvoiceHome() {
                           borderTopLeftRadius: 40,
                           backgroundColor: 'white',
                           paddingVertical: 4,
-
                         }}>
 
                         <View style={{ flex: 1 }}>
@@ -307,9 +304,7 @@ export function InvoiceHome() {
                             <View style={{ marginVertical: 8 }}>
                               <Text style={styles.mediumtextbold}>Período de referência </Text>
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
-                             
                             </View>
-
                             <ContainerViewButton>
                             <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 8 }}>
                               <SmallButton
@@ -348,7 +343,6 @@ export function InvoiceHome() {
                                     responseFormat="YYYY-MM-DD"
                                     // maxDate={moment()}
                                    // minDate={moment().subtract(100, "days")}
-          
                                   />
                             </View>
 
