@@ -7,15 +7,14 @@ const transformCardApi = (
   if (data) {
     data.forEach(d => {
       let trInst = {} as CardChild;
-      trInst.Instalacao = String(d.numero);
-      trInst.descBairro = d.codigoInstalacao;
-      trInst.descCEP = d.valorContaAtual;
-      trInst.descComplemento = d.mesReferencia;
-      trInst.descEnderecoNumero = d.dataVencimento;
-      trInst.descMunicipio = d.statusPagamento;
-      trInst.descEnderecoRua = d.parcelamentoDisponivel;
-      trInst.descUF = d.temParcelamentoEmAberto;
-      trInst.DocumetoTitular = d.temDebitoAutomatico;
+      trInst.codigoinstalacao = d.codigoInstalacao;
+      trInst.valorcontaatual = d.valorContaAtual;
+      trInst.mesreferencia = d.mesReferencia;
+      trInst.datavencimento = d.dataVencimento;
+      trInst.statuspagamento = d.statusPagamento;
+      trInst.parcelamentodisponivel = d.parcelamentoDisponivel;
+      trInst.temparcelamentoemaberto = d.temParcelamentoEmAberto;
+      trInst.temdebitoautomatico = d.temDebitoAutomatico;
       trData.push(trInst);
     });
   }
