@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { PaymentInvoice } from '../../screens/PaymentInvoice';
-
+import { InvoicePixPayment } from '../../screens/InvoicePixPayment';
 import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
 import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
 
@@ -14,6 +14,7 @@ function MainNaviagtor() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} />
       <Stack.Screen name="InvoiceBillPayment" component={InvoiceBillPayment} />
+      <Stack.Screen name="InvoicePixPayment" component={InvoicePixPayment} />
       <Stack.Screen name="InvoiceSendToHome" component={InvoiceSendToHome} />
    </Stack.Navigator>
   );

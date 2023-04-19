@@ -46,7 +46,7 @@ export function PaymentInvoice() {
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisiblePop, setModalVisiblePop] = useState(false);
-const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = React.useState(false);
 
   const onToggleSnackBar = () => setVisible(!visible);
 
@@ -126,20 +126,26 @@ const [visible, setVisible] = React.useState(false);
   const handleClickEnviar = () => {
     // toggleModalPix()
     navigation.navigate('InvoiceSendToHome', {
-      itemId: 86,
+      itemId: 1,
       otherParam: 'Enviar por correspondência',
     });
     
   };
 
   const handleClickPix = () => {
-    // toggleModalPix()
-    navigation.navigate('Serviços')
+    // Como realizar seu pagamento via Pix?
+    navigation.navigate('InvoicePixPayment', {
+      itemId: 3,
+      otherParam: 'Como realizar seu pagamento via Pix?',
+    });
   };
 
   const handleClickBarras = () => {
-    // toggleModalPix()
-    navigation.navigate('InvoiceBillPayment')
+    // Como realizar seu pagamento via Código barras?>
+    navigation.navigate('InvoiceBillPayment', {
+      itemId: 2,
+      otherParam: 'Como realizar seu pagamento via Código barras?',
+    });
   };
 
   return (
@@ -228,7 +234,6 @@ const [visible, setVisible] = React.useState(false);
                         backgroundColor: 'white',
                         justifyContent: 'center',
                         flex: 1,
-
                       }}>
                       <Card style={{ backgroundColor: 'white', borderRadius: 10, borderBottomEndRadius: 0, borderTopEndRadius: 0, marginTop: 2, }}>
                         <Card.Content>
@@ -290,7 +295,6 @@ const [visible, setVisible] = React.useState(false);
                 </View>
 
                 <TouchableWithoutFeedback onPress={toggleModal}>
-
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
                     <Card.Content>
                       <View style={styles.container}>
@@ -322,9 +326,7 @@ const [visible, setVisible] = React.useState(false);
                           borderTopLeftRadius: 40,
                           backgroundColor: 'white',
                           paddingVertical: 5,
-
                         }}>
-
                         <View
                           style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
                           <View style={[styles.boxcontainer]}>

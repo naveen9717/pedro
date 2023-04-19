@@ -29,9 +29,10 @@ import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
 
-export function InvoiceBillPayment() {
+export function InvoiceBillPayment({route}) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [step, setStep] = useState(0);
+  const { itemId, otherParam } = route.params;
 
 
   const netInfo = useNetInfo();
@@ -119,7 +120,7 @@ export function InvoiceBillPayment() {
                   <Title paddingBottom={height * 0.0216}>
                   Pagamento por Código de barra
                   </Title>
-                  <Label style={styles.smalltextbold}>Como realizar seu pagamento via Código de barra?</Label>
+                  <Label style={styles.smalltextbold}>{otherParam}</Label>
                 </View>
                 
                 <View style={styles.viewflex}>

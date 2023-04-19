@@ -28,11 +28,12 @@ import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
 
-export function InvoicePixPayment() {
+export function InvoicePixPayment({route}) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const { itemId, otherParam } = route.params;
 
   
   const netInfo = useNetInfo();
@@ -122,7 +123,7 @@ export function InvoicePixPayment() {
                   <Title paddingBottom={height * 0.0216}>
                   Pagamento por PIX
                   </Title>
-                  <Label style={styles.smalltextbold}>Como realizar seu pagamento via Pix?</Label>
+                  <Label style={styles.smalltextbold}>{otherParam}</Label>
                 </View>
                 
                 <View style={styles.viewflex}>
