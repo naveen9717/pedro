@@ -36,6 +36,8 @@ import { AlertModal } from '../../components/Modal/AlertModal';
 import ClipboardToast from 'react-native-clipboard-toast';
 import { Card, Snackbar } from 'react-native-paper';
 import Modal from "react-native-modal";
+import ContaServices from '../../shared/services/ContaServices';
+import QRCode from 'react-native-qrcode-svg';
 
 export function PaymentInvoice() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -43,10 +45,11 @@ export function PaymentInvoice() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(true);
+  const [dataMain, setDataMain] = useState(undefined)
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisiblePop, setModalVisiblePop] = useState(false);
-  const [visible, setVisible] = React.useState(false);
+  const [visible, setVisible] = useState(false);
 
   const onToggleSnackBar = () => setVisible(!visible);
 
@@ -54,6 +57,7 @@ export function PaymentInvoice() {
   const [isModalPixVisible, setModalPixVisible] = useState(false);
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
+    setDataMain(dataMain);
   };
 
   const toggleModalPix = () => {
@@ -93,7 +97,12 @@ export function PaymentInvoice() {
     }
   };
   useEffect(() => {
-  
+ 
+  //Get Conat Data Main
+  ContaServices.getDataConta().then((res) => {
+    // console.log('Main',res.data)
+    setDataMain({data: res.data});
+  });
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -125,28 +134,234 @@ export function PaymentInvoice() {
 
   const handleClickEnviar = () => {
     // toggleModalPix()
-    navigation.navigate('InvoiceSendToHome', {
-      itemId: 1,
-      otherParam: 'Enviar por correspondência',
-    });
+    navigation.navigate('InvoiceSendToHome')
     
   };
 
   const handleClickPix = () => {
     // Como realizar seu pagamento via Pix?
-    navigation.navigate('InvoicePixPayment', {
-      itemId: 3,
-      otherParam: 'Como realizar seu pagamento via Pix?',
-    });
+    navigation.navigate('InvoicePixPayment');
   };
 
   const handleClickBarras = () => {
     // Como realizar seu pagamento via Código barras?>
-    navigation.navigate('InvoiceBillPayment', {
-      itemId: 2,
-      otherParam: 'Como realizar seu pagamento via Código barras?',
-    });
+    navigation.navigate('InvoiceBillPayment');
   };
+
+  const CodigoBarra = (props)=>{
+    console.log('propsnew',props.dataCodigoMain?.data);
+    return (
+      <View
+      style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
+      <TouchableWithoutFeedback onPress={toggleModal}>
+        <View
+          style={{
+            flex: 1,
+            marginTop: -30,
+            borderTopRightRadius: 40,
+            borderTopLeftRadius: 40,
+            backgroundColor: 'white',
+            paddingVertical: 5,
+          }}>
+          <View
+            style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
+            <View style={[styles.boxcontainer]}>
+              <View style={{ marginVertical: 12 }}>
+                <Text style={styles.mediumtextbold}>Pagamento via código de barras</Text>
+                <Text style={styles.smalltext}>O pagamento por código de barras pode levar</Text>
+                <Text style={styles.smalltext}>até 3 dias úteis para ser confırmado</Text>
+              </View>
+              <View style={{ backgroundColor: 'lightgrey', padding: 10 }}>
+                <Text style={[styles.smalltext, { textAlign: 'center' }]}>{props.dataCodigoMain?.data.pagamentoCodigoBarra}</Text>
+              </View>
+              <ContainerViewButton>
+                <View style={{ marginVertical: 10 }}></View>
+                <Button
+                  title="Copiar código de barras"
+                  type="secondary"
+                  // onPress={handleSignIn}
+                  onPress={handleClick}
+                  isLoading={isLogging}
+                />
+                <View style={{ marginVertical: 10 }}></View>
+                <Button
+                  title="Visualizar PDF"
+                  type="secondary"
+                  // onPress={handleSignIn}
+                  onPress={handleClick}
+                  isLoading={isLogging}
+                />
+                <View style={{ marginVertical: 10 }}></View>
+                <Button
+                  title="Compartilhar"
+                  type="primary"
+                  // onPress={handleSignIn}
+                  onPress={handleClick}
+                  isLoading={isLogging}
+                />
+                <View style={{ marginVertical: 10 }}></View>
+                <Button
+                  title="Enviar por correspondência"
+                  type="primary"
+                  // onPress={handleSignIn}
+                  onPress={handleClickEnviar}
+                  isLoading={isLogging}
+                />
+              </ContainerViewButton>
+              <View style={styles.bottom}>
+              <TouchableOpacity onPress={handleClickBarras}>
+                <Text style={styles.second}>Como realizar seu pagamento via Código barras?></Text>
+              </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </View>
+      </TouchableWithoutFeedback>
+    </View>
+    )
+  }
+
+  const ModalPix = (props)=>{
+    console.log('pixnew',props.dataPixMain?.data);
+    return (
+     
+       <TouchableWithoutFeedback onPress={toggleModalPix}>
+                    <View
+                      style={{height: '70%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
+                      <View
+                        style={{
+                          flex: 1,
+                          marginTop: -30,
+                          borderTopRightRadius: 40,
+                          borderTopLeftRadius: 40,
+                          backgroundColor: 'white',
+                          paddingVertical: 5,
+
+                        }}>
+
+                        <View style={{ flex: 1 }}>
+
+                          <View style={[styles.boxcontainer]}>
+                            <View style={{ marginVertical: 12 }}>
+                              <Text style={styles.mediumtextbold}>Pagamento via PIX</Text>
+                              <Text style={styles.smalltext}>Copie o código PIX ou leia o QR Code para pagar</Text>
+                              <Text style={styles.smalltext}>su a conta! Tenha agilidade na baixa da conta no</Text>
+                              <Text style={styles.smalltext}>mesmo dia!</Text>
+                            </View>
+                            <ContainerViewButton>
+                              <Button
+                                title="Copiar código PIX"
+                                type="secondary"
+                                // onPress={handleSignIn}
+                                onPress={handleClickCopiar}
+                                isLoading={isLogging}
+                              />
+                            </ContainerViewButton>
+
+                            <View style={styles.checkboxContainer}>
+                              <Text style={styles.mediumtext}>Ou ler o QR code</Text>
+                              <View>
+                                <View style={{ justifyContent: 'center', justifyContent: 'center', alignItems: 'center', }}>
+                                <QRCode value={props.dataPixMain?.data.pagamentoCodigoPix.pix}/>
+                                </View>
+                                <View style={styles.bottom}>
+                                <TouchableOpacity onPress={handleClickPix}>
+                                 <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text></TouchableOpacity>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                  </TouchableWithoutFeedback>
+    
+    )
+  }
+
+
+  const RiscodeCorte = (props)=>{
+    console.log('propsnew',props.dataMain?.data);
+    return (
+     
+      <View style={{height: '90%',backgroundColor: 'white',width: '100%'}}>
+      <TouchableWithoutFeedback onPress={toggleModalPix}>
+       <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
+       <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
+     <View style={[styles.boxcontainer]}>
+       <View style={{ marginVertical: 10 }}>
+          <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
+          <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
+          <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
+          <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
+          <Text style={styles.smalltext}>elétrica.</Text>
+       </View>
+     <View style={{ marginVertical: 10 }}>
+       <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
+       <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
+       <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
+     </View>
+     <View style={{ marginVertical: 10 }}>
+       <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
+       <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
+       <Text style={styles.smalltext}>processamento</Text>
+       <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
+
+     </View>
+
+     <View style={{ marginVertical: 10 }}>
+       <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
+       <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
+       <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
+       <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
+       <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
+       <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
+     </View>
+    
+     <ContainerViewButton>
+       <View style={{ marginVertical: 8 }}></View>
+       <Button
+         title="Realizar pagamento"
+         type="secondary"
+         // onPress={handleSignIn}
+         onPress={toggleModalPop}
+         isLoading={isLogging}
+       />
+       <View style={{ marginVertical: 8 }}></View>
+       <Button
+         title="Já realizei o pagamento, preciso religar"
+         type="secondary"
+         // onPress={handleSignIn}
+         onPress={toggleModalPop}
+         isLoading={isLogging}
+       />
+       <View style={{ marginVertical: 8 }}></View>
+       <Button
+         title="Fechar"
+         type="secondary"
+         // onPress={handleSignIn}
+         onPress={toggleModalPop}
+         isLoading={isLogging}
+       />
+       <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
+          <CheckBox
+           value={isSelected}
+           onValueChange={setSelection}
+           style={styles.checkbox}
+           tintColors={{ true: '#02ade1', false: 'black' }}
+
+        />
+        <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
+      </View>
+
+     </ContainerViewButton>
+   </View>
+ </View>
+</View>
+</TouchableWithoutFeedback>
+</View>
+    )
+  }
 
   return (
     <>
@@ -315,220 +530,25 @@ export function PaymentInvoice() {
 
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalVisible} style={{ margin: 0 }}>
-                  <View
-                    style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
-                    <TouchableWithoutFeedback onPress={toggleModal}>
-                      <View
-                        style={{
-                          flex: 1,
-                          marginTop: -30,
-                          borderTopRightRadius: 40,
-                          borderTopLeftRadius: 40,
-                          backgroundColor: 'white',
-                          paddingVertical: 5,
-                        }}>
-                        <View
-                          style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
-                          <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 12 }}>
-                              <Text style={styles.mediumtextbold}>Pagamento via código de barras</Text>
-                              <Text style={styles.smalltext}>O pagamento por código de barras pode levar</Text>
-                              <Text style={styles.smalltext}>até 3 dias úteis para ser confırmado</Text>
-                            </View>
-                            <View style={{ backgroundColor: 'lightgrey', padding: 10 }}>
-                              <Text style={[styles.smalltext, { textAlign: 'center' }]}>836900000024 056800403059</Text>
-                              <Text style={[styles.smalltext, { textAlign: 'center' }]}>534844626034 100763780358</Text>
-                            </View>
-                            <ContainerViewButton>
-                              <View style={{ marginVertical: 10 }}></View>
-                              <Button
-                                title="Copiar código de barras"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
-                              <View style={{ marginVertical: 10 }}></View>
-                              <Button
-                                title="Visualizar PDF"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
-                              <View style={{ marginVertical: 10 }}></View>
-                              <Button
-                                title="Compartilhar"
-                                type="primary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
-                              <View style={{ marginVertical: 10 }}></View>
-                              <Button
-                                title="Enviar por correspondência"
-                                type="primary"
-                                // onPress={handleSignIn}
-                                onPress={handleClickEnviar}
-                                isLoading={isLogging}
-
-                              />
-                            </ContainerViewButton>
-                            <View style={styles.bottom}>
-                            <TouchableOpacity onPress={handleClickBarras}>
-                              <Text style={styles.second}>Como realizar seu pagamento via Código barras?></Text>
-                            </TouchableOpacity>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableWithoutFeedback>
-                  </View>
+                   <CodigoBarra dataCodigoMain={dataMain}/>
                 </Modal>
               </View>
 
+
+           
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
-                  <TouchableWithoutFeedback onPress={toggleModalPix}>
-                    <View
-                      style={{height: '70%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
-                      <View
-                        style={{
-                          flex: 1,
-                          marginTop: -30,
-                          borderTopRightRadius: 40,
-                          borderTopLeftRadius: 40,
-                          backgroundColor: 'white',
-                          paddingVertical: 5,
-
-                        }}>
-
-                        <View style={{ flex: 1 }}>
-
-                          <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 12 }}>
-                              <Text style={styles.mediumtextbold}>Pagamento via PIX</Text>
-                              <Text style={styles.smalltext}>Copie o código PIX ou leia o QR Code para pagar</Text>
-                              <Text style={styles.smalltext}>su a conta! Tenha agilidade na baixa da conta no</Text>
-                              <Text style={styles.smalltext}>mesmo dia!</Text>
-                            </View>
-                            <ContainerViewButton>
-                              <Button
-                                title="Copiar código PIX"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                onPress={handleClickCopiar}
-                                isLoading={isLogging}
-                              />
-                            </ContainerViewButton>
-
-                            <View style={styles.checkboxContainer}>
-                              <Text style={styles.mediumtext}>Ou ler o QR code</Text>
-
-                              <View >
-
-                                <View style={{ justifyContent: 'center', justifyContent: 'center', alignItems: 'center', }}>
-                                  <Image
-                                    source={require('../../assets/images/QrCodeImage.png')}
-                                    style={styles.scanicons}
-                                  />
-                                </View>
-                                <View style={styles.bottom}>
-                                <TouchableOpacity onPress={handleClickPix}>
-                                 <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text></TouchableOpacity>
-                                </View>
-                              </View>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                  </TouchableWithoutFeedback>
+                 <ModalPix dataPixMain={dataMain}/>
                 </Modal>
 
               </View>
 
 
         <View style={{ flex: 1 }}>
-        <Modal isVisible={isModalVisiblePop}>
-          <View style={{height: '90%',backgroundColor: 'white',width: '100%'}}>
-             <TouchableWithoutFeedback onPress={toggleModalPix}>
-              <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
-              <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
-          <View style={[styles.boxcontainer]}>
-            <View style={{ marginVertical: 10 }}>
-              <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
-              <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
-              <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
-              <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
-              <Text style={styles.smalltext}>elétrica.</Text>
-            </View>
-            <View style={{ marginVertical: 10 }}>
-              <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
-              <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
-              <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
-            </View>
-            <View style={{ marginVertical: 10 }}>
-              <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
-              <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
-              <Text style={styles.smalltext}>processamento</Text>
-              <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
-
-            </View>
-
-            <View style={{ marginVertical: 10 }}>
-              <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
-              <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
-              <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
-              <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
-              <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
-              <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
-            </View>
-           
-            <ContainerViewButton>
-              <View style={{ marginVertical: 8 }}></View>
-              <Button
-                title="Realizar pagamento"
-                type="secondary"
-                // onPress={handleSignIn}
-                onPress={toggleModalPop}
-                isLoading={isLogging}
-              />
-              <View style={{ marginVertical: 8 }}></View>
-              <Button
-                title="Já realizei o pagamento, preciso religar"
-                type="secondary"
-                // onPress={handleSignIn}
-                onPress={toggleModalPop}
-                isLoading={isLogging}
-              />
-              <View style={{ marginVertical: 8 }}></View>
-              <Button
-                title="Fechar"
-                type="secondary"
-                // onPress={handleSignIn}
-                onPress={toggleModalPop}
-                isLoading={isLogging}
-              />
-              <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
-                 <CheckBox
-                  value={isSelected}
-                  onValueChange={setSelection}
-                  style={styles.checkbox}
-                  tintColors={{ true: '#02ade1', false: 'black' }}
-
-               />
-               <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
-             </View>
-
-            </ContainerViewButton>
-          </View>
-        </View>
+           <Modal isVisible={isModalVisiblePop}>
+             <RiscodeCorte/>
+           </Modal>
        </View>
-      </TouchableWithoutFeedback>
-   </View>
-  </Modal>
-  </View>
  </ScrollView>
           </>
         ) : (

@@ -89,7 +89,6 @@ function TabsContainer() {
         <Tab.Screen options={{headerShown: false}} name={Screen} component={FirstTabNavigator} />
         <Tab.Screen options={{headerShown: false,tabBarStyle:{display:'none'}}} name={InvoiceMin} component={MainInnerNavigator} />
         <Tab.Screen options={{headerShown: false}} name={InvoiceBill} component={OtherInnerNavigator} /> 
-
         <Tab.Screen options={{headerShown: false}} name={InvoiceSend} component={MainNaviagtor} /> 
   
       </Tab.Navigator>

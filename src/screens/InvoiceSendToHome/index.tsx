@@ -26,12 +26,11 @@ import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 
-export function InvoiceSendToHome({ route }) {
+export function InvoiceSendToHome() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const { itemId, otherParam } = route.params;
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -124,11 +123,13 @@ export function InvoiceSendToHome({ route }) {
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
-                  {otherParam}
+                  Enviar por correspondência
                   </Title>
+                  
                   <Text style={styles.smalltext}>
                   O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser
 cobrado em sua próxima fatura.</Text>
+                 
                 </View>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
