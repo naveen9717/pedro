@@ -82,7 +82,7 @@ export default function CardChild({
                   right={(props) => 
                     renderToggle()
                     }
-                    >
+                >
                 </Card.Title>
                   <Card.Content>
                     <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>

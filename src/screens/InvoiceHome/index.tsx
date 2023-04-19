@@ -330,7 +330,6 @@ export function InvoiceHome() {
                               />
                              </View>
                             </ContainerViewButton>
-
                             <View style={{ marginVertical: 8 }}>
                               <Text style={styles.mediumtextbold}>ou Selecione o período </Text>
                             </View> 
@@ -345,7 +344,6 @@ export function InvoiceHome() {
                                    // minDate={moment().subtract(100, "days")}
                                   />
                             </View>
-
                             <ContainerViewButton>
                               <Button
                                 title="Aplicar filtros"

@@ -33,8 +33,8 @@ import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
-
-import { Card, Paragraph } from 'react-native-paper';
+import ClipboardToast from 'react-native-clipboard-toast';
+import { Card, Snackbar } from 'react-native-paper';
 import Modal from "react-native-modal";
 
 export function PaymentInvoice() {
@@ -46,7 +46,11 @@ export function PaymentInvoice() {
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisiblePop, setModalVisiblePop] = useState(false);
+const [visible, setVisible] = React.useState(false);
 
+  const onToggleSnackBar = () => setVisible(!visible);
+
+  const onDismissSnackBar = () => setVisible(false);
   const [isModalPixVisible, setModalPixVisible] = useState(false);
   const toggleModal = () => {
     setModalVisible(!isModalVisible);
@@ -121,7 +125,11 @@ export function PaymentInvoice() {
 
   const handleClickEnviar = () => {
     // toggleModalPix()
-    navigation.navigate('InvoiceSendToHome')
+    navigation.navigate('InvoiceSendToHome', {
+      itemId: 86,
+      otherParam: 'Enviar por correspondência',
+    });
+    
   };
 
   const handleClickPix = () => {
@@ -210,7 +218,7 @@ export function PaymentInvoice() {
                     </Card.Content>
                   </Card>
                 </View>
-
+                
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
                   <View style={{ flexDirection: 'row' }}>
@@ -249,7 +257,24 @@ export function PaymentInvoice() {
                         <View style={styles.container}>
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
                             <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
-                              <Text style={styles.white}>Copia e cola</Text>
+                            <View style={styles.container}>
+                            <TouchableHighlight onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableHighlight>
+                            <Snackbar
+                                 wrapperStyle={{backgroundColor:'transparent',marginHorizontal:-50,marginVertical:40}}
+                                 style={{backgroundColor:"#80c342"}}
+                                 duration={500}
+                                 visible={visible}
+                                 onDismiss={onDismissSnackBar}
+                                 action={{
+                                    label: '',
+                                    onPress: () => {
+                                     // Do something
+                                    },
+                                  }}>
+                                   Código PIX copiado com sucesso
+                               </Snackbar>
+                             </View>
+                             
                             </View>
                             <View style={{ borderBottomColor: '#FCFCFC', borderBottomWidth: 1, flex: 1, width: 200 }} />
                             <TouchableOpacity onPress={toggleModalPix}>

@@ -61,7 +61,6 @@ export default function CardMain({
 
   return (
     <TouchableOpacity onPress={onPress} style={{paddingTop: height * 0.01,}}>
-     
          <View style={{marginBottom:20}}>
                 <Card style={{backgroundColor:'white'}}>
                     <Card.Content>
@@ -93,7 +92,6 @@ export default function CardMain({
                    <Text style={styles.smalltext}>Total de débitos em aberto</Text>
                    <Text style={styles.amount}>R$ {valorContaAtual}</Text>
                 </View>
-        
                  {renderText()}
                   </Card.Content>
                </Card>
@@ -168,7 +166,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius:5
   },
-
   first:{
     color:'black'
   },
@@ -186,7 +183,6 @@ const styles = StyleSheet.create({
     color:'#02ade1',
     fontSize:10
   },
-  
   bar:{
     width:40,
     height: 30,
