@@ -13,12 +13,12 @@ import {
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
 
 import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
-import {Strong} from '../../components/Generic/index';
-import {AccessibilityWidget} from '../../components/AccessibilityWidget';
+
 import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../components/Containers/index';
 import {HeaderCustom} from '../../components/HeaderCustom';
 import {Button} from '../../components/Button';
+import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 import {useNetInfo} from '@react-native-community/netinfo';
 import {useDispatch, useSelector} from 'react-redux';
 import {AuthContext, AuthContextProps} from '../../contexts/useAuth';
@@ -27,12 +27,14 @@ import {Load} from '../../components/Button/styles';
 import {RootState} from '../../redux/reducer';
 import {AlertModal} from '../../components/Modal/AlertModal';
 
-export function InvoiceSolicitedInfo() {
+
+export function InvoicePaymentInfoSuccess() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
 
+ 
   const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
@@ -62,12 +64,11 @@ export function InvoiceSolicitedInfo() {
     }
   };
   useEffect(() => {
- 
+  
   }, []);
 
   const {height} = Dimensions.get('window');
- 
-
+  
   const theme = useTheme();
   const changeStep = (s: number) => {
     setStep(s);
@@ -112,10 +113,11 @@ export function InvoiceSolicitedInfo() {
               leftAction={'menu'}
             />
             <AccessibilityWidget
-            marginTop={
+             marginTop={
               Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            }
+             }
             />
+
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
@@ -133,17 +135,13 @@ export function InvoiceSolicitedInfo() {
                  </View>
                    <View style={{marginVertical:15}}>
                   <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                  <Text style={styles.mediumtext}>Estamos processando seu pagamento!
-                    Fique tranquilo que em breve será baixada! Caso
-                    receba ações de cobrança, elas serão
-                    automaticamente canceladas!</Text>
+                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
                  </View>
                   <View>
-                  <Text style={styles.smalltext}>Conta referente a instalação: 039204859</Text>
-                  <Text style={styles.smalltext}>Pagamento solicitado por: Gustavo Risonho Fortunato</Text>
-                  <Text style={styles.smalltext}>Data do pagamento: 12/11/2021 às 13:23:12</Text>
-                  <Text style={styles.smalltext}>Data Prevista:</Text>
-                  <Text style={styles.smalltext}>Método de pagamento: PIX</Text>
+                  <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
+                  <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
+                  <Text style={styles.smalltext}>sua próxima fatura.</Text>
+                  
                   </View>
                 </View>
                 
@@ -175,7 +173,6 @@ export function InvoiceSolicitedInfo() {
               leftOnPress={handleHome}
               leftAction={'login'}
             />
-           
           </>
         )}
       </SafeAreaView>

@@ -26,11 +26,12 @@ import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 
-export function InvoiceSendToHome() {
+export function InvoiceSendToHome({route}) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const { itemId, otherParam } = route.params;
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -129,19 +130,15 @@ export function InvoiceSendToHome() {
                   <Text style={styles.smalltext}>
                   O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser
 cobrado em sua próxima fatura.</Text>
-                 
                 </View>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
                   Endereço de entrega
                   </Title>
-                  
                   <Text style={styles.mediumtext}>Rua Bemvinda Martins Ceolim, 57 - Terra Nova -</Text>
                   <Text style={styles.mediumtext}>Itatiba-SP- CEP: 13256-558</Text>
                 </View>
-
                 <ContainerViewButton>
-                 
                   <Button
                     title="Reenviar por correspondência"
                     type="secondary"

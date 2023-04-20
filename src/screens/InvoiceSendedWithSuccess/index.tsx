@@ -149,7 +149,8 @@ export function InvoiceSendedWithSuccess() {
                   <Button
                     title="Compartilhar"
                     type="primary"
-                    // onPress={handleSignIn}
+                    Icon="sharealt"
+                    IconColor="#02ade1"
                     onPress={handleClick}
                     isLoading={isLogging}
                   />

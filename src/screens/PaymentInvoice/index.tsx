@@ -12,8 +12,7 @@ import {
   TouchableOpacity,
   Pressable,
   TouchableHighlight,
-  TouchableWithoutFeedback,
-  TouchableWithoutFeedbackComponent
+  TouchableWithoutFeedback
 } from 'react-native';
 // Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -134,7 +133,10 @@ export function PaymentInvoice() {
 
   const handleClickEnviar = () => {
     // toggleModalPix()
-    navigation.navigate('InvoiceSendToHome')
+    navigation.navigate('InvoiceSendToHome', {
+      itemId: 1,
+      otherParam: 'Enviar por correspondência',
+    });
     
   };
 
@@ -179,7 +181,8 @@ export function PaymentInvoice() {
                 <Button
                   title="Copiar código de barras"
                   type="secondary"
-                  // onPress={handleSignIn}
+                  Icon="copy1"
+                  IconColor="#FFFFFF"
                   onPress={handleClick}
                   isLoading={isLogging}
                 />
@@ -187,7 +190,8 @@ export function PaymentInvoice() {
                 <Button
                   title="Visualizar PDF"
                   type="secondary"
-                  // onPress={handleSignIn}
+                  Icon="filetext1"
+                  IconColor="#FFFFFF"
                   onPress={handleClick}
                   isLoading={isLogging}
                 />
@@ -195,7 +199,8 @@ export function PaymentInvoice() {
                 <Button
                   title="Compartilhar"
                   type="primary"
-                  // onPress={handleSignIn}
+                  Icon="sharealt"
+                  IconColor="#02ade1"
                   onPress={handleClick}
                   isLoading={isLogging}
                 />
@@ -203,7 +208,8 @@ export function PaymentInvoice() {
                 <Button
                   title="Enviar por correspondência"
                   type="primary"
-                  // onPress={handleSignIn}
+                  Icon="mail"
+                  IconColor="#02ade1"
                   onPress={handleClickEnviar}
                   isLoading={isLogging}
                 />
@@ -236,11 +242,9 @@ export function PaymentInvoice() {
                           borderTopLeftRadius: 40,
                           backgroundColor: 'white',
                           paddingVertical: 5,
-
                         }}>
 
                         <View style={{ flex: 1 }}>
-
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>
                               <Text style={styles.mediumtextbold}>Pagamento via PIX</Text>
@@ -252,7 +256,8 @@ export function PaymentInvoice() {
                               <Button
                                 title="Copiar código PIX"
                                 type="secondary"
-                                // onPress={handleSignIn}
+                                Icon="copy1"
+                                IconColor="#FFFFFF"
                                 onPress={handleClickCopiar}
                                 isLoading={isLogging}
                               />
@@ -271,11 +276,10 @@ export function PaymentInvoice() {
                               </View>
                             </View>
                           </View>
-                        </View>
-                      </View>
                     </View>
-                  </TouchableWithoutFeedback>
-    
+                </View>
+            </View>
+      </TouchableWithoutFeedback>
     )
   }
 
@@ -285,50 +289,49 @@ export function PaymentInvoice() {
     return (
      
       <View style={{height: '90%',backgroundColor: 'white',width: '100%'}}>
-      <TouchableWithoutFeedback onPress={toggleModalPix}>
-       <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
-       <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
-     <View style={[styles.boxcontainer]}>
-       <View style={{ marginVertical: 10 }}>
+        <TouchableWithoutFeedback onPress={toggleModalPix}>
+         <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
+         <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
+         <View style={[styles.boxcontainer]}>
+          <View style={{ marginVertical: 10 }}>
           <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
           <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
           <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
           <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
           <Text style={styles.smalltext}>elétrica.</Text>
-       </View>
-     <View style={{ marginVertical: 10 }}>
-       <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
-       <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
-       <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
-     </View>
-     <View style={{ marginVertical: 10 }}>
-       <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
-       <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
-       <Text style={styles.smalltext}>processamento</Text>
-       <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
+         </View>
+         <View style={{ marginVertical: 10 }}>
+          <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
+          <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
+          <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
+         </View>
+         <View style={{ marginVertical: 10 }}>
+          <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
+          <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
+          <Text style={styles.smalltext}>processamento</Text>
+          <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
+         </View>
 
-     </View>
-
-     <View style={{ marginVertical: 10 }}>
-       <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
-       <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
-       <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
-       <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
-       <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
-       <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
-     </View>
+         <View style={{ marginVertical: 10 }}>
+          <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
+          <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
+          <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
+          <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
+          <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
+          <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
+        </View>
     
-     <ContainerViewButton>
-       <View style={{ marginVertical: 8 }}></View>
-       <Button
-         title="Realizar pagamento"
-         type="secondary"
-         // onPress={handleSignIn}
-         onPress={toggleModalPop}
-         isLoading={isLogging}
-       />
-       <View style={{ marginVertical: 8 }}></View>
-       <Button
+        <ContainerViewButton>
+         <View style={{ marginVertical: 8 }}></View>
+         <Button
+           title="Realizar pagamento"
+           type="secondary"
+           // onPress={handleSignIn}
+           onPress={toggleModalPop}
+           isLoading={isLogging}
+         />
+        <View style={{ marginVertical: 8 }}></View>
+        <Button
          title="Já realizei o pagamento, preciso religar"
          type="secondary"
          // onPress={handleSignIn}
@@ -349,11 +352,9 @@ export function PaymentInvoice() {
            onValueChange={setSelection}
            style={styles.checkbox}
            tintColors={{ true: '#02ade1', false: 'black' }}
-
         />
         <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
       </View>
-
      </ContainerViewButton>
    </View>
  </View>
@@ -398,7 +399,6 @@ export function PaymentInvoice() {
 
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
-                
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>
                     Pagmenta da conta
@@ -434,7 +434,6 @@ export function PaymentInvoice() {
                           <Text style={styles.first}>Referente à</Text>
                           <Text style={styles.second}>Fevereiro/2022</Text>
                         </View>
-
                       </View>
                     </Card.Content>
                   </Card>
@@ -527,29 +526,24 @@ export function PaymentInvoice() {
                 </TouchableWithoutFeedback>
               </MainGenericContainer>
 
-
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalVisible} style={{ margin: 0 }}>
                    <CodigoBarra dataCodigoMain={dataMain}/>
                 </Modal>
               </View>
-
-
            
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                  <ModalPix dataPixMain={dataMain}/>
                 </Modal>
-
               </View>
 
-
-        <View style={{ flex: 1 }}>
-           <Modal isVisible={isModalVisiblePop}>
-             <RiscodeCorte/>
-           </Modal>
-       </View>
- </ScrollView>
+              <View style={{ flex: 1 }}>
+               <Modal isVisible={isModalVisiblePop}>
+                 <RiscodeCorte/>
+              </Modal>
+         </View>
+     </ScrollView>
           </>
         ) : (
           <>

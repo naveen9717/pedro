@@ -259,9 +259,9 @@ const styles = StyleSheet.create({
     marginLeft:10
   },
   smalltextbold: {
-    fontSize: 12,
+    fontSize: 13,
     color:'black',
-    fontWeight:'500'
+    fontWeight:'700'
   },
   bullettext: {
     fontSize: 12,
@@ -383,10 +383,10 @@ const styles = StyleSheet.create({
     height: 44,
   },
   bullets:{
-    width: 10,
-    height:10,
+    width: 6,
+    height:6,
     backgroundColor:'#02ade1',
-    borderRadius:10
+    borderRadius:6
   }
  
 });
