@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import {boxShadowCard} from '../../helpers/functions/utils';
 import { Card, Paragraph } from 'react-native-paper';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 
 import {
@@ -48,10 +49,7 @@ export default function CardMain({
 
   const renderText=() =>{
     if (parcelamentoD === true ) {
-      return   <View style={styles.bottomview}><Text style={{color:'white',textAlign:'center'}}>Parcelamento disponivel <Image
-      source={require('../../assets/icons/right-arrow.png')}
-      style={styles.icon}
-    /></Text></View>
+      return   <View style={styles.bottomview}><Text style={{color:'white',textAlign:'center'}}>Parcelamento disponivel <AntIcon name="right" color="#FFFFFF" size={13} /></Text></View>
       ;
     }
     else {
@@ -73,10 +71,7 @@ export default function CardMain({
                       <TouchableOpacity
                       //  onPress={handleClick}
                        style={styles.onpress}>
-                       <Text style={{color:'white'}}>Trocar instalação <Image
-                    source={require('../../assets/icons/right-arrow.png')}
-                    style={styles.icon}
-                     /></Text>
+                       <Text style={{color:'white'}}>Trocar instalação <AntIcon name="right" color="#FFFFFF" size={13} /></Text>
                       </TouchableOpacity>
                     </View>
                   </View>

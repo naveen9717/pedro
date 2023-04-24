@@ -27,6 +27,7 @@ import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 export function InvoicePixPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -161,7 +162,6 @@ export function InvoicePixPayment() {
 
 
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                
                   <Text style={styles.mediumtextbold}>Principais vantagens do seu pagamentos via PlX:</Text>
                   <FlatList
                   data={[
@@ -179,14 +179,10 @@ export function InvoicePixPayment() {
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
 
                 <View style={styles.mTop}>
-                 
                 <Card style={{ backgroundColor: '#fff', width: '30%' }}>
                  <Card.Content>
                       <View>
-                         <Image
-                           source={require('../../assets/icons/icBarcode.png')}
-                           style={styles.bar}
-                          />
+                       <AntIcon name="barcode" color="#000000" size={30} />
 
                          <Text style={styles.bartext}>Código de</Text>
                         <Text style={styles.bartext}>barra</Text>

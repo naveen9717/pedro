@@ -35,7 +35,8 @@ import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 
 import { Card, Paragraph } from 'react-native-paper';
-import Modal from "react-native-modal";
+import FeatherIcon from 'react-native-vector-icons/Feather';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 export function Screen3() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -159,14 +160,62 @@ export function Screen3() {
             />
 
             <ScrollView>
-              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
-                
-                <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Minhas contas
-                  </Title>
-                  <Text style={styles.label}>Procotocolo: 000000000</Text>
+              <MainGenericContainer style={{ height: height }}>
+
+              <View style={{backgroundColor:"#02ade1",marginLeft:-40,marginRight:-40,paddingLeft:40,paddingRight:40,paddingVertical:20}}>
+                      <View>
+                        <Text style={[styles.filtertext,{color:'#FFFFFF'}]} > Olá. Gustavo Risonho</Text>
+                        <Text style={[styles.filtertext,{color:'#FFFFFF'}]} > N° da instalação: 0123453333 </Text>
+                      </View>
+
+                      <View style={{marginVertical:15}}>
+                        <Text style={[styles.filtertext,{color:'#FFFFFF'}]} > Avenida Paulista, 1000</Text>
+                        <Text style={[styles.mediumtextbold,{color:'#FFFFFF'}]} > Como podemos ajudar hoje?</Text>
+                      </View> 
+              </View>
+           
+               <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
+                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                 <View>
+                  <Title>Minhas contas</Title>
                 </View>
+                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                  </View>
+                  </View>
+                </View>
+
+                <View style={{ marginVertical:15}}>
+                  <Card style={{ backgroundColor: '#fecd5b' }}>
+                    <Card.Content>
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',alignItems:'center',paddingHorizontal:12 }}>
+                        <View style={{ marginHorizontal:2}}>
+                        <AntIcon name="exclamationcircleo" color="#ed1c25" size={17} />
+                        </View>
+                        <View style={{ marginHorizontal:5}}>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1,color:'#ed1c25'}]}>Você possui 3 contas em aberto Com valor total de R$ 1.909.000,00</Text>
+                        </View>
+                        <AntIcon name="right" color="#ed1c25" size={17} />
+                      </View>
+                      </Card.Content>
+                </Card>
+              </View>
+
+              <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
+                  <View style={{ flexDirection: 'row', }}>
+                    <View>
+                      <FeatherIcon name="dollar-sign" color="#02ade1" size={18} />
+                      </View>
+                      <View>
+                        <Text style={styles.filtertext} > Precisa financiar suas contas?</Text>
+                        </View>
+                      </View>
+                  <View>
+                   <Text style={styles.second}>Saiba mais <AntIcon name="right" color="#02ade1" size={13} /> </Text>
+                 </View>
+                 
+                 </View>
+           
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Card.Content>
@@ -334,6 +383,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 22,
+  },
+  filtertexticon:{
+    backgroundColor:"#80c342",
+    width:22,
+    height:22,
+    borderRadius:22,
+    alignContent:'center',
+    alignItems:'center',
+    alignSelf:'center',
+    justifyContent:'center'
+  },
+  filtertext:{
+    fontSize:12
   },
   modalView: {
     margin: 20,

@@ -37,6 +37,7 @@ import { Card, Snackbar } from 'react-native-paper';
 import Modal from "react-native-modal";
 import ContaServices from '../../shared/services/ContaServices';
 import QRCode from 'react-native-qrcode-svg';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 export function PaymentInvoice() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -66,7 +67,6 @@ export function PaymentInvoice() {
   const toggleModalPop = () => {
     setModalVisiblePop(!isModalVisiblePop)
   }
-
  
   const netInfo = useNetInfo();
 
@@ -84,7 +84,6 @@ export function PaymentInvoice() {
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
- 
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -183,6 +182,7 @@ export function PaymentInvoice() {
                   type="secondary"
                   Icon="copy1"
                   IconColor="#FFFFFF"
+                  bgColor="#2da55d"
                   onPress={handleClick}
                   isLoading={isLogging}
                 />
@@ -216,7 +216,7 @@ export function PaymentInvoice() {
               </ContainerViewButton>
               <View style={styles.bottom}>
               <TouchableOpacity onPress={handleClickBarras}>
-                <Text style={styles.second}>Como realizar seu pagamento via Código barras?></Text>
+                <Text style={styles.second}>Como realizar seu pagamento via Código barras?<AntIcon name="right" color="#02ade1" size={10} /></Text>
               </TouchableOpacity>
               </View>
             </View>
@@ -233,7 +233,7 @@ export function PaymentInvoice() {
      
        <TouchableWithoutFeedback onPress={toggleModalPix}>
                     <View
-                      style={{height: '70%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
+                      style={{height: '80%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
                       <View
                         style={{
                           flex: 1,
@@ -252,6 +252,7 @@ export function PaymentInvoice() {
                               <Text style={styles.smalltext}>su a conta! Tenha agilidade na baixa da conta no</Text>
                               <Text style={styles.smalltext}>mesmo dia!</Text>
                             </View>
+                            <View style={{marginVertical:15}}>
                             <ContainerViewButton>
                               <Button
                                 title="Copiar código PIX"
@@ -262,16 +263,16 @@ export function PaymentInvoice() {
                                 isLoading={isLogging}
                               />
                             </ContainerViewButton>
-
+                          </View>
                             <View style={styles.checkboxContainer}>
                               <Text style={styles.mediumtext}>Ou ler o QR code</Text>
                               <View>
-                                <View style={{ justifyContent: 'center', justifyContent: 'center', alignItems: 'center', }}>
+                                <View style={{ justifyContent: 'center', alignItems: 'center', }}>
                                 <QRCode value={props.dataPixMain?.data.pagamentoCodigoPix.pix}/>
                                 </View>
-                                <View style={styles.bottom}>
+                                <View style={[styles.bottom,{justifyContent: 'center', alignItems: 'center',marginVertical:50}]}>
                                 <TouchableOpacity onPress={handleClickPix}>
-                                 <Text style={styles.second}>Como realizar seu pagamento via Pix?></Text></TouchableOpacity>
+                                 <Text style={styles.second}>Como realizar seu pagamento via Pix?<AntIcon name="right" color="#02ade1" size={10} /></Text></TouchableOpacity>
                                 </View>
                               </View>
                             </View>
@@ -410,19 +411,18 @@ export function PaymentInvoice() {
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
-                          <Text style={styles.smalltext}>Pagmenta da conta</Text>
+                          <Text style={[styles.smalltext,{fontSize:11,fontWeight:'600'}]}>Parcelamento em código de barras</Text>
                           <Text style={styles.amount}>R$ 124.153,58</Text>
                         </View>
                         <View>
                           <TouchableOpacity
                             onPress={toggleModalPop}
                             style={styles.onpress}>
-                            <Text style={{ color: 'white' }}>Risco de corte </Text>
+                            <Text style={[styles.smalltext,{ color: 'white' }]}>Risco de corte </Text>
                           </TouchableOpacity>
                         </View>
                       </View>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-
                         <View>
                           <Text style={styles.title}>Vencida</Text>
                         </View>
@@ -442,19 +442,13 @@ export function PaymentInvoice() {
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
                   <View style={{ flexDirection: 'row' }}>
-                    <View
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: 'white',
-                        justifyContent: 'center',
-                        flex: 1,
-                      }}>
+                    <View style={styles.cardStyles}>
                       <Card style={{ backgroundColor: 'white', borderRadius: 10, borderBottomEndRadius: 0, borderTopEndRadius: 0, marginTop: 2, }}>
                         <Card.Content>
                           <View style={{ flexDirection: 'row' }}>
                             <View>
-                              <Text style={styles.smalltext}>Pagar</Text>
-                              <Text style={[styles.smalltext, {marginBottom:10}]}>com Pix</Text>
+                              <Text style={[styles.smalltext,{fontWeight:'500'}]}>Pagar</Text>
+                              <Text style={[styles.smalltext, {marginBottom:10,fontWeight:'500'}]}>com Pix</Text>
                               <Image
                                 source={require('../../assets/icons/icGroup.png')}
                                 style={styles.icon}
@@ -464,38 +458,16 @@ export function PaymentInvoice() {
                         </Card.Content>
                       </Card>
                     </View>
-                    <View
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: '#02ade1',
-                        justifyContent: 'center',
-                        flex: 2.9,
-                        borderRadius: 10, borderBottomLeftRadius: 0, borderBottomStartRadius: 0, borderTopLeftRadius: 0, marginTop: 2,
-                      }}>
+                    <View style={styles.cardStyle}>
                       <Card.Content>
                         <View style={styles.container}>
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
                             <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
                             <View style={styles.container}>
                             <TouchableHighlight onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableHighlight>
-                            <Snackbar
-                                 wrapperStyle={{backgroundColor:'transparent',marginHorizontal:-50,marginVertical:40}}
-                                 style={{backgroundColor:"#80c342"}}
-                                 duration={500}
-                                 visible={visible}
-                                 onDismiss={onDismissSnackBar}
-                                 action={{
-                                    label: '',
-                                    onPress: () => {
-                                     // Do something
-                                    },
-                                  }}>
-                                   Código PIX copiado com sucesso
-                               </Snackbar>
                              </View>
-                             
                             </View>
-                            <View style={{ borderBottomColor: '#FCFCFC', borderBottomWidth: 1, flex: 1, width: 200 }} />
+                            <View style={{ borderBottomColor: '#4ec6ea', borderBottomWidth: 1, flex: 1, width: 235 }} />
                             <TouchableOpacity onPress={toggleModalPix}>
                               <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 20 }} >
                                 <Text style={styles.white}>Ver QR code</Text>
@@ -506,6 +478,21 @@ export function PaymentInvoice() {
                       </Card.Content>
                     </View>
                   </View>
+
+                  <Snackbar
+                      wrapperStyle={{backgroundColor:'transparent',marginVertical:"100%"}}
+                      style={{backgroundColor:"#80c342",width:"100%"}}
+                      duration={500}
+                      visible={visible}
+                      onDismiss={onDismissSnackBar}
+                      action={{
+                            label: '',
+                            onPress: () => {
+                            // Do something
+                        },
+                      }}>
+                        <Text style={{color:"#FFFFFF",fontSize:12,width:"100%"}}><AntIcon name="check" color="#FFFFFF" size={15} /> Código PIX copiado com sucesso</Text>
+                  </Snackbar>
                 </View>
 
                 <TouchableWithoutFeedback onPress={toggleModal}>
@@ -513,11 +500,8 @@ export function PaymentInvoice() {
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
-                          <Image
-                            source={require('../../assets/icons/icBarcode.png')}
-                            style={styles.bar}
-                          />
-                          <Text style={[styles.bartext, {marginTop:20}]}>Código de</Text>
+                          <AntIcon name="barcode" color="#000000" size={30} />
+                          <Text style={[styles.bartext, {marginTop:5}]}>Código de</Text>
                           <Text style={[styles.bartext, {marginTop:2, marginBottom:-2}]}>barra</Text>
                         </View>
                       </View>
@@ -531,19 +515,17 @@ export function PaymentInvoice() {
                    <CodigoBarra dataCodigoMain={dataMain}/>
                 </Modal>
               </View>
-           
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                  <ModalPix dataPixMain={dataMain}/>
                 </Modal>
               </View>
-
               <View style={{ flex: 1 }}>
                <Modal isVisible={isModalVisiblePop}>
                  <RiscodeCorte/>
               </Modal>
-         </View>
-     </ScrollView>
+          </View>
+       </ScrollView>
           </>
         ) : (
           <>
@@ -557,10 +539,25 @@ export function PaymentInvoice() {
 
 const styles = StyleSheet.create({
   container: {
-
     flexDirection: 'row',
-    flexWrap: 'wrap',
     alignItems: 'flex-start'
+  },
+  cardStyle:{
+    alignItems: 'center',
+    backgroundColor: '#02ade1',
+    justifyContent: 'center',
+    flex: 2.9,
+    borderRadius: 10,
+    borderBottomLeftRadius: 0,
+    borderBottomStartRadius: 0,
+    borderTopLeftRadius: 0,
+    marginTop: 2,
+  },
+  cardStyles:{
+    alignItems: 'center',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    flex: 1,
   },
   checkboxContainer: {
     marginBottom: 20,
@@ -576,13 +573,12 @@ const styles = StyleSheet.create({
   },
   amount: {
     marginBottom: 10,
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: '600'
   },
   smalltext: {
     fontSize: 13,
     color: 'black',
-
   },
   mediumtext: {
     fontSize: 18,
@@ -608,11 +604,10 @@ const styles = StyleSheet.create({
   },
   onpress: {
     paddingVertical: 2,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     backgroundColor: 'maroon',
-    borderRadius: 5
+    borderRadius: 4
   },
-
   first: {
     color: 'black'
   },
@@ -623,7 +618,7 @@ const styles = StyleSheet.create({
   second: {
     fontWeight: '500',
     color: '#02ade1',
-    flexShrink: 1
+    fontSize:12
   },
   bartext: {
     fontWeight: '500',
@@ -683,7 +678,7 @@ const styles = StyleSheet.create({
   },
   bottom: {
     marginVertical: 20,
-    fontSize: 8
+    fontSize: 8,
   },
   boxcontainer: {
     paddingHorizontal: 50
@@ -693,6 +688,5 @@ const styles = StyleSheet.create({
     width: 120,
     alignItems: 'center',
     justifyContent: 'center',
-
   }
 });

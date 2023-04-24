@@ -146,11 +146,9 @@ cobrado em sua próxima fatura.</Text>
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
-
                 </ContainerViewButton>
 
                 <View style={styles.mTop}>
-                 
                   <Button
                    title="Alterar endereço de entrega"
                    type="primary"

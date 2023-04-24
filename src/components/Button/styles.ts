@@ -3,7 +3,7 @@ import { RectButton } from 'react-native-gesture-handler';
 import { Button } from 'react-native-paper';
 import { TouchableOpacity, Text } from 'react-native';
 
-export type TypeProps = 'primary' | 'secondary';
+export type TypeProps = 'primary' | 'secondary' | 'tertiary';
 
 type ContainerProps = {
   type?: TypeProps;

@@ -34,6 +34,7 @@ import DateRangePicker from "rnv-date-range-picker";
 import moment from 'moment'
 import ContaServices from '../../shared/services/ContaServices';
 import {AccessibilityWidget} from '../../components/AccessibilityWidget';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 
 export function InvoiceHome() {
@@ -206,25 +207,27 @@ export function InvoiceHome() {
                    <Text style={styles.filtertext}>Status: Todos</Text>
                  </View>
                  <View style={styles.filterInner}>
-                   <Text style={styles.filtertext}>Período: {moment(selectedRange.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange.secondDate, 'YYY-MM-DD').format('DD/MM')}</Text>
+                   <Text style={styles.filtertext}>Período: {moment(selectedRange?.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange?.secondDate, 'YYY-MM-DD').format('DD/MM')}</Text>
                  </View>
                    <View style={styles.iconouter}>
                      <TouchableWithoutFeedback onPress={handlePix}>
-                      <Image
-                         source={require('../../assets/icons/icFilter.png')}
-                         style={styles.icon}
-                      />
+                     <AntIcon name="filter" color="#FFFFFF" size={13} />
                     </TouchableWithoutFeedback>
                    </View>
                  </View>
 
                  <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
-                 <View>
-                   <Text style={styles.filtertext}>Baixar todas faturas</Text>
-                 </View>
+                   <View style={{ flexDirection: 'row', }}>
+                    <View style={styles.filtertexticon}>
+                      <AntIcon name="download" color="#FFFFFF" size={13} />
+                      </View>
+                      <View>
+                        <Text style={styles.filtertext} > Baixar todas faturas</Text>
+                        </View>
+                      </View>
                  <View>
                  <TouchableWithoutFeedback onPress={handleClickHist}>
-                   <Text style={styles.second}>Ver histórico de consumo></Text>
+                   <Text style={styles.second}>Ver histórico de consumo <AntIcon name="right" color="#02ade1" size={13} /> </Text>
                    </TouchableWithoutFeedback>
                  </View>
                  </View>
@@ -416,6 +419,16 @@ const styles = StyleSheet.create({
   filtertext:{
     fontSize:12
   },
+  filtertexticon:{
+    backgroundColor:"#80c342",
+    width:22,
+    height:22,
+    borderRadius:22,
+    alignContent:'center',
+    alignItems:'center',
+    alignSelf:'center',
+    justifyContent:'center'
+  },
   icon:{
     width:15,
     height:15
@@ -478,7 +491,7 @@ const styles = StyleSheet.create({
   second: {
     fontWeight: '500',
     color: '#02ade1',
-    flexShrink: 1
+    fontSize:12
   },
   bartext: {
     fontWeight: '500',

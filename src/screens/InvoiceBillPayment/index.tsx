@@ -28,6 +28,7 @@ import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 export function InvoiceBillPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -179,10 +180,7 @@ export function InvoiceBillPayment() {
                <Card style={{ backgroundColor: '#fff', flex: 2.2,marginHorizontal:10,borderRadius:3 }}>
                  <Card.Content>
                       <View>
-                         <Image
-                           source={require('../../assets/icons/icBarcode.png')}
-                           style={styles.bar}
-                          />
+                        <AntIcon name="wallet" color="#02ade1" size={30} />
                          <Text style={styles.bartext}>Cartão</Text>
                          <Text style={styles.bartext}>de crédito</Text>
                       </View>

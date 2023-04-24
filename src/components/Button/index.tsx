@@ -14,6 +14,7 @@ type Props = RectButtonProps & {
   disabled?: boolean;
   height?: number;
   Icon?:string;
+  bgColor?:string;
   IconColor?:string;
   onPress?: () => void;
 };
@@ -22,6 +23,7 @@ export function Button({
   title,
   Icon,
   IconColor,
+  bgColor,
   type = 'primary',
   isLoading = false,
   marginBottom,
@@ -42,7 +44,6 @@ export function Button({
         <Load />
       ) : (
         <>
-        
           <Title type={type}><AntIcon name={Icon} color={IconColor} size={15} /> {title}</Title>
           {children}
         </>

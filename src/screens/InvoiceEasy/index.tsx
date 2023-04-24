@@ -28,7 +28,8 @@ import { Card, Paragraph } from 'react-native-paper';
 import SegmentedControlTab from 'react-native-segmented-control-tab'
 import { BarChart } from "react-native-gifted-charts";
 import { PieChart } from "react-native-gifted-charts";
-
+import AntIcon from 'react-native-vector-icons/AntDesign';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 
 
 export function InvoiceEasy() {
@@ -212,10 +213,7 @@ const renderHorizontalItem2 = (data) => {
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
-                        <Image
-                          source={require('../../assets/icons/exclamation-mark.png')}
-                          style={styles.icon}
-                        />
+                        <AntIcon name="exclamationcircleo" color="yellow" size={17} />
                         </View>
                         <View>
                           <Text style={[styles.mediumtextbold,{marginVertical:1,color:'#FFFFFF'}]}>Data da próxima leitura: 17/05/2022</Text>
@@ -271,10 +269,7 @@ const renderHorizontalItem2 = (data) => {
                           <Text style={styles.second}>Realizar pagamento</Text>
                         </View>
                         <View>
-                          <Image
-                            source={require('../../assets/icons/share.png')}
-                            style={styles.icon}
-                          />
+                        <FeatherIcon name="share-2" color="#02ade1" size={18} />
                         </View>
                       </View>
                       </Card.Content>
@@ -284,14 +279,11 @@ const renderHorizontalItem2 = (data) => {
                   <View style={{ marginVertical:15}}>
                   <Card style={{ backgroundColor: '#04704e' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <View>
-                        <Image
-                          source={require('../../assets/icons/exclamation-mark.png')}
-                          style={styles.icon}
-                        />
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',alignItems:'center' }}>
+                        <View style={{ marginHorizontal:5}}>
+                        <AntIcon name="exclamationcircleo" color="yellow" size={17} />
                         </View>
-                        <View>
+                        <View style={{ marginHorizontal:5}}>
                           <Text style={[styles.mediumtextbold,{marginVertical:1,color:'#FFFFFF'}]}>O valor da sua conta está 18% menor que o mês anterior. Em Abril você pagou R$300,00.</Text>
                         </View>
                       </View>
@@ -346,7 +338,7 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={{marginVertical:15}}>
                  <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
+                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData2}
@@ -359,8 +351,12 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Bandeira tarifária</Text>
+                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                  </View>
+
                  </View>
                  <View style={{marginVertical:5,}}>
                  <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
@@ -575,8 +571,12 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Bandeira tarifária</Text>
+                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                  </View>
+
                  </View>
                  <View style={{marginVertical:5,}}>
                  <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
@@ -775,8 +775,12 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Bandeira tarifária</Text>
+                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                  </View>
+
                  </View>
                  <View style={{marginVertical:5,}}>
                  <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>

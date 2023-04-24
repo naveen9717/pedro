@@ -22,6 +22,7 @@ import {
 } from 'react-native-popup-menu';
 
 import { Tooltip } from 'react-native-elements';
+import AntIcon from 'react-native-vector-icons/AntDesign';
 
 type Props = {
   status: string;
@@ -113,10 +114,7 @@ export default function CardChild({
                       <Text style={styles.second}>Detalhamento</Text>
                     </View>
                   <View>
-                  <Image
-                    source={require('../../assets/icons/share.png')}
-                    style={styles.icon}
-                  />
+                  <AntIcon name="sharealt" color="#02ade1" size={15} />
                    </View>
                  </View>
                   </Card.Content>
