@@ -122,7 +122,7 @@ export function PaymentInvoice() {
 
   const handleClick = () => {
     // toggleModalPix()
-    navigation.navigate('Info')
+    navigation.navigate('InvoicePaymentInfoSuccess')
   };
 
   const handleClickCopiar = () => {
@@ -464,7 +464,7 @@ export function PaymentInvoice() {
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
                             <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
                             <View style={styles.container}>
-                            <TouchableHighlight onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableHighlight>
+                            <TouchableWithoutFeedback onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableWithoutFeedback>
                              </View>
                             </View>
                             <View style={{ borderBottomColor: '#4ec6ea', borderBottomWidth: 1, flex: 1, width: 235 }} />
@@ -478,7 +478,6 @@ export function PaymentInvoice() {
                       </Card.Content>
                     </View>
                   </View>
-
                   <Snackbar
                       wrapperStyle={{backgroundColor:'transparent',marginVertical:"100%"}}
                       style={{backgroundColor:"#80c342",width:"100%"}}

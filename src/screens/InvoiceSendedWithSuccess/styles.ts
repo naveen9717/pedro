@@ -49,7 +49,7 @@ export const Label = styled.Text<ContainerProps>`
 `;
 
 export const Title = styled.Text<ContainerProps>`
-  font-size: 20px;
+  font-size: 18px;
   padding-bottom: ${({paddingBottom}) => (paddingBottom ? paddingBottom : 0)}px;
   /* margin-bottom: 10px; */
   ${({theme}) => css`

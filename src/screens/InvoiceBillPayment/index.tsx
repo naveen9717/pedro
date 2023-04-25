@@ -165,14 +165,10 @@ export function InvoiceBillPayment() {
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
                  <View style={{flexDirection:'row'}}>
-                 
-                <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
-                 <Card.Content>
+                  <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
+                    <Card.Content>
                       <View>
-                         <Image
-                           source={require('../../assets/icons/icBarcode.png')}
-                           style={styles.bar}
-                          />
+                         <AntIcon name="barcode" color="#000000" size={25} />
                          <Text style={styles.bartext}>Pix</Text>
                       </View>
                  </Card.Content>
@@ -180,7 +176,7 @@ export function InvoiceBillPayment() {
                <Card style={{ backgroundColor: '#fff', flex: 2.2,marginHorizontal:10,borderRadius:3 }}>
                  <Card.Content>
                       <View>
-                        <AntIcon name="wallet" color="#02ade1" size={30} />
+                        <AntIcon name="wallet" color="#02ade1" size={20} />
                          <Text style={styles.bartext}>Cartão</Text>
                          <Text style={styles.bartext}>de crédito</Text>
                       </View>

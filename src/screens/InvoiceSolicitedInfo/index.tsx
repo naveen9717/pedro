@@ -81,7 +81,7 @@ export function InvoiceSolicitedInfo() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('MinhaContaAtual');
+    // navigation.navigate('MinhaContaAtual');
   };
 
   return (
