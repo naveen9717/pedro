@@ -27,6 +27,8 @@ import { AlertModal } from '../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import { FAB } from 'react-native-paper';
+import { AnimatedFAB } from 'react-native-paper';
 
 
 export function Screen18() {
@@ -131,15 +133,15 @@ export function Screen18() {
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
               <Text style={[styles.label,{textAlign:'right'}]}>Procotocolo: 000000000</Text>
 
-                <View style={{ marginVertical:10}}>
+                <View style={{ marginVertical:8}}>
                   <Title>Selecionar a instalação</Title>
                 </View>
 
-                <View style={{ marginVertical:10}}>
+                <View style={{ marginVertical:5}}>
                   <Text style={styles.smalltext}>Qual instalação deseja acessar?</Text>
                 </View>
 
-                <View style={{ marginVertical:10}}>
+                <View style={{ marginVertical:5}}>
                   <Text style={styles.mediumtextbold}>Avenida Norte Sul, 1000 - Taquaral - Campinas/SP
 CEP 13256-558</Text>
                 </View>
@@ -148,7 +150,7 @@ CEP 13256-558</Text>
                  <SearchBar
                    inputStyle={{backgroundColor: 'white'}}
                    containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
-                   inputContainerStyle={{backgroundColor: 'white',height:40}}
+                   inputContainerStyle={{backgroundColor: 'white',height:35}}
                    placeholderTextColor={'#g5g5g5'}
                    placeholder={'Searching...'}
                    searchIcon={{color:'#02ade1',size:30,}}
@@ -157,28 +159,90 @@ CEP 13256-558</Text>
               <View style={{ marginVertical:10}}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
-                      <View >
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
-                        <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:5}}>
+                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
+                         <View style={{ backgroundColor: '#80c342',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                         </View>
+                        <View style={{flexShrink:4,marginLeft:25}}>
+                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
+                         </View>
+                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
                           <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
                           <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
-                        </View>
-                        <View>
+                         </View>
+                         <View>
                           <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Paulista, 1000, Bela Vista, São Paulo - SP</Text>
-                        </View>
+                         </View>
+                       </View>
+                      </View>
+                     
+                      </Card.Content>
+                </Card>
+              </View>
+
+              <View style={{ marginVertical:10}}>
+                <Card style={{ backgroundColor: '#FFFFFF' }}>
+                    <Card.Content>
+                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
+                         <View style={{ backgroundColor: '#80c342',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                         </View>
+                        <View style={{flexShrink:4,marginLeft:25}}>
+                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa</Text>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
+                         </View>
+                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
+                          <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
+                          <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                         </View>
+                         <View>
+                          <Text style={[styles.smalltext,{marginVertical:5}]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
+                         </View>
+                       </View>
+                      </View>
+                      </Card.Content>
+                </Card>
+              </View>
+
+              <View style={{ marginVertical:10}}>
+                <Card style={{ backgroundColor: '#FFFFFF' }}>
+                    <Card.Content>
+                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
+                         <View style={{ backgroundColor: '#ed2125',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                         </View>
+                        <View style={{flexShrink:4,marginLeft:25}}>
+                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Dois irmãos construções</Text>
+                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#ed2125',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Inativa</Text>
+                         </View>
+                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
+                          <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
+                          <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                         </View>
+                         <View>
+                          <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
+                         </View>
+                       </View>
                       </View>
                       </Card.Content>
                 </Card>
               </View>
 
               <View style={styles.checkboxContainer}>
-               
+             
                     
               </View>
                 </MainGenericContainer>
+                
+                <FAB
+                icon="message"
+                animated={true}
+                color="#FFFFFF"
+                mode="elevated"
+                style={styles.fab}
+                onPress={() => console.log('Pressed')}
+              />
             </ScrollView>
           </>
         ) : (
@@ -210,6 +274,13 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  fab: {
+    position: 'absolute',
+    margin: 16,
+    right: 0,
+    bottom: 0,
+    backgroundColor:'#2ea55e',
   },
   checkbox: {
     alignSelf: 'center',

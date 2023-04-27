@@ -69,7 +69,6 @@ export function InvoiceHome() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
   console.log('dataSource:', dataSource);
   console.log('dataMain:', dataMain);
 

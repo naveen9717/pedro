@@ -18,8 +18,6 @@ import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../components/Containers/index';
 import { HeaderCustom } from '../../components/HeaderCustom';
-import { Button } from '../../components/Button';
-import { SmallButton } from '../../components/SmallButton';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthContext, AuthContextProps } from '../../contexts/useAuth';
@@ -27,9 +25,10 @@ import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../components/Button/styles';
 import { RootState } from '../../redux/reducer';
 import { AlertModal } from '../../components/Modal/AlertModal';
-import ContaServices from '../../shared/services/ContaServices';
+import HistoryDataServices from '../../shared/services/HistoryDataServices';
 import {AccessibilityWidget} from '../../components/AccessibilityWidget';
 import { Card, Paragraph } from 'react-native-paper';
+import moment from 'moment'
 
 import { BarChart } from "react-native-gifted-charts";
 
@@ -39,7 +38,6 @@ export function InvoiceHistoryChart() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
 
-  const [dataMain, setDataMain] = useState({})
   const [dataSource, setDataSource] = useState([])
   const { height } = Dimensions.get('window');
 
@@ -58,9 +56,8 @@ export function InvoiceHistoryChart() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
-  console.log('dataSource:', dataSource);
-  console.log('dataMain:', dataMain);
+  console.log('History:', dataSource);
+
 
 
   const isLoading: boolean = useSelector(
@@ -79,15 +76,10 @@ export function InvoiceHistoryChart() {
     }
   };
   useEffect(() => {
-  //   //Get Conat Data List
-  //   ContaServices.getDataContaList().then((res) => {
-  //     setDataSource(res.data);
-  // });
-  // //Get Conat Data Main
-  // ContaServices.getDataConta().then((res) => {
-  //   // console.log('Main',res.data)
-  //   setDataMain({data: res.data});
-  // });
+    //Get History Data List
+    HistoryDataServices.getHistoryData().then((res) => {
+      setDataSource(res.data.historicoContas);
+  });
   }, []);
 
  
@@ -99,13 +91,33 @@ export function InvoiceHistoryChart() {
     navigation.navigate('')
   }
 
+//   const lineData = [
+//     {value: 0, dataPointText: '0'},
+//     {value: 20, dataPointText: '20'},
+//     {value: 18, dataPointText: '18'},
+//     {value: 40, dataPointText: '40'},
+//     {value: 36, dataPointText: '36'},
+//     {value: 60, dataPointText: '60'},
+//     {value: 54, dataPointText: '54'},
+//     {value: 85, dataPointText: '85'}
+// ];
   const barData = [
-    {value: 2500,frontColor: '#02ade1',label:'Jan'}, 
-    {value: 3500,frontColor: '#02ade1',label:'Feb'}, 
-    {value: 4500,frontColor: '#02ade1',label:'Mar'}, 
-    {value: 5000,frontColor: '#02ade1',label:'Apr'},
-    {value: 3000,frontColor: '#02ade1',label:'May'}
+    {value: 2500,dataPointText:'2500'}, 
+    {value: 3500,dataPointText:'3500'}, 
+    {value: 4500,dataPointText:'4500'}, 
+    {value: 5000,dataPointText:'5000'},
+    {value: 3000,dataPointText:'3000'}
   ];
+
+  const stringifybarData = dataSource.map((data,key) => {
+    return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
+  });
+
+  const stringifylineData = dataSource.map((data,key) => {
+    return {value: data?.mediaConsumo,dataPointText: `${data?.mediaConsumo}`}
+  });
+
+
 
   return (
     <>
@@ -153,31 +165,34 @@ export function InvoiceHistoryChart() {
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
-                <BarChart 
-                   data={barData}   
-                   barWidth={30}
-                   initialSpacing={15}
-                   spacing={18}
+                 <BarChart 
+                   data={stringifybarData}   
+                   barWidth={26}
+                   initialSpacing={5}
+                   spacing={8}
                    barBorderRadius={4}
                    yAxisThickness={0}
-                   xAxisType={'dashed'}
-                   xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
-                   stepValue={1000}
-                   maxValue={6000}
-                   noOfSections={5}
-                   yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
-                   labelWidth={20}
-                   xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
+                   xAxisColor={'gray'}
+                   yAxisTextStyle={{color: 'gray',fontSize:10}}
+                   stepValue={300}
+                   maxValue={2700}
+                   noOfSections={9}
+                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   labelWidth={30}
+                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
                          color: '#0058a0',
-                        //  thickness: 3,
+                         thickness: 2,
+                         textFontSize:10
+                        
                         //  curved: true,
                         //  hideDataPoints: true,
                         //  shiftY: 20,
                         //  initialSpacing: -30,
                   }} 
-                 showLine/>
+                 showLine={true}
+                 lineData={stringifylineData}
+                 />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
@@ -193,14 +208,13 @@ export function InvoiceHistoryChart() {
                  <View style={styles.bottomtext}>
                  <View style={{flexDirection:'column',marginTop:5}}>
                   <Text style={styles.smalltext}>Última fatura</Text>
-                  <Text style={styles.mediumtextbold}>R$ 237,00</Text>
+                  <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.totalDaFatura}</Text>
                   </View>
                   <View style={{flexDirection:'column'}}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
-                  <Text style={styles.mediumtextbold}>R$ 200,00</Text>
+                  <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.mediaFaturamento}</Text>
                   </View>
                  </View>
-                  
                 </Card.Content>
                </Card>
               </View>
@@ -213,31 +227,34 @@ export function InvoiceHistoryChart() {
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
-                <BarChart 
-                   data={barData}   
-                   barWidth={30}
-                   initialSpacing={15}
-                   spacing={18}
+                 <BarChart 
+                   data={stringifybarData}   
+                   barWidth={26}
+                   initialSpacing={5}
+                   spacing={8}
                    barBorderRadius={4}
                    yAxisThickness={0}
-                   xAxisType={'dashed'}
-                   xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
-                   stepValue={1000}
-                   maxValue={6000}
-                   noOfSections={5}
-                   yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
-                   labelWidth={20}
-                   xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
+                   xAxisColor={'gray'}
+                   yAxisTextStyle={{color: 'gray',fontSize:10}}
+                   stepValue={300}
+                   maxValue={2700}
+                   noOfSections={9}
+                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   labelWidth={30}
+                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
                          color: '#0058a0',
-                        //  thickness: 3,
+                         thickness: 2,
+                         textFontSize:10
+                        
                         //  curved: true,
                         //  hideDataPoints: true,
                         //  shiftY: 20,
                         //  initialSpacing: -30,
-                    }} 
-                 showLine/>
+                  }} 
+                 showLine={true}
+                 lineData={stringifylineData}
+                 />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
@@ -253,11 +270,11 @@ export function InvoiceHistoryChart() {
                  <View style={styles.bottomtext}>
                  <View style={{flexDirection:'column',marginTop:5}}>
                   <Text style={styles.smalltext}>Última fatura</Text>
-                  <Text style={styles.mediumtextbold}>240kWh</Text>
+                  <Text style={styles.mediumtextbold}>{dataSource[0]?.consumoKwh}kWh</Text>
                   </View>
                   <View style={{flexDirection:'column'}}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
-                  <Text style={styles.mediumtextbold}>200kWh</Text>
+                  <Text style={styles.mediumtextbold}>{dataSource[0]?.mediaConsumo}kWh</Text>
                   </View>
                  </View>
                   

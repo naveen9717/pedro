@@ -2,25 +2,8 @@ import * as React from 'react';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { InvoiceIntro } from '../../screens/InvoiceIntro';
-import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
-import { PaymentInvoice } from '../../screens/PaymentInvoice';
-import {HeaderCustom} from '../../components/HeaderCustom';
-import {useWindowDimensions} from 'react-native';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import { InvoicePixPayment } from '../../screens/InvoicePixPayment';
-import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
-import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess';
-import { InvoiceMinPayment } from '../../screens/InvoiceMinPayment';
-import { TwoSevenScreen } from '../../screens/TwoSevenScreen';
-import { InvoiceHome } from '../../screens/InvoiceHome';
-import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
-import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
-import { InvoiceEasy } from '../../screens/InvoiceEasy';
-import { Screen3 } from '../../screens/Screen3';
+
 
 
 import MainNaviagtor from './MainNavigator';
