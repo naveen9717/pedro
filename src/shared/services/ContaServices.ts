@@ -21,7 +21,7 @@ class ContaServices {
     getDataContaList(){
       // return axios.get(`${baseUrl}/conta/conta-atual/123/listar-contas`);
       return axios.get(
-        `${baseUrl}/conta/conta/conta-atual/123/listar-contas`,
+        `${baseUrl}/conta/Conta/instalacao/123/listar-contas`,
         {
         headers: {
         'Content-Type': 'application/json',

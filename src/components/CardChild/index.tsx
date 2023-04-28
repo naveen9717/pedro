@@ -51,13 +51,13 @@ export default function CardChild({
 
   const renderConditionalText=() =>{
     if (status === "Paga") {
-      return  <Text style={styles.pagaV}>{status}</Text>;
+      return  <View style={styles.pagaV}><Text style={{ color:'#0f7751'}}>{status}</Text></View>;
     }
     else if (status !== "Paga" || Moment(dataVencimento).format('DD/MM/YYYY')> new Date().toString() ) {
-      return  <Text style={styles.vencidaV}>Vencida</Text>;
+      return   <View style={styles.vencidaV}><Text style={{ color:'#c0161b'}}>Vencida</Text></View>;
     }
     else {
-      return  <Text style={styles.abertaV}>Aberta</Text>;
+      return   <View style={styles.abertaV}><Text style={{ color:'#04704e'}}>Aberta</Text></View>;
     }
    }
 
@@ -141,27 +141,25 @@ const styles = StyleSheet.create({
      paddingVertical:8
   },
   pagaV:{
-    fontSize:13,
+    fontSize:12,
     fontWeight:'600',
     marginTop:10,
     backgroundColor:'#e1e874',
-    color:'#04704e',
     paddingVertical: 2,
     paddingHorizontal: 15,
     borderRadius:5
   },
   vencidaV:{
-    fontSize:13,
+    fontSize:12,
     fontWeight:'600',
     marginTop:10,
     backgroundColor:'#f8b1ab',
-    color:'#c0161b',
     paddingVertical: 2,
     paddingHorizontal: 15,
     borderRadius:5
 },
 abertaV:{
-  fontSize:13,
+    fontSize:12,
     fontWeight:'600',
     marginTop:10,
     backgroundColor:'#fed26c',

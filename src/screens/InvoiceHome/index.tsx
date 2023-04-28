@@ -130,6 +130,7 @@ export function InvoiceHome() {
     }
 
   const renderItem = (data) => {
+    
     return (
       <CardChild
       key={data.item?.mesReferencia}
@@ -145,6 +146,25 @@ export function InvoiceHome() {
     />
     )
 }
+
+const list = () => {
+  return dataSource?.map(element => {
+    return (
+      <CardChild
+      key={element.item?.mesReferencia}
+      title="Conta de energia"
+      status={element?.statusPagamento}
+      code_install={element?.pagamentoCodigoBarra}
+      mesReferencia={element?.mesReferencia}
+      dataVencimento={element?.dataVencimento}
+      parcelamentoD={element?.parcelamentoDisponivel}
+      temParcelamentoEmA={element?.temParcelamentoEmAberto}
+      valorContaAtual={element?.valorContaAtual}
+      onPress={handleChild}
+    />
+    );
+  });
+};
 
   return (
     <>
@@ -232,12 +252,15 @@ export function InvoiceHome() {
                  </View>
 
                  <View style={{marginVertical:15}}>
-                 <FlatList
+                 {/* <FlatList
                     data={dataSource}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.id.toString()}
-                 /> 
+                 />  */}
+                 {list()}
+
+                 
                  </View>
                 </View>
 
@@ -263,15 +286,14 @@ export function InvoiceHome() {
                           backgroundColor: 'white',
                           paddingVertical: 4,
                         }}>
-
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 8 }}>
+                            <View style={{ marginVertical: 5 }}>
                               <Text style={styles.mediumtextbold}>Filtros</Text>
                               <Text style={styles.smalltext}>Selecione os filtros de instalação</Text>
                             </View>
                             <ContainerViewButton>
-                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 8 }}>
+                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
                             <SmallButton
                                 title="Paga"
                                 type="secondary"
@@ -303,12 +325,12 @@ export function InvoiceHome() {
                              </View>
                             </ContainerViewButton>
 
-                            <View style={{ marginVertical: 8 }}>
+                            <View style={{ marginVertical: 5 }}>
                               <Text style={styles.mediumtextbold}>Período de referência </Text>
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
                             </View>
                             <ContainerViewButton>
-                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 8 }}>
+                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
                               <SmallButton
                                 title="3 meses"
                                 type="primary"
@@ -332,7 +354,7 @@ export function InvoiceHome() {
                               />
                              </View>
                             </ContainerViewButton>
-                            <View style={{ marginVertical: 8 }}>
+                            <View style={{ marginVertical: 5 }}>
                               <Text style={styles.mediumtextbold}>ou Selecione o período </Text>
                             </View> 
                            <View>
@@ -342,6 +364,7 @@ export function InvoiceHome() {
                                     }}
                                     blockSingleDateSelection={true}
                                     responseFormat="YYYY-MM-DD"
+                                    
                                     // maxDate={moment()}
                                    // minDate={moment().subtract(100, "days")}
                                   />
