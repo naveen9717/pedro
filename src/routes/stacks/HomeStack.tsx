@@ -2,27 +2,27 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import RegisterStack from './RegisterStack';
 // import {SelectInstallation} from '@screens/SelectInstallation';
-import { LoggedInWebView } from '../../screens/LoggedInWebView';
-import { Welcome } from '../../screens/Welcome';
-import { InvoiceIntro } from '../../screens/InvoiceIntro';
-import { InvoiceHome } from '../../screens/InvoiceHome';
-import { PaymentInvoice } from '../../screens/PaymentInvoice';
-import { InvoiceSolicitedInfo } from '../../screens/InvoiceSolicitedInfo';
-import { InvoiceSendedWithSuccess } from '../../screens/InvoiceSendedWithSuccess';
+import { LoggedInWebView } from '../../screens/invoice/LoggedInWebView';
+import { Welcome } from '../../screens/invoice/Welcome';
+import { InvoiceIntro } from '../../screens/invoice/InvoiceIntro';
+import { InvoiceHome } from '../../screens/invoice/InvoiceHome';
+import { PaymentInvoice } from '../../screens/invoice/PaymentInvoice';
+import { InvoiceSolicitedInfo } from '../../screens/invoice/InvoiceSolicitedInfo';
+import { InvoiceSendedWithSuccess } from '../../screens/invoice/InvoiceSendedWithSuccess';
 
-import { ScanScreen } from '../../screens/ScanScreen';
+import { ScanScreen } from '../../screens/invoice/ScanScreen';
 
-import { Login } from '../../screens/Login';
+import { Login } from '../../screens/invoice/Login';
 import { AccessibilityWidget } from '../../components/AccessibilityWidget';
 import { Header } from 'react-native/Libraries/NewAppScreen';
-import { SelectInstallation } from '../../screens/SelectInstallation';
+import { SelectInstallation } from '../../screens/invoice/SelectInstallation';
 import StackRecoverPass from './RecoverStack';
-import { FinishRegistration } from '../../screens/FinishRegistration';
+import { FinishRegistration } from '../../screens/invoice/FinishRegistration';
 import { HeaderCustom } from '../../components/HeaderCustom';
 import { useTheme } from 'styled-components';
 import TabsContainer from './TabsNaviagtion';
-import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
-import { InvoiceHistoryChart } from '../../screens/InvoiceHistoryChart';
+import { InvoiceBillPayment } from '../../screens/invoice/InvoiceBillPayment';
+import { InvoiceHistoryChart } from '../../screens/invoice/InvoiceHistoryChart';
 
 const { Navigator, Screen } = createNativeStackNavigator();
 

@@ -12,11 +12,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // import { BottomTab } from '../tabs/BottomTab';
 
 import theme from '../../theme';
-import {Register} from '../../screens/Register';
+import {Register} from '../../screens/invoice/Register';
 import {HeaderCustom} from '../../components/HeaderCustom';
 import {useWindowDimensions} from 'react-native';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
-import {RecoverPass} from '../../screens/RecoverPass';
+import {RecoverPass} from '../../screens/invoice/RecoverPass';
 
 export default function StackRecoverPass() {
   // const navigation = useNavigation();

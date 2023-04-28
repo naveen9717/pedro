@@ -1,11 +1,11 @@
 import * as React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { PaymentInvoice } from '../../screens/PaymentInvoice';
-import { InvoicePixPayment } from '../../screens/InvoicePixPayment';
-import { InvoiceBillPayment } from '../../screens/InvoiceBillPayment';
-import { InvoiceSendToHome } from '../../screens/InvoiceSendToHome';
-import { InvoicePaymentInfoSuccess } from '../../screens/InvoicePaymentInfoSuccess';
+import { PaymentInvoice } from '../../screens/invoice/PaymentInvoice';
+import { InvoicePixPayment } from '../../screens/invoice/InvoicePixPayment';
+import { InvoiceBillPayment } from '../../screens/invoice/InvoiceBillPayment';
+import { InvoiceSendToHome } from '../../screens/invoice/InvoiceSendToHome';
+import { InvoicePaymentInfoSuccess } from '../../screens/invoice/InvoicePaymentInfoSuccess';
 
 
 const Stack = createNativeStackNavigator();

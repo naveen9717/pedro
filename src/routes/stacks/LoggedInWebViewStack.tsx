@@ -12,11 +12,11 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 // import {BottomTab} from '../tabs/BottomTab';
 
 import theme from '../../theme';
-// import {Register} from '../../screens/Register';
+// import {Register} from '../../screens/invoice/Register';
 // import {HeaderCustom} from '../../components/HeaderCustom';
 // import {LoggedInWebView} from '@src/screens/LoggedInWebView';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
-import {LoggedInWebView} from '../../screens/LoggedInWebView';
+import {LoggedInWebView} from '../../screens/invoice/LoggedInWebView';
 
 export default function StackLoggedInWebView() {
   const {Navigator, Screen} = createDrawerNavigator();

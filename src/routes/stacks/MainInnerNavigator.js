@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { InvoiceEasy } from '../../screens/InvoiceEasy';
-import { InvoiceEasyComposition } from '../../screens/InvoiceEasyComposition';
+import { InvoiceEasy } from '../../screens/invoice/InvoiceEasy';
+import { InvoiceEasyComposition } from '../../screens/invoice/InvoiceEasyComposition';
 
-import { Screen3 } from '../../screens/Screen3';
+import { Screen3 } from '../../screens/invoice/Screen3';
 
 
 const Stack = createNativeStackNavigator();
@@ -15,8 +15,6 @@ function MainInnerNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="InvoiceEasy" component={InvoiceEasy} />
       <Stack.Screen name="InvoiceEasyComposition" component={InvoiceEasyComposition} />
-
-      
    </Stack.Navigator>
   );
 }

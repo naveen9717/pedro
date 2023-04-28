@@ -15,12 +15,11 @@ import theme from '../../theme';
 import {HeaderCustom} from '../../components/HeaderCustom';
 import {useWindowDimensions} from 'react-native';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
-import {InvoiceIntro} from '../../screens/InvoiceIntro';
-import { InvoiceHome } from '../../screens/InvoiceHome';
-import {PaymentInvoice} from '../../screens/PaymentInvoice';
-import {InvoiceSolicitedInfo} from '../../screens/InvoiceSolicitedInfo';
-import {ScanScreen} from '../../screens/ScanScreen';
-import {PagScanScreen} from '../../screens/PagScanScreen';
+import {InvoiceIntro} from '../../screens/invoice/InvoiceIntro';
+import { InvoiceHome } from '../../screens/invoice/InvoiceHome';
+import {PaymentInvoice} from '../../screens/invoice/PaymentInvoice';
+import {InvoiceSolicitedInfo} from '../../screens/invoice/InvoiceSolicitedInfo';
+import {ScanScreen} from '../../screens/invoice/ScanScreen';
 export default function NewStack() {
 
 
@@ -54,7 +53,6 @@ export default function NewStack() {
       <Screen name="InvoiceHome" component={InvoiceHome} />
       {/* <Screen name="Scan" component={ScanScreen} /> */}
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
-      <Screen name="PagScan" component={PagScanScreen} />
 
     </Navigator>
   );
