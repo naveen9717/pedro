@@ -10,15 +10,13 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
-import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { Label, Title, ContainerViewButton } from './styles';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../../components/HeaderCustom';
-import { createDate } from '../../../helpers/functions/datas';
 import { Button } from '../../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
@@ -46,7 +44,6 @@ export function InvoiceIntro() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
  
 
   const isLoading: boolean = useSelector(

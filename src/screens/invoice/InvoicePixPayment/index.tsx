@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
   Platform,
   StatusBar,
@@ -11,16 +11,15 @@ import {
   Text,
   FlatList
 } from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Label, Title } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
 import { HeaderCustom } from '../../../components/HeaderCustom';
 import { useNetInfo } from '@react-native-community/netinfo';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
-
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../../components/Button/styles';
@@ -46,8 +45,6 @@ export function InvoicePixPayment() {
     title: '',
     msg: '',
   });
-
-  console.log('Net Info:', netInfo);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
@@ -153,18 +150,17 @@ export function InvoicePixPayment() {
                    <Image
                     source={require('../../../assets/images/phone.circle.png')}
                     style={styles.icon}
-                   />
+                    />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Confirme as informações de pagamento</Text>
                   </View>
                 </View>
 
-
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Text style={styles.mediumtextbold}>Principais vantagens do seu pagamentos via PlX:</Text>
                   <FlatList
-                  data={[
+                    data={[
                        {key: 'Rapidez na informação de pagamento no mesmo dia;'},
                        {key: 'Bloqueio para Novas Ações de Cobrança;'},
                        {key: 'Agilidade na Baixa de Conta no mesmo dia;'},
@@ -173,21 +169,19 @@ export function InvoicePixPayment() {
                       ]}
                      renderItem={({item}) => <View style={{flexDirection:'row'}}><View style={styles.bullets}></View><Text style={styles.bullettext}>{item.key}</Text></View>}
                    />
-                  
                 </View>
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
 
                 <View style={styles.mTop}>
                 <Card style={{ backgroundColor: '#fff', width: '30%' }}>
-                 <Card.Content>
+                  <Card.Content>
                       <View>
-                       <AntIcon name="barcode" color="#000000" size={30} />
-
+                         <AntIcon name="barcode" color="#000000" size={30} />
                          <Text style={styles.bartext}>Código de</Text>
                         <Text style={styles.bartext}>barra</Text>
                       </View>
-                 </Card.Content>
+                  </Card.Content>
                </Card>
             </View>
                 {ModalLoading(isLoading)}

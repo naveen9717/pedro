@@ -59,8 +59,6 @@ export function Screen18() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
-
   
   useEffect(() => {
   

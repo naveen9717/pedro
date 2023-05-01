@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import { Title, ContainerViewButton } from './styles';
 import { useTheme } from 'styled-components/native';
@@ -48,7 +48,6 @@ export function InvoiceSendToHome({route}) {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
   const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(

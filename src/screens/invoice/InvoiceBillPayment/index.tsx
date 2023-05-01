@@ -46,8 +46,6 @@ export function InvoiceBillPayment() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
-
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );

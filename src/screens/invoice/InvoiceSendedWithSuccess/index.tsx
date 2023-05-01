@@ -10,9 +10,9 @@ import {
   StyleSheet,
   Text
 } from 'react-native';
-import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
-import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
+import {Title, ContainerViewButton} from './styles';
 
 import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../../components/Containers/index';
@@ -45,9 +45,6 @@ export function InvoiceSendedWithSuccess() {
     title: '',
     msg: '',
   });
-
-  console.log('Net Info:', netInfo);
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
@@ -117,12 +114,11 @@ export function InvoiceSendedWithSuccess() {
               Platform.OS === 'android' ? StatusBar.currentHeight : 0
              }
             />
-
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
                   <Title paddingBottom={height * 0.0216}>
-                  Conta reenviada para o seu endreço!
+                   Conta reenviada para o seu endreço!
                   </Title>
                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}

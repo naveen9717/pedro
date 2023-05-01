@@ -67,7 +67,6 @@ export function Welcome() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
   const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(

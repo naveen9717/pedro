@@ -52,8 +52,6 @@ export function InvoiceMinPayment() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
-
   
   useEffect(() => {
   

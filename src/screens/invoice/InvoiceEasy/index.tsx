@@ -60,7 +60,6 @@ export function InvoiceEasy() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
 
   
   useEffect(() => {
