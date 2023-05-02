@@ -126,9 +126,7 @@ export function InvoiceSendToHome({route}) {
                   Enviar por correspondência
                   </Title>
                   
-                  <Text style={styles.smalltext}>
-                  O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser
-cobrado em sua próxima fatura.</Text>
+                  <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser cobrado em sua próxima fatura.</Text>
                 </View>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>
@@ -155,7 +153,6 @@ cobrado em sua próxima fatura.</Text>
                   //  onPress={handleClick}
                    isLoading={isLogging}
                  />
-
                </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>

@@ -322,7 +322,7 @@ const styles = StyleSheet.create({
   },
   label: {
     margin: 5,
-    fontSize: 10,
+    fontSize: 11,
     fontWeight: '600'
   },
   bottomtext: {
