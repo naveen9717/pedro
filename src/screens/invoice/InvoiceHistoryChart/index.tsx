@@ -91,23 +91,6 @@ export function InvoiceHistoryChart() {
     navigation.navigate('')
   }
 
-//   const lineData = [
-//     {value: 0, dataPointText: '0'},
-//     {value: 20, dataPointText: '20'},
-//     {value: 18, dataPointText: '18'},
-//     {value: 40, dataPointText: '40'},
-//     {value: 36, dataPointText: '36'},
-//     {value: 60, dataPointText: '60'},
-//     {value: 54, dataPointText: '54'},
-//     {value: 85, dataPointText: '85'}
-// ];
-  const barData = [
-    {value: 2500,dataPointText:'2500'}, 
-    {value: 3500,dataPointText:'3500'}, 
-    {value: 4500,dataPointText:'4500'}, 
-    {value: 5000,dataPointText:'5000'},
-    {value: 3000,dataPointText:'3000'}
-  ];
 
   const stringifybarData = dataSource.map((data,key) => {
     return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
@@ -246,7 +229,6 @@ export function InvoiceHistoryChart() {
                          color: '#0058a0',
                          thickness: 2,
                          textFontSize:10
-                        
                         //  curved: true,
                         //  hideDataPoints: true,
                         //  shiftY: 20,
