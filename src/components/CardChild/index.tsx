@@ -100,7 +100,7 @@ export default function CardChild({
                     </View>
                   <View>
                      <Text style={styles.first}>Referente à</Text>
-                     <Text style={styles.second}>Feverei {mesReferencia}</Text>
+                     <Text style={styles.second}>Fever {mesReferencia}</Text>
                    </View>
                  </View>
 

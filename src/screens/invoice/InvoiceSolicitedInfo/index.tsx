@@ -132,10 +132,7 @@ export function InvoiceSolicitedInfo() {
                  </View>
                    <View style={{marginVertical:15}}>
                   <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                  <Text style={styles.mediumtext}>Estamos processando seu pagamento!
-                    Fique tranquilo que em breve será baixada! Caso
-                    receba ações de cobrança, elas serão
-                    automaticamente canceladas!</Text>
+                  <Text style={styles.mediumtext}>Estamos processando seu pagamento! Fique tranquilo que em breve será baixada! Caso receba ações de cobrança, elas serão automaticamente canceladas!</Text>
                  </View>
                   <View>
                   <Text style={styles.smalltext}>Conta referente a instalação: 039204859</Text>

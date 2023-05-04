@@ -14,7 +14,7 @@ import {
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { Label, Title } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
 import { HeaderCustom } from '../../../components/HeaderCustom';
@@ -29,7 +29,7 @@ import HistoryDataServices from '../../../shared/services/HistoryDataServices';
 import {AccessibilityWidget} from '../../../components/AccessibilityWidget';
 import { Card, Paragraph } from 'react-native-paper';
 import moment from 'moment'
-
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { BarChart } from "react-native-gifted-charts";
 
 export function InvoiceHistoryChart() {
@@ -178,11 +178,12 @@ export function InvoiceHistoryChart() {
                  />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                 <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
+                 <FontAwesome name="circle" color="#02ade1" size={15} />
+
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
+                  <FontAwesome name="circle" color="#0058a0" size={15} />
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
@@ -239,11 +240,13 @@ export function InvoiceHistoryChart() {
                  />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                 <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
+                 <FontAwesome name="circle" color="#02ade1" size={15} />
+
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
+                  <FontAwesome name="circle" color="#0058a0" size={15} />
+
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>

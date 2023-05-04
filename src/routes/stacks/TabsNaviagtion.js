@@ -3,9 +3,6 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CustomMenuStandard from '../../components/CustomMenuStandard';
-
-
-
 import MainNaviagtor from './MainNavigator';
 import MainInnerNavigator from './MainInnerNavigator';
 import OtherInnerNavigator from './OtherInnerNavigator';

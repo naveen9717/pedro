@@ -437,12 +437,9 @@ export function TwentyScreen() {
                         borderRadius: 10, borderBottomLeftRadius: 0, borderBottomStartRadius: 0, borderTopLeftRadius: 0, marginTop: 2,
                       }}>
 
-
                       <Card.Content>
                         <View style={styles.container}>
-
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
-
                             <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
                               <Text style={styles.white}>Copia e cola</Text>
                             </View>
@@ -455,7 +452,6 @@ export function TwentyScreen() {
                           </View>
                         </View>
                       </Card.Content>
-
                     </View>
                   </View>
 

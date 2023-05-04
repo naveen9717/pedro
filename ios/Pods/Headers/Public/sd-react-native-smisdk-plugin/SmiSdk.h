@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-smisdk-plugin/ios/SmiSdk.h
