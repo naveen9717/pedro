@@ -246,8 +246,6 @@ export function InvoiceHistoryChart() {
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                   <FontAwesome name="circle" color="#0058a0" size={15} />
-
-
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
                  </View>

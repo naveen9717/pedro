@@ -30,6 +30,7 @@ import { BarChart } from "react-native-gifted-charts";
 import { PieChart } from "react-native-gifted-charts";
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import HistoryDataServices from '../../../shared/services/HistoryDataServices';
 
 
 export function InvoiceEasy() {
@@ -37,6 +38,7 @@ export function InvoiceEasy() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [tab, setTab] = useState([]);
  
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
@@ -60,11 +62,26 @@ export function InvoiceEasy() {
     msg: '',
   });
 
-
+console.log('tab',tab);
   
   useEffect(() => {
-  
+    HistoryDataServices.getTabBarData().then((res) => {
+      setTab(res.data.historicoContas);
+   });
   }, []);
+  // {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
+
+  var arr = [];
+
+  const stringifybarData = tab.map((data,key) => {
+    arr.push(...[{value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}])
+  });
+
+  console.log('arr',arr);
+
+  const stringybarData = tab.map((data,key) => {
+    return {value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}
+  });
 
   const { height } = Dimensions.get('window');
  
@@ -325,7 +342,7 @@ const renderHorizontalItem2 = (data) => {
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                  </View>
                     <FlatList
-                    data={HorizontalBarData}
+                    data={stringybarData}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderHorizontalItem(item)}
                     keyExtractor={item => item.value.toString()}
