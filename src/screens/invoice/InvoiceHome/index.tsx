@@ -211,13 +211,11 @@ const list = () => {
                   <CardMain 
                     key={1}
                     title="Instalaçãão"
-                    status='statusPagamento'
                     code_install={dataMain.data?.codigoInstalacao}
                     status={dataMain.data?.statusPagamento}
                     parcelamentoD={dataMain.data?.parcelamentoDisponivel}
                     valorContaAtual={dataMain.data?.valorContaAtual}
-                    address="Avenida Norte Sul, 1000 - Taquaral
-                Campinas/SP - CEP 13256-558"
+                    address={dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}
                   /> 
                   
                  <View style={styles.filter}>
