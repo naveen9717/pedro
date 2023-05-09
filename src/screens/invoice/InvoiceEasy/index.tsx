@@ -348,7 +348,6 @@ const renderHorizontalItem2 = (data) => {
                     keyExtractor={item => item.value.toString()}
                    /> 
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>Seu consumo aumentou comparado ao més passado.</Text>
-
                 </View>
 
 

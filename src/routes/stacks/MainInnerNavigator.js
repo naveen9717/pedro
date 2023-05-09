@@ -15,7 +15,6 @@ function MainInnerNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="InvoiceEasy" component={InvoiceEasy} />
       <Stack.Screen name="Screen25" component={Screen25} />
-
       <Stack.Screen name="InvoiceEasyComposition" component={InvoiceEasyComposition} />
    </Stack.Navigator>
   );

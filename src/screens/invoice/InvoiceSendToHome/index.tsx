@@ -26,6 +26,7 @@ import { Load } from '../../../components/Button/styles';
 import { RootState } from '../../../redux/reducer';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import OtherDataServices from '../../../shared/services/OtherDataServices';
+import ContaServices from '../../../shared/services/ContaServices';
 
 export function InvoiceSendToHome({route}) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -38,6 +39,8 @@ export function InvoiceSendToHome({route}) {
     "numeroProtocolo":"123",
     "dataEnvio": "2023-01-17T00:30:00"
     })
+  const [tab, setTab] = useState([]);
+
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -74,6 +77,12 @@ export function InvoiceSendToHome({route}) {
     OtherDataServices.getReenviarData().then((res) => {
       setDataSource(res.data);
   });
+
+ //Get Conat Data Main
+ ContaServices.getDataConta().then((res) => {
+  // console.log('Main',res.data)
+   setTab({data: res.data});
+ });
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -134,18 +143,12 @@ export function InvoiceSendToHome({route}) {
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Enviar por correspondência
-                  </Title>
-                  
+                  <Title paddingBottom={height * 0.0216}>Enviar por correspondência</Title>
                   <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser cobrado em sua próxima fatura.</Text>
                 </View>
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Endereço de entrega
-                  </Title>
-                  <Text style={styles.mediumtext}>Rua Bemvinda Martins Ceolim, 57 - Terra Nova -</Text>
-                  <Text style={styles.mediumtext}>Itatiba-SP- CEP: 13256-558</Text>
+                  <Title paddingBottom={height * 0.0216}>Endereço de entrega</Title>
+                  <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.numeroInicial+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
                 </View>
                 <ContainerViewButton>
                   <Button
