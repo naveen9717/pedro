@@ -25,6 +25,7 @@ import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../../components/Button/styles';
 import { RootState } from '../../../redux/reducer';
 import { AlertModal } from '../../../components/Modal/AlertModal';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
 
 export function InvoiceSendToHome({route}) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -32,6 +33,11 @@ export function InvoiceSendToHome({route}) {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const { itemId, otherParam } = route.params;
+  const [dataSource, setDataSource] = useState({
+    "email": "123",
+    "numeroProtocolo":"123",
+    "dataEnvio": "2023-01-17T00:30:00"
+    })
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -65,7 +71,9 @@ export function InvoiceSendToHome({route}) {
     }
   };
   useEffect(() => {
-   
+    OtherDataServices.getReenviarData().then((res) => {
+      setDataSource(res.data);
+  });
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -83,7 +91,11 @@ export function InvoiceSendToHome({route}) {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('InvoiceSendedWithSuccess' as never);
+    navigation.navigate('InvoiceSendedWithSuccess', {
+      itemId: 1,
+      otherParam: dataSource,
+    });
+    // navigation.navigate('InvoiceSendedWithSuccess' as never);
   };
 
   return (

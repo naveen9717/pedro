@@ -28,13 +28,14 @@ import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
 
 
-export function InvoiceSendedWithSuccess() {
+export function InvoiceSendedWithSuccess({route}) {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const { itemId, otherParam } = route.params;
 
- 
+ console.log('routedata',otherParam)
   const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);

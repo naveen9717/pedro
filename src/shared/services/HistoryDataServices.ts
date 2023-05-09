@@ -44,8 +44,9 @@ class HistoryDataServices {
         'api-version': `1.0.0`, 
         },
         }
-        )
+        ) 
      }
+     
 }
 
 export default new HistoryDataServices();

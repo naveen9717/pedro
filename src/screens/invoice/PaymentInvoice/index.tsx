@@ -477,7 +477,7 @@ export function PaymentInvoice() {
                     </View>
                   </View>
                   <Snackbar
-                      wrapperStyle={{backgroundColor:'transparent',marginVertical:"100%"}}
+                      wrapperStyle={{backgroundColor:'transparent',marginVertical:"90%"}}
                       style={{backgroundColor:"#80c342",width:"100%"}}
                       duration={500}
                       visible={visible}
