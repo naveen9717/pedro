@@ -166,6 +166,10 @@ const list = () => {
   });
 };
 
+  function webViewRender(step: number) {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <>
       <AlertModal
@@ -330,26 +334,23 @@ const list = () => {
                             <ContainerViewButton>
                             <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
                               <SmallButton
-                                title="3 meses"
-                                type="primary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
+                                  title="3 meses"
+                                  type="primary"
+                                  // onPress={handleSignIn}
+                                  onPress={handleClick}
+                                  isLoading={isLogging} bgColor={''} Color={''}                              />
                               <SmallButton
-                                title="6 meses"
-                                type="primary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
+                                  title="6 meses"
+                                  type="primary"
+                                  // onPress={handleSignIn}
+                                  onPress={handleClick}
+                                  isLoading={isLogging} bgColor={''} Color={''}                              />
                               <SmallButton
-                                title="Personalizado"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
+                                  title="Personalizado"
+                                  type="secondary"
+                                  // onPress={handleSignIn}
+                                  onPress={handleClick}
+                                  isLoading={isLogging} bgColor={''} Color={''}                              />
                              </View>
                             </ContainerViewButton>
                             <View style={{ marginVertical: 5 }}>
