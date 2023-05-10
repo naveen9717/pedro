@@ -157,7 +157,7 @@ export function InvoiceMinPayment() {
                 </View>
                 <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
                   <Text style={styles.smalltext}>Para gerar código para pagamento. </Text>
-                  <Text style={styles.label}>Clique aqui> </Text>
+                  <Text style={styles.label}>Clique aqui{'>'} </Text>
                 </View>
                 <ContainerViewButton>
                   <Button

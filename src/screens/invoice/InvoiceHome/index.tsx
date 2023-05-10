@@ -261,8 +261,6 @@ const list = () => {
                     keyExtractor={item => item.id.toString()}
                  />  */}
                  {list()}
-
-                 
                  </View>
                 </View>
 

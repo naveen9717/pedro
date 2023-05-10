@@ -303,7 +303,7 @@ const renderHorizontalItem2 = (data) => {
                           <Text style={[styles.mediumtextbold,{marginVertical:1,color:'#FFFFFF'}]}>O valor da sua conta está 18% menor que o mês anterior. Em Abril você pagou R$300,00.</Text>
                         </View>
                       </View>
-                      </Card.Content>
+                    </Card.Content>
                 </Card>
               </View>
                   <ContainerViewButton>
