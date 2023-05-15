@@ -13,7 +13,6 @@ import {
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
 
 import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
-import {Strong} from '../../../components/Generic/index';
 import {AccessibilityWidget} from '../../../components/AccessibilityWidget';
 import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../../components/Containers/index';
@@ -118,9 +117,7 @@ export function InvoiceSolicitedInfo() {
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Informações do pagamento solicitada!
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Informações do pagamento solicitada!</Title>
                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}
                     style={{width: 250,height: 250}}

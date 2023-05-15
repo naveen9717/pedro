@@ -37,6 +37,8 @@ import { AlertModal } from '../../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import FontIcon from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export function Screen3() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -158,7 +160,7 @@ export function Screen3() {
             />
 
             <ScrollView>
-              <MainGenericContainer style={{ height: height }}>
+              <MainGenericContainer>
 
               <View style={{backgroundColor:"#02ade1",marginLeft:-40,marginRight:-40,paddingLeft:40,paddingRight:40,paddingVertical:20}}>
                       <View>
@@ -250,10 +252,7 @@ export function Screen3() {
                           </TouchableWithoutFeedback>
                        </View>
                        <View>
-                       <Image
-                            source={require('../../../assets/icons/share.png')}
-                            style={styles.icon}
-                          />
+                       <FeatherIcon name="share-2" color="#02ade1" size={20} />
                        </View>
 
                       </View>
@@ -261,22 +260,117 @@ export function Screen3() {
                   </Card>
                 </View>
 
+                <View style={{marginVertical:10}}>
+                  <Title>Sugestões para você</Title>
+                </View>
+              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
 
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
-                          <Image
-                            source={require('../../../assets/icons/icBarcode.png')}
-                            style={styles.bar}
-                          />
-                          <Text style={[styles.bartext, {marginTop:20}]}>Débitos e segunda via</Text>
+                          <FontIcon name="files-o" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Débitos e segunda via</Text>
                         </View>
                       </View>
                     </Card.Content>
                   </Card>
+
+                  
                 </TouchableWithoutFeedback>
+
+
+                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                    <Card.Content>
+                      <View style={styles.container}>
+                        <View>
+                          <FontIcon name="files-o" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Histórico de contas</Text>
+                        </View>
+                      </View>
+                    </Card.Content>
+                </Card>
+
+                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                    <Card.Content>
+                      <View style={styles.container}>
+                        <View>
+                          <Ionicons name="flash-off-outline" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Entenda sua conta</Text>
+                        </View>
+                      </View>
+                    </Card.Content>
+                </Card>
+                
+                </View>
+
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between',marginVertical:15 }}>
+                <TouchableWithoutFeedback onPress={handleClickDebit}>
+
+                  <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                    <Card.Content>
+                      <View style={styles.container}>
+                        <View>
+                        <Ionicons name="flash-off-outline" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Falta de energia</Text>
+                        </View>
+                      </View>
+                    </Card.Content>
+                  </Card>
+
+                  
+                </TouchableWithoutFeedback>
+
+
+                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                    <Card.Content>
+                      <View style={styles.container}>
+                        <View>
+                          <AntIcon name="bars" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Meus pedidos</Text>
+                        </View>
+                      </View>
+                    </Card.Content>
+                </Card>
+
+                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                    <Card.Content>
+                      <View style={styles.container}>
+                        <View>
+                          <FeatherIcon name="grid" color="#02ade1" size={25} />
+                          <Text style={[styles.bartext, {marginTop:10}]}>Ver mais serviços</Text>
+                        </View>
+                      </View>
+                    </Card.Content>
+                </Card>
+                
+                </View>
+
+                <View style={{marginVertical:10}}>
+                  <Title>Meus pedidos em aberto</Title>
+                </View>
+
+                <View style={styles.checkboxContainer}>
+                  <Card style={{ backgroundColor: 'white',padding:14 }}>
+                    <Card.Content>
+                      <View style={{ flexDirection: 'row', justifyContent: 'center',alignContent:'center',alignItems:'center' }}>
+                        <View>
+                          <Text style={styles.smalltextbold}>Troca de nome na conta</Text>
+                          <Text style={[styles.smalltext,{marginVertical:5}]}>Envie a sua selfie para finalizar a </Text>
+                          <Text style={[styles.smalltext,{marginVertical:0}]}>a solicitacão</Text>
+                          <Text style={styles.second}>Enviar selfie</Text>
+                        </View>
+                    
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View>
+                          <Text style={styles.smalltext}>   28/05</Text>
+                        </View>
+                      </View>
+                     </View>
+                    </Card.Content>
+                  </Card>
+                </View>
               </MainGenericContainer>
         </ScrollView>
           </>
@@ -292,7 +386,6 @@ export function Screen3() {
 
 const styles = StyleSheet.create({
   container: {
-
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
@@ -317,7 +410,11 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color: 'black',
-
+  },
+  smalltextbold: {
+    fontSize: 13,
+    color: 'black',
+    fontWeight: '600'
   },
   mediumtext: {
     fontSize: 18,
@@ -347,7 +444,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-
   first: {
     color: 'black'
   },
@@ -365,7 +461,6 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontSize: 10
   },
-  
   icon:{
     width:20,
     height: 20,
@@ -442,6 +537,5 @@ const styles = StyleSheet.create({
     width: 120,
     alignItems: 'center',
     justifyContent: 'center',
-
   }
 });
