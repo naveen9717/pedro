@@ -26,6 +26,7 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
+import ContaServices from '../../../shared/services/ContaServices';
 
 
 export function InvoiceSendedWithSuccess({route}) {
@@ -34,6 +35,7 @@ export function InvoiceSendedWithSuccess({route}) {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const { itemId, otherParam } = route.params;
+  const [dataMain, setDataMain] = useState({})
 
  console.log('routedata',otherParam)
   const netInfo = useNetInfo();
@@ -62,7 +64,11 @@ export function InvoiceSendedWithSuccess({route}) {
     }
   };
   useEffect(() => {
-  
+  //Get Conat Data Main
+  ContaServices.getDataConta().then((res) => {
+    // console.log('Main',res.data)
+    setDataMain({data: res.data});
+  });
   }, []);
 
   const {height} = Dimensions.get('window');
@@ -132,7 +138,7 @@ export function InvoiceSendedWithSuccess({route}) {
                  </View>
                    <View style={{marginVertical:15}}>
                   <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
+                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
                  </View>
                   <View>
                   <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>

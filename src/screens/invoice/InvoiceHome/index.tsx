@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text,
   TouchableWithoutFeedback,
-  FlatList
+  TextInput
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -42,6 +42,9 @@ export function InvoiceHome() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [text, setText] = useState("");
+  const [active, setActive] = useState(false);
+
 
   const [dataMain, setDataMain] = useState({})
   const [dataSource, setDataSource] = useState([])
@@ -59,6 +62,9 @@ export function InvoiceHome() {
   }
 
   const netInfo = useNetInfo();
+
+
+console.log('text',text);
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -129,23 +135,6 @@ export function InvoiceHome() {
     navigation.navigate('InvoiceHistoryChart')
     }
 
-  const renderItem = (data) => {
-    
-    return (
-      <CardChild
-      key={data.item?.mesReferencia}
-      title="Conta de energia"
-      status={data.item?.statusPagamento}
-      code_install={data.item?.pagamentoCodigoBarra}
-      mesReferencia={data.item?.mesReferencia}
-      dataVencimento={data.item?.dataVencimento}
-      parcelamentoD={data.item?.parcelamentoDisponivel}
-      temParcelamentoEmA={data.item?.temParcelamentoEmAberto}
-      valorContaAtual={data.item?.valorContaAtual}
-      onPress={handleChild}
-    />
-    )
-}
 
 const list = () => {
   return dataSource?.map(element => {
@@ -331,24 +320,10 @@ const list = () => {
                             </View>
                             <ContainerViewButton>
                             <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
-                              <SmallButton
-                                  title="3 meses"
-                                  type="primary"
-                                  // onPress={handleSignIn}
-                                  onPress={handleClick}
-                                  isLoading={isLogging} bgColor={''} Color={''}                              />
-                              <SmallButton
-                                  title="6 meses"
-                                  type="primary"
-                                  // onPress={handleSignIn}
-                                  onPress={handleClick}
-                                  isLoading={isLogging} bgColor={''} Color={''}                              />
-                              <SmallButton
-                                  title="Personalizado"
-                                  type="secondary"
-                                  // onPress={handleSignIn}
-                                  onPress={handleClick}
-                                  isLoading={isLogging} bgColor={''} Color={''}                              />
+                            <TouchableWithoutFeedback onPress={() => setText("3 messes")}><Text style={styles.input}>3 messes</Text></TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => setText("6 messes")}><Text style={styles.input}>6 messes</Text></TouchableWithoutFeedback>
+                            <TouchableWithoutFeedback onPress={() => setText("Personalizado")}><Text style={styles.input}>Personalizado</Text></TouchableWithoutFeedback>
+                            
                              </View>
                             </ContainerViewButton>
                             <View style={{ marginVertical: 5 }}>
@@ -448,6 +423,12 @@ const styles = StyleSheet.create({
     alignSelf:'center',
     justifyContent:'center'
   },
+  input: {
+    height: 25,
+    margin: 4,
+    padding: 4,
+    borderWidth: 1
+ },
   icon:{
     width:15,
     height:15
