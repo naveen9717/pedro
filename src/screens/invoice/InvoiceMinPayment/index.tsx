@@ -167,7 +167,6 @@ export function InvoiceMinPayment() {
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
-                  
                 </ContainerViewButton>
                 </MainGenericContainer>
             </ScrollView>

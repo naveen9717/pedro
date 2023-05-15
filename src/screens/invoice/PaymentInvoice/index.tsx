@@ -154,14 +154,7 @@ export function PaymentInvoice() {
       style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
       <TouchableWithoutFeedback onPress={toggleModal}>
         <View
-          style={{
-            flex: 1,
-            marginTop: -30,
-            borderTopRightRadius: 40,
-            borderTopLeftRadius: 40,
-            backgroundColor: 'white',
-            paddingVertical: 5,
-          }}>
+          style={styles.bordercorner}>
           <View
             style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
             <View style={[styles.boxcontainer]}>
@@ -538,6 +531,14 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'flex-start'
+  },
+  bordercorner:{
+    flex: 1,
+    marginTop: -30,
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    backgroundColor: 'white',
+    paddingVertical: 5,
   },
   cardStyle:{
     alignItems: 'center',

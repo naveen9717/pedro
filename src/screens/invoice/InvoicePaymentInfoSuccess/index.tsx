@@ -120,27 +120,24 @@ export function InvoicePaymentInfoSuccess() {
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Informações do pagamento solicitada!
-                  </Title>
-                  <Image
+                  <Title paddingBottom={height * 0.0216}>Informações do pagamento solicitada!</Title>
+                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}
                     style={{width: 250,height: 250}}
-                  />
+                   />
                   <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
-                  <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                  <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
+                    <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
+                    <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
+                    <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
                  </View>
-                   <View style={{marginVertical:15}}>
-                  <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
+                  <View style={{marginVertical:15}}>
+                    <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
+                    <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
                  </View>
                   <View>
-                  <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
-                  <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
-                  <Text style={styles.smalltext}>sua próxima fatura.</Text>
-                  
+                    <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
+                    <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
+                    <Text style={styles.smalltext}>sua próxima fatura.</Text>
                   </View>
                 </View>
                 

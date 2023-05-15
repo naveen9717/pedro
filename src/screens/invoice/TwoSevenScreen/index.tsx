@@ -192,14 +192,8 @@ export function TwoSevenScreen() {
 
                   <View style={{ flexDirection: 'row' }}>
                     <View
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: 'white',
-                        justifyContent: 'center',
-                        flex: 1,
-
-                      }}>
-                      <Card style={{ backgroundColor: 'white', borderRadius: 10, borderBottomEndRadius: 0, borderTopEndRadius: 0, marginTop: 2, }}>
+                      style={styles.cardcontent}>
+                      <Card style={styles.cardsview}>
                         <Card.Content>
                           <View style={{ flexDirection: 'row' }}>
                             <View>
@@ -215,13 +209,7 @@ export function TwoSevenScreen() {
                       </Card>
                     </View>
                     <View
-                      style={{
-                        alignItems: 'center',
-                        backgroundColor: '#02ade1',
-                        justifyContent: 'center',
-                        flex: 2.9,
-                        borderRadius: 10, borderBottomLeftRadius: 0, borderBottomStartRadius: 0, borderTopLeftRadius: 0, marginTop: 2,
-                      }}>
+                      style={styles.cardview}>
 
                       <Card.Content>
                         <View style={styles.container}>
@@ -257,12 +245,9 @@ export function TwoSevenScreen() {
                             source={require('../../../assets/icons/icBarcode.png')}
                             style={styles.bar}
                           />
-
                           <Text style={[styles.bartext, {marginTop:20}]}>Código de</Text>
                           <Text style={[styles.bartext, {marginTop:2, marginBottom:-2}]}>barra</Text>
                         </View>
-
-
                       </View>
                     </Card.Content>
                   </Card>
@@ -274,26 +259,13 @@ export function TwoSevenScreen() {
 
                 <Modal isVisible={isModalVisible}>
                   <View
-                    style={{
-                      height: '90%',
-                      backgroundColor: 'white',
-                      width: '100%'
-                    }}>
+                    style={styles.ismodalview}>
                     <TouchableWithoutFeedback onPress={toggleModal}>
                       <View
-                        style={{
-                          flex: 1,
-                          marginTop: -30,
-                          backgroundColor: 'white',
-
-                        }}>
+                        style={styles.toggleview}>
 
                         <View
-                          style={{
-                            flexDirection: 'row',
-                            height: '100%',
-                            marginTop: 10,
-                          }}>
+                          style={styles.togglemodalview}>
 
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 10 }}>
@@ -397,10 +369,48 @@ export function TwoSevenScreen() {
 
 const styles = StyleSheet.create({
   container: {
-
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
+  },
+  toggleview:{
+    flex: 1,
+    marginTop: -30,
+    backgroundColor: 'white',
+  },
+  togglemodalview:{
+    flexDirection: 'row',
+    height: '100%',
+    marginTop: 10,
+  },
+  cardcontent:{
+    alignItems: 'center',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    flex: 1,
+  },
+  ismodalview:{
+    height: '90%',
+    backgroundColor: 'white',
+    width: '100%'
+  },
+  cardview:{
+    alignItems: 'center',
+    backgroundColor: '#02ade1',
+    justifyContent: 'center',
+    flex: 2.9,
+    borderRadius: 10,
+    borderBottomLeftRadius: 0,
+    borderBottomStartRadius: 0,
+    borderTopLeftRadius: 0,
+    marginTop: 2,
+  },
+  cardsview:{
+    backgroundColor: 'white',
+    borderRadius: 10,
+    borderBottomEndRadius: 0,
+    borderTopEndRadius: 0,
+    marginTop: 2,
   },
   checkboxContainer: {
     marginBottom: 10,

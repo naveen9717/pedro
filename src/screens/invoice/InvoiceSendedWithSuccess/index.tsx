@@ -124,30 +124,26 @@ export function InvoiceSendedWithSuccess({route}) {
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
-                  <Title paddingBottom={height * 0.0216}>
-                   Conta reenviada para o seu endreço!
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Conta reenviada para o seu endreço!</Title>
                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}
                     style={{width: 250,height: 250}}
                   />
                   <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
-                  <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                  <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
-                 </View>
-                   <View style={{marginVertical:15}}>
-                  <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                  <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
-                 </View>
+                    <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
+                    <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
+                    <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
+                  </View>
+                  <View style={{marginVertical:15}}>
+                    <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
+                    <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
+                  </View>
                   <View>
-                  <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
-                  <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
+                    <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
+                    <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
                   <Text style={styles.smalltext}>sua próxima fatura.</Text>
                 </View>
-                
               </View>
-                
                 <ContainerViewButton>
                   <Button
                     title="Compartilhar"

@@ -243,13 +243,7 @@ const list = () => {
                  </View>
 
                  <View style={{marginVertical:15}}>
-                 {/* <FlatList
-                    data={dataSource}
-                    // ItemSeparatorComponent={FlatListSeparator}
-                    renderItem={item => renderItem(item)}
-                    keyExtractor={item => item.id.toString()}
-                 />  */}
-                 {list()}
+                   {list()}
                  </View>
                 </View>
 
@@ -260,21 +254,9 @@ const list = () => {
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                   <TouchableWithoutFeedback onPress={handlePix}>
                     <View
-                      style={{
-                        height: '100%',
-                        backgroundColor: 'white',
-                        marginTop: '30%',
-                        width: '100%'
-                      }}>
+                      style={styles.handlepixview}>
                       <View
-                        style={{
-                          flex: 1,
-                          marginTop: -30,
-                          borderTopRightRadius: 40,
-                          borderTopLeftRadius: 40,
-                          backgroundColor: 'white',
-                          paddingVertical: 4,
-                        }}>
+                        style={styles.bordercorner}>
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 5 }}>
@@ -310,7 +292,6 @@ const list = () => {
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
-                              
                              </View>
                             </ContainerViewButton>
 
@@ -336,7 +317,6 @@ const list = () => {
                                     }}
                                     blockSingleDateSelection={true}
                                     responseFormat="YYYY-MM-DD"
-                                    
                                     // maxDate={moment()}
                                    // minDate={moment().subtract(100, "days")}
                                   />
@@ -386,6 +366,20 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  handlepixview:{
+    height: '100%',
+    backgroundColor: 'white',
+    marginTop: '30%',
+    width: '100%'
+  },
+  bordercorner:{
+    flex: 1,
+    marginTop: -30,
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    backgroundColor: 'white',
+    paddingVertical: 4,
   },
   checkboxContainer: {
     marginBottom: 10,
