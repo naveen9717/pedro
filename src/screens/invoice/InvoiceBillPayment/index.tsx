@@ -29,6 +29,10 @@ import { RootState } from '../../../redux/reducer';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 export function InvoiceBillPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -122,33 +126,24 @@ export function InvoiceBillPayment() {
                 </View>
                 
                 <View style={styles.viewflex}>
-                  <View>
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                   />
+                  <View style={styles.iconcenter}>
+                    <SimpleLineIcons name="screen-smartphone" color="#ffffff" size={18} />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Pague via internet utilizando o código de barras do boleto</Text>
                   </View>
                 </View>
                 <View style={styles.viewflex}>
-                  <View >
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                   />
+                   <View style={styles.iconcenter}>
+                     <MaterialCommunityIcons name="printer" color="#ffffff" size={18} />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Ou imprima o boleto e pague no bancoo</Text>
                   </View>
                 </View>
                 <View style={styles.viewflex}>
-                  <View>
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                   />
+                  <View style={styles.iconcenter}>
+                     <MaterialIcons name="event-note" color="#ffffff" size={18} />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Sempre confira o prazo de validade do Código de barra e prazos de pagamento.</Text>
@@ -212,6 +207,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  iconcenter:{
+    backgroundColor:'#02ade1',
+    width:26,
+    height:26,
+    borderRadius:13,
+    justifyContent:'center',
+    flexDirection:'row',
+    alignItems:'center'
   },
   checkboxContainer: {
     flexDirection: 'row',

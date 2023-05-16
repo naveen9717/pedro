@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { InvoiceIntro } from '../../screens/invoice/InvoiceIntro';
 import { InvoiceHistoryChart } from '../../screens/invoice/InvoiceHistoryChart';
 import { Screen3 } from '../../screens/invoice/Screen3';
-import { Screen25 } from '../../screens/invoice/Screen25';
+import { InvoiceBillPayment } from '../../screens/invoice/InvoiceBillPayment';
 
 
 const Stack = createNativeStackNavigator();

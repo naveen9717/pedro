@@ -27,6 +27,10 @@ import { RootState } from '../../../redux/reducer';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import { Card } from 'react-native-paper';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
 
 export function InvoicePixPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -123,33 +127,24 @@ export function InvoicePixPayment() {
                 </View>
                 
                 <View style={styles.viewflex}>
-                  <View >
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                   />
+                  <View style={styles.iconcenter}>
+                     <SimpleLineIcons name="screen-smartphone" color="#ffffff" size={18} />
                   </View>
                   <View >
                     <Text style={styles.smalltextleft}> Abra o aplicativo do seu banco e acesse o PIX</Text>
                   </View>
                 </View>
                 <View style={styles.viewflex}>
-                  <View>
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                   />
+                  <View style={styles.iconcenter}>
+                    <MaterialCommunityIcons name="qrcode-scan" color="#ffffff" size={18} />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Escolha a opção pagar com QR code e escaneie o código acima</Text>
                   </View>
                 </View>
                 <View style={styles.viewflex}>
-                  <View>
-                   <Image
-                    source={require('../../../assets/images/phone.circle.png')}
-                    style={styles.icon}
-                    />
+                  <View style={styles.iconcenter}>
+                    <MaterialIcons name="check" color="#ffffff" size={18} />
                   </View>
                   <View>
                     <Text style={styles.smalltextleft}> Confirme as informações de pagamento</Text>
@@ -218,6 +213,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginVertical: 40,
   },
+  iconcenter:{
+    backgroundColor:'#02ade1',
+    width:26,
+    height:26,
+    borderRadius:13,
+    justifyContent:'center',
+    flexDirection:'row',
+    alignItems:'center'
+  },
   checkbox: {
     alignSelf: 'center',
   },
@@ -235,7 +239,6 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color:'black',
-    
   },
   viewflex:{
     flexDirection:'row',
@@ -287,7 +290,6 @@ const styles = StyleSheet.create({
     backgroundColor:'maroon',
     borderRadius:5
   },
-
   first:{
     color:'black'
   },
@@ -377,5 +379,4 @@ const styles = StyleSheet.create({
     backgroundColor:'#02ade1',
     borderRadius:6
   }
- 
 });
