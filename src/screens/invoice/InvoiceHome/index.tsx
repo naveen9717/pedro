@@ -226,15 +226,15 @@ const list = () => {
                    </View>
                  </View>
 
-                 <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
+                 <View style={styles.viewicon}>
                    <View style={{ flexDirection: 'row', }}>
                     <View style={styles.filtertexticon}>
                       <AntIcon name="download" color="#FFFFFF" size={13} />
-                      </View>
-                      <View>
+                    </View>
+                    <View>
                         <Text style={styles.filtertext} > Baixar todas faturas</Text>
-                        </View>
-                      </View>
+                    </View>
+                    </View>
                  <View>
                  <TouchableWithoutFeedback onPress={handleClickHist}>
                    <Text style={styles.second}>Ver histórico de consumo <AntIcon name="right" color="#02ade1" size={13} /> </Text>
@@ -264,7 +264,7 @@ const list = () => {
                               <Text style={styles.smalltext}>Selecione os filtros de instalação</Text>
                             </View>
                             <ContainerViewButton>
-                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
+                            <View style={styles.viewtouch}>
                             <SmallButton
                                 title="Paga"
                                 type="secondary"
@@ -300,12 +300,11 @@ const list = () => {
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
                             </View>
                             <ContainerViewButton>
-                            <View style={{ flexDirection: 'row',justifyContent:'space-between',marginVertical: 5 }}>
-                            <TouchableWithoutFeedback onPress={() => setText("3 messes")}><Text style={styles.input}>3 messes</Text></TouchableWithoutFeedback>
-                            <TouchableWithoutFeedback onPress={() => setText("6 messes")}><Text style={styles.input}>6 messes</Text></TouchableWithoutFeedback>
-                            <TouchableWithoutFeedback onPress={() => setText("Personalizado")}><Text style={styles.input}>Personalizado</Text></TouchableWithoutFeedback>
-                            
-                             </View>
+                            <View style={styles.viewtouch}>
+                               <TouchableWithoutFeedback onPress={() => setText("3 messes")}><Text style={styles.input}>3 messes</Text></TouchableWithoutFeedback>
+                               <TouchableWithoutFeedback onPress={() => setText("6 messes")}><Text style={styles.input}>6 messes</Text></TouchableWithoutFeedback>
+                               <TouchableWithoutFeedback onPress={() => setText("Personalizado")}><Text style={styles.input}>Personalizado</Text></TouchableWithoutFeedback>
+                            </View>
                             </ContainerViewButton>
                             <View style={{ marginVertical: 5 }}>
                               <Text style={styles.mediumtextbold}>ou Selecione o período </Text>
@@ -366,6 +365,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  viewtouch:{
+    flexDirection: 'row',
+    justifyContent:'space-between',
+    marginVertical: 5 
+  },
+  viewicon:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginVertical:15
   },
   handlepixview:{
     height: '100%',

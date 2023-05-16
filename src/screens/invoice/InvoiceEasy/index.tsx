@@ -337,7 +337,7 @@ const renderHorizontalItem2 = (data) => {
 
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                 <View style={styles.viewmes}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                  </View>
@@ -506,23 +506,20 @@ const renderHorizontalItem2 = (data) => {
                     &&                     
                     <View style={{ marginVertical: 20 }}>
                     <View style={styles.checkboxContainer}>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:5}}>
-                      <View style={{flexDirection:'column',width:'60%',justifyContent:'space-between'}}>
+                    <View style={styles.viewlietura}>
+                      <View style={styles.innerview}>
                          <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura anterior</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>16/03/2022</Text>
                       </View>
-                      <View style={{flexDirection:'column',width:'60%',justifyContent:'space-between'}}>
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Dias consumidos</Text>
+                      <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Dias consumidos</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>33 dias</Text>
                       </View>
                     </View>
-                    <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:5}}>
-                      <View style={{flexDirection:'column',width:'60%',justifyContent:'space-between'}}>
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura atual</Text>
+                    <View style={styles.viewlietura}>
+                    <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura atual</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>18/04/2022</Text>
                       </View>
-                      <View style={{flexDirection:'column',width:'60%',justifyContent:'space-between'}}>
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Mês referência</Text>
+                      <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Mês referência</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>Abril</Text>
                       </View>
                     </View>
@@ -586,7 +583,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                 <View style={styles.viewtarif}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
@@ -643,7 +640,7 @@ const renderHorizontalItem2 = (data) => {
                         //  initialSpacing: -30,
                   }} 
                  showLine/>
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
+                 <View style={styles.viewvalor}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
@@ -725,7 +722,7 @@ const renderHorizontalItem2 = (data) => {
                     && <View style={{ marginVertical: 20 }}>
                     <View style={styles.checkboxContainer}>
                     <View style={{flexDirection:'row',marginVertical:5}}>
-                      <View style={{flexDirection:'column',width:'100%',alignContent:'center',alignItems:'center'}}>
+                      <View style={styles.viewdata}>
                          <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura anterior</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>17/05/2022</Text>
                       </View>
@@ -763,7 +760,7 @@ const renderHorizontalItem2 = (data) => {
 
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                 <View style={styles.viewmes}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                  </View>
@@ -776,7 +773,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>Seu consumo aumentou comparado ao més passado.</Text>
                 </View>
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
+                 <View style={styles.viewtributos}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
                     <FlatList
@@ -790,9 +787,9 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                 <View style={styles.viewbanderia}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
-                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                  <View style={styles.viewfeather}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
 
@@ -800,9 +797,9 @@ const renderHorizontalItem2 = (data) => {
                  <View style={{marginVertical:5,}}>
                  <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
                     <View style={{flexDirection:'row',width:'100%',height:30}}>
-                       <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
+                       <View style={styles.viewbana}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                    <View style={styles.viewdate}>
                       <Text style={[styles.smalltext,{color:'black'}]}>18/04</Text>
                       <Text style={[styles.smalltext,{color:'black'}]}>17/04</Text>
                     </View>
@@ -846,7 +843,7 @@ const renderHorizontalItem2 = (data) => {
                         //  initialSpacing: -30,
                   }} 
                  showLine/>
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
+                 <View style={styles.viewconsumo}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
@@ -956,6 +953,72 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  viewmes:{
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'space-between'
+  },
+  viewlietura:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginVertical:5
+  },
+  innerview:{
+    flexDirection:'column',
+    width:'60%',
+    justifyContent:'space-between'
+  },
+  viewtributos:{
+    flexDirection:'row',
+    width:'100%',
+    marginVertical:5
+  },
+  viewtarif:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    width:'100%',
+    marginVertical:5
+  },
+  viewconsumo:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginTop:10
+  },
+  viewfeather:{
+    backgroundColor: '#04704e',
+    padding:6,
+    borderRadius:3,
+    flexDirection:'row'
+  },
+  viewbana:{
+    width:'100%',
+    backgroundColor:'#80c342',
+    borderRadius:15
+  },
+  viewdate:{
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'space-between'
+  },
+  viewdata:{
+    flexDirection:'column',
+    width:'100%',
+    alignContent:'center',
+    alignItems:'center'
+  },
+  viewbanderia:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    width:'100%',
+    marginVertical:5
+  },
+  viewvalor:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginTop:10
   },
   checkbox: {
     alignSelf: 'center',

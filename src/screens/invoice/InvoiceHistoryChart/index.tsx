@@ -319,7 +319,6 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color: 'black',
-
   },
   mediumtext: {
     fontSize: 18,
@@ -349,7 +348,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-
   first: {
     color: 'black'
   },
@@ -367,7 +365,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     marginHorizontal:2
   },
- 
   bar: {
     width: 14,
     height: 14,
@@ -395,11 +392,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
- 
   boxcontainer: {
     paddingHorizontal: 50
   },
-
   chart: {
     padding: 10,
     borderRadius: 15,

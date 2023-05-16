@@ -166,7 +166,7 @@ export function InvoiceBillPayment() {
                       </View>
                  </Card.Content>
                </Card>
-               <Card style={{ backgroundColor: '#fff', flex: 2.2,marginHorizontal:10,borderRadius:3 }}>
+               <Card style={styles.viewcard}>
                  <Card.Content>
                       <View>
                         <AntIcon name="wallet" color="#02ade1" size={20} />
@@ -216,6 +216,12 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     flexDirection:'row',
     alignItems:'center'
+  },
+  viewcard:{
+    backgroundColor: '#fff',
+    flex: 2.2,
+    marginHorizontal:10,
+    borderRadius:3
   },
   checkboxContainer: {
     flexDirection: 'row',
