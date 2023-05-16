@@ -326,9 +326,7 @@ export function Welcome() {
                 </ContainerViewLogo>
                 <View style={{paddingBottom: height * 0.0324}}>
                   <Label>Olá! Vamos começar?</Label>
-                  <Title paddingBottom={height * 0.0216}>
-                    Você já possui uma conta?
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Você já possui uma conta?</Title>
                   <Label>
                     Lembre de usar o mesmo e-mail e senha que você já utiliza na
                     nossa agência digital.

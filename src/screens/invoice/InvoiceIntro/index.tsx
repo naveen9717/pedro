@@ -114,9 +114,7 @@ export function InvoiceIntro() {
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.01, height: height }}>
                 <View style={{justifyContent: 'center', alignItems: 'center' }}>
-                  <Title paddingBottom={height * 0.01}>
-                    Tire sua segunda via aqui!
-                  </Title>
+                  <Title paddingBottom={height * 0.01}>Tire sua segunda via aqui!</Title>
                   <Image
                     source={require('../../../assets/images/icQrCode.png')}
                     style={{ width: 250, height: 250 }}

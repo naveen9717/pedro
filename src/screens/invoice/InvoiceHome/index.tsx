@@ -194,9 +194,7 @@ const list = () => {
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                  <Title paddingBottom={height * 0.0216}>
-                    Minha conta atual
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Minha conta atual</Title>
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
                 </View>
                 <View style={styles.checkboxContainer}>

@@ -119,9 +119,7 @@ export function InvoiceBillPayment() {
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Pagamento por Código de barra
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Pagamento por Código de barra</Title>
                   <Label style={styles.smalltextbold}>Como realizar seu pagamento via Código de barra?</Label>
                 </View>
                 

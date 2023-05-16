@@ -140,9 +140,7 @@ export function TwoSevenScreen() {
                 style={{ paddingTop: height * 0.02, height: height }}>
                
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
-                  <Title paddingBottom={height * 0.0216}>
-                    Pagmenta da conta
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Pagmenta da conta</Title>
 
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
 

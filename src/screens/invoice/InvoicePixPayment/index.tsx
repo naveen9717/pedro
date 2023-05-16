@@ -120,9 +120,7 @@ export function InvoicePixPayment() {
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Pagamento por PIX
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Pagamento por PIX</Title>
                   <Label style={styles.smalltextbold}>Como realizar seu pagamento via Pix?</Label>
                 </View>
                 

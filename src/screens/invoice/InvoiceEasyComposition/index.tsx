@@ -158,7 +158,6 @@ export function InvoiceEasyComposition() {
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02}}>
                  <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
-
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
                   <View style={{alignItems:'flex-start'}}>
                   <Title paddingBottom={height * 0.0216}>
@@ -183,7 +182,6 @@ export function InvoiceEasyComposition() {
                    />
 
                   <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Vencimento: 13/06/2022</Text>
-
                   </View>
                   <View style={{marginVertical:15}}>
                     <FlatList

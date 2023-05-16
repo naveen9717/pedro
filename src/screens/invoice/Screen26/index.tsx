@@ -122,9 +122,7 @@ export function Screen26() {
               
 
                 <View style={{flexDirection:'row',justifyContent: 'space-between'}}>
-                  <Title paddingBottom={height * 0.0216}>
-                  Segunda Via
-                  </Title>
+                  <Title paddingBottom={height * 0.0216}>Segunda Via</Title>
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
                   </View>
                   <View>
