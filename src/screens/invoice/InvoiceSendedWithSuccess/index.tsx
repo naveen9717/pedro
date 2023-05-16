@@ -141,7 +141,7 @@ export function InvoiceSendedWithSuccess({route}) {
                   <View>
                     <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
                     <Text style={styles.smalltext}>dias úteis e terá um custo de R$1,24, a ser cobrado em</Text>
-                  <Text style={styles.smalltext}>sua próxima fatura.</Text>
+                    <Text style={styles.smalltext}>sua próxima fatura.</Text>
                 </View>
               </View>
                 <ContainerViewButton>
