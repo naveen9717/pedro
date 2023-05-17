@@ -534,7 +534,6 @@ const styles = StyleSheet.create({
     backgroundColor:'maroon',
     borderRadius:5
   },
-
   first:{
     color:'black'
   },
@@ -563,13 +562,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
- 
   scanicons:{
    height:120,
    width:120,
    alignItems:'center',
    justifyContent:'center',
-  
   },
   boxcontainer:{
     paddingHorizontal:50

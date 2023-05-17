@@ -448,7 +448,7 @@ const renderHorizontalItem2 = (data) => {
                 <View style={{marginVertical:5,}}>
                    <Text style={[styles.mediumtext,{fontWeight:'600',color:'black',marginVertical:2,}]}>Taxas</Text>
                   </View>
-                  <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                  <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Encargos Setoriais</Text>
                     </View>
@@ -457,7 +457,7 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                 </View>
 
-                <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Perdas</Text>
                     </View>
@@ -466,7 +466,7 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                 </View>
 
-                <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Total de taxas</Text>
                     </View>
@@ -479,7 +479,7 @@ const renderHorizontalItem2 = (data) => {
                 <View style={{marginVertical:5,}}>
                    <Text style={[styles.mediumtext,{fontWeight:'600',color:'black',marginVertical:2,}]}>Taxas</Text>
                   </View>
-                  <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                  <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Encargos Setoriais</Text>
                     </View>
@@ -488,7 +488,7 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                 </View>
 
-                <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Perdas</Text>
                     </View>
@@ -497,7 +497,7 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                 </View>
 
-                <View style={{marginVertical:10,flexDirection:'row',justifyContent:'space-between'}}>
+                <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Total de taxas</Text>
                     </View>
@@ -508,7 +508,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={[styles.mediumtextbold,{textAlign:'center'}]}>Vencimento: 13/05/2022</Text>
                   <Text style={[styles.smalltext,{}]}>Aqui você vê as cobranças de juros e multa por atraso de pagamento e a Taxa de Contribuição para o Custeio do Serviço de Iluminação Pública (COSIP/CIP) que é cobrada pelo uso da iluminação pública da cidade, sendo recolhido pela CPFL e repassado a Prefeitura Municipal. Caso tenha algum serviço de terceiros, como seguros, ele também é exibido aqui.</Text>
 
-                  <View style={{marginVertical:15,backgroundColor: '#1d58a0',padding:15,borderTopRightRadius:35}}>
+                  <View style={styles.viewcfl}>
                   <Text style={[styles.smalltext,{color:'white'}]}>A CPFL/RGE faz apenas a arrecadação dos valores desse tributos e repassa o valor integral aos órgãos responsáveis.</Text>
                  </View>
                  
@@ -555,6 +555,17 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  viewcfl:{
+    marginVertical:15,
+    backgroundColor: '#1d58a0',
+    padding:15,
+    borderTopRightRadius:35
+  },
+  viewenc:{
+    marginVertical:10,
+    flexDirection:'row',
+    justifyContent:'space-between'
   },
   checkbox: {
     alignSelf: 'center',

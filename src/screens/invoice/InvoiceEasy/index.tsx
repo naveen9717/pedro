@@ -805,9 +805,7 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                   </View>
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>A bandeira tarifária vigente foi a verde e por isso, não houve acréscimo no valor.</Text>
-
                 </View>
-
 
              <View style={styles.checkboxContainer}>
              <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>

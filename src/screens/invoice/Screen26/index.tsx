@@ -119,8 +119,6 @@ export function Screen26() {
 
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
-              
-
                 <View style={{flexDirection:'row',justifyContent: 'space-between'}}>
                   <Title paddingBottom={height * 0.0216}>Segunda Via</Title>
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>

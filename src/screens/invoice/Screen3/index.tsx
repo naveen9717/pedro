@@ -239,8 +239,7 @@ export function Screen3() {
                           <Text style={styles.second}>Fevereiro/2022</Text>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',marginVertical:10 }}>
-
+                      <View style={styles.viewfull}>
                        <View>
                        <TouchableWithoutFeedback onPress={handleClickPagar}>
                          <Text style={styles.second}>Pagar sua</Text>
@@ -252,9 +251,8 @@ export function Screen3() {
                           </TouchableWithoutFeedback>
                        </View>
                        <View>
-                       <FeatherIcon name="share-2" color="#02ade1" size={20} />
+                         <FeatherIcon name="share-2" color="#02ade1" size={20} />
                        </View>
-
                       </View>
                     </Card.Content>
                   </Card>
@@ -305,9 +303,8 @@ export function Screen3() {
                 
                 </View>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between',marginVertical:15 }}>
+                <View style={styles.viewfull}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
-
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
                     <Card.Content>
                       <View style={styles.container}>
@@ -319,7 +316,6 @@ export function Screen3() {
                     </Card.Content>
                   </Card>
 
-                  
                 </TouchableWithoutFeedback>
 
 
@@ -402,6 +398,12 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontWeight: '600'
   },
+  viewfull:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical:10 
+  },
+  
   amount: {
     marginBottom: 10,
     fontSize: 22,
