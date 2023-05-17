@@ -24,9 +24,6 @@ import { useNetInfo } from '@react-native-community/netinfo';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { AlertModal } from '../../../components/Modal/AlertModal';
-import { Card, Paragraph } from 'react-native-paper';
-import SegmentedControlTab from 'react-native-segmented-control-tab'
-import { BarChart } from "react-native-gifted-charts";
 import { PieChart } from "react-native-gifted-charts";
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';

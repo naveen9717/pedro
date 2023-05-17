@@ -119,8 +119,7 @@ export function InvoiceIntro() {
                     source={require('../../../assets/images/icQrCode.png')}
                     style={{ width: 250, height: 250 }}
                   />
-                  <Label>
-                    Se voce perdeu, nao recebeu sua conta ou precisa
+                  <Label>Se voce perdeu, nao recebeu sua conta ou precisa
                     de um comprovante de residência, solicite aqui a
                     segunda via.</Label>
                   <Label>O pagamento é rápido e simples e pode ser feito a qualquer momento!</Label>
