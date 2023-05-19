@@ -13,6 +13,7 @@ import {
 } from '../../helpers/functions/utils';
 import {CleanButton} from '../ButtonClean';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 type Props = {
   backgroundColor: string;
@@ -38,7 +39,6 @@ export function HeaderCustom({
   leftAction,
 }: Props) {
   const navigation = useNavigation();
-  const icBell = require('../../assets/images/bell.png');
   const icLogo = require('../../assets/Logo_CPFL_Energia.png');
   return (
     <>
@@ -46,7 +46,6 @@ export function HeaderCustom({
         backgroundColor={backgroundColor}
         isPrimaryColorDark={isPrimaryColorDark}
       />
-
       <Container style={{...boxShadowHeaderStyle(), marginTop: marginTop}}>
         {leftAction &&
           (leftAction === 'back' ? (
@@ -84,7 +83,7 @@ export function HeaderCustom({
           {hideMessage ? (
             <>
               {/* <ContainerBadgeView size={10} /> */}
-              <Image resizeMode="contain" source={icBell} />
+              <FontAwesome name="bell" color="#02ade1" size={18} />
             </>
           ) : null}
         </ContainerBadge>

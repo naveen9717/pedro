@@ -3,6 +3,7 @@ import {Image, TouchableOpacity} from 'react-native';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 
 import {Container, ContainerBadge, ContainerBadgeView} from './styles';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import StatusBarColor from '../../config/StatusBarColor';
 import {
@@ -26,7 +27,6 @@ export function Header({
   isFocused,
 }: Props) {
   const navigation = useNavigation();
-  const icBell = require('../../assets/images/bell.png');
   const icLogo = require('../../assets/images/Logo_CPFL_Energia.png');
   return (
     <>
@@ -56,7 +56,7 @@ export function Header({
         />
         <ContainerBadge>
           <ContainerBadgeView size={10} />
-          <Image resizeMode="contain" source={icBell} />
+          <FontAwesome name="bell" color="#02ade1" size={18} />
         </ContainerBadge>
       </Container>
     </>

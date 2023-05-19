@@ -20,7 +20,7 @@ export const ContainerMenuForm = styled.View`
 
 export const ContainerMenu = styled.View`
   background-color: #00ade1;
-  height: 167px;
+  height: 160px;
   margin-bottom: 60px;
 `;
 

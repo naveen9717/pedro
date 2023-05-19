@@ -1,7 +1,7 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
-// import {Feather} from '@expo/vector-icons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import {
   Container,
   ContainerBottom,
@@ -46,10 +46,7 @@ function CustomMenu() {
         </ContainerMenuForm>
 
         <ContainerMenuFormLabel>
-          <IconMenu
-            resizeMode="contain"
-            source={require('../../assets/images/person.png')}
-          />
+          <Ionicons name="person-circle-outline" color="#02ade1" size={25} />
           <TouchableOpacity
             onPress={() => navigate('welcome')}
             style={{
@@ -60,10 +57,7 @@ function CustomMenu() {
         </ContainerMenuFormLabel>
 
         <ContainerMenuFormLabel>
-          <IconMenu
-            resizeMode="contain"
-            source={require('../../assets/images/iconSquare.png')}
-          />
+        <Ionicons name="grid" color="#02ade1" size={25} />
           <TouchableOpacity
             onPress={() => navigate('login')}
             style={{

@@ -222,7 +222,7 @@ export function PaymentInvoice() {
     console.log('pixnew',props.dataPixMain?.data);
     return (
      
-       <TouchableWithoutFeedback onPress={toggleModalPix}>
+            <TouchableWithoutFeedback onPress={toggleModalPix}>
                     <View
                       style={{height: '80%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
                       <View
@@ -270,8 +270,8 @@ export function PaymentInvoice() {
                           </View>
                     </View>
                 </View>
-            </View>
-      </TouchableWithoutFeedback>
+              </View>
+         </TouchableWithoutFeedback>
     )
   }
 

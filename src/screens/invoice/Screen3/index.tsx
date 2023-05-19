@@ -107,6 +107,7 @@ export function Screen3() {
     navigation.navigate('InvoiceHome')
   };
   function handleHome() {
+    console.log('clickdrawer');
     changeStep(0);
   }
 

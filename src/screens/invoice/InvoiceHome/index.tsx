@@ -338,19 +338,7 @@ const list = () => {
           </>
         ) : (
           <>
-            <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
-            {webViewRender(step)}
+            
           </>
         )}
       </SafeAreaView>

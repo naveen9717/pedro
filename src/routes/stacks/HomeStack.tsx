@@ -1,5 +1,8 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {Platform, StatusBar, useWindowDimensions} from 'react-native';
+
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import RegisterStack from './RegisterStack';
 // import {SelectInstallation} from '@screens/SelectInstallation';
 import { LoggedInWebView } from '../../screens/invoice/LoggedInWebView';
@@ -23,13 +26,36 @@ import { useTheme } from 'styled-components';
 import TabsContainer from './TabsNaviagtion';
 import { InvoiceBillPayment } from '../../screens/invoice/InvoiceBillPayment';
 import { InvoiceHistoryChart } from '../../screens/invoice/InvoiceHistoryChart';
-
+import CustomMenuStandard from '../../components/CustomMenuStandard';
 const { Navigator, Screen } = createNativeStackNavigator();
 
 export function HomeStack() {
+  const {Navigator, Screen} = createDrawerNavigator();
+  const dimensions = useWindowDimensions();
   const theme = useTheme();
   return (
-    <Navigator screenOptions={{ headerShown: false }}>
+    <Navigator initialRouteName="loggedInWebView"
+    screenOptions={{
+      // headerShown: false,
+      drawerType: dimensions.width >= 768 ? 'permanent' : 'front',
+      drawerStyle: {
+        backgroundColor: theme.COLORS.DRAWER_STYLE,
+      },
+
+      // header: () => (
+      //   <HeaderCustom
+      //     // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
+      //     hideMessage={true}
+      //     // onBackPress={async () => goBack()}
+      //     backgroundColor={theme.COLORS.PRIMARY_800}
+      //     isPrimaryColorDark
+      //     isFocused={false}
+      //     // leftOnPress={handleHome}
+      //     leftAction={'menu'}
+      //   />
+      // ),
+    }}
+    drawerContent={() => <CustomMenuStandard />}>
       {/* <Screen
         // options={{
         //   headerShown: true,
@@ -58,7 +84,10 @@ export function HomeStack() {
       <Screen name="routesregister" component={RegisterStack} />
       <Screen name="routesLoggedInWV" component={LoggedInWebView} />
       <Screen name="routesrecover" component={StackRecoverPass} />
-      <Screen name="InvoiceHome" component={InvoiceHome} />
+      <Screen name="InvoiceHome" component={InvoiceHome} options={{
+          headerShown: false,
+          // header: () => <AccessibilityWidget marginTop={30} />,
+        }}/>
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
       <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
