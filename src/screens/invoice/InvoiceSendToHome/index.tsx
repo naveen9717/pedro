@@ -142,7 +142,7 @@ export function InvoiceSendToHome({route}) {
 
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
-                <View style={{ paddingBottom: height * 0.0324, }}>
+                <View style={{paddingBottom: height * 0.0324}}>
                   <Title paddingBottom={height * 0.0216}>Enviar por correspondência</Title>
                   <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco dias úteis e terá um custo de R$3,60, a ser cobrado em sua próxima fatura.</Text>
                 </View>
