@@ -511,15 +511,18 @@ const renderHorizontalItem2 = (data) => {
                          <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura anterior</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>16/03/2022</Text>
                       </View>
-                      <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Dias consumidos</Text>
+                      <View style={styles.innerview}>                         
+                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Dias consumidos</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>33 dias</Text>
                       </View>
                     </View>
                     <View style={styles.viewlietura}>
-                    <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura atual</Text>
+                    <View style={styles.innerview}>                         
+                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura atual</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>18/04/2022</Text>
                       </View>
-                      <View style={styles.innerview}>                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Mês referência</Text>
+                      <View style={styles.innerview}>                         
+                        <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Mês referência</Text>
                          <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>Abril</Text>
                       </View>
                     </View>
