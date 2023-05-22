@@ -13,7 +13,7 @@ import {
 import {useNavigation} from '@react-navigation/native';
 
 import {Title, ContainerViewButton} from './styles';
-
+import Moment from 'moment'
 import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../../components/Containers/index';
 import {HeaderCustom} from '../../../components/HeaderCustom';
@@ -34,10 +34,10 @@ export function InvoiceSendedWithSuccess({route}) {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const { itemId, otherParam } = route.params;
+  const { email, numeroProtocolo,dataEnvio } = route.params;
   const [dataMain, setDataMain] = useState({})
 
- console.log('routedata',otherParam)
+ console.log('routedata',route.params)
   const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
@@ -131,12 +131,12 @@ export function InvoiceSendedWithSuccess({route}) {
                   />
                   <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
                     <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                    <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                    <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
+                    <Text style={styles.largetext}>PROTOCOLO #{route.params?.dataSource.numeroProtocolo}</Text>
+                    <Text style={styles.smallertext}>Serviço realizado às {Moment(route.params?.dataSource.dataEnvio).format('LT')} {Moment(route.params?.dataSource.dataEnvio).format('DD/MM/YYYY')}</Text>
                   </View>
                   <View style={{marginVertical:15}}>
                     <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                    <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
+                    <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
                   </View>
                   <View>
                     <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>

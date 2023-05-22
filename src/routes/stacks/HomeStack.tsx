@@ -90,7 +90,10 @@ export function HomeStack() {
         }}/>
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" component={InvoiceSolicitedInfo} />
-      <Screen name="InvoiceSendedWithSuccess" component={InvoiceSendedWithSuccess} />
+      <Screen name="InvoiceSendedWithSuccess" options={{
+          headerShown: false,
+          // header: () => <AccessibilityWidget marginTop={30} />,
+        }} component={InvoiceSendedWithSuccess} />
       <Screen name="selectInstallation" component={SelectInstallation} />
       
     </Navigator>

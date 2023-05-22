@@ -33,12 +33,8 @@ export function InvoiceSendToHome({route}) {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const { itemId, otherParam } = route.params;
-  const [dataSource, setDataSource] = useState({
-    "email": "123",
-    "numeroProtocolo":"123",
-    "dataEnvio": "2023-01-17T00:30:00"
-    })
+  // const { itemId, otherParam } = route.params;
+  const [dataSource, setDataSource] = useState(undefined)
   const [tab, setTab] = useState([]);
 
 
@@ -73,8 +69,12 @@ export function InvoiceSendToHome({route}) {
       );
     }
   };
+
+  console.log('datas',dataSource);
   useEffect(() => {
-    OtherDataServices.getReenviarData().then((res) => {
+
+  //Get btn Data Main getReenviarData
+  OtherDataServices.getReenviarData().then((res) => {
       setDataSource(res.data);
   });
 
@@ -83,6 +83,7 @@ export function InvoiceSendToHome({route}) {
   // console.log('Main',res.data)
    setTab({data: res.data});
  });
+ 
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -101,8 +102,7 @@ export function InvoiceSendToHome({route}) {
   const handleClick = () => {
     // navigation.navigate('login' as never);
     navigation.navigate('InvoiceSendedWithSuccess', {
-      itemId: 1,
-      otherParam: dataSource,
+     dataSource
     });
     // navigation.navigate('InvoiceSendedWithSuccess' as never);
   };

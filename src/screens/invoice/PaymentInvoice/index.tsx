@@ -36,6 +36,7 @@ import ClipboardToast from 'react-native-clipboard-toast';
 import { Card, Snackbar } from 'react-native-paper';
 import Modal from "react-native-modal";
 import ContaServices from '../../../shared/services/ContaServices';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
 import QRCode from 'react-native-qrcode-svg';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
@@ -92,6 +93,8 @@ export function PaymentInvoice() {
       );
     }
   };
+
+  
   useEffect(() => {
  
   //Get Conat Data Main
@@ -99,6 +102,7 @@ export function PaymentInvoice() {
     // console.log('Main',res.data)
     setDataMain({data: res.data});
   });
+
   }, []);
 
   const { height } = Dimensions.get('window');
