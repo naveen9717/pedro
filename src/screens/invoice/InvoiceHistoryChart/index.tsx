@@ -143,8 +143,7 @@ export function InvoiceHistoryChart() {
                 {/* Optional chaining used while api get data*/}
                <Card style={{ backgroundColor: '#fff' }}>
                 <Card.Content>
-                  
-                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>

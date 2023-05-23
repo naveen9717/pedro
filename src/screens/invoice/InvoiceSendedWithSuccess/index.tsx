@@ -130,6 +130,7 @@ export function InvoiceSendedWithSuccess({route}) {
                     source={require('../../../assets/images/icOnlineWorking.png')}
                     style={{width: 250,height: 250}}
                   />
+                  
                   <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
                     <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
                     <Text style={styles.largetext}>PROTOCOLO #{route.params?.dataSource.numeroProtocolo}</Text>
