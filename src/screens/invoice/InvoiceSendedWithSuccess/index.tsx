@@ -121,6 +121,7 @@ export function InvoiceSendedWithSuccess({route}) {
               Platform.OS === 'android' ? StatusBar.currentHeight : 0
              }
             />
+            
             <ScrollView>
               <MainGenericContainer style={{paddingTop: height * 0.02, height: height}}>
                 <View style={{paddingBottom: height * 0.0324,justifyContent: 'center',alignItems: 'center'}}>
