@@ -23,6 +23,7 @@ import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
 
 
 export function InvoiceMinPayment() {
@@ -30,6 +31,7 @@ export function InvoiceMinPayment() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [dataSource, setDataSource] = useState([])
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalPixVisible, setModalPixVisible] = useState(false);
@@ -54,7 +56,10 @@ export function InvoiceMinPayment() {
 
   
   useEffect(() => {
-  
+  //Get History Data List
+  OtherDataServices.putBloquearData().then((res) => {
+    setDataSource(res.data);
+  });
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -73,7 +78,10 @@ export function InvoiceMinPayment() {
 
   const handleClick = () => {
     toggleModalPix()
-    navigation.navigate('Info')
+    // navigation.navigate('Info')
+    navigation.navigate('Info', {
+      dataSource
+     });
   };
 
 

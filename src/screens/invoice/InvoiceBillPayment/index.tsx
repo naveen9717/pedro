@@ -294,7 +294,6 @@ const styles = StyleSheet.create({
     backgroundColor:'maroon',
     borderRadius:5
   },
-
   first:{
     color:'black'
   },

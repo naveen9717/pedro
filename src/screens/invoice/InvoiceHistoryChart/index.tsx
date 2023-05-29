@@ -239,7 +239,7 @@ export function InvoiceHistoryChart() {
                  />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                 <FontAwesome name="circle" color="#02ade1" size={15} />
+                   <FontAwesome name="circle" color="#02ade1" size={15} />
 
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>

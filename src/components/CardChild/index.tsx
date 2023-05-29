@@ -67,7 +67,8 @@ export default function CardChild({
       ;
     }
     else {
-      return  null;
+      // return null;
+      return  <Tooltip popover={<View><Text style={styles.labels}>O que é conta mínima?</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
     }
    }
 
@@ -80,13 +81,11 @@ export default function CardChild({
                   subtitle={title}
                   subtitleStyle={{fontSize:16,fontWeight:'700',color:"#717171"}}
                   style={{marginVertical:0}}
-                  right={(props) => 
-                    renderToggle()
-                    }
+                  right={(props) => renderToggle()}
                 >
                 </Card.Title>
                   <Card.Content>
-                    <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
+                    <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
                       <View>
                         {/* <Text style={styles.smalltext}>{title}</Text> */}
                         <Text style={styles.amount}>R$ {valorContaAtual}</Text>
@@ -104,18 +103,18 @@ export default function CardChild({
                    </View>
                  </View>
 
-                 <View style={{flexDirection: 'row',  justifyContent: 'space-between',marginVertical:15}}>
+                 <View style={{flexDirection: 'row',justifyContent: 'space-between',marginVertical:15}}>
                     <View>
-                    <TouchableOpacity onPress={onPress}>
+                      <TouchableOpacity onPress={onPress}>
                         <Text style={styles.second}>Pagar sua Conta</Text>
-                        </TouchableOpacity>
+                      </TouchableOpacity>
                     </View>
                     <View>
                       <Text style={styles.second}>Detalhamento</Text>
                     </View>
                   <View>
-                  <AntIcon name="sharealt" color="#02ade1" size={15} />
-                   </View>
+                    <AntIcon name="sharealt" color="#02ade1" size={15} />
+                  </View>
                  </View>
                   </Card.Content>
                </Card>
@@ -125,7 +124,6 @@ export default function CardChild({
 
 const styles = StyleSheet.create({
   container: {
-   
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start' 
@@ -197,7 +195,6 @@ abertaV:{
   smalltext: {
     fontSize: 13,
     color:'black',
-    
   },
   labels: {
     margin: 1,

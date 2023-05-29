@@ -9,11 +9,27 @@ var vardata = {
 };
 
 class OtherDataServices {
-
     getReenviarData(){
       // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.post(
         `${baseUrl}conta/Conta/segunda-via-por-email`,
+        vardata,
+        {
+         
+        headers: {
+        'Content-Type': 'application/json',
+        'Ocp-Apim-Subscription-Key': `91446917bfed4d1b93360901cb5913c7`, // auth token
+        'api-version': `1.0.0`, 
+        },
+        }
+        )
+     }
+
+
+     putBloquearData(){
+      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
+      return axios.post(
+        `${baseUrl}conta/conta/conta-minima/12312/bloquear`,
         vardata,
         {
          

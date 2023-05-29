@@ -150,7 +150,7 @@ export function InvoicePixPayment() {
                 </View>
 
                 <View style={{ paddingBottom: height * 0.0324, }}>
-                  <Text style={styles.mediumtextbold}>Principais vantagens do seu pagamentos via PlX:</Text>
+                  <Text style={styles.mediumtextbold}> Principais vantagens do seu pagamentos via PlX:</Text>
                   <FlatList
                     data={[
                        {key: 'Rapidez na informação de pagamento no mesmo dia;'},

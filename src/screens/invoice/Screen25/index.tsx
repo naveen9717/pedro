@@ -444,7 +444,6 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                 </View>
 
-
                 <View style={{marginVertical:5,}}>
                    <Text style={[styles.mediumtext,{fontWeight:'600',color:'black',marginVertical:2,}]}>Taxas</Text>
                   </View>

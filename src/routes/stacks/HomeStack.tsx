@@ -56,23 +56,15 @@ export function HomeStack() {
       // ),
     }}
     drawerContent={() => <CustomMenuStandard />}>
-      {/* <Screen
-        // options={{
-        //   headerShown: true,
-        //   header: () => <AccessibilityWidget marginTop={30} />,
-        // }}
-        name="welcome"
-        component={Welcome}
-      /> */}
-      <Screen
+    <Screen
         options={{
           headerShown: false,
           header: () => <AccessibilityWidget marginTop={30} />,
         }}
         name="TabsContainer"
         component={TabsContainer}
-      />
-      <Screen
+    />
+    <Screen
         options={{
           headerShown: false,
           // header: () => <AccessibilityWidget marginTop={30} />,
@@ -80,7 +72,6 @@ export function HomeStack() {
         name="login"
         component={Login}
       />
-     
       <Screen name="routesregister" component={RegisterStack} />
       <Screen name="routesLoggedInWV" component={LoggedInWebView} />
       <Screen name="routesrecover" component={StackRecoverPass} />
