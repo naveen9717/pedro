@@ -97,7 +97,7 @@ console.log('text',text);
   useEffect(() => {
     //Get Conat Data List
     ContaServices.getDataContaList().then((res) => {
-      setDataSource(res.data);
+      setDataSource(res.data.debitos);
   });
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
@@ -143,12 +143,12 @@ const list = () => {
       key={element.item?.mesReferencia}
       title="Conta de energia"
       status={element?.statusPagamento}
-      code_install={element?.pagamentoCodigoBarra}
+      code_install={element?.codigoParceiroNegocio}
       mesReferencia={element?.mesReferencia}
       dataVencimento={element?.dataVencimento}
-      parcelamentoD={element?.parcelamentoDisponivel}
-      temParcelamentoEmA={element?.temParcelamentoEmAberto}
-      valorContaAtual={element?.valorContaAtual}
+      // parcelamentoD={element?.parcelamentoDisponivel}
+      contaMinima={element?.contaMinima}
+      valorContaAtual={element?.valor}
       onPress={handleChild}
     />
     );

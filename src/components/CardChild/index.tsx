@@ -30,8 +30,7 @@ type Props = {
   code_install: string;
   mesReferencia: string;
   dataVencimento:string;
-  temParcelamentoEmA:Boolean;
-  parcelamentoD:Boolean;
+  contaMinima:Boolean;
   valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
 };
@@ -42,8 +41,7 @@ export default function CardChild({
   code_install,
   dataVencimento,
   mesReferencia,
-  parcelamentoD,
-  temParcelamentoEmA,
+  contaMinima,
   valorContaAtual,
   onPress,
 }: Props) {
@@ -62,7 +60,7 @@ export default function CardChild({
    }
 
    const renderToggle=() =>{
-    if (parcelamentoD == true || temParcelamentoEmA == true) {
+    if (contaMinima == true) {
       return  <Tooltip popover={<View><Text style={styles.labels}>Entenda sobre seu</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
       ;
     }
