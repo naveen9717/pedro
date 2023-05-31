@@ -206,7 +206,8 @@ const list = () => {
                     status={dataMain.data?.statusPagamento}
                     parcelamentoD={dataMain.data?.parcelamentoDisponivel}
                     valorContaAtual={dataMain.data?.valorContaAtual}
-                    address={dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}
+                    address={dataMain.data?.enderecoInstalacao}
+                    // address={dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}
                   /> 
                   
                  <View style={styles.filter}>

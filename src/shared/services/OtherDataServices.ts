@@ -28,8 +28,8 @@ class OtherDataServices {
 
      putBloquearData(){
       // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
-      return axios.post(
-        `${baseUrl}conta/conta/conta-minima/12312/bloquear`,
+      return axios.put(
+        `${baseUrl}conta/conta/conta-minima/4000039723/bloquear`,
         vardata,
         {
          

@@ -78,7 +78,7 @@ export default function CardChild({
                   // title=""
                   subtitle={title}
                   subtitleStyle={{fontSize:16,fontWeight:'700',color:"#717171"}}
-                  style={{marginVertical:0}}
+                  style={{marginVertical:-16}}
                   right={(props) => renderToggle()}
                 >
                 </Card.Title>
@@ -110,11 +110,11 @@ export default function CardChild({
                     <View>
                       <Text style={styles.second}>Detalhamento</Text>
                     </View>
-                  <View>
-                    <AntIcon name="sharealt" color="#02ade1" size={15} />
-                  </View>
-                 </View>
-                  </Card.Content>
+                    <View>
+                      <AntIcon name="sharealt" color="#02ade1" size={15} />
+                    </View>
+                </View>
+                </Card.Content>
                </Card>
             </View>
   );
