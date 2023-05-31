@@ -32,7 +32,6 @@ class OtherDataServices {
         `${baseUrl}conta/conta/conta-minima/4000039723/bloquear`,
         vardata,
         {
-         
         headers: {
         'Content-Type': 'application/json',
         'Ocp-Apim-Subscription-Key': `91446917bfed4d1b93360901cb5913c7`, // auth token

@@ -34,7 +34,6 @@ export function Header({
         backgroundColor={backgroundColor}
         isPrimaryColorDark={isPrimaryColorDark}
       />
-
       <Container style={boxShadowHeaderStyle()}>
         {showBackButton ? (
           <TouchableOpacity onPress={onBackPress}>
@@ -46,7 +45,6 @@ export function Header({
             {/* <Feather name="menu" size={23} color={backgroundColor} /> */}
           </TouchableOpacity>
         )}
-
         <Image
           style={{
             width: 45,

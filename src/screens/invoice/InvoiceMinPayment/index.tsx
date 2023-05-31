@@ -154,7 +154,6 @@ export function InvoiceMinPayment() {
                     </Card.Content>
                   </Card>
                 </View>
-
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.smalltext}>O valor deste mês não atingiuo valor de R$70,00 e será acumulado sem encargos na próxima conta.</Text>
                 </View>

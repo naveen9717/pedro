@@ -339,7 +339,6 @@ const list = () => {
           </>
         ) : (
           <>
-            
           </>
         )}
       </SafeAreaView>

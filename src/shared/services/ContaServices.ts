@@ -31,7 +31,6 @@ class ContaServices {
         }
         )
      }
-  
 }
 
 export default new ContaServices();

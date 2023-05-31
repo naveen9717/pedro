@@ -140,7 +140,6 @@ export function InvoicePaymentInfoSuccess() {
                     <Text style={styles.smalltext}>sua próxima fatura.</Text>
                   </View>
                 </View>
-                
                 <ContainerViewButton>
                   <Button
                     title="Compartilhar"

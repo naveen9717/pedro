@@ -115,7 +115,7 @@ export function InvoiceSendToHome({route}) {
         msg={modalInfo.msg}
         title={modalInfo.title}
       />
-    
+  
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={

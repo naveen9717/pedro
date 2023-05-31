@@ -120,6 +120,7 @@ export default function CardChild({
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',

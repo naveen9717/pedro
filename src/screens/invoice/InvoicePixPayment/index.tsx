@@ -164,7 +164,6 @@ export function InvoicePixPayment() {
                 </View>
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
-
                 <View style={styles.mTop}>
                 <Card style={{ backgroundColor: '#fff', width: '30%' }}>
                   <Card.Content>

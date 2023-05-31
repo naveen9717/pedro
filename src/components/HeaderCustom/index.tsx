@@ -69,7 +69,6 @@ export function HeaderCustom({
               <Feather name="menu" size={23} color={backgroundColor} />
             </TouchableOpacity>
           ) : null)}
-
         <View style={{left: width * (0.5 - 0.052), position: 'absolute'}}>
           <Image
             style={{
