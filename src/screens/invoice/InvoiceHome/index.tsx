@@ -264,7 +264,7 @@ const list = () => {
                             </View>
                             <ContainerViewButton>
                             <View style={styles.viewtouch}>
-                            <SmallButton
+                             <SmallButton
                                 title="Paga"
                                 type="secondary"
                                 // onPress={handleSignIn}
