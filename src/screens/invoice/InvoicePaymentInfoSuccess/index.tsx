@@ -132,7 +132,7 @@ export function InvoicePaymentInfoSuccess() {
                  </View>
                   <View style={{marginVertical:15}}>
                     <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                    <Text style={[styles.smalltext,{ textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
+                    <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>Rua Norte Sul, 100- Centro- Caxias do Sul - RS -CEP: 95010-000</Text>
                  </View>
                   <View>
                     <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
