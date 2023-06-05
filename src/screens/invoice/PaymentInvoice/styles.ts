@@ -14,6 +14,7 @@ export const Container = styled.View<ContainerProps>`
   background-color: ${({theme}) => theme.COLORS.BACKGROUND};
 `;
 
+
 export const ContainerView = styled.View`
   margin: 30px;
   margin-top: 40px;

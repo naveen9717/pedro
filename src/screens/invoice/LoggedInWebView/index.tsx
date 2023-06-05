@@ -7,7 +7,6 @@ import {
   Linking,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-
 import WebView, {WebViewNavigation} from 'react-native-webview';
 
 import {useTheme} from 'styled-components/native';

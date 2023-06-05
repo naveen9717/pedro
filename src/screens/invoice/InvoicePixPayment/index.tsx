@@ -153,7 +153,7 @@ export function InvoicePixPayment() {
                   <Text style={styles.mediumtextbold}> Principais vantagens do seu pagamentos via PlX:</Text>
                   <FlatList
                     data={[
-                       {key: 'Rapidez na informação de pagamento no mesmo dia;'},
+                       {key: 'Rapide na informação de pagamento no mesmo dia;'},
                        {key: 'Bloqueio para Novas Ações de Cobrança;'},
                        {key: 'Agilidade na Baixa de Conta no mesmo dia;'},
                        {key: 'Não necessidade de abertura de NS para'},

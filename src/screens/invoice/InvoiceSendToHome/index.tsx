@@ -149,6 +149,7 @@ export function InvoiceSendToHome({route}) {
                   <Title paddingBottom={height * 0.0216}>Endereço de entrega</Title>
                   <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.numeroInicial+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
                 </View>
+                
                 <ContainerViewButton>
                   <Button
                     title="Reenviar por correspondência"
