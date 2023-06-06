@@ -120,7 +120,9 @@ console.log('text',text);
     navigation.navigate('Meus dados')
   }
 
-
+  function handleChild2() {
+    navigation.navigate('Ajuda')
+  }
   const handleClick = () => {
     toggleModalPix()
     navigation.navigate('Info')
@@ -150,6 +152,7 @@ const list = () => {
       contaMinima={element?.contaMinima}
       valorContaAtual={element?.valor}
       onPress={handleChild}
+      onPress2={handleChild2}
     />
     );
   });
@@ -237,7 +240,7 @@ const list = () => {
                  <View>
                  <TouchableWithoutFeedback onPress={handleClickHist}>
                    <Text style={styles.second}>Ver histórico de consumo <AntIcon name="right" color="#02ade1" size={13} /> </Text>
-                   </TouchableWithoutFeedback>
+                  </TouchableWithoutFeedback>
                  </View>
                  </View>
 

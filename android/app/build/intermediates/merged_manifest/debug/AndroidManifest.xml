@@ -15,7 +15,9 @@
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required to read and write the expansion files on shared storage for Android 11 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Required to to download files without a notification -->
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <queries>
@@ -119,6 +121,24 @@
             android:exported="false"
             android:initOrder="99" />
         <provider
+            android:name="com.ReactNativeBlobUtil.Utils.FileProvider"
+            android:authorities="br.com.cpfl.android.autoatendimento.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="cl.json.RNShareFileProvider"
+            android:authorities="br.com.cpfl.android.autoatendimento.rnshare.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/share_download_paths" />
+        </provider>
+        <provider
             android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
             android:authorities="br.com.cpfl.android.autoatendimento.fileprovider"
             android:exported="false"
@@ -157,7 +177,7 @@
             android:name="com.datami.smi.wrapper.SmiVPNHandler"
             android:exported="false" />
         <service
-            android:name="de.blinkt.openvpn.core.cusdmi1"
+            android:name="de.blinkt.openvpn.core.cusdmi2"
             android:exported="true"
             android:foregroundServiceType="connectedDevice"
             android:permission="android.permission.BIND_VPN_SERVICE"
@@ -167,11 +187,11 @@
             </intent-filter>
         </service>
         <service
-            android:name="de.blinkt.openvpn.core.cusdmi"
+            android:name="de.blinkt.openvpn.core.cusdmi3"
             android:exported="false"
             android:process=":openvpn" />
         <service
-            android:name="com.datami.smi.wrapper.dmicus"
+            android:name="com.datami.smi.wrapper.dmicus2"
             android:exported="false" />
 
         <activity

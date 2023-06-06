@@ -141,6 +141,14 @@ export function PaymentInvoice() {
     
   };
 
+  const handleClickPDF = () => {
+    // toggleModalPix()
+    navigation.navigate('InvoiceDowlnoad', {
+      itemId: 2,
+      otherParam: 'Enviar por correspondência',
+    });
+  };
+
   const handleClickPix = () => {
     // Como realizar seu pagamento via Pix?
     navigation.navigate('InvoicePixPayment');
@@ -150,6 +158,8 @@ export function PaymentInvoice() {
     // Como realizar seu pagamento via Código barras?>
     navigation.navigate('InvoiceBillPayment');
   };
+
+  
 
   const CodigoBarra = (props)=>{
     console.log('propsnew',props.dataCodigoMain?.data);
@@ -187,7 +197,7 @@ export function PaymentInvoice() {
                   type="secondary"
                   Icon="filetext1"
                   IconColor="#FFFFFF"
-                  onPress={handleClick}
+                  onPress={handleClickPDF}
                   isLoading={isLogging}
                 />
                 <View style={{ marginVertical: 10 }}></View>

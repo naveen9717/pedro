@@ -33,6 +33,8 @@ type Props = {
   contaMinima:Boolean;
   valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
+  onPress2: ((event: GestureResponderEvent) => void) | undefined;
+
 };
 
 export default function CardChild({
@@ -44,6 +46,7 @@ export default function CardChild({
   contaMinima,
   valorContaAtual,
   onPress,
+  onPress2
 }: Props) {
   const {height} = Dimensions.get('window');
 
@@ -108,7 +111,9 @@ export default function CardChild({
                       </TouchableOpacity>
                     </View>
                     <View>
+                    <TouchableWithoutFeedback onPress={onPress2}>
                       <Text style={styles.second}>Detalhamento</Text>
+                      </TouchableWithoutFeedback>
                     </View>
                     <View>
                       <AntIcon name="sharealt" color="#02ade1" size={15} />

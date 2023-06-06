@@ -17,10 +17,12 @@ MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/Reac
 MERGED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-32:12
 MERGED from [:react-native-google-signin_google-signin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-google-signin/google-signin/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-app-auth] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-app-auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-48:12
 MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-fbsdk-next/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:1-28:12
 MERGED from [:react-native-gesture-handler] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-splash-screen] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-svg] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-touch-id] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-touch-id/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
@@ -35,7 +37,7 @@ MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gra
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/9db99ddecddb732caefae0c67343d29a/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/8024176ead4947459d98c5f948ff1655/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/67137cc40bbedf902b125f1025f8d158/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:2:1-46:12
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:2:1-46:12
 MERGED from [org.webkit:android-jsc:r250230] /Users/naveenkumar/.gradle/caches/transforms-3/5c6cf19c133db308bc3736c103dd74a8/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-reanimated] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-reanimated/android/build/.transforms/8ec2456b307041e3b9c4e7cd9bb90e5a/transformed/jetified-react-native-reanimated-67-jsc/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:flipper:2.5.0] /Users/naveenkumar/.gradle/caches/transforms-3/b49dd07ea83c4f31048cd8e97551df42/transformed/jetified-flipper-2.5.0/AndroidManifest.xml:2:1-9:12
@@ -151,8 +153,10 @@ MERGED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cp
 MERGED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:11:5-67
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:11:5-67
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:11:5-67
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:11:5-67
 MERGED from [net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:22:5-67
 MERGED from [net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:22:5-67
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:22:5-67
@@ -169,14 +173,16 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.2.0] /U
 		ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:6:5-81
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-81
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-81
 	android:name
 		ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:7:5-77
 MERGED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-77
 MERGED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-77
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:15:5-77
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:15:5-77
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:15:5-77
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:15:5-77
 	android:name
 		ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:7:22-74
 uses-permission#android.permission.USE_FINGERPRINT
@@ -195,6 +201,10 @@ MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/Reac
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-32:19
 MERGED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-30:19
 MERGED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-30:19
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:5-46:19
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:5-46:19
+MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:9:5-20
@@ -209,8 +219,8 @@ MERGED from [com.facebook.android:facebook-share:9.0.0] /Users/naveenkumar/.grad
 MERGED from [com.facebook.android:facebook-share:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/391c327616adb4d3bc40f946b2e604b3/transformed/jetified-facebook-share-9.0.0/AndroidManifest.xml:28:5-29:19
 MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:29:5-50:19
 MERGED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:29:5-50:19
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:17:5-44:19
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:17:5-44:19
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:17:5-44:19
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:17:5-44:19
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/naveenkumar/.gradle/caches/transforms-3/2b732a12b0d2fa121b0032403c359c81/transformed/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.1] /Users/naveenkumar/.gradle/caches/transforms-3/2b732a12b0d2fa121b0032403c359c81/transformed/jetified-soloader-0.10.1/AndroidManifest.xml:11:5-20
 MERGED from [net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:34:5-53:19
@@ -376,6 +386,8 @@ MERGED from [:react-native-google-signin_google-signin] /Users/naveenkumar/Devel
 MERGED from [:react-native-google-signin_google-signin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-google-signin/google-signin/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-app-auth] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-app-auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-app-auth] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-app-auth/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-fbsdk-next/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:5-26:41
 MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-fbsdk-next/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:5-26:41
 MERGED from [:react-native-gesture-handler] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -384,6 +396,8 @@ MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/React
 MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-splash-screen] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-splash-screen] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-svg] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -412,8 +426,8 @@ MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naveenkumar/.g
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/8024176ead4947459d98c5f948ff1655/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/67137cc40bbedf902b125f1025f8d158/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/67137cc40bbedf902b125f1025f8d158/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r250230] /Users/naveenkumar/.gradle/caches/transforms-3/5c6cf19c133db308bc3736c103dd74a8/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:7:5-9:41
 MERGED from [org.webkit:android-jsc:r250230] /Users/naveenkumar/.gradle/caches/transforms-3/5c6cf19c133db308bc3736c103dd74a8/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-reanimated] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-reanimated/android/build/.transforms/8ec2456b307041e3b9c4e7cd9bb90e5a/transformed/jetified-react-native-reanimated-67-jsc/AndroidManifest.xml:5:5-7:41
@@ -608,6 +622,8 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.99.0] /Users/naveenkumar/.gradle/caches/transforms-3/b62ec960024b7ef72f2e9344dbd8911f/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:5-76
 MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
 MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-76
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.99.0] /Users/naveenkumar/.gradle/caches/transforms-3/b62ec960024b7ef72f2e9344dbd8911f/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -616,8 +632,10 @@ MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/React
 MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:12:5-79
-MERGED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:12:5-79
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-79
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-79
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:12:5-79
+MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:9:5-79
@@ -636,6 +654,8 @@ ADDED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpf
 		ADDED from [:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:18-64
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-68
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:5-68
+MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:25:5-68
@@ -720,6 +740,40 @@ ADDED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative
 		ADDED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-35
 	android:name
 		ADDED from [:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-88
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-80
+	android:name
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:22-77
+uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:5-88
+	android:name
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:22-85
+provider#com.ReactNativeBlobUtil.Utils.FileProvider
+ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-45:20
+	android:grantUriPermissions
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-47
+	android:authorities
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-60
+	android:exported
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-70
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+	android:resource
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+	android:name
+		ADDED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+provider#cl.json.RNShareFileProvider
+ADDED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-72
+	android:exported
+		ADDED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
 provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
 ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
@@ -730,12 +784,6 @@ ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl
 		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
-meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:63
-	android:resource
-		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-60
-	android:name
-		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
 activity#com.facebook.FacebookActivity
 ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
 	android:configChanges
@@ -767,57 +815,57 @@ ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.grad
 	android:scheme
 		ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:14:5-81
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:5-81
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:14:22-78
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:22-78
 activity#com.datami.smi.ui.VpnPermissionActivity
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:18:9-22:56
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:18:9-22:56
 	android:exported
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:21:13-37
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:21:13-37
 	android:configChanges
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:20:13-83
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:20:13-83
 	android:theme
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:22:13-53
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:22:13-53
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:19:13-67
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:19:13-67
 service#com.datami.smi.wrapper.SmiVPNHandler
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:24:9-26:40
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:24:9-26:40
 	android:exported
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:26:13-37
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:25:13-64
-service#de.blinkt.openvpn.core.cusdmi1
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:27:9-36:19
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:25:13-64
+service#de.blinkt.openvpn.core.cusdmi2
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:27:9-36:19
 	android:process
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:32:13-39
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:32:13-39
 	android:exported
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:29:13-36
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:29:13-36
 	android:permission
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:31:13-69
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:31:13-69
 	android:foregroundServiceType
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:30:13-60
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:30:13-60
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:28:13-58
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:28:13-58
 intent-filter#action:name:android.net.VpnService
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:33:13-35:29
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:33:13-35:29
 action#android.net.VpnService
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:34:17-65
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:17-65
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:34:25-62
-service#de.blinkt.openvpn.core.cusdmi
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:37:9-40:42
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:25-62
+service#de.blinkt.openvpn.core.cusdmi3
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:37:9-40:42
 	android:process
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:40:13-39
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:40:13-39
 	android:exported
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:39:13-37
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:38:13-57
-service#com.datami.smi.wrapper.dmicus
-ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:41:9-43:40
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:38:13-58
+service#com.datami.smi.wrapper.dmicus2
+ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:41:9-43:40
 	android:exported
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:43:13-37
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:43:13-37
 	android:name
-		ADDED from [com.datami:vpnsdk:4.0.2] /Users/naveenkumar/.gradle/caches/transforms-3/632c256bfabca7d3372c2f50c0818845/transformed/jetified-vpnsdk-4.0.2/AndroidManifest.xml:42:13-57
+		ADDED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:42:13-58
 queries
 ADDED from [net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:24:5-32:15
 intent#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+data:scheme:https

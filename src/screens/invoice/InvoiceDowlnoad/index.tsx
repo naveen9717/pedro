@@ -26,15 +26,58 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
+import ReactNativeBlobUtil from 'react-native-blob-util'
+import Share from 'react-native-share'
 
 
-export function Screen26() {
+export function InvoiceDowlnoad() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
 
- 
+  const downloadFile = () => {
+    const fileUrl = "http://www.pdf995.com/samples/pdf.pdf";
+    const fileName= "sample"
+    let dirs = ReactNativeBlobUtil.fs.dirs;
+    ReactNativeBlobUtil.config({
+      fileCache: true,
+      appendExt: 'pdf',
+      path: `${dirs.DocumentDir}/${fileName}`,
+      addAndroidDownloads: {
+        useDownloadManager: true,
+        notification: true,
+        title: fileName,
+        description: 'File downloaded by download manager.',
+        mime: 'application/pdf',
+      },
+    })
+      .fetch('GET', fileUrl)
+      .then((res) => {
+        // in iOS, we want to save our files by opening up the saveToFiles bottom sheet action.
+        // whereas in android, the download manager is handling the download for us.
+        if (Platform.OS === 'ios') {
+          const filePath = res.path();
+          let options = {
+            type: 'application/pdf',
+            url: filePath,
+            saveToFiles: true,
+          };
+          Share.open(options)
+            .then((resp) => console.log(resp))
+            .catch((err) => console.log(err));
+        }
+      })
+      .catch((err) => console.log('BLOB ERROR -> ', err));
+  };
+  const source = "http://www.pdf995.com/samples/pdf.pdf";
+        //const source = require('./test.pdf');  // ios only
+        //const source = {uri:'bundle-assets://test.pdf' };
+        //const source = {uri:'file:///sdcard/test.pdf'};
+        //const source = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
+        //const source = {uri:"content://com.example.blobs/xxxxxxxx-...?offset=0&size=xxx"};
+        //const source = {uri:"blob:xxxxxxxx-...?offset=0&size=xxx"};
+
   const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
@@ -124,23 +167,23 @@ export function Screen26() {
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
                   </View>
                   <View>
-                  <Image
-                    source={require('../../../assets/images/icOnlineWorking.png')}
-                    style={{width: 250,height: 250}}
-                  />
+                   <Image
+                     source={require('../../../assets/pdf-preview.png')}
+                     style={{width: "100%",height: 450}}
+                   />
                 </View>
-                <View>
+                <View style={{marginVertical:25}}>
                 <ContainerViewButton>
                   <Button
                     title="Baixar segunda via"
                     type="secondary"
                     IconColor="#02ade1"
-                    onPress={handleClick}
+                    onPress={downloadFile}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>
                 </View>
-                <View style={{marginVertical:20}}>
+                <View style={{marginVertical:10}}>
                 <ContainerViewButton>
                   <Button
                     title="Compartilhar"
@@ -222,5 +265,10 @@ const styles = StyleSheet.create({
     textAlign:'center',
     fontWeight:'500',
     marginVertical:5
-  }
+  },
+  pdf: {
+    flex:1,
+    width:Dimensions.get('window').width,
+    height:Dimensions.get('window').height,
+}
 });

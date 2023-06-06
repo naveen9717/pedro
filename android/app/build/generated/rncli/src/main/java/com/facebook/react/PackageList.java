@@ -27,6 +27,8 @@ import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 import com.reactnativegooglesignin.RNGoogleSigninPackage;
 // react-native-app-auth
 import com.rnappauth.RNAppAuthPackage;
+// react-native-blob-util
+import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 // react-native-fbsdk-next
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
@@ -37,6 +39,8 @@ import com.swmansion.reanimated.ReanimatedPackage;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+// react-native-share
+import cl.json.RNSharePackage;
 // react-native-splash-screen
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 // react-native-svg
@@ -100,11 +104,13 @@ public class PackageList {
       new ReactNativeFirebaseAppPackage(),
       new RNGoogleSigninPackage(),
       new RNAppAuthPackage(),
+      new ReactNativeBlobUtilPackage(),
       new FBSDKPackage(),
       new RNGestureHandlerPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
+      new RNSharePackage(),
       new SplashScreenReactPackage(),
       new SvgPackage(),
       new FingerprintAuthPackage(),
