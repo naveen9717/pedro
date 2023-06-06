@@ -304,7 +304,7 @@ export function Screen3() {
                 
                 </View>
 
-                <View style={styles.viewfull}>
+              <View style={styles.viewfull}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
                     <Card.Content>
@@ -342,7 +342,7 @@ export function Screen3() {
                     </Card.Content>
                 </Card>
                 
-                </View>
+              </View>
 
                 <View style={{marginVertical:10}}>
                   <Title>Meus pedidos em aberto</Title>
@@ -404,7 +404,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginVertical:10 
   },
-  
   amount: {
     marginBottom: 10,
     fontSize: 22,

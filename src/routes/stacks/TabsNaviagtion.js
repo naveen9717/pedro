@@ -45,7 +45,7 @@ function TabsContainer() {
               iconName = focused ? 'people-circle-outline' : 'people-circle-outline';
             }
             else if (rn === InvoiceBill) {
-              iconName = focused ? 'settings-outline' : 'settings-outline';
+              iconName = focused ? 'grid-outline' : 'grid-outline';
             }
             // You can return any component that you like here!
             return <Ionicons name={iconName} size={size} color={color} />;
