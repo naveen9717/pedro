@@ -20,9 +20,9 @@ target 'CPFLMOBILE' do
 
   pod 'react-native-blob-util', :path => '../node_modules/react-native-blob-util'
 
-  pod 'react-native-pdf', :path => '../node_modules/react-native-pdf'
+  # pod 'react-native-pdf', :path => '../node_modules/react-native-pdf'
 
-  pod 'RNPDF', :path => '../node_modules/react-native-view-pdf'
+  # pod 'RNPDF', :path => '../node_modules/react-native-view-pdf'
 
   target 'CPFLMOBILETests' do
     inherit! :complete

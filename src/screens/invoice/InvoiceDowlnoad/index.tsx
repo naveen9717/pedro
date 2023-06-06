@@ -8,7 +8,8 @@ import {
   Dimensions,
   ScrollView,
   StyleSheet,
-  Text
+  Text,
+  ActivityIndicator
 } from 'react-native';
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
 
@@ -28,7 +29,7 @@ import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
 import ReactNativeBlobUtil from 'react-native-blob-util'
 import Share from 'react-native-share'
-
+import Pdf from 'react-native-pdf';
 
 export function InvoiceDowlnoad() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
@@ -70,13 +71,6 @@ export function InvoiceDowlnoad() {
       })
       .catch((err) => console.log('BLOB ERROR -> ', err));
   };
-  const source = "http://www.pdf995.com/samples/pdf.pdf";
-        //const source = require('./test.pdf');  // ios only
-        //const source = {uri:'bundle-assets://test.pdf' };
-        //const source = {uri:'file:///sdcard/test.pdf'};
-        //const source = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
-        //const source = {uri:"content://com.example.blobs/xxxxxxxx-...?offset=0&size=xxx"};
-        //const source = {uri:"blob:xxxxxxxx-...?offset=0&size=xxx"};
 
   const netInfo = useNetInfo();
 
@@ -152,7 +146,7 @@ export function InvoiceDowlnoad() {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
+              leftAction={'back'}
             />
             <AccessibilityWidget
              marginTop={
@@ -166,12 +160,35 @@ export function InvoiceDowlnoad() {
                   <Title paddingBottom={height * 0.0216}>Segunda Via</Title>
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
                   </View>
-                  <View>
-                   <Image
-                     source={require('../../../assets/pdf-preview.png')}
-                     style={{width: "100%",height: 450}}
-                   />
-                </View>
+                
+                   <View style={{justifyContent: 'flex-start', alignItems: 'center',backgroundColor:'#fff'}}>
+                    <Pdf
+                       trustAllCerts={false}
+                       source={{
+                            uri: 'http://www.pdf995.com/samples/pdf.pdf',
+                        }}
+                       page={1}
+                       scale={1.0}
+                       minScale={0.5}
+                       maxScale={3.0}
+                       renderActivityIndicator={() => (
+                        <ActivityIndicator color="black" size="large" />
+                       )}
+                       enablePaging={true}
+                       onLoadProgress={(percentage) => console.log(`Loading :${percentage}`)}
+                       onLoadComplete={() => console.log('Loading Complete')}
+                       onPageChanged={(page, totalPages) => console.log(`${page}/${totalPages}`)}
+                       onError={(error) => console.log(error)}
+                      //  onPageSingleTap={(page) => alert(page)}
+                       onPressLink={(link) => Linking.openURL(link)}
+                       onScaleChanged={(scale) => console.log(scale)}
+                       // singlePage={true}
+                       spacing={10}
+                        // horizontal
+                       style={styles.pdf}
+                      />
+                  </View>
+              
                 <View style={{marginVertical:25}}>
                 <ContainerViewButton>
                   <Button
@@ -183,7 +200,7 @@ export function InvoiceDowlnoad() {
                   />
                 </ContainerViewButton>
                 </View>
-                <View style={{marginVertical:10}}>
+                <View style={{marginVertical:15}}>
                 <ContainerViewButton>
                   <Button
                     title="Compartilhar"
@@ -267,8 +284,8 @@ const styles = StyleSheet.create({
     marginVertical:5
   },
   pdf: {
-    flex:1,
-    width:Dimensions.get('window').width,
-    height:Dimensions.get('window').height,
+  // flex:1,
+  width:Dimensions.get('window').width,
+  height: 480,
 }
 });

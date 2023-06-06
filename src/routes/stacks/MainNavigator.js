@@ -17,7 +17,7 @@ function MainNaviagtor() {
       <Stack.Screen name="InvoiceBillPayment" component={InvoiceBillPayment} />
       <Stack.Screen name="InvoicePixPayment" component={InvoicePixPayment} />
       <Stack.Screen name="InvoiceSendToHome" component={InvoiceSendToHome} />
-      <Stack.Screen name="InvoiceDowlnoad" component={InvoiceDowlnoad} />
+      <Stack.Screen name="InvoiceDowlnoad" tabBarVisible ={false} component={InvoiceDowlnoad} />
       <Stack.Screen name="InvoicePaymentInfoSuccess" component={InvoicePaymentInfoSuccess} />
 
    </Stack.Navigator>

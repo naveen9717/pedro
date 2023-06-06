@@ -20,6 +20,7 @@ MERGED from [:react-native-app-auth] /Users/naveenkumar/Developer/ReactNative/cp
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-48:12
 MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-fbsdk-next/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:1-28:12
 MERGED from [:react-native-gesture-handler] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
@@ -28,6 +29,7 @@ MERGED from [:react-native-svg] /Users/naveenkumar/Developer/ReactNative/cpfl-ag
 MERGED from [:react-native-touch-id] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-touch-id/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-45:12
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.android:facebook-android-sdk:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/2cb7a001a0f58521e1dbb55a5be79fe2/transformed/jetified-facebook-android-sdk-9.0.0/AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-login:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/488e1744b3638915819c4a67742afc2b/transformed/jetified-facebook-login-9.0.0/AndroidManifest.xml:21:1-31:12
@@ -95,11 +97,13 @@ MERGED from [androidx.activity:activity:1.2.3] /Users/naveenkumar/.gradle/caches
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/427358eeaa4b00dde25cebe07a0344b0/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/naveenkumar/.gradle/caches/transforms-3/2dc7e410378eab56a004fa5463921b03/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/5ef8fd78139e4ff0667ed744a729c6fd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.TalbotGooday:AndroidPdfViewer:3.1.0-beta.3] /Users/naveenkumar/.gradle/caches/transforms-3/4edc08dce33472992143c11ca79e384f/transformed/jetified-AndroidPdfViewer-3.1.0-beta.3/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.android:facebook-applinks:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/04ae8a87636dba6377f91022e39f68a2/transformed/jetified-facebook-applinks-9.0.0/AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-messenger:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/38ae1fc3cbb3117c56626043ceed6167/transformed/jetified-facebook-messenger-9.0.0/AndroidManifest.xml:21:1-31:12
 MERGED from [com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:21:1-53:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/79bafeda421a4ff34a33ed80a4ebda08/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/198e7f7b1ac774f9d677a972d66f90ee/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.TalbotGooday:PdfiumAndroid:1.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/a6605c9a7e1e640acdb7fc3e68395a10/transformed/jetified-PdfiumAndroid-1.0.1/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ddf20bfaa325f99880f17cf61197f43a/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/21bfceaf1328cf3e89b0cde6bd975eb3/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/4454c974400c8714285d6234b9450588/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -155,6 +159,8 @@ MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/Reac
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-67
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-67
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-67
 MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:11:5-67
 MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:11:5-67
 MERGED from [net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:22:5-67
@@ -175,6 +181,8 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:6:5-81
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-81
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-81
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-81
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:6:22-78
 uses-permission#android.permission.FOREGROUND_SERVICE
@@ -207,6 +215,8 @@ MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-
 MERGED from [:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:5-43:19
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:5-43:19
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.android:facebook-android-sdk:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/2cb7a001a0f58521e1dbb55a5be79fe2/transformed/jetified-facebook-android-sdk-9.0.0/AndroidManifest.xml:28:5-29:19
@@ -392,6 +402,8 @@ MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/
 MERGED from [:react-native-fbsdk-next] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-fbsdk-next/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:5-26:41
 MERGED from [:react-native-gesture-handler] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-gesture-handler] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-safe-area-context] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -408,6 +420,8 @@ MERGED from [:react-native-vector-icons] /Users/naveenkumar/Developer/ReactNativ
 MERGED from [:react-native-vector-icons] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.67.5] /Users/naveenkumar/.gradle/caches/transforms-3/9d446503c7a5c589213bbeef14285f62/transformed/jetified-react-native-0.67.5/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.android:facebook-android-sdk:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/2cb7a001a0f58521e1dbb55a5be79fe2/transformed/jetified-facebook-android-sdk-9.0.0/AndroidManifest.xml:24:5-26:41
@@ -542,6 +556,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/nav
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/naveenkumar/.gradle/caches/transforms-3/2dc7e410378eab56a004fa5463921b03/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/5ef8fd78139e4ff0667ed744a729c6fd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/5ef8fd78139e4ff0667ed744a729c6fd/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.TalbotGooday:AndroidPdfViewer:3.1.0-beta.3] /Users/naveenkumar/.gradle/caches/transforms-3/4edc08dce33472992143c11ca79e384f/transformed/jetified-AndroidPdfViewer-3.1.0-beta.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.TalbotGooday:AndroidPdfViewer:3.1.0-beta.3] /Users/naveenkumar/.gradle/caches/transforms-3/4edc08dce33472992143c11ca79e384f/transformed/jetified-AndroidPdfViewer-3.1.0-beta.3/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.android:facebook-applinks:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/04ae8a87636dba6377f91022e39f68a2/transformed/jetified-facebook-applinks-9.0.0/AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-applinks:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/04ae8a87636dba6377f91022e39f68a2/transformed/jetified-facebook-applinks-9.0.0/AndroidManifest.xml:24:5-26:41
 MERGED from [com.facebook.android:facebook-messenger:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/38ae1fc3cbb3117c56626043ceed6167/transformed/jetified-facebook-messenger-9.0.0/AndroidManifest.xml:24:5-26:41
@@ -552,6 +568,8 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naveenkumar
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/79bafeda421a4ff34a33ed80a4ebda08/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/198e7f7b1ac774f9d677a972d66f90ee/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/198e7f7b1ac774f9d677a972d66f90ee/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.TalbotGooday:PdfiumAndroid:1.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/a6605c9a7e1e640acdb7fc3e68395a10/transformed/jetified-PdfiumAndroid-1.0.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.TalbotGooday:PdfiumAndroid:1.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/a6605c9a7e1e640acdb7fc3e68395a10/transformed/jetified-PdfiumAndroid-1.0.1/AndroidManifest.xml:8:5-10:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ddf20bfaa325f99880f17cf61197f43a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ddf20bfaa325f99880f17cf61197f43a/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/21bfceaf1328cf3e89b0cde6bd975eb3/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -624,6 +642,8 @@ MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/React
 MERGED from [:react-native-community_netinfo] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-76
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-76
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-76
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-76
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.99.0] /Users/naveenkumar/.gradle/caches/transforms-3/b62ec960024b7ef72f2e9344dbd8911f/transformed/jetified-flipper-0.99.0/AndroidManifest.xml:16:22-73
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -634,6 +654,8 @@ MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/Reac
 MERGED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-79
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:5-79
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-79
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-79
 MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:12:5-79
 MERGED from [com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:12:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:23:5-79
@@ -656,6 +678,8 @@ uses-permission#android.permission.WAKE_LOCK
 ADDED from [:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-68
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:5-68
 MERGED from [:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:5-68
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
+MERGED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:24:5-68
 MERGED from [com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:25:5-68
@@ -784,6 +808,20 @@ ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl
 		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
+uses-permission#com.android.vending.CHECK_LICENSE
+ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+provider#com.RNFetchBlob.Utils.FileProvider
+ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+	android:grantUriPermissions
+		ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+	android:authorities
+		ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+	android:exported
+		ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
 activity#com.facebook.FacebookActivity
 ADDED from [com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
 	android:configChanges

@@ -33,6 +33,8 @@ import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-pdf
+import org.wonday.pdf.RCTPdfView;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -51,6 +53,8 @@ import com.rnfingerprint.FingerprintAuthPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -107,6 +111,7 @@ public class PackageList {
       new ReactNativeBlobUtilPackage(),
       new FBSDKPackage(),
       new RNGestureHandlerPackage(),
+      new RCTPdfView(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
@@ -115,7 +120,8 @@ public class PackageList {
       new SvgPackage(),
       new FingerprintAuthPackage(),
       new VectorIconsPackage(),
-      new RNCWebViewPackage()
+      new RNCWebViewPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }

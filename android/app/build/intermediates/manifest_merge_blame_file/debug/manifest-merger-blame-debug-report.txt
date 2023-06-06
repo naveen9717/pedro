@@ -35,496 +35,516 @@
 19    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Required to to download files without a notification -->
 19-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-80
 19-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:22-77
-20    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+20    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" /> <!-- Required to access Google Play Licensing -->
 20-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:5-88
 20-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:22-85
-21    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-21-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:5-81
-21-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:22-78
-22
-23    <queries>
-23-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:24:5-32:15
-24        <intent>
-24-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:25:9-31:18
-25            <action android:name="android.intent.action.VIEW" />
-25-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
-25-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
-26
-27            <category android:name="android.intent.category.BROWSABLE" />
-27-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
-27-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
-28
-29            <data android:scheme="https" />
-29-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
-29-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
-30        </intent>
-31    </queries>
-32
-33    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-33-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:25:5-79
-33-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:25:22-76
-34    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-34-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:5-110
-34-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:22-107
-35
-36    <application
-36-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:10:5-36:19
-37        android:name="br.com.cpfl.android.autoatendimento.MainApplication"
-37-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:11:9-40
-38        android:allowBackup="false"
-38-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:15:9-36
-39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-39-->[androidx.core:core:1.6.0] /Users/naveenkumar/.gradle/caches/transforms-3/9936fd6b5f18049d67f38e86cb184351/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
-40        android:debuggable="true"
-41        android:extractNativeLibs="true"
-41-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:16:9-41
-42        android:icon="@mipmap/ic_launcher"
-42-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:13:9-43
-43        android:label="@string/app_name"
-43-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:12:9-41
-44        android:roundIcon="@mipmap/ic_launcher_round"
-44-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:14:9-54
-45        android:supportsRtl="true"
-45-->[com.facebook.android:facebook-android-sdk:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/2cb7a001a0f58521e1dbb55a5be79fe2/transformed/jetified-facebook-android-sdk-9.0.0/AndroidManifest.xml:28:18-44
-46        android:theme="@style/AppTheme"
-46-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:17:9-40
-47        android:usesCleartextTraffic="true" >
-47-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:8:9-44
-48        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
-48-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:11:9-86
-48-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:11:19-83
-49        <activity
-49-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:18:9-32:20
-50            android:name="br.com.cpfl.android.autoatendimento.MainActivity"
-50-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:19:13-41
-51            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-51-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:22:13-90
-52            android:exported="true"
-52-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:20:13-36
-53            android:label="@string/app_name"
-53-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:21:13-45
-54            android:launchMode="singleTask"
-54-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:23:13-44
-55            android:windowSoftInputMode="adjustResize" >
-55-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:24:13-55
-56            <intent-filter>
-56-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:25:13-31:29
-57                <action android:name="android.intent.action.MAIN" />
-57-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:26:17-69
-57-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:26:25-66
-58
-59                <category android:name="android.intent.category.LAUNCHER" />
-59-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:27:17-77
-59-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:27:27-74
-60
-61                <action android:name="android.intent.action.VIEW" />
-61-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
-61-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
-62
-63                <category android:name="android.intent.category.DEFAULT" />
-63-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
-63-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
-64                <category android:name="android.intent.category.BROWSABLE" />
-64-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
-64-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
-65            </intent-filter>
-66        </activity>
-67
-68        <uses-library
-68-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:9-87
-69            android:name="org.apache.http.legacy"
-69-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:23-60
-70            android:required="false" />
-70-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:61-85
-71
-72        <meta-data
-72-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:9-107
-73            android:name="com.facebook.sdk.ApplicationId"
-73-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:20-65
-74            android:value="@string/facebook_app_id" />
-74-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:66-105
-75        <meta-data
-75-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:9-111
-76            android:name="com.facebook.sdk.ClientToken"
-76-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:20-63
-77            android:value="@string/facebook_client_token" />
-77-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:64-109
-78
-79        <service android:name="com.datami.smi.SmiIntentService" />
-79-->[:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-67
-79-->[:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:18-64
-80
-81        <meta-data
-81-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-16:36
-82            android:name="firebase_analytics_collection_enabled"
-82-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-65
-83            android:value="true" />
-83-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-33
-84        <meta-data
-84-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:9-19:37
-85            android:name="firebase_analytics_collection_deactivated"
-85-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-69
-86            android:value="false" />
-86-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-34
-87        <meta-data
-87-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-22:36
-88            android:name="google_analytics_adid_collection_enabled"
-88-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-68
-89            android:value="true" />
-89-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-33
-90        <meta-data
-90-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-25:36
-91            android:name="google_analytics_ssaid_collection_enabled"
-91-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-69
-92            android:value="true" />
-92-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-33
-93        <meta-data
-93-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-28:36
-94            android:name="google_analytics_default_allow_ad_personalization_signals"
-94-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-85
-95            android:value="true" />
-95-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-33
-96        <meta-data
-96-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:9-31:36
-97            android:name="google_analytics_automatic_screen_reporting_enabled"
-97-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-79
-98            android:value="true" />
-98-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-33
-99        <meta-data
-99-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-13:36
-100            android:name="app_data_collection_default_enabled"
-100-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-63
-101            android:value="true" />
-101-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-33
-102
-103        <service
-103-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-23:19
-104            android:name="com.google.firebase.components.ComponentDiscoveryService"
-104-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-84
-105            android:directBootAware="true"
-105-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-43
-106            android:exported="false" >
-106-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
-107            <meta-data
-107-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:85
-108                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
-108-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-120
-109                android:value="com.google.firebase.components.ComponentRegistrar" />
-109-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-82
-110            <meta-data
-110-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:31:13-33:85
-111                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-111-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:32:17-139
-112                android:value="com.google.firebase.components.ComponentRegistrar" />
-112-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:33:17-82
-113            <meta-data
-113-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:17:13-19:85
-114                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-114-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:18:17-127
-115                android:value="com.google.firebase.components.ComponentRegistrar" />
-115-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:19:17-82
-116        </service>
-117
-118        <provider
-118-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-29:38
-119            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
-119-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-88
-120            android:authorities="br.com.cpfl.android.autoatendimento.reactnativefirebaseappinitprovider"
-120-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-86
-121            android:exported="false"
-121-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-37
-122            android:initOrder="99" />
-122-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-35
-123        <provider
-123-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-45:20
-124            android:name="com.ReactNativeBlobUtil.Utils.FileProvider"
-124-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-70
-125            android:authorities="br.com.cpfl.android.autoatendimento.provider"
-125-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-60
-126            android:exported="false"
-126-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-37
-127            android:grantUriPermissions="true" >
-127-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-47
-128            <meta-data
-128-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
-129                android:name="android.support.FILE_PROVIDER_PATHS"
-129-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
-130                android:resource="@xml/provider_paths" />
-130-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
-131        </provider>
-132        <provider
-132-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
-133            android:name="cl.json.RNShareFileProvider"
-133-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
-134            android:authorities="br.com.cpfl.android.autoatendimento.rnshare.fileprovider"
-134-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-72
-135            android:exported="false"
-135-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
-136            android:grantUriPermissions="true" >
-136-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
-137            <meta-data
-137-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
-138                android:name="android.support.FILE_PROVIDER_PATHS"
-138-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
-139                android:resource="@xml/share_download_paths" />
-139-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
-140        </provider>
-141        <provider
-141-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
-142            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
-142-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
-143            android:authorities="br.com.cpfl.android.autoatendimento.fileprovider"
-143-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
-144            android:exported="false"
-144-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
-145            android:grantUriPermissions="true" >
-145-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
-146            <meta-data
-146-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
-147                android:name="android.support.FILE_PROVIDER_PATHS"
-147-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
-148                android:resource="@xml/file_provider_paths" />
-148-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
-149        </provider>
-150
-151        <activity
-151-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
-152            android:name="com.facebook.FacebookActivity"
-152-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:31:13-57
-153            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-153-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:32:13-96
-154            android:theme="@style/com_facebook_activity_theme" />
-154-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:33:13-63
-155        <activity android:name="com.facebook.CustomTabMainActivity" />
-155-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:9-71
-155-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:19-68
-156        <activity
-156-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:35:9-49:20
-157            android:name="com.facebook.CustomTabActivity"
-157-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:36:13-58
-158            android:exported="true" >
-158-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:37:13-36
-159            <intent-filter>
-159-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:39:13-48:29
-160                <action android:name="android.intent.action.VIEW" />
-160-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
-160-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
-161
-162                <category android:name="android.intent.category.DEFAULT" />
-162-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
-162-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
-163                <category android:name="android.intent.category.BROWSABLE" />
-163-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
-163-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
-164
-165                <data
-165-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
-166                    android:host="cct.br.com.cpfl.android.autoatendimento"
-166-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:46:21-56
-167                    android:scheme="fbconnect" />
-167-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
-168            </intent-filter>
-169        </activity>
-170        <activity
-170-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:18:9-22:56
-171            android:name="com.datami.smi.ui.VpnPermissionActivity"
-171-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:19:13-67
-172            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
-172-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:20:13-83
-173            android:exported="false"
-173-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:21:13-37
-174            android:theme="@style/Theme.Transparent" />
-174-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:22:13-53
-175
-176        <service
-176-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:24:9-26:40
-177            android:name="com.datami.smi.wrapper.SmiVPNHandler"
-177-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:25:13-64
-178            android:exported="false" />
-178-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:26:13-37
-179        <service
-179-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:27:9-36:19
-180            android:name="de.blinkt.openvpn.core.cusdmi2"
-180-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:28:13-58
-181            android:exported="true"
-181-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:29:13-36
-182            android:foregroundServiceType="connectedDevice"
-182-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:30:13-60
-183            android:permission="android.permission.BIND_VPN_SERVICE"
-183-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:31:13-69
-184            android:process=":openvpn" >
-184-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:32:13-39
-185            <intent-filter>
-185-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:33:13-35:29
-186                <action android:name="android.net.VpnService" />
-186-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:17-65
-186-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:25-62
-187            </intent-filter>
-188        </service>
+21    <uses-permission android:name="com.android.vending.CHECK_LICENSE" /> <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+21-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+21-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+22-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:5-81
+22-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:14:22-78
+23
+24    <queries>
+24-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:24:5-32:15
+25        <intent>
+25-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:25:9-31:18
+26            <action android:name="android.intent.action.VIEW" />
+26-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
+26-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
+27
+28            <category android:name="android.intent.category.BROWSABLE" />
+28-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
+28-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
+29
+30            <data android:scheme="https" />
+30-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
+30-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
+31        </intent>
+32    </queries>
+33
+34    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+34-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:25:5-79
+34-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:25:22-76
+35    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+35-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:5-110
+35-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:26:22-107
+36
+37    <application
+37-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:10:5-36:19
+38        android:name="br.com.cpfl.android.autoatendimento.MainApplication"
+38-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:11:9-40
+39        android:allowBackup="false"
+39-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:15:9-36
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.6.0] /Users/naveenkumar/.gradle/caches/transforms-3/9936fd6b5f18049d67f38e86cb184351/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="true"
+42-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:16:9-41
+43        android:icon="@mipmap/ic_launcher"
+43-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:13:9-43
+44        android:label="@string/app_name"
+44-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:12:9-41
+45        android:roundIcon="@mipmap/ic_launcher_round"
+45-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:14:9-54
+46        android:supportsRtl="true"
+46-->[com.facebook.android:facebook-android-sdk:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/2cb7a001a0f58521e1dbb55a5be79fe2/transformed/jetified-facebook-android-sdk-9.0.0/AndroidManifest.xml:28:18-44
+47        android:theme="@style/AppTheme"
+47-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:17:9-40
+48        android:usesCleartextTraffic="true" >
+48-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:8:9-44
+49        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+49-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:11:9-86
+49-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/debug/AndroidManifest.xml:11:19-83
+50        <activity
+50-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:18:9-32:20
+51            android:name="br.com.cpfl.android.autoatendimento.MainActivity"
+51-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:19:13-41
+52            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+52-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:22:13-90
+53            android:exported="true"
+53-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:20:13-36
+54            android:label="@string/app_name"
+54-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:21:13-45
+55            android:launchMode="singleTask"
+55-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:23:13-44
+56            android:windowSoftInputMode="adjustResize" >
+56-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:24:13-55
+57            <intent-filter>
+57-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:25:13-31:29
+58                <action android:name="android.intent.action.MAIN" />
+58-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:26:17-69
+58-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:26:25-66
+59
+60                <category android:name="android.intent.category.LAUNCHER" />
+60-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:27:17-77
+60-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:27:27-74
+61
+62                <action android:name="android.intent.action.VIEW" />
+62-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
+62-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
+63
+64                <category android:name="android.intent.category.DEFAULT" />
+64-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
+64-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
+65                <category android:name="android.intent.category.BROWSABLE" />
+65-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
+65-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
+66            </intent-filter>
+67        </activity>
+68
+69        <uses-library
+69-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:9-87
+70            android:name="org.apache.http.legacy"
+70-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:23-60
+71            android:required="false" />
+71-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:33:61-85
+72
+73        <meta-data
+73-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:9-107
+74            android:name="com.facebook.sdk.ApplicationId"
+74-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:20-65
+75            android:value="@string/facebook_app_id" />
+75-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:34:66-105
+76        <meta-data
+76-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:9-111
+77            android:name="com.facebook.sdk.ClientToken"
+77-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:20-63
+78            android:value="@string/facebook_client_token" />
+78-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:35:64-109
+79
+80        <service android:name="com.datami.smi.SmiIntentService" />
+80-->[:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:9-67
+80-->[:smisdk-android-plugin] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-smisdk-plugin/smisdk-android-plugin/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:18-64
+81
+82        <meta-data
+82-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:9-16:36
+83            android:name="firebase_analytics_collection_enabled"
+83-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-65
+84            android:value="true" />
+84-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-33
+85        <meta-data
+85-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:9-19:37
+86            android:name="firebase_analytics_collection_deactivated"
+86-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-69
+87            android:value="false" />
+87-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-34
+88        <meta-data
+88-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-22:36
+89            android:name="google_analytics_adid_collection_enabled"
+89-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-68
+90            android:value="true" />
+90-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-33
+91        <meta-data
+91-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:23:9-25:36
+92            android:name="google_analytics_ssaid_collection_enabled"
+92-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-69
+93            android:value="true" />
+93-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-33
+94        <meta-data
+94-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:9-28:36
+95            android:name="google_analytics_default_allow_ad_personalization_signals"
+95-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-85
+96            android:value="true" />
+96-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-33
+97        <meta-data
+97-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:9-31:36
+98            android:name="google_analytics_automatic_screen_reporting_enabled"
+98-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-79
+99            android:value="true" />
+99-->[:react-native-firebase_analytics] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/analytics/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-33
+100        <meta-data
+100-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-13:36
+101            android:name="app_data_collection_default_enabled"
+101-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-63
+102            android:value="true" />
+102-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-33
+103
+104        <service
+104-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:9-23:19
+105            android:name="com.google.firebase.components.ComponentDiscoveryService"
+105-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:13-84
+106            android:directBootAware="true"
+106-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-43
+107            android:exported="false" >
+107-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+108            <meta-data
+108-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-22:85
+109                android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar"
+109-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:21:17-120
+110                android:value="com.google.firebase.components.ComponentRegistrar" />
+110-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:22:17-82
+111            <meta-data
+111-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:31:13-33:85
+112                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+112-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:32:17-139
+113                android:value="com.google.firebase.components.ComponentRegistrar" />
+113-->[com.google.android.gms:play-services-measurement-api:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/dabc8542dffd046306c33517ff19a014/transformed/jetified-play-services-measurement-api-21.2.0/AndroidManifest.xml:33:17-82
+114            <meta-data
+114-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:17:13-19:85
+115                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+115-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:18:17-127
+116                android:value="com.google.firebase.components.ComponentRegistrar" />
+116-->[com.google.firebase:firebase-installations:17.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/f2b75e6c60bf77aa7009ff4c9dc93f64/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:19:17-82
+117        </service>
+118
+119        <provider
+119-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:9-29:38
+120            android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider"
+120-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:13-88
+121            android:authorities="br.com.cpfl.android.autoatendimento.reactnativefirebaseappinitprovider"
+121-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:27:13-86
+122            android:exported="false"
+122-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:13-37
+123            android:initOrder="99" />
+123-->[:react-native-firebase_app] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-35
+124        <provider
+124-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-45:20
+125            android:name="com.ReactNativeBlobUtil.Utils.FileProvider"
+125-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-70
+126            android:authorities="br.com.cpfl.android.autoatendimento.provider"
+126-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:39:13-60
+127            android:exported="false"
+127-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:40:13-37
+128            android:grantUriPermissions="true" >
+128-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:41:13-47
+129            <meta-data
+129-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+130                android:name="android.support.FILE_PROVIDER_PATHS"
+130-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+131                android:resource="@xml/provider_paths" />
+131-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+132        </provider>
+133        <provider
+133-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+134            android:name="cl.json.RNShareFileProvider"
+134-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
+135            android:authorities="br.com.cpfl.android.autoatendimento.rnshare.fileprovider"
+135-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-72
+136            android:exported="false"
+136-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+137            android:grantUriPermissions="true" >
+137-->[:react-native-share] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+138            <meta-data
+138-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+139                android:name="android.support.FILE_PROVIDER_PATHS"
+139-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+140                android:resource="@xml/share_download_paths" />
+140-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+141        </provider>
+142        <provider
+142-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+143            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+143-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-83
+144            android:authorities="br.com.cpfl.android.autoatendimento.fileprovider"
+144-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-64
+145            android:exported="false"
+145-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+146            android:grantUriPermissions="true" >
+146-->[:react-native-webview] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-webview/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+147            <meta-data
+147-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+148                android:name="android.support.FILE_PROVIDER_PATHS"
+148-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+149                android:resource="@xml/file_provider_paths" />
+149-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+150        </provider>
+151        <provider
+151-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+152            android:name="com.RNFetchBlob.Utils.FileProvider"
+152-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
+153            android:authorities="br.com.cpfl.android.autoatendimento.provider"
+153-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+154            android:exported="false"
+154-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+155            android:grantUriPermissions="true" >
+155-->[:rn-fetch-blob] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+156            <meta-data
+156-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+157                android:name="android.support.FILE_PROVIDER_PATHS"
+157-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+158                android:resource="@xml/provider_paths" />
+158-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+159        </provider>
+160
+161        <activity
+161-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:30:9-33:66
+162            android:name="com.facebook.FacebookActivity"
+162-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:31:13-57
+163            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+163-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:32:13-96
+164            android:theme="@style/com_facebook_activity_theme" />
+164-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:33:13-63
+165        <activity android:name="com.facebook.CustomTabMainActivity" />
+165-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:9-71
+165-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:34:19-68
+166        <activity
+166-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:35:9-49:20
+167            android:name="com.facebook.CustomTabActivity"
+167-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:36:13-58
+168            android:exported="true" >
+168-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:37:13-36
+169            <intent-filter>
+169-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:39:13-48:29
+170                <action android:name="android.intent.action.VIEW" />
+170-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
+170-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
+171
+172                <category android:name="android.intent.category.DEFAULT" />
+172-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
+172-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
+173                <category android:name="android.intent.category.BROWSABLE" />
+173-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
+173-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
+174
+175                <data
+175-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
+176                    android:host="cct.br.com.cpfl.android.autoatendimento"
+176-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:46:21-56
+177                    android:scheme="fbconnect" />
+177-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
+178            </intent-filter>
+179        </activity>
+180        <activity
+180-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:18:9-22:56
+181            android:name="com.datami.smi.ui.VpnPermissionActivity"
+181-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:19:13-67
+182            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+182-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:20:13-83
+183            android:exported="false"
+183-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:21:13-37
+184            android:theme="@style/Theme.Transparent" />
+184-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:22:13-53
+185
+186        <service
+186-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:24:9-26:40
+187            android:name="com.datami.smi.wrapper.SmiVPNHandler"
+187-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:25:13-64
+188            android:exported="false" />
+188-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:26:13-37
 189        <service
-189-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:37:9-40:42
-190            android:name="de.blinkt.openvpn.core.cusdmi3"
-190-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:38:13-58
-191            android:exported="false"
-191-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:39:13-37
-192            android:process=":openvpn" />
-192-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:40:13-39
-193        <service
-193-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:41:9-43:40
-194            android:name="com.datami.smi.wrapper.dmicus2"
-194-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:42:13-58
-195            android:exported="false" />
-195-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:43:13-37
-196
-197        <activity
-197-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:35:9-40:77
-198            android:name="net.openid.appauth.AuthorizationManagementActivity"
-198-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:36:13-78
-199            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
-199-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:37:13-115
-200            android:exported="false"
-200-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:38:13-37
-201            android:launchMode="singleTask"
-201-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:39:13-44
-202            android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar" />
-202-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:40:13-74
-203        <activity
-203-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:41:9-52:20
-204            android:name="net.openid.appauth.RedirectUriReceiverActivity"
-204-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:42:13-74
-205            android:exported="true" >
-205-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:43:13-36
-206            <intent-filter>
-206-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:44:13-51:29
-207                <action android:name="android.intent.action.VIEW" />
-207-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
-207-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
-208
-209                <category android:name="android.intent.category.DEFAULT" />
-209-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
-209-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
-210                <category android:name="android.intent.category.BROWSABLE" />
-210-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
-210-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
-211
-212                <data android:scheme="msauth" />
-212-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
-212-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
-213            </intent-filter>
-214        </activity>
-215        <activity
-215-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
-216            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-216-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
-217            android:excludeFromRecents="true"
-217-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
-218            android:exported="false"
-218-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
-219            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-219-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
-220        <!--
-221            Service handling Google Sign-In user revocation. For apps that do not integrate with
-222            Google Sign-In, this service will never be started.
-223        -->
-224        <service
-224-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
-225            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-225-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
-226            android:exported="true"
-226-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
-227            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-227-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
-228            android:visibleToInstantApps="true" />
-228-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
-229
-230        <activity
-230-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-231            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-231-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-232            android:exported="false"
-232-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-233            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-233-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-234
-235        <provider
-235-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
-236            android:name="com.google.firebase.provider.FirebaseInitProvider"
-236-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
-237            android:authorities="br.com.cpfl.android.autoatendimento.firebaseinitprovider"
-237-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
-238            android:directBootAware="true"
-238-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
-239            android:exported="false"
-239-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
-240            android:initOrder="100" />
-240-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
-241
-242        <receiver
-242-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:29:9-33:20
-243            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-243-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:30:13-85
-244            android:enabled="true"
-244-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:31:13-35
-245            android:exported="false" >
-245-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:32:13-37
-246        </receiver>
-247
-248        <service
-248-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:35:9-38:40
-249            android:name="com.google.android.gms.measurement.AppMeasurementService"
-249-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:36:13-84
-250            android:enabled="true"
-250-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:37:13-35
-251            android:exported="false" />
-251-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:38:13-37
-252        <service
-252-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:39:9-43:72
-253            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-253-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:40:13-87
+189-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:27:9-36:19
+190            android:name="de.blinkt.openvpn.core.cusdmi2"
+190-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:28:13-58
+191            android:exported="true"
+191-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:29:13-36
+192            android:foregroundServiceType="connectedDevice"
+192-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:30:13-60
+193            android:permission="android.permission.BIND_VPN_SERVICE"
+193-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:31:13-69
+194            android:process=":openvpn" >
+194-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:32:13-39
+195            <intent-filter>
+195-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:33:13-35:29
+196                <action android:name="android.net.VpnService" />
+196-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:17-65
+196-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:34:25-62
+197            </intent-filter>
+198        </service>
+199        <service
+199-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:37:9-40:42
+200            android:name="de.blinkt.openvpn.core.cusdmi3"
+200-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:38:13-58
+201            android:exported="false"
+201-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:39:13-37
+202            android:process=":openvpn" />
+202-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:40:13-39
+203        <service
+203-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:41:9-43:40
+204            android:name="com.datami.smi.wrapper.dmicus2"
+204-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:42:13-58
+205            android:exported="false" />
+205-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:43:13-37
+206
+207        <activity
+207-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:35:9-40:77
+208            android:name="net.openid.appauth.AuthorizationManagementActivity"
+208-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:36:13-78
+209            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
+209-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:37:13-115
+210            android:exported="false"
+210-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:38:13-37
+211            android:launchMode="singleTask"
+211-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:39:13-44
+212            android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar" />
+212-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:40:13-74
+213        <activity
+213-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:41:9-52:20
+214            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+214-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:42:13-74
+215            android:exported="true" >
+215-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:43:13-36
+216            <intent-filter>
+216-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:44:13-51:29
+217                <action android:name="android.intent.action.VIEW" />
+217-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
+217-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
+218
+219                <category android:name="android.intent.category.DEFAULT" />
+219-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
+219-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
+220                <category android:name="android.intent.category.BROWSABLE" />
+220-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
+220-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
+221
+222                <data android:scheme="msauth" />
+222-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
+222-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
+223            </intent-filter>
+224        </activity>
+225        <activity
+225-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
+226            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+226-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
+227            android:excludeFromRecents="true"
+227-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
+228            android:exported="false"
+228-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
+229            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+229-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
+230        <!--
+231            Service handling Google Sign-In user revocation. For apps that do not integrate with
+232            Google Sign-In, this service will never be started.
+233        -->
+234        <service
+234-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
+235            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+235-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
+236            android:exported="true"
+236-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
+237            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+237-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
+238            android:visibleToInstantApps="true" />
+238-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
+239
+240        <activity
+240-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+241            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+241-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+242            android:exported="false"
+242-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+243            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+243-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+244
+245        <provider
+245-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
+246            android:name="com.google.firebase.provider.FirebaseInitProvider"
+246-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+247            android:authorities="br.com.cpfl.android.autoatendimento.firebaseinitprovider"
+247-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
+248            android:directBootAware="true"
+248-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
+249            android:exported="false"
+249-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
+250            android:initOrder="100" />
+250-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
+251
+252        <receiver
+252-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:29:9-33:20
+253            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+253-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:30:13-85
 254            android:enabled="true"
-254-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:41:13-35
-255            android:exported="false"
-255-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:42:13-37
-256            android:permission="android.permission.BIND_JOB_SERVICE" />
-256-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:43:13-69
+254-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:31:13-35
+255            android:exported="false" >
+255-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:32:13-37
+256        </receiver>
 257
-258        <meta-data
-258-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-259            android:name="com.google.android.gms.version"
-259-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-260            android:value="@integer/google_play_services_version" />
-260-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-261        <!--
-262         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
-263         with the application context. This config is merged in with the host app's manifest,
-264         but there can only be one provider with the same authority activated at any given
-265         point; so if the end user has two or more different apps that use Facebook SDK, only the
-266         first one will be able to use the provider. To work around this problem, we use the
-267         following placeholder in the authority to identify each host application as if it was
-268         a completely different provider.
-269        -->
-270        <provider
-270-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
-271            android:name="com.facebook.internal.FacebookInitProvider"
-271-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
-272            android:authorities="br.com.cpfl.android.autoatendimento.FacebookInitProvider"
-272-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
-273            android:exported="false" />
-273-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
-274
-275        <receiver
-275-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
-276            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
-276-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
-277            android:exported="false" >
-277-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
-278            <intent-filter>
-278-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
-279                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
-279-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
-279-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
-280            </intent-filter>
-281        </receiver>
-282    </application>
-283
-284</manifest>
+258        <service
+258-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:35:9-38:40
+259            android:name="com.google.android.gms.measurement.AppMeasurementService"
+259-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:36:13-84
+260            android:enabled="true"
+260-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:37:13-35
+261            android:exported="false" />
+261-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:38:13-37
+262        <service
+262-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:39:9-43:72
+263            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+263-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:40:13-87
+264            android:enabled="true"
+264-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:41:13-35
+265            android:exported="false"
+265-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:42:13-37
+266            android:permission="android.permission.BIND_JOB_SERVICE" />
+266-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:43:13-69
+267
+268        <meta-data
+268-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+269            android:name="com.google.android.gms.version"
+269-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+270            android:value="@integer/google_play_services_version" />
+270-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+271        <!--
+272         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+273         with the application context. This config is merged in with the host app's manifest,
+274         but there can only be one provider with the same authority activated at any given
+275         point; so if the end user has two or more different apps that use Facebook SDK, only the
+276         first one will be able to use the provider. To work around this problem, we use the
+277         following placeholder in the authority to identify each host application as if it was
+278         a completely different provider.
+279        -->
+280        <provider
+280-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
+281            android:name="com.facebook.internal.FacebookInitProvider"
+281-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
+282            android:authorities="br.com.cpfl.android.autoatendimento.FacebookInitProvider"
+282-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
+283            android:exported="false" />
+283-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
+284
+285        <receiver
+285-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
+286            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+286-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
+287            android:exported="false" >
+287-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
+288            <intent-filter>
+288-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
+289                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+289-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
+289-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
+290            </intent-filter>
+291        </receiver>
+292    </application>
+293
+294</manifest>
