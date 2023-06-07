@@ -75,10 +75,10 @@ export function HomeStack() {
       <Screen name="routesregister" component={RegisterStack} />
       <Screen name="routesLoggedInWV" component={LoggedInWebView} />
       <Screen name="routesrecover" component={StackRecoverPass} />
-      <Screen name="InvoiceHome" component={InvoiceHome} options={{
+      {/* <Screen name="InvoiceHome" component={InvoiceHome} options={{
           headerShown: false,
           // header: () => <AccessibilityWidget marginTop={30} />,
-        }}/>
+        }}/> */}
       <Screen name="Scan" component={ScanScreen} />
       <Screen name="InvoiceSolicitedInfo" options={{
           headerShown: false,
