@@ -396,155 +396,174 @@
 205            android:exported="false" />
 205-->[com.datami:vpnsdk:4.0.4] /Users/naveenkumar/.gradle/caches/transforms-3/84fff0b4bc13c0e7763e5cd07d9da42d/transformed/jetified-vpnsdk-4.0.4/AndroidManifest.xml:43:13-37
 206
-207        <activity
-207-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:35:9-40:77
-208            android:name="net.openid.appauth.AuthorizationManagementActivity"
-208-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:36:13-78
-209            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
-209-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:37:13-115
+207        <provider
+207-->[:react-native-share-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-19:20
+208            android:name="androidx.core.content.FileProvider"
+208-->[:react-native-share-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-62
+209            android:authorities="br.com.cpfl.android.autoatendimento.provider"
+209-->[:react-native-share-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-60
 210            android:exported="false"
-210-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:38:13-37
-211            android:launchMode="singleTask"
-211-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:39:13-44
-212            android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar" />
-212-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:40:13-74
-213        <activity
-213-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:41:9-52:20
-214            android:name="net.openid.appauth.RedirectUriReceiverActivity"
-214-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:42:13-74
-215            android:exported="true" >
-215-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:43:13-36
-216            <intent-filter>
-216-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:44:13-51:29
-217                <action android:name="android.intent.action.VIEW" />
-217-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
-217-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
-218
-219                <category android:name="android.intent.category.DEFAULT" />
-219-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
-219-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
-220                <category android:name="android.intent.category.BROWSABLE" />
-220-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
-220-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
-221
-222                <data android:scheme="msauth" />
-222-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
-222-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
-223            </intent-filter>
-224        </activity>
-225        <activity
-225-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
-226            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-226-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
-227            android:excludeFromRecents="true"
-227-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
-228            android:exported="false"
-228-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
-229            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-229-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
-230        <!--
-231            Service handling Google Sign-In user revocation. For apps that do not integrate with
-232            Google Sign-In, this service will never be started.
-233        -->
-234        <service
-234-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
-235            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-235-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
-236            android:exported="true"
-236-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
-237            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-237-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
-238            android:visibleToInstantApps="true" />
-238-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
-239
-240        <activity
-240-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
-241            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-241-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
-242            android:exported="false"
-242-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
-243            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-243-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
-244
-245        <provider
-245-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
-246            android:name="com.google.firebase.provider.FirebaseInitProvider"
-246-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
-247            android:authorities="br.com.cpfl.android.autoatendimento.firebaseinitprovider"
-247-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
-248            android:directBootAware="true"
-248-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
-249            android:exported="false"
-249-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
-250            android:initOrder="100" />
-250-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
-251
-252        <receiver
-252-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:29:9-33:20
-253            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-253-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:30:13-85
-254            android:enabled="true"
-254-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:31:13-35
-255            android:exported="false" >
-255-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:32:13-37
-256        </receiver>
-257
-258        <service
-258-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:35:9-38:40
-259            android:name="com.google.android.gms.measurement.AppMeasurementService"
-259-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:36:13-84
-260            android:enabled="true"
-260-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:37:13-35
-261            android:exported="false" />
-261-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:38:13-37
-262        <service
-262-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:39:9-43:72
-263            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-263-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:40:13-87
-264            android:enabled="true"
-264-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:41:13-35
-265            android:exported="false"
-265-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:42:13-37
-266            android:permission="android.permission.BIND_JOB_SERVICE" />
-266-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:43:13-69
-267
-268        <meta-data
-268-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
-269            android:name="com.google.android.gms.version"
-269-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
-270            android:value="@integer/google_play_services_version" />
-270-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
-271        <!--
-272         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
-273         with the application context. This config is merged in with the host app's manifest,
-274         but there can only be one provider with the same authority activated at any given
-275         point; so if the end user has two or more different apps that use Facebook SDK, only the
-276         first one will be able to use the provider. To work around this problem, we use the
-277         following placeholder in the authority to identify each host application as if it was
-278         a completely different provider.
-279        -->
-280        <provider
-280-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
-281            android:name="com.facebook.internal.FacebookInitProvider"
-281-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
-282            android:authorities="br.com.cpfl.android.autoatendimento.FacebookInitProvider"
-282-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
-283            android:exported="false" />
-283-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
-284
-285        <receiver
-285-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
-286            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
-286-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
-287            android:exported="false" >
-287-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
-288            <intent-filter>
-288-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
-289                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
-289-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
-289-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
-290            </intent-filter>
-291        </receiver>
-292    </application>
-293
-294</manifest>
+210-->[:react-native-share-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+211            android:grantUriPermissions="true" >
+211-->[:react-native-share-pdf] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-share-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+212            <meta-data
+212-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:42:13-44:58
+213                android:name="android.support.FILE_PROVIDER_PATHS"
+213-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:43:17-67
+214                android:resource="@xml/file_paths" >
+214-->[:react-native-blob-util] /Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:44:17-55
+215            </meta-data>
+216        </provider>
+217
+218        <activity
+218-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:35:9-40:77
+219            android:name="net.openid.appauth.AuthorizationManagementActivity"
+219-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:36:13-78
+220            android:configChanges="screenSize|smallestScreenSize|screenLayout|orientation|keyboard|keyboardHidden"
+220-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:37:13-115
+221            android:exported="false"
+221-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:38:13-37
+222            android:launchMode="singleTask"
+222-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:39:13-44
+223            android:theme="@style/Theme.AppCompat.Translucent.NoTitleBar" />
+223-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:40:13-74
+224        <activity
+224-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:41:9-52:20
+225            android:name="net.openid.appauth.RedirectUriReceiverActivity"
+225-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:42:13-74
+226            android:exported="true" >
+226-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:43:13-36
+227            <intent-filter>
+227-->[net.openid:appauth:0.11.1] /Users/naveenkumar/.gradle/caches/transforms-3/ef200b00139a258e6f42d9835e0095f0/transformed/jetified-appauth-0.11.1/AndroidManifest.xml:44:13-51:29
+228                <action android:name="android.intent.action.VIEW" />
+228-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:17-69
+228-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:28:25-66
+229
+230                <category android:name="android.intent.category.DEFAULT" />
+230-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:17-76
+230-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:29:27-73
+231                <category android:name="android.intent.category.BROWSABLE" />
+231-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:17-78
+231-->/Users/naveenkumar/Developer/ReactNative/cpfl-agv-mobile-new/android/app/src/main/AndroidManifest.xml:30:27-75
+232
+233                <data android:scheme="msauth" />
+233-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:45:17-47:50
+233-->[com.facebook.android:facebook-common:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/63c62d9e8a15afdf2aed5fd5dede25a3/transformed/jetified-facebook-common-9.0.0/AndroidManifest.xml:47:21-47
+234            </intent-filter>
+235        </activity>
+236        <activity
+236-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:23:9-27:75
+237            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+237-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:24:13-93
+238            android:excludeFromRecents="true"
+238-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:25:13-46
+239            android:exported="false"
+239-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:26:13-37
+240            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+240-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:27:13-72
+241        <!--
+242            Service handling Google Sign-In user revocation. For apps that do not integrate with
+243            Google Sign-In, this service will never be started.
+244        -->
+245        <service
+245-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:33:9-37:51
+246            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+246-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:34:13-89
+247            android:exported="true"
+247-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:35:13-36
+248            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+248-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:36:13-107
+249            android:visibleToInstantApps="true" />
+249-->[com.google.android.gms:play-services-auth:20.3.0] /Users/naveenkumar/.gradle/caches/transforms-3/8445de4b95c48762dd3df953a360eaa6/transformed/jetified-play-services-auth-20.3.0/AndroidManifest.xml:37:13-48
+250
+251        <activity
+251-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+252            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+252-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+253            android:exported="false"
+253-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+254            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+254-->[com.google.android.gms:play-services-base:18.0.1] /Users/naveenkumar/.gradle/caches/transforms-3/7132be99dcb4e2dfb47b69f072b34c9f/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+255
+256        <provider
+256-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
+257            android:name="com.google.firebase.provider.FirebaseInitProvider"
+257-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+258            android:authorities="br.com.cpfl.android.autoatendimento.firebaseinitprovider"
+258-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
+259            android:directBootAware="true"
+259-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
+260            android:exported="false"
+260-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
+261            android:initOrder="100" />
+261-->[com.google.firebase:firebase-common:20.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/bb786a06a58760920fd368726ed3bb37/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
+262
+263        <receiver
+263-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:29:9-33:20
+264            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+264-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:30:13-85
+265            android:enabled="true"
+265-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:31:13-35
+266            android:exported="false" >
+266-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:32:13-37
+267        </receiver>
+268
+269        <service
+269-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:35:9-38:40
+270            android:name="com.google.android.gms.measurement.AppMeasurementService"
+270-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:36:13-84
+271            android:enabled="true"
+271-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:37:13-35
+272            android:exported="false" />
+272-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:38:13-37
+273        <service
+273-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:39:9-43:72
+274            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+274-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:40:13-87
+275            android:enabled="true"
+275-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:41:13-35
+276            android:exported="false"
+276-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:42:13-37
+277            android:permission="android.permission.BIND_JOB_SERVICE" />
+277-->[com.google.android.gms:play-services-measurement:21.2.0] /Users/naveenkumar/.gradle/caches/transforms-3/d5ca5c31fcaca9a83f5b20f4ce8cc410/transformed/jetified-play-services-measurement-21.2.0/AndroidManifest.xml:43:13-69
+278
+279        <meta-data
+279-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+280            android:name="com.google.android.gms.version"
+280-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+281            android:value="@integer/google_play_services_version" />
+281-->[com.google.android.gms:play-services-basement:18.1.0] /Users/naveenkumar/.gradle/caches/transforms-3/afbeca0b7f43ced588d1918cba5265cb/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+282        <!--
+283         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+284         with the application context. This config is merged in with the host app's manifest,
+285         but there can only be one provider with the same authority activated at any given
+286         point; so if the end user has two or more different apps that use Facebook SDK, only the
+287         first one will be able to use the provider. To work around this problem, we use the
+288         following placeholder in the authority to identify each host application as if it was
+289         a completely different provider.
+290        -->
+291        <provider
+291-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:39:9-42:40
+292            android:name="com.facebook.internal.FacebookInitProvider"
+292-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:40:13-70
+293            android:authorities="br.com.cpfl.android.autoatendimento.FacebookInitProvider"
+293-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:41:13-72
+294            android:exported="false" />
+294-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:42:13-37
+295
+296        <receiver
+296-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:44:9-50:20
+297            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+297-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:45:13-86
+298            android:exported="false" >
+298-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:46:13-37
+299            <intent-filter>
+299-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:47:13-49:29
+300                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+300-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:17-95
+300-->[com.facebook.android:facebook-core:9.0.0] /Users/naveenkumar/.gradle/caches/transforms-3/ca7c2e13bbf98917258f528b3180f339/transformed/jetified-facebook-core-9.0.0/AndroidManifest.xml:48:25-92
+301            </intent-filter>
+302        </receiver>
+303    </application>
+304
+305</manifest>

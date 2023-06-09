@@ -3706,7 +3706,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-find-up@~5.0.0:
+find-up@^5.0.0, find-up@~5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-5.0.0.tgz#4c92819ecb7083561e4f4a240a86be5198f536fc"
   integrity sha512-78/PXT1wlLLDgTzDs7sjq9hzz0vXD+zn+7wypEe4fXQxCmdmqfGsEPQxmiCSQI3ajFV91bVSsvNtrJRiW6nGng==
@@ -6314,6 +6314,13 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+pkg-dir@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-5.0.0.tgz#a02d6aebe6ba133a928f74aec20bafdfe6b8e760"
+  integrity sha512-NPE8TDbzl/3YQYY7CSS228s3g2ollTFnc+Qi3tqmqJp9Vg2ovUpixcJEo2HJScN2Ez+kEaal6y70c0ehqJBJeA==
+  dependencies:
+    find-up "^5.0.0"
+
 pkg-up@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.1.0.tgz#100ec235cc150e4fd42519412596a28512a0def5"
@@ -6656,6 +6663,11 @@ react-native-input-search-bar@^0.0.8:
   resolved "https://registry.yarnpkg.com/react-native-input-search-bar/-/react-native-input-search-bar-0.0.8.tgz#443be9b0644c0cd8fbdc29f7c88201d29d0e1408"
   integrity sha512-Sr1bG0UcFgGWJevFLneSBeQ+NJMEGTjGMlsT35VnlFFIf/PUfjdSet7+u7HNqRb0NF3aNFViTp7DVzy01UivDg==
 
+react-native-ios-files-app-save@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-ios-files-app-save/-/react-native-ios-files-app-save-0.1.6.tgz#2929ba05e944f8f11c2aaa50e4b763103b81e123"
+  integrity sha512-+8fajp1NNDDMOBd9gHOV40+gKkEnc1Z6wq0Qn5m9Q60zkexBPYBN1JVbwHbm/hFvKNyc/IXfhLUC0LXSGK8L3w==
+
 react-native-linear-gradient@^2.5.6:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.6.2.tgz#56598a76832724b2afa7889747635b5c80948f38"
@@ -6698,6 +6710,14 @@ react-native-pdf@^6.6.2:
   dependencies:
     crypto-js "^3.2.0"
     deprecated-react-native-prop-types "^2.3.0"
+
+react-native-permissions@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-3.8.0.tgz#7c1f75ae126c7d0b863eec9d2f5cd93ff8ad8310"
+  integrity sha512-BfZ7ksgdpGchHZH8M/kxCGZbWeACANbnPmb3hNjVOMDQusc4PWlPpobX3eBqYMSKbpi7bMECeV9BVU4QuwAf9A==
+  dependencies:
+    picocolors "^1.0.0"
+    pkg-dir "^5.0.0"
 
 react-native-popup-menu@^0.16.1:
   version "0.16.1"
@@ -6768,6 +6788,11 @@ react-native-segmented-control-tab@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-native-segmented-control-tab/-/react-native-segmented-control-tab-4.0.0.tgz#e52a5638dda1a217e1f2308dcb8a935a7812edc2"
   integrity sha512-Iyxabn5T7HGFGjLAvOWUL6K/o0r+UglAUDDQzMgqlHcz3tCnK9C6QUgZaAkzMTSgB/2JO9yLgk3XROPmb8064A==
+
+react-native-share-pdf@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-share-pdf/-/react-native-share-pdf-0.0.6.tgz#731be00ab28a5e907016aa4c559910d1d2a4f550"
+  integrity sha512-4lvrEpHFv7rZkhU25lya745HTWQrVqElLvybuW4a6pLsHC7qmtCQaTxmvY/Tb+CJwJpvEHo29vqNQggVm83zcg==
 
 react-native-share@^8.2.2:
   version "8.2.2"

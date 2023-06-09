@@ -9,7 +9,8 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  ActivityIndicator
+  ActivityIndicator,
+  Alert
 } from 'react-native';
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
 
@@ -28,50 +29,101 @@ import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
 import ReactNativeBlobUtil from 'react-native-blob-util'
-import Share from 'react-native-share'
 import Pdf from 'react-native-pdf';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
+import RNFetchBlob from 'rn-fetch-blob'
+import RNShareFile from 'react-native-share-pdf';
+import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
 export function InvoiceDowlnoad() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [dataSource, setDataSource] = useState('')
 
-  const downloadFile = () => {
-    const fileUrl = "http://www.pdf995.com/samples/pdf.pdf";
-    const fileName= "sample"
-    let dirs = ReactNativeBlobUtil.fs.dirs;
-    ReactNativeBlobUtil.config({
-      fileCache: true,
-      appendExt: 'pdf',
-      path: `${dirs.DocumentDir}/${fileName}`,
-      addAndroidDownloads: {
-        useDownloadManager: true,
-        notification: true,
-        title: fileName,
-        description: 'File downloaded by download manager.',
-        mime: 'application/pdf',
-      },
-    })
-      .fetch('GET', fileUrl)
-      .then((res) => {
-        // in iOS, we want to save our files by opening up the saveToFiles bottom sheet action.
-        // whereas in android, the download manager is handling the download for us.
-        if (Platform.OS === 'ios') {
-          const filePath = res.path();
-          let options = {
-            type: 'application/pdf',
-            url: filePath,
-            saveToFiles: true,
-          };
-          Share.open(options)
-            .then((resp) => console.log(resp))
-            .catch((err) => console.log(err));
-        }
-      })
-      .catch((err) => console.log('BLOB ERROR -> ', err));
-  };
+  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
+  //const source = require('./test.pdf');  // ios only
+  //const source = {uri:'bundle-assets://test.pdf' };
+  //const source = {uri:'file:///sdcard/test.pdf'};
+  const source64new = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
+  const source64sample = {uri:`data:application/pdf;base64,${dataSource?.binarioPDF}`};
+  // console.log("source64sample",source64sample);
+  // console.log("dataSource",dataSource);
 
+  
+  //const source = {uri:"content://com.example.blobs/xxxxxxxx-...?offset=0&size=xxx"};
+  //const source = {uri:"blob:xxxxxxxx-...?offset=0&size=xxx"};
+//   var path = RNFetchBlob.fs.dirs.DocumentDir + "/bill.pdf";
+//   RNFetchBlob.fs.writeFile(path, `${dataSource?.binarioPDF}`, "base64").then(res => {
+//     console.log("FileDownload : ", res);
+// }
+
+// )
+
+const mockData = {
+  filename: 'Invoice.pdf',
+  document: `${dataSource?.binarioPDF}`
+}
+const SharePdf = async () => {
+    const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+  if (showError) {
+    // Do something with the error
+  }
+}
+
+const DemoDownload = () => {
+  // if (!hasPermission) {
+  //   //* Handle Permission
+  //   return;
+  // }
+ let options: FileSaveOptions = {
+    url: `${dataSource?.binarioPDF}`,
+    fileName: "Invoice.pdf",
+    isBase64: true
+  }
+  startDownloadAppSave(options).then((res) => {
+    const fileSaveSuccess = res as FileSaveSuccess;
+    console.log(fileSaveSuccess);
+    alert(fileSaveSuccess.message);
+  }).catch((error) => {
+    console.log("error", error);
+  })
+};
+
+  const downloadImage = async () => {
+    let date = new Date();
+    const { config, fs } = RNFetchBlob
+    const dirPath = Platform.OS == 'ios' ? `${fs.dirs.PictureDir}/<folder-name>` : `${fs.dirs.PictureDir}`
+    const filePath = dirPath + '/' + Math.floor(date.getTime() + date.getSeconds() / 2) + '.pdf'
+    fs.writeFile(filePath,`${dataSource?.binarioPDF}`, 'base64').then(res => {
+    Platform.OS === 'ios' ?
+    RNFetchBlob.ios.previewDocument(filePath) :
+    RNFetchBlob.fs.scanFile([
+    { path: filePath, mime: 'application/pdf' },
+    ])
+    Platform.OS === 'android' && Alert.alert("File Successfully downloaded!!")
+    }).catch(err => console.log("err", err))
+}
+  
+
+
+// let fPath = Platform.select({
+//   ios: fs.dirs.DocumentDir,
+//   android: fs.dirs.DownloadDir,
+// });
+
+// fPath = `${fPath}/pdfFileName.pdf`;
+
+// if (Platform.OS === PlatformTypes.IOS) {
+//    await fs.createFile(fPath, base64Data, "base64");
+// } else {
+//    await fs.writeFile(fPath, base64Data, "base64");
+// }
+// RNFetchBlob can be used to open the file
+
+
+  
   const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
@@ -100,8 +152,15 @@ export function InvoiceDowlnoad() {
     }
   };
   useEffect(() => {
-  
+   //Get History Data List
+   OtherDataServices.getInvoiceData().then((res) => {
+    setDataSource(res.data);
+});
   }, []);
+
+// console.log("pdfactual",dataSource);
+
+
 
   const {height} = Dimensions.get('window');
   
@@ -160,13 +219,10 @@ export function InvoiceDowlnoad() {
                   <Title paddingBottom={height * 0.0216}>Segunda Via</Title>
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
                   </View>
-                
                    <View style={{justifyContent: 'flex-start', alignItems: 'center',backgroundColor:'#fff'}}>
                     <Pdf
                        trustAllCerts={false}
-                       source={{
-                            uri: 'http://www.pdf995.com/samples/pdf.pdf',
-                        }}
+                       source={source64sample}
                        page={1}
                        scale={1.0}
                        minScale={0.5}
@@ -195,7 +251,7 @@ export function InvoiceDowlnoad() {
                     title="Baixar segunda via"
                     type="secondary"
                     IconColor="#02ade1"
-                    onPress={downloadFile}
+                    onPress={DemoDownload}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>
@@ -207,10 +263,12 @@ export function InvoiceDowlnoad() {
                     type="primary"
                     Icon="sharealt"
                     IconColor="#02ade1"
-                    onPress={handleClick}
+                    onPress={SharePdf}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>
+
+                {/* <a href="data:application/pdf;base64,'+input+'" class="btn btn-success" download="document.pdf">Download As File...</a> */}
                 </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>
@@ -286,6 +344,6 @@ const styles = StyleSheet.create({
   pdf: {
   // flex:1,
   width:Dimensions.get('window').width,
-  height: 480,
+  height: 600,
 }
 });

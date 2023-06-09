@@ -33,8 +33,12 @@ import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-ios-files-app-save
+import com.iosfilesappsave.IosFilesAppSavePackage;
 // react-native-pdf
 import org.wonday.pdf.RCTPdfView;
+// react-native-permissions
+import com.zoontek.rnpermissions.RNPermissionsPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
@@ -43,6 +47,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-share
 import cl.json.RNSharePackage;
+// react-native-share-pdf
+import com.maximegerbe.reactnative.sharefile.ShareFilePackage;
 // react-native-splash-screen
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 // react-native-svg
@@ -111,11 +117,14 @@ public class PackageList {
       new ReactNativeBlobUtilPackage(),
       new FBSDKPackage(),
       new RNGestureHandlerPackage(),
+      new IosFilesAppSavePackage(),
       new RCTPdfView(),
+      new RNPermissionsPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new RNSharePackage(),
+      new ShareFilePackage(),
       new SplashScreenReactPackage(),
       new SvgPackage(),
       new FingerprintAuthPackage(),
