@@ -389,7 +389,7 @@ const renderHorizontalItem2 = (data) => {
 
 
              <View style={styles.checkboxContainer}>
-             <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
+              <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
 
                 {/* Optional chaining used while api get data*/}
                <Card style={{ backgroundColor: '#fff' }}>
