@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text,
   TouchableWithoutFeedback,
-  TextInput
+  ActivityIndicator
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -44,6 +44,7 @@ export function InvoiceHome() {
   const [step, setStep] = useState(0);
   const [text, setText] = useState("");
   const [active, setActive] = useState(false);
+  const[Loading,setLoading] = useState(true);
 
 
   const [dataMain, setDataMain] = useState({})
@@ -94,15 +95,18 @@ console.log('text',text);
       );
     }
   };
+
   useEffect(() => {
     //Get Conat Data List
     ContaServices.getDataContaList().then((res) => {
       setDataSource(res.data.debitos);
+      // setLoading(false); 
   });
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
     setDataMain({data: res.data});
+    setLoading(false); 
   });
   }, []);
 
@@ -153,7 +157,8 @@ const list = () => {
       valorContaAtual={element?.valor}
       onPress={handleChild}
       onPress2={handleChild2}
-    />
+    />        
+     
     );
   });
 };
@@ -196,13 +201,15 @@ const list = () => {
 
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
+                  { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>Minha conta atual</Title>
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
                 </View>
+                
                 <View style={styles.checkboxContainer}>
                 {/* Optional chaining used while api get data*/}
-                  <CardMain 
+                <CardMain 
                     key={1}
                     title="Instalaçãão"
                     code_install={dataMain.data?.codigoInstalacao}
@@ -211,8 +218,8 @@ const list = () => {
                     valorContaAtual={dataMain.data?.valorContaAtual}
                     address={dataMain.data?.enderecoInstalacao}
                     // address={dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}
-                  /> 
-                  
+                  />  
+               
                  <View style={styles.filter}>
                  
                  <View style={styles.filterInner}>
@@ -249,7 +256,9 @@ const list = () => {
                  </View>
                 </View>
 
-                {ModalLoading(isLoading)}
+                {/* {ModalLoading(isLoading)} */}
+                </>
+}
               </MainGenericContainer>
 
               <View style={{ flex: 1 }}>
@@ -381,6 +390,12 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 10,
+  },
+  activity:{
+    flex: 1,
+    marginTop:240,
+    justifyContent: 'center',
+    alignItems:'center'
   },
   checkbox: {
     alignSelf: 'center',
