@@ -28,10 +28,8 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
-import ReactNativeBlobUtil from 'react-native-blob-util'
 import Pdf from 'react-native-pdf';
 import OtherDataServices from '../../../shared/services/OtherDataServices';
-import RNFetchBlob from 'rn-fetch-blob'
 import RNShareFile from 'react-native-share-pdf';
 import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 

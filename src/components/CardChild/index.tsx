@@ -81,7 +81,7 @@ export default function CardChild({
                   // title=""
                   subtitle={title}
                   subtitleStyle={{fontSize:16,fontWeight:'700',color:"#717171"}}
-                  style={{marginVertical:-16}}
+                  style={{marginVertical:-16,marginHorizontal:-6}}
                   right={(props) => renderToggle()}
                 >
                 </Card.Title>

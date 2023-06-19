@@ -414,18 +414,18 @@ export function PaymentInvoice() {
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
-                          <Text style={[styles.smalltext,{fontSize:11,fontWeight:'600'}]}>Parcelamento em código de barras</Text>
+                          <Text style={[styles.smalltext,{fontSize:10,fontWeight:'600'}]}>Parcelamento em código de barras</Text>
                           <Text style={styles.amount}>R$ 124.153,58</Text>
                         </View>
                         <View>
                           <TouchableOpacity
                             onPress={toggleModalPop}
                             style={styles.onpress}>
-                            <Text style={[styles.smalltext,{ color: 'white' }]}>Risco de corte </Text>
+                            <Text style={[styles.smalltext,{ fontSize:10,color: 'white' }]}>Risco de corte </Text>
                           </TouchableOpacity>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderTopColor:'#f1f1f1',borderTopWidth:1,paddingVertical:10 }}>
                         <View>
                           <Text style={styles.title}>Vencida</Text>
                         </View>
@@ -445,7 +445,7 @@ export function PaymentInvoice() {
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
                   <View style={{ flexDirection: 'row' }}>
-                    <View style={styles.cardStyles}>
+                    <View style={styles.cardFirstStyle}>
                       <Card style={{ backgroundColor: 'white', borderRadius: 10, borderBottomEndRadius: 0, borderTopEndRadius: 0, marginTop: 2, }}>
                         <Card.Content>
                           <View style={{ flexDirection: 'row' }}>
@@ -461,7 +461,7 @@ export function PaymentInvoice() {
                         </Card.Content>
                       </Card>
                     </View>
-                    <View style={styles.cardStyle}>
+                    <View style={styles.cardSecondStyle}>
                       <Card.Content>
                         <View style={styles.container}>
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
@@ -470,7 +470,7 @@ export function PaymentInvoice() {
                             <TouchableWithoutFeedback onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableWithoutFeedback>
                              </View>
                             </View>
-                            <View style={{ borderBottomColor: '#4ec6ea', borderBottomWidth: 1, flex: 1, width: 235 }} />
+                            <View style={{ borderBottomColor: '#4ec6ea', borderBottomWidth: 1, flex: 1, width: 220 }} />
                             <TouchableOpacity onPress={toggleModalPix}>
                               <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 20 }} >
                                 <Text style={styles.white}>Ver QR code</Text>
@@ -552,22 +552,22 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingVertical: 5,
   },
-  cardStyle:{
+  cardFirstStyle:{
+    alignItems: 'center',
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    flex: 1.5,
+  },
+  cardSecondStyle:{
     alignItems: 'center',
     backgroundColor: '#02ade1',
     justifyContent: 'center',
-    flex: 2.9,
+    flex:4,
     borderRadius: 10,
     borderBottomLeftRadius: 0,
     borderBottomStartRadius: 0,
     borderTopLeftRadius: 0,
     marginTop: 2,
-  },
-  cardStyles:{
-    alignItems: 'center',
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    flex: 1,
   },
   checkboxContainer: {
     marginBottom: 20,
@@ -607,7 +607,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginTop: 10,
     backgroundColor: '#f8b1ab',
-    color: 'maroon',
+    color: '#c0151c',
     paddingVertical: 2,
     paddingHorizontal: 15,
     borderRadius: 5
@@ -615,11 +615,12 @@ const styles = StyleSheet.create({
   onpress: {
     paddingVertical: 2,
     paddingHorizontal: 5,
-    backgroundColor: 'maroon',
+    backgroundColor: '#c0151c',
     borderRadius: 4
   },
   first: {
-    color: 'black'
+    color: 'black',
+    fontSize:11
   },
   white: {
     color: 'white',
@@ -628,7 +629,7 @@ const styles = StyleSheet.create({
   second: {
     fontWeight: '500',
     color: '#02ade1',
-    fontSize:12
+    fontSize:11
   },
   bartext: {
     fontWeight: '500',

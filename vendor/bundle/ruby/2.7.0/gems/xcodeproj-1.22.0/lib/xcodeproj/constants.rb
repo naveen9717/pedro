@@ -391,7 +391,7 @@ module Xcodeproj
         'COPY_PHASE_STRIP'                        => 'NO',
         'ENABLE_STRICT_OBJC_MSGSEND'              => 'YES',
         'GCC_C_LANGUAGE_STANDARD'                 => 'gnu11',
-        'GCC_NO_COMMON_BLOCKS'                    => 'YES',
+        'GCC_NO_COMMON_BLOCKS'                    => 'NO',
         'GCC_WARN_64_TO_32_BIT_CONVERSION'        => 'YES',
         'GCC_WARN_ABOUT_RETURN_TYPE'              => 'YES_ERROR',
         'GCC_WARN_UNDECLARED_SELECTOR'            => 'YES',

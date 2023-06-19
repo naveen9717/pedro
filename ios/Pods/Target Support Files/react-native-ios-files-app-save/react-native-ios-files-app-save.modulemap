@@ -1,0 +1,6 @@
+module react_native_ios_files_app_save {
+  umbrella header "react-native-ios-files-app-save-umbrella.h"
+
+  export *
+  module * { export * }
+}

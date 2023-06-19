@@ -44,7 +44,6 @@
     "react-native": "0.67.5",
     "react-native-app-auth": "^7.0.0-rc2",
     "react-native-base64": "^0.2.1",
-    "react-native-blob-util": "^0.18.2",
     "react-native-circular-chart": "^1.0.9",
     "react-native-clipboard-toast": "^1.0.0",
     "react-native-elements": "^3.4.3",
@@ -58,6 +57,7 @@
     "react-native-modal": "^13.0.1",
     "react-native-modern-datepicker": "^1.0.0-beta.91",
     "react-native-paper": "^5.0.1",
+    "react-native-blob-util": "^0.18.2",
     "react-native-pdf": "^6.6.2",
     "react-native-permissions": "^3.8.0",
     "react-native-popup-menu": "^0.16.1",
@@ -79,7 +79,6 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "redux": "^4.2.0",
-    "rn-fetch-blob": "^0.12.0",
     "rnv-date-range-picker": "^1.2.6",
     "styled-components": "^5.3.6",
     "xmldom": "^0.6.0"

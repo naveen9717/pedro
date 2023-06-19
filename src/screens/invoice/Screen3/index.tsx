@@ -175,7 +175,7 @@ export function Screen3() {
                       </View> 
               </View>
            
-               <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
+              <View style={{ paddingBottom: height * 0.0324,marginVertical:10, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                  <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
                  <View>
                   <Title>Minhas contas</Title>
@@ -184,9 +184,9 @@ export function Screen3() {
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
                   </View>
-                </View>
+              </View>
 
-                <View style={{ marginVertical:15}}>
+              <View style={{ marginVertical:15}}>
                   <Card style={{ backgroundColor: '#fecd5b' }}>
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between',alignItems:'center',paddingHorizontal:12 }}>
@@ -265,7 +265,7 @@ export function Screen3() {
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
 
-                  <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                  <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -280,7 +280,7 @@ export function Screen3() {
                 </TouchableWithoutFeedback>
 
 
-                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -291,7 +291,7 @@ export function Screen3() {
                     </Card.Content>
                 </Card>
 
-                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -306,7 +306,7 @@ export function Screen3() {
 
               <View style={styles.viewfull}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
-                  <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                  <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -320,7 +320,7 @@ export function Screen3() {
                 </TouchableWithoutFeedback>
 
 
-                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2, margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -331,7 +331,7 @@ export function Screen3() {
                     </Card.Content>
                 </Card>
 
-                <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                <Card style={{ backgroundColor: '#fff', flex: 2, margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>

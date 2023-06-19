@@ -34,7 +34,8 @@ export function HomeStack() {
   const dimensions = useWindowDimensions();
   const theme = useTheme();
   return (
-    <Navigator initialRouteName="loggedInWebView"
+    <Navigator 
+    initialRouteName="loggedInWebView"
     screenOptions={{
       // headerShown: false,
       drawerType: dimensions.width >= 768 ? 'permanent' : 'front',

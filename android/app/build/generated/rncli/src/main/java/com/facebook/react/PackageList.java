@@ -27,14 +27,14 @@ import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 import com.reactnativegooglesignin.RNGoogleSigninPackage;
 // react-native-app-auth
 import com.rnappauth.RNAppAuthPackage;
-// react-native-blob-util
-import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 // react-native-fbsdk-next
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-ios-files-app-save
 import com.iosfilesappsave.IosFilesAppSavePackage;
+// react-native-blob-util
+import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 // react-native-pdf
 import org.wonday.pdf.RCTPdfView;
 // react-native-permissions
@@ -59,8 +59,6 @@ import com.rnfingerprint.FingerprintAuthPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 // react-native-webview
 import com.reactnativecommunity.webview.RNCWebViewPackage;
-// rn-fetch-blob
-import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -114,10 +112,10 @@ public class PackageList {
       new ReactNativeFirebaseAppPackage(),
       new RNGoogleSigninPackage(),
       new RNAppAuthPackage(),
-      new ReactNativeBlobUtilPackage(),
       new FBSDKPackage(),
       new RNGestureHandlerPackage(),
       new IosFilesAppSavePackage(),
+      new ReactNativeBlobUtilPackage(),
       new RCTPdfView(),
       new RNPermissionsPackage(),
       new ReanimatedPackage(),
@@ -129,8 +127,7 @@ public class PackageList {
       new SvgPackage(),
       new FingerprintAuthPackage(),
       new VectorIconsPackage(),
-      new RNCWebViewPackage(),
-      new RNFetchBlobPackage()
+      new RNCWebViewPackage()
     ));
   }
 }

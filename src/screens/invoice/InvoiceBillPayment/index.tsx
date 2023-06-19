@@ -156,23 +156,26 @@ export function InvoiceBillPayment() {
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
                  <View style={{flexDirection:'row'}}>
-                  <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
+                  <View style={{ flex:2.5 }}>
+                   <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
                     <Card.Content>
                       <View>
                          <AntIcon name="barcode" color="#000000" size={25} />
-                         <Text style={styles.bartext}>Pix</Text>
+                         <Text style={[styles.bartext, {marginTop:15}]}>Pix</Text>
                       </View>
-                 </Card.Content>
-               </Card>
+                    </Card.Content>
+                  </Card>
+               </View>
                <Card style={styles.viewcard}>
                  <Card.Content>
                       <View>
                         <AntIcon name="wallet" color="#02ade1" size={20} />
-                         <Text style={styles.bartext}>Cartão</Text>
-                         <Text style={styles.bartext}>de crédito</Text>
+                         <Text style={[styles.bartext, {marginTop:15}]}>Cartão</Text>
+                         <Text style={[styles.bartext, {marginVertical:5}]}>de crédito</Text>
                       </View>
                  </Card.Content>
                </Card>
+               
                <View style={{ flex: 2,marginHorizontal:10  }}></View>
             </View>
                 {ModalLoading(isLoading)}
@@ -217,7 +220,7 @@ const styles = StyleSheet.create({
   },
   viewcard:{
     backgroundColor: '#fff',
-    flex: 2.2,
+    flex: 2.5,
     marginHorizontal:10,
     borderRadius:3
   },

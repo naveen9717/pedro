@@ -8,7 +8,8 @@ import {
   Dimensions,
   ScrollView,
   StyleSheet,
-  Text
+  Text,
+  ActivityIndicator
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
@@ -36,6 +37,7 @@ export function InvoiceSendedWithSuccess({route}) {
   const [step, setStep] = useState(0);
   const { email, numeroProtocolo,dataEnvio } = route.params;
   const [dataMain, setDataMain] = useState({})
+  const[Loading,setLoading] = useState(true);
 
  console.log('routedata',route.params)
   const netInfo = useNetInfo();
@@ -68,6 +70,7 @@ export function InvoiceSendedWithSuccess({route}) {
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
     setDataMain({data: res.data});
+    setLoading(false); 
   });
   }, []);
 
@@ -138,7 +141,10 @@ export function InvoiceSendedWithSuccess({route}) {
                   </View>
                   <View style={{marginVertical:15}}>
                     <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                    <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.numeroInicial+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
+                    { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
+                    <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
+                    </>
+                   }
                   </View>
                   <View>
                     <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>

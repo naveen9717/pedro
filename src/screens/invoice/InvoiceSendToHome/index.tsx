@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect, useContext } from 'react';
 import {
   Platform,
   StatusBar,
-  Image,
+  ActivityIndicator,
   SafeAreaView,
   View,
   Dimensions,
@@ -36,7 +36,7 @@ export function InvoiceSendToHome({route}) {
   // const { itemId, otherParam } = route.params;
   const [dataSource, setDataSource] = useState(undefined)
   const [tab, setTab] = useState([]);
-
+  const[Loading,setLoading] = useState(true);
 
   const dispatch = useDispatch();
   function handleSignIn() {
@@ -82,6 +82,7 @@ export function InvoiceSendToHome({route}) {
  ContaServices.getDataConta().then((res) => {
   // console.log('Main',res.data)
    setTab({data: res.data});
+   setLoading(false); 
  });
  
   }, []);
@@ -147,7 +148,10 @@ export function InvoiceSendToHome({route}) {
                 </View>
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>Endereço de entrega</Title>
-                  <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.numeroInicial+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
+                  { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
+                  <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.localizacao+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
+                  </>
+                 }
                 </View>
                 
                 <ContainerViewButton>
