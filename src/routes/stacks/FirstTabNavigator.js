@@ -6,6 +6,7 @@ import { InvoiceIntro } from '../../screens/invoice/InvoiceIntro';
 import { InvoiceHistoryChart } from '../../screens/invoice/InvoiceHistoryChart';
 import { Screen3 } from '../../screens/invoice/Screen3';
 import { InvoiceHome } from '../../screens/invoice/InvoiceHome';
+import { Screen18 } from '../../screens/invoice/Screen18';
 
 
 const Stack = createNativeStackNavigator();

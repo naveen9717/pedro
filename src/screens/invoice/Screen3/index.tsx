@@ -102,6 +102,8 @@ export function Screen3() {
   const { goBack } = useNavigation();
   const [btnClick, setBtnClick] = useState(0);
 
+
+  
   const handleClickBack = () => {
     // toggleModalPix()
     navigation.navigate('InvoiceHome')

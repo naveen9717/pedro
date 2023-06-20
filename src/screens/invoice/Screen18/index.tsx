@@ -11,7 +11,7 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  FlatList
+  ActivityIndicator
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import { ListItem, SearchBar } from "react-native-elements";
@@ -29,6 +29,7 @@ import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import { FAB } from 'react-native-paper';
 import { AnimatedFAB } from 'react-native-paper';
+import ContaServices from '../../../shared/services/ContaServices';
 
 
 export function Screen18() {
@@ -36,7 +37,9 @@ export function Screen18() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
- 
+  const [dataMain, setDataMain] = useState({})
+  const[Loading,setLoading] = useState(true);
+
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
   };
@@ -61,8 +64,14 @@ export function Screen18() {
 
   
   useEffect(() => {
-  
+  //Get Conat Data Main
+  ContaServices.getDataConta().then((res) => {
+    // console.log('Main',res.data)
+    setDataMain({data: res.data});
+    setLoading(false); 
+  });
   }, []);
+
 
   const { height } = Dimensions.get('window');
  
@@ -140,8 +149,10 @@ export function Screen18() {
                 </View>
 
                 <View style={{ marginVertical:5}}>
-                  <Text style={styles.mediumtextbold}>Avenida Norte Sul, 1000 - Taquaral - Campinas/SP
-CEP 13256-558</Text>
+                  { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
+                   <Text style={styles.mediumtextbold}>{dataMain.data?.enderecoInstalacao}</Text>
+                    </>
+                  }
                 </View>
                 
                 <View style={{ marginVertical:5}}>
@@ -170,6 +181,7 @@ CEP 13256-558</Text>
                           <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
                          </View>
                          <View>
+                          
                           <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Paulista, 1000, Bela Vista, São Paulo - SP</Text>
                          </View>
                        </View>

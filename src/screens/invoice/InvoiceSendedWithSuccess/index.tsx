@@ -133,7 +133,6 @@ export function InvoiceSendedWithSuccess({route}) {
                     source={require('../../../assets/images/icOnlineWorking.png')}
                     style={{width: 250,height: 250}}
                   />
-                  
                   <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
                     <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
                     <Text style={styles.largetext}>PROTOCOLO #{route.params?.dataSource.numeroProtocolo}</Text>
@@ -141,7 +140,7 @@ export function InvoiceSendedWithSuccess({route}) {
                   </View>
                   <View style={{marginVertical:15}}>
                     <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
-                    { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
+                    { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
                     <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
                     </>
                    }

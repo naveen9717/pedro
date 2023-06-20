@@ -134,11 +134,11 @@ export function InvoiceMinPayment() {
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
-                          <Text style={styles.smalltext}>Pagmenta da conta</Text>
-                          <Text style={styles.amount}>R$ 124.153,58</Text>
+                          <Text style={styles.smalltext}>Conta mínima</Text>
+                          <Text style={[styles.amount,{ marginVertical: 5}]}>R$ 20,30</Text>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderTopWidth:1,borderTopColor:'#f1f1f1',paddingVertical:10 }}>
                         <View>
                           <Text style={styles.title}>Alberta</Text>
                         </View>
