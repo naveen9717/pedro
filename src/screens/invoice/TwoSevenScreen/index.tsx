@@ -187,7 +187,6 @@ export function TwoSevenScreen() {
                 <View style={styles.checkboxContainer}>
 
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
-
                   <View style={{ flexDirection: 'row' }}>
                     <View
                       style={styles.cardcontent}>
@@ -259,12 +258,8 @@ export function TwoSevenScreen() {
                   <View
                     style={styles.ismodalview}>
                     <TouchableWithoutFeedback onPress={toggleModal}>
-                      <View
-                        style={styles.toggleview}>
-
-                        <View
-                          style={styles.togglemodalview}>
-
+                      <View style={styles.toggleview}>
+                        <View style={styles.togglemodalview}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 10 }}>
                               <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
@@ -283,7 +278,6 @@ export function TwoSevenScreen() {
                               <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
                               <Text style={styles.smalltext}>processamento</Text>
                               <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
-
                             </View>
 
                             <View style={{ marginVertical: 10 }}>
@@ -293,7 +287,6 @@ export function TwoSevenScreen() {
                               <Text style={styles.smalltext}>pois, se nossa equipe comparecer no local</Text>
                               <Text style={styles.smalltext}>para efetuar a suspensão do fornecimento,</Text>
                               <Text style={styles.smalltext}>você deverá apresentar os comprovantes.</Text>
-
                             </View>
                            
                             <ContainerViewButton>
@@ -328,7 +321,6 @@ export function TwoSevenScreen() {
                                   onValueChange={setSelection}
                                   style={styles.checkbox}
                                   tintColors={{ true: '#02ade1', false: 'black' }}
-
                                />
                                <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
                              </View>
@@ -430,7 +422,6 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color: 'black',
-
   },
   mediumtext: {
     fontSize: 18,
@@ -460,7 +451,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-
   first: {
     color: 'black'
   },

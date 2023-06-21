@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { InvoiceEasy } from '../../screens/invoice/InvoiceEasy';
 import { InvoiceEasyComposition } from '../../screens/invoice/InvoiceEasyComposition';
-
+import { InvoiceDownload } from '../../screens/invoice/InvoiceDownload';
 import { Screen25 } from '../../screens/invoice/Screen25';
 
 
@@ -16,6 +16,8 @@ function MainInnerNavigator() {
       <Stack.Screen name="InvoiceEasy" component={InvoiceEasy} />
       <Stack.Screen name="Screen25" component={Screen25} />
       <Stack.Screen name="InvoiceEasyComposition" component={InvoiceEasyComposition} />
+      <Stack.Screen name="InvoiceDownload" component={InvoiceDownload} />
+
    </Stack.Navigator>
   );
 }

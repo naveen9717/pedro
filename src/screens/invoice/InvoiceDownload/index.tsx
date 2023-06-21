@@ -33,7 +33,7 @@ import OtherDataServices from '../../../shared/services/OtherDataServices';
 import RNShareFile from 'react-native-share-pdf';
 import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
-export function InvoiceDowlnoad() {
+export function InvoiceDownload() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();

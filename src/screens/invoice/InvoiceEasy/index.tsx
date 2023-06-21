@@ -103,6 +103,11 @@ console.log('tab',tab);
     navigation.navigate('InvoiceEasyComposition')
   };
 
+  const handleBaixar = () => {
+    navigation.navigate('InvoiceDownload')
+  };
+  
+
   const barData = [
     {value: 2500,frontColor: '#02ade1',label:'Jan'}, 
     {value: 3500,frontColor: '#02ade1',label:'Feb'}, 
@@ -163,8 +168,7 @@ const renderHorizontalItem2 = (data) => {
       <View style={{width:data.item.percentthree,backgroundColor:data.item.color3}}/>
       <View style={{width:data.item.percentfour,backgroundColor:data.item.color4,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
 
-
-      </View>
+    </View>
       <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
       <Text style={[styles.smalltext,{color:'black'}]}>{data.item.name}</Text>
       <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
@@ -264,10 +268,10 @@ const renderHorizontalItem2 = (data) => {
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                           <View>
                             <Text style={styles.smalltext}>Parcelamento em código de barras</Text>
-                            <Text style={styles.amount}>R$ 124.153,58</Text>
+                            <Text style={[styles.amount,{marginVertical:5}]}>R$ 124.153,58</Text>
                           </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderBottomColor:'#f3f3f3',borderTopColor:'#f3f3f3',borderBottomWidth:1,borderTopWidth:1,paddingVertical:5 }}>
                           <View>
                             <Text style={styles.title}>Vencida</Text>
                           </View>
@@ -311,7 +315,7 @@ const renderHorizontalItem2 = (data) => {
                       title="Baixar segunda via"
                       type="secondary"
                       // onPress={handleSignIn}
-                      onPress={handleHome}
+                      onPress={handleBaixar}
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
@@ -335,12 +339,11 @@ const renderHorizontalItem2 = (data) => {
                     <Text style={[styles.smalltext,{marginVertical:10}]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
                 </View> 
 
-
                 <View style={{marginVertical:15}}>
-                 <View style={styles.viewmes}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
-                 </View>
+                  <View style={styles.viewmes}>
+                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
+                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
+                  </View>
                     <FlatList
                     data={stringybarData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -533,7 +536,7 @@ const renderHorizontalItem2 = (data) => {
                       title="Baixar segunda via"
                       type="secondary"
                       // onPress={handleSignIn}
-                      onPress={handleHome}
+                      onPress={handleBaixar}
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
@@ -737,7 +740,7 @@ const renderHorizontalItem2 = (data) => {
                       title="Baixar segunda via"
                       type="secondary"
                       // onPress={handleSignIn}
-                      onPress={handleHome}
+                      onPress={handleBaixar}
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
@@ -760,7 +763,6 @@ const renderHorizontalItem2 = (data) => {
                     <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Sua leitura</Text>
                     <Text style={[styles.smalltext,{marginVertical:10}]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
                 </View> 
-
 
                 <View style={{marginVertical:15}}>
                  <View style={styles.viewmes}>
@@ -786,7 +788,6 @@ const renderHorizontalItem2 = (data) => {
                     keyExtractor={item => item.value.toString()}
                    /> 
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>O consumo ultrapassou 200 quilowatt-hora e a alíquota de ICMS foi de 25%</Text>
-
                 </View>
 
                 <View style={{marginVertical:15}}>

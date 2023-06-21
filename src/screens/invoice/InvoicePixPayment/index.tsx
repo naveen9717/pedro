@@ -82,7 +82,7 @@ export function InvoicePixPayment() {
 
   const handleClick = () => {
     // navigation.navigate('login' as never);
-    navigation.navigate('Meus dados' as never);
+    navigation.navigate('PaymentInvoice');
   };
 
   return (
@@ -105,7 +105,7 @@ export function InvoicePixPayment() {
             <HeaderCustom
               // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
-              onBackPress={async () => handleClick()}
+              onBackPress={async () => goBack()}
               backgroundColor={theme.COLORS.PRIMARY_800}
               isPrimaryColorDark
               isFocused={false}
@@ -181,7 +181,7 @@ export function InvoicePixPayment() {
           </>
         ) : (
           <>
-            <HeaderCustom
+            {/* <HeaderCustom
               marginTop={
                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
               }
@@ -192,7 +192,7 @@ export function InvoicePixPayment() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'login'}
-            />
+            /> */}
           </>
         )}
       </SafeAreaView>

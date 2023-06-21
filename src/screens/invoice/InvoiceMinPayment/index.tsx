@@ -196,7 +196,6 @@ export function InvoiceMinPayment() {
 
 const styles = StyleSheet.create({
   container: {
-
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
@@ -208,11 +207,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   label: {
-    
     fontSize: 13,
     color: '#02ade1',
     fontWeight:'500'
-   
   },
   amount: {
     marginBottom: 10,
@@ -222,7 +219,6 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color: 'black',
-
   },
   mediumtext: {
     fontSize: 18,
@@ -252,7 +248,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-
   first: {
     color: 'black'
   },
@@ -343,6 +338,5 @@ const styles = StyleSheet.create({
     width: 120,
     alignItems: 'center',
     justifyContent: 'center',
-
   }
 });

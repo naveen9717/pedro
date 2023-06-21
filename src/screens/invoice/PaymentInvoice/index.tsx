@@ -124,16 +124,20 @@ export function PaymentInvoice() {
 
   const handleClick = () => {
     // toggleModalPix()
+    setModalVisible(!isModalVisible);
     navigation.navigate('InvoicePaymentInfoSuccess')
   };
 
   const handleClickCopiar = () => {
     // toggleModalPix()
+    setModalPixVisible(!isModalPixVisible);
     navigation.navigate('InvoiceSolicitedInfo')
+    
   };
 
   const handleClickEnviar = () => {
     // toggleModalPix()
+    setModalVisible(!isModalVisible);
     navigation.navigate('InvoiceSendToHome', {
       itemId: 1,
       otherParam: 'Enviar por correspondência',
@@ -143,7 +147,8 @@ export function PaymentInvoice() {
 
   const handleClickPDF = () => {
     // toggleModalPix()
-    navigation.navigate('InvoiceDowlnoad', {
+    setModalVisible(!isModalVisible);
+    navigation.navigate('InvoiceDownload', {
       itemId: 2,
       otherParam: 'Enviar por correspondência',
     });
@@ -151,11 +156,13 @@ export function PaymentInvoice() {
 
   const handleClickPix = () => {
     // Como realizar seu pagamento via Pix?
+    setModalPixVisible(!isModalPixVisible);
     navigation.navigate('InvoicePixPayment');
   };
 
   const handleClickBarras = () => {
     // Como realizar seu pagamento via Código barras?>
+    setModalVisible(!isModalVisible);
     navigation.navigate('InvoiceBillPayment');
   };
 
