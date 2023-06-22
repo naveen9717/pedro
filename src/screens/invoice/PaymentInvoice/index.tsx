@@ -255,7 +255,6 @@ export function PaymentInvoice() {
                           backgroundColor: 'white',
                           paddingVertical: 5,
                         }}>
-
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>
