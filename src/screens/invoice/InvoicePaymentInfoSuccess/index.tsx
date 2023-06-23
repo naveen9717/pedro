@@ -109,7 +109,7 @@ export function InvoicePaymentInfoSuccess() {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
+              leftAction={'back'}
             />
             <AccessibilityWidget
              marginTop={
@@ -156,7 +156,7 @@ export function InvoicePaymentInfoSuccess() {
           </>
         ) : (
           <>
-            <HeaderCustom
+            {/* <HeaderCustom
               marginTop={
                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
               }
@@ -167,7 +167,7 @@ export function InvoicePaymentInfoSuccess() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'login'}
-            />
+            /> */}
           </>
         )}
       </SafeAreaView>

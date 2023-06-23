@@ -133,7 +133,7 @@ export function InvoiceSendToHome({route}) {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
+              leftAction={'back'}
             /> 
              <AccessibilityWidget
              marginTop={
@@ -179,7 +179,7 @@ export function InvoiceSendToHome({route}) {
           </>
         ) : (
           <>
-            <HeaderCustom
+            {/* <HeaderCustom
               marginTop={
                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
               }
@@ -190,7 +190,7 @@ export function InvoiceSendToHome({route}) {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'login'}
-            />
+            /> */}
           </>
         )}
       </SafeAreaView>
