@@ -270,7 +270,7 @@ export function InvoiceHistoryChart() {
           </>
         ) : (
           <>
-            <HeaderCustom
+            {/* <HeaderCustom
               marginTop={
                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
               }
@@ -282,7 +282,7 @@ export function InvoiceHistoryChart() {
               leftOnPress={handleHome}
               leftAction={'login'}
             />
-            {webViewRender(step)}
+            {webViewRender(step)} */}
           </>
         )}
       </SafeAreaView>

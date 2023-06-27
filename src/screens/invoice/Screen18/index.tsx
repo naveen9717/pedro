@@ -157,12 +157,12 @@ export function Screen18() {
                 
                 <View style={{ marginVertical:5}}>
                  <SearchBar
-                   inputStyle={{backgroundColor: 'white'}}
-                   containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
-                   inputContainerStyle={{backgroundColor: 'white',height:35}}
-                   placeholderTextColor={'#g5g5g5'}
-                   placeholder={'Searching...'}
-                   searchIcon={{color:'#02ade1',size:30,}}
+                    inputStyle={{backgroundColor: 'white'}}
+                    containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
+                    inputContainerStyle={{backgroundColor: 'white',height:35}}
+                    placeholderTextColor={'#g5g5g5'}
+                    placeholder={'Searching...'}
+                    searchIcon={{color:'#02ade1',size:30,}}
                  />
               </View>
               <View style={{ marginVertical:10}}>
@@ -186,8 +186,7 @@ export function Screen18() {
                          </View>
                        </View>
                       </View>
-                     
-                      </Card.Content>
+                    </Card.Content>
                 </Card>
               </View>
 

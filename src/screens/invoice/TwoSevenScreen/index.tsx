@@ -188,8 +188,7 @@ export function TwoSevenScreen() {
 
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
                   <View style={{ flexDirection: 'row' }}>
-                    <View
-                      style={styles.cardcontent}>
+                    <View style={styles.cardcontent}>
                       <Card style={styles.cardsview}>
                         <Card.Content>
                           <View style={{ flexDirection: 'row' }}>
@@ -314,18 +313,16 @@ export function TwoSevenScreen() {
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
-                              
-                              <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
+                               </ContainerViewButton>
+                              <View style={[styles.checkboxContainer,{ flexDirection: 'row',marginVertical:10}]}>
                                  <CheckBox
                                   value={isSelected}
                                   onValueChange={setSelection}
                                   style={styles.checkbox}
                                   tintColors={{ true: '#02ade1', false: 'black' }}
-                               />
-                               <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
+                                />
+                               <Text style={[styles.smalltext,{ marginVertical: 8,marginHorizontal:5}]}>Não mostrar mais essa mensagem hoje</Text>
                              </View>
-
-                            </ContainerViewButton>
                           </View>
                         </View>
                       </View>
