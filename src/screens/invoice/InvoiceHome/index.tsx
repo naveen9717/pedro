@@ -43,13 +43,14 @@ export function InvoiceHome() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [text, setText] = useState("");
+  const [status, setStatus] = useState("Todos");
   const [active, setActive] = useState(false);
   const[Loading,setLoading] = useState(true);
 
 
   const [dataMain, setDataMain] = useState({})
   const [dataSource, setDataSource] = useState([])
-  const [selectedRange, setRange] = useState({});
+  const [selectedRange, setRange] = useState({firstDate:'03',secondDate:'06'});
 
 
   const [isModalVisible, setModalVisible] = useState(false);
@@ -135,6 +136,13 @@ console.log('text',text);
 
   function handlePix() {
     toggleModalPix()
+
+    const result = dataSource.filter(d=>d.mesReferencia == moment(selectedRange?.secondDate).format('YYYY/MM'));
+    console.log("resultremaining",result);
+    console.log("dateselectedsecond", moment(selectedRange?.secondDate).format('YYYY/MM'));
+    console.log("status", status);
+
+    setDataSource(result);
   }
 
   function handleClickHist() {
@@ -146,7 +154,7 @@ const list = () => {
   return dataSource?.map(element => {
     return (
       <CardChild
-      key={element.item?.mesReferencia}
+      key={element?.mesReferencia}
       title="Conta de energia"
       status={element?.statusPagamento}
       code_install={element?.codigoParceiroNegocio}
@@ -163,9 +171,11 @@ const list = () => {
   });
 };
 
-  function webViewRender(step: number) {
+let DataSecondary = (dataSource.length >=1 ) ? list() : <View style={{flex:1,justifyContent: "center",alignItems: "center"}}><Text>NO DATA FOUND IN SELECTED FILTER</Text></View>;
+
+function webViewRender(step: number) {
     throw new Error('Function not implemented.');
-  }
+}
 
   return (
     <>
@@ -223,10 +233,12 @@ const list = () => {
                  <View style={styles.filter}>
                  
                  <View style={styles.filterInner}>
-                   <Text style={styles.filtertext}>Status: Todos</Text>
+                   <Text style={styles.filtertext}>Status: {status}</Text>
                  </View>
                  <View style={styles.filterInner}>
-                   <Text style={styles.filtertext}>Período: {moment(selectedRange?.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange?.secondDate, 'YYY-MM-DD').format('DD/MM')}</Text>
+                 {/* let result = condition ? value1 : value2; */}
+                 {/* moment(selectedRange?.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange?.secondDate, 'YYY-MM-DD').format('DD/MM') */}
+                   <Text style={styles.filtertext}>Período: {moment(selectedRange?.firstDate).format('MMM/YYYY')} - {moment(selectedRange?.secondDate).format('MMM/YYYY')}</Text>
                  </View>
                    <View style={styles.iconouter}>
                      <TouchableWithoutFeedback onPress={handlePix}>
@@ -241,18 +253,20 @@ const list = () => {
                       <AntIcon name="download" color="#FFFFFF" size={13} />
                     </View>
                     <View>
-                        <Text style={styles.filtertext} > Baixar todas faturas</Text>
+                        <Text style={styles.filtertext}> Baixar todas faturas</Text>
                     </View>
-                    </View>
+                  </View>
+
                  <View>
-                 <TouchableWithoutFeedback onPress={handleClickHist}>
-                   <Text style={styles.second}>Ver histórico de consumo <AntIcon name="right" color="#02ade1" size={13} /> </Text>
-                  </TouchableWithoutFeedback>
+                   <TouchableWithoutFeedback onPress={handleClickHist}>
+                     <Text style={styles.second}>Ver histórico de consumo <AntIcon name="right" color="#02ade1" size={13} /> </Text>
+                   </TouchableWithoutFeedback>
                  </View>
-                 </View>
+                </View>
 
                  <View style={{marginVertical:15}}>
-                   {list()}
+                   {/* {list()} */}
+                   {DataSecondary}
                  </View>
                 </View>
 
@@ -264,49 +278,23 @@ const list = () => {
               <View style={{ flex: 1 }}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                   <TouchableWithoutFeedback onPress={handlePix}>
-                    <View
-                      style={styles.handlepixview}>
-                      <View
-                        style={styles.bordercorner}>
+                    <View style={styles.handlepixview}>
+                      <View style={styles.bordercorner}>
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 5 }}>
+                            <View style={{ marginVertical: 3 }}>
                               <Text style={styles.mediumtextbold}>Filtros</Text>
                               <Text style={styles.smalltext}>Selecione os filtros de instalação</Text>
                             </View>
                             <ContainerViewButton>
-                            <View style={styles.viewtouch}>
-                             <SmallButton
-                                title="Paga"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                bgColor="#e1e874"
-                                Color="#167a51"
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
-                              <SmallButton
-                                title="Aberta"
-                                type="secondary"
-                                // onPress={handleSignIn}
-                                bgColor="#fed26c"
-                                Color="#f37040"
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
-                              <SmallButton
-                                title="Vencida"
-                                type="secondary"
-                                bgColor="#f8b1ab"
-                                Color="#c6252a"
-                                // onPress={handleSignIn}
-                                onPress={handleClick}
-                                isLoading={isLogging}
-                              />
+                             <View style={styles.viewtouch}>
+                               <TouchableWithoutFeedback onPress={() => setStatus("Paga")}><Text style={[styles.input,{color:'#167a51',backgroundColor:'#e1e874',paddingHorizontal:20,borderColor:'#e1e874'}]}>Paga</Text></TouchableWithoutFeedback>
+                               <TouchableWithoutFeedback onPress={() => setStatus("Aberta")}><Text style={[styles.input,{color:'#f37040',backgroundColor:'#fed26c',paddingHorizontal:20,borderColor:'#fed26c'}]}>Aberta</Text></TouchableWithoutFeedback>
+                               <TouchableWithoutFeedback onPress={() => setStatus("Vencida")}><Text style={[styles.input,{color:'#c6252a',backgroundColor:'#f8b1ab',paddingHorizontal:20,borderColor:'#f8b1ab'}]}>Vencida</Text></TouchableWithoutFeedback>
                              </View>
                             </ContainerViewButton>
 
-                            <View style={{ marginVertical: 5 }}>
+                            <View style={{ marginVertical: 3 }}>
                               <Text style={styles.mediumtextbold}>Período de referência </Text>
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
                             </View>
@@ -317,7 +305,7 @@ const list = () => {
                                <TouchableWithoutFeedback onPress={() => setText("Personalizado")}><Text style={styles.input}>Personalizado</Text></TouchableWithoutFeedback>
                             </View>
                             </ContainerViewButton>
-                            <View style={{ marginVertical: 5 }}>
+                            <View style={{ marginVertical: 3 }}>
                               <Text style={styles.mediumtextbold}>ou Selecione o período </Text>
                             </View> 
                            <View>
@@ -328,7 +316,7 @@ const list = () => {
                                     blockSingleDateSelection={true}
                                     responseFormat="YYYY-MM-DD"
                                     // maxDate={moment()}
-                                   // minDate={moment().subtract(100, "days")}
+                                   //  minDate={moment().subtract(100, "days")}
                                   />
                             </View>
                             <ContainerViewButton>
@@ -367,7 +355,7 @@ const styles = StyleSheet.create({
   viewtouch:{
     flexDirection: 'row',
     justifyContent:'space-between',
-    marginVertical: 5 
+    marginVertical: 3
   },
   viewicon:{
     flexDirection:'row',
@@ -375,16 +363,16 @@ const styles = StyleSheet.create({
     marginVertical:15
   },
   handlepixview:{
-    height: '100%',
+    height: '85%',
     backgroundColor: 'white',
-    marginTop: '30%',
+    marginTop: '35%',
     width: '100%'
   },
   bordercorner:{
     flex: 1,
     marginTop: -30,
-    borderTopRightRadius: 40,
-    borderTopLeftRadius: 40,
+    borderTopRightRadius: 35,
+    borderTopLeftRadius: 35,
     backgroundColor: 'white',
     paddingVertical: 4,
   },
@@ -410,15 +398,15 @@ const styles = StyleSheet.create({
     flexDirection:'row'
   },
   filterInner:{
-    paddingVertical:5,
+    paddingVertical:6,
     paddingHorizontal:10,
     borderWidth:1,
     borderColor:'#02ade1',
-    marginHorizontal:10,
+    marginHorizontal:8,
     borderRadius:10
   },
   filtertext:{
-    fontSize:12
+    fontSize:11
   },
   filtertexticon:{
     backgroundColor:"#80c342",
@@ -434,7 +422,9 @@ const styles = StyleSheet.create({
     height: 25,
     margin: 4,
     padding: 4,
-    borderWidth: 1
+    borderWidth: 1,
+    borderRadius:4,
+    fontWeight:'600'
  },
   icon:{
     width:15,
@@ -469,7 +459,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'black',
     fontWeight: '500',
-    marginVertical: 15,
+    marginVertical: 10,
   },
   title: {
     fontSize: 13,
@@ -487,7 +477,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-
   first: {
     color: 'black'
   },

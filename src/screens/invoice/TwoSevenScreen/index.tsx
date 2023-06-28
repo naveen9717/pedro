@@ -362,12 +362,12 @@ const styles = StyleSheet.create({
   },
   toggleview:{
     flex: 1,
-    marginTop: -30,
+    marginTop: 30,
     backgroundColor: 'white',
   },
   togglemodalview:{
     flexDirection: 'row',
-    height: '100%',
+    height: '90%',
     marginTop: 10,
   },
   cardcontent:{
@@ -377,7 +377,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   ismodalview:{
-    height: '90%',
+    height: '80%',
     backgroundColor: 'white',
     width: '100%'
   },

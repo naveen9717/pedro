@@ -238,10 +238,7 @@ export function Screen18() {
                 </Card>
               </View>
 
-              <View style={styles.checkboxContainer}>
-             
-                    
-              </View>
+              <View style={styles.checkboxContainer}></View>
                 </MainGenericContainer>
                 
                 <FAB
