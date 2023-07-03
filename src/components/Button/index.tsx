@@ -1,7 +1,7 @@
 import React from 'react';
 import {Dimensions} from 'react-native';
 import {RectButtonProps} from 'react-native-gesture-handler';
-import AntIcon from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
 
 import {Container, Title, Load, TypeProps} from './styles';
 
@@ -44,7 +44,7 @@ export function Button({
         <Load />
       ) : (
         <>
-          <Title type={type}><AntIcon name={Icon} color={IconColor} size={15} /> {title}</Title>
+          <Title type={type}><Feather name={Icon} color={IconColor} size={15} /> {title}</Title>
           {children}
         </>
       )}

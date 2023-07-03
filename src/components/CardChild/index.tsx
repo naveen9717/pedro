@@ -23,6 +23,8 @@ import {
 
 import { Tooltip } from 'react-native-elements';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
+
 
 type Props = {
   status: string;
@@ -100,7 +102,7 @@ export default function CardChild({
                     </View>
                   <View>
                      <Text style={styles.first}>Referente à</Text>
-                     <Text style={styles.second}>Fever {mesReferencia}</Text>
+                     <Text style={styles.second}>Fevereiro/{mesReferencia}</Text>
                    </View>
                  </View>
 
@@ -116,7 +118,7 @@ export default function CardChild({
                       </TouchableWithoutFeedback>
                     </View>
                     <View>
-                      <AntIcon name="sharealt" color="#02ade1" size={15} />
+                      <Feather name="share-2" color="#02ade1" size={18} />
                     </View>
                 </View>
                 </Card.Content>
@@ -229,7 +231,8 @@ abertaV:{
     borderRadius:5
   },
   first:{
-    color:'black'
+    color:'black',
+    fontSize:12.5
   },
   white:{
     color:'white',
@@ -238,7 +241,8 @@ abertaV:{
   second:{
     fontWeight:'500',
     color:'#02ade1',
-    flexShrink: 1 
+    flexShrink: 1,
+    fontSize:12.5
   },
   bartext:{
     fontWeight:'500',

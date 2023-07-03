@@ -35,6 +35,7 @@ import moment from 'moment'
 import ContaServices from '../../../shared/services/ContaServices';
 import {AccessibilityWidget} from '../../../components/AccessibilityWidget';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 
 export function InvoiceHome() {
@@ -250,7 +251,7 @@ function webViewRender(step: number) {
                  <View style={styles.viewicon}>
                    <View style={{ flexDirection: 'row', }}>
                     <View style={styles.filtertexticon}>
-                      <AntIcon name="download" color="#FFFFFF" size={13} />
+                      <MaterialIcons name="file-download" color="#FFFFFF" size={13} />
                     </View>
                     <View>
                         <Text style={styles.filtertext}> Baixar todas faturas</Text>
@@ -447,7 +448,6 @@ const styles = StyleSheet.create({
   smalltext: {
     fontSize: 13,
     color: 'black',
-
   },
   mediumtext: {
     fontSize: 18,
@@ -494,7 +494,6 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontSize: 10
   },
- 
   bar: {
     width: 30,
     height: 20,

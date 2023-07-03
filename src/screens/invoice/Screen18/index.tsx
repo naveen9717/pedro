@@ -240,7 +240,6 @@ export function Screen18() {
 
               <View style={styles.checkboxContainer}></View>
                 </MainGenericContainer>
-                
                 <FAB
                 icon="message"
                 animated={true}
