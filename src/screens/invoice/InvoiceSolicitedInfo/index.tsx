@@ -25,12 +25,15 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
 
+import RNShareFile from 'react-native-share-pdf';
 export function InvoiceSolicitedInfo() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [dataSource, setDataSource] = useState('')
 
   const netInfo = useNetInfo();
 
@@ -49,7 +52,16 @@ export function InvoiceSolicitedInfo() {
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
 
-
+  const mockData = {
+    filename: 'Invoice.pdf',
+    document: `${dataSource?.binarioPDF}`
+  }
+  const SharePdf = async () => {
+      const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+    if (showError) {
+      // Do something with the error
+    }
+  }
   const ModalLoading = (loading: boolean) => {
     if (loading) {
       return (
@@ -59,9 +71,13 @@ export function InvoiceSolicitedInfo() {
       );
     }
   };
+  
   useEffect(() => {
- 
-  }, []);
+    //Get History Data List
+    OtherDataServices.getInvoiceData().then((res) => {
+     setDataSource(res.data);
+ });
+   }, []);
 
   const {height} = Dimensions.get('window');
  
@@ -127,9 +143,9 @@ export function InvoiceSolicitedInfo() {
                   <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
                   <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
                  </View>
-                   <View style={{marginVertical:15}}>
-                  <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
-                  <Text style={styles.mediumtext}>Estamos processando seu pagamento! Fique tranquilo que em breve será baixada! Caso receba ações de cobrança, elas serão automaticamente canceladas!</Text>
+                  <View style={{marginVertical:15}}>
+                    <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
+                    <Text style={styles.mediumtext}>Estamos processando seu pagamento! Fique tranquilo que em breve será baixada! Caso receba ações de cobrança, elas serão automaticamente canceladas!</Text>
                  </View>
                   <View>
                   <Text style={styles.smalltext}>Conta referente a instalação: 039204859</Text>
@@ -146,7 +162,7 @@ export function InvoiceSolicitedInfo() {
                     type="primary"
                     Icon="share-2"
                     IconColor="#02ade1"
-                    onPress={handleClick}
+                    onPress={SharePdf}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>

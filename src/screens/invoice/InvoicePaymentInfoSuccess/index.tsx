@@ -26,6 +26,10 @@ import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
+
+import RNShareFile from 'react-native-share-pdf';
+import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
 
 export function InvoicePaymentInfoSuccess() {
@@ -33,6 +37,7 @@ export function InvoicePaymentInfoSuccess() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const [dataSource, setDataSource] = useState('')
 
  
   const netInfo = useNetInfo();
@@ -52,6 +57,16 @@ export function InvoicePaymentInfoSuccess() {
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
 
+  const mockData = {
+    filename: 'Invoice.pdf',
+    document: `${dataSource?.binarioPDF}`
+  }
+  const SharePdf = async () => {
+      const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+    if (showError) {
+      // Do something with the error
+    }
+  }
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -63,8 +78,11 @@ export function InvoicePaymentInfoSuccess() {
     }
   };
   useEffect(() => {
-  
-  }, []);
+    //Get History Data List
+    OtherDataServices.getInvoiceData().then((res) => {
+     setDataSource(res.data);
+ });
+   }, []);
 
   const {height} = Dimensions.get('window');
   
@@ -146,7 +164,7 @@ export function InvoicePaymentInfoSuccess() {
                     type="primary"
                     Icon="share-2"
                     IconColor="#02ade1"
-                    onPress={handleClick}
+                    onPress={SharePdf}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>

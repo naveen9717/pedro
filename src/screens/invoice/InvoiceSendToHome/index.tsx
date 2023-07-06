@@ -108,6 +108,15 @@ export function InvoiceSendToHome({route}) {
     // navigation.navigate('InvoiceSendedWithSuccess' as never);
   };
 
+  const handleAlterar = () => {
+    // navigation.navigate('login' as never);
+    navigation.navigate('InvoiceSendedWithSuccess', {
+     dataSource
+    });
+    // navigation.navigate('InvoiceSendedWithSuccess' as never);
+  };
+  
+
   return (
     <>
       <AlertModal
@@ -169,7 +178,7 @@ export function InvoiceSendToHome({route}) {
                    title="Alterar endereço de entrega"
                    type="primary"
                    // onPress={handleSignIn}
-                  //  onPress={handleClick}
+                   onPress={handleAlterar}
                    isLoading={isLogging}
                  />
                </View>

@@ -40,6 +40,8 @@ import OtherDataServices from '../../../shared/services/OtherDataServices';
 import QRCode from 'react-native-qrcode-svg';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
+import RNShareFile from 'react-native-share-pdf';
+
 export function PaymentInvoice() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
@@ -47,6 +49,7 @@ export function PaymentInvoice() {
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(true);
   const [dataMain, setDataMain] = useState(undefined)
+  const [dataSource, setDataSource] = useState('')
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisiblePop, setModalVisiblePop] = useState(false);
@@ -103,6 +106,10 @@ export function PaymentInvoice() {
     setDataMain({data: res.data});
   });
 
+  OtherDataServices.getInvoiceData().then((res) => {
+    setDataSource(res.data);
+});
+
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -120,6 +127,17 @@ export function PaymentInvoice() {
   };
   function handleHome() {
     changeStep(0);
+  }
+
+  const mockData = {
+    filename: 'Invoice.pdf',
+    document: `${dataSource?.binarioPDF}`
+  }
+  const SharePdf = async () => {
+      const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+    if (showError) {
+      // Do something with the error
+    }
   }
 
   const handleClick = () => {
@@ -192,7 +210,7 @@ export function PaymentInvoice() {
                 <Button
                   title="Copiar código de barras"
                   type="secondary"
-                  Icon="copy1"
+                  Icon="copy"
                   IconColor="#FFFFFF"
                   bgColor="#2da55d"
                   onPress={handleClick}
@@ -202,7 +220,7 @@ export function PaymentInvoice() {
                 <Button
                   title="Visualizar PDF"
                   type="secondary"
-                  Icon="filetext1"
+                  Icon="copy"
                   IconColor="#FFFFFF"
                   onPress={handleClickPDF}
                   isLoading={isLogging}
@@ -213,7 +231,7 @@ export function PaymentInvoice() {
                   type="primary"
                   Icon="share-2"
                   IconColor="#02ade1"
-                  onPress={handleClick}
+                  onPress={SharePdf}
                   isLoading={isLogging}
                 />
                 <View style={{ marginVertical: 10 }}></View>
@@ -268,7 +286,7 @@ export function PaymentInvoice() {
                               <Button
                                 title="Copiar código PIX"
                                 type="secondary"
-                                Icon="copy1"
+                                Icon="copy"
                                 IconColor="#FFFFFF"
                                 onPress={handleClickCopiar}
                                 isLoading={isLogging}

@@ -28,7 +28,9 @@ import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
 import ContaServices from '../../../shared/services/ContaServices';
+import OtherDataServices from '../../../shared/services/OtherDataServices';
 
+import RNShareFile from 'react-native-share-pdf';
 
 export function InvoiceSendedWithSuccess({route}) {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
@@ -38,6 +40,7 @@ export function InvoiceSendedWithSuccess({route}) {
   const { email, numeroProtocolo,dataEnvio } = route.params;
   const [dataMain, setDataMain] = useState({})
   const[Loading,setLoading] = useState(true);
+  const [dataSource, setDataSource] = useState('')
 
  console.log('routedata',route.params)
   const netInfo = useNetInfo();
@@ -55,6 +58,16 @@ export function InvoiceSendedWithSuccess({route}) {
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
 
+  const mockData = {
+    filename: 'Invoice.pdf',
+    document: `${dataSource?.binarioPDF}`
+  }
+  const SharePdf = async () => {
+      const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+    if (showError) {
+      // Do something with the error
+    }
+  }
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {
@@ -65,12 +78,17 @@ export function InvoiceSendedWithSuccess({route}) {
       );
     }
   };
+
   useEffect(() => {
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
     setDataMain({data: res.data});
     setLoading(false); 
+  });
+
+  OtherDataServices.getInvoiceData().then((res) => {
+    setDataSource(res.data);
   });
   }, []);
 
@@ -143,7 +161,7 @@ export function InvoiceSendedWithSuccess({route}) {
                     { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
                     <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
                     </>
-                   }
+                    }
                   </View>
                   <View>
                     <Text style={styles.smalltext}>O prazo para entrega da segunda via da conta é de cinco</Text>
@@ -157,7 +175,7 @@ export function InvoiceSendedWithSuccess({route}) {
                     type="primary"
                     Icon="share-2"
                     IconColor="#02ade1"
-                    onPress={handleClick}
+                    onPress={SharePdf}
                     isLoading={isLogging}
                   />
                 </ContainerViewButton>

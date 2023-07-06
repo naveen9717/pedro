@@ -233,7 +233,6 @@ export function TwoSevenScreen() {
                 <TouchableWithoutFeedback onPress={toggleModal}>
 
                   <Card style={{ backgroundColor: '#fff', width: '28%' }}>
-
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
