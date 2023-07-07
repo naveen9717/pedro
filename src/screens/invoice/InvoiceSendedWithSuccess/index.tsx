@@ -37,10 +37,9 @@ export function InvoiceSendedWithSuccess({route}) {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const { email, numeroProtocolo,dataEnvio } = route.params;
   const [dataMain, setDataMain] = useState({})
   const[Loading,setLoading] = useState(true);
-  const [dataSource, setDataSource] = useState('')
+  const[dataSource, setDataSource] = useState('')
 
  console.log('routedata',route.params)
   const netInfo = useNetInfo();

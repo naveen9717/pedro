@@ -39,13 +39,14 @@ import ContaServices from '../../../shared/services/ContaServices';
 import OtherDataServices from '../../../shared/services/OtherDataServices';
 import QRCode from 'react-native-qrcode-svg';
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import CardChildSecond from '../../../components/CardChildSecond';
 
 import RNShareFile from 'react-native-share-pdf';
 
-export function PaymentInvoice() {
+export function PaymentInvoice({ route, navigation }) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(true);
   const [dataMain, setDataMain] = useState(undefined)
@@ -63,6 +64,9 @@ export function PaymentInvoice() {
     setModalVisible(!isModalVisible);
     setDataMain(dataMain);
   };
+
+  
+  // const { email, numeroProtocolo,dataEnvio } = route.params;
 
   const toggleModalPix = () => {
     setModalPixVisible(!isModalPixVisible)
@@ -99,7 +103,7 @@ export function PaymentInvoice() {
 
   
   useEffect(() => {
- 
+    console.log('routeparams',route.params);
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
@@ -184,7 +188,33 @@ export function PaymentInvoice() {
     navigation.navigate('InvoiceBillPayment');
   };
 
-  
+  const handlePagar = () => {
+    navigation.navigate('PaymentInvoice', {CardData:dataSource});
+  };
+
+  function handleChild2() {
+    navigation.navigate('Ajuda')
+  }
+
+  const DataSecondary = () => {
+    return route.params.CardData?.map(element => {
+      return (
+        <CardChildSecond
+        key={element?.mesReferencia}
+        title="Conta de energia"
+        status={element?.statusPagamento}
+        code_install={element?.codigoParceiroNegocio}
+        mesReferencia={element?.mesReferencia}
+        dataVencimento={element?.dataVencimento}
+        // parcelamentoD={element?.parcelamentoDisponivel}
+        contaMinima={element?.contaMinima}
+        valorContaAtual={element?.valor}
+        // onPress={handlePagar}
+        // onPress2={handleChild2}
+      />        
+      );
+    });
+  };
 
   const CodigoBarra = (props)=>{
     console.log('propsnew',props.dataCodigoMain?.data);
@@ -428,13 +458,14 @@ export function PaymentInvoice() {
             />
 
             <ScrollView>
-              <MainGenericContainer style={{ paddingTop: height * 0.02, height: height }}>
+              <MainGenericContainer style={{ paddingTop: height * 0.02}}>
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'row', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}>Pagmenta da conta</Title>
                   <Text style={styles.label}>Procotocolo: 000000000</Text>
                 </View>
                 <View style={styles.checkboxContainer}>
-                  <Card style={{ backgroundColor: 'white' }}>
+                {DataSecondary()}
+                  {/* <Card style={{ backgroundColor: 'white' }}>
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
@@ -463,7 +494,7 @@ export function PaymentInvoice() {
                         </View>
                       </View>
                     </Card.Content>
-                  </Card>
+                  </Card> */}
                 </View>
                 
                 <View style={styles.checkboxContainer}>

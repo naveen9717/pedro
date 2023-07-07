@@ -126,6 +126,11 @@ console.log('text',text);
     navigation.navigate('Meus dados')
   }
 
+ 
+  const handlePagar = () => {
+    navigation.navigate('PaymentInvoice', {CardData:dataSource});
+  };
+
   function handleChild2() {
     navigation.navigate('Ajuda')
   }
@@ -164,7 +169,7 @@ const list = () => {
       // parcelamentoD={element?.parcelamentoDisponivel}
       contaMinima={element?.contaMinima}
       valorContaAtual={element?.valor}
-      onPress={handleChild}
+      onPress={handlePagar}
       onPress2={handleChild2}
     />        
      

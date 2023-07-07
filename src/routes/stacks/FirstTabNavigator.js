@@ -6,7 +6,7 @@ import { InvoiceIntro } from '../../screens/invoice/InvoiceIntro';
 import { InvoiceHistoryChart } from '../../screens/invoice/InvoiceHistoryChart';
 import { Screen3 } from '../../screens/invoice/Screen3';
 import { InvoiceHome } from '../../screens/invoice/InvoiceHome';
-import { Screen18 } from '../../screens/invoice/Screen18';
+import { PaymentInvoice } from '../../screens/invoice/PaymentInvoice';
 
 
 const Stack = createNativeStackNavigator();
@@ -16,6 +16,8 @@ function FirstTabNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Screen3" component={Screen3} />
       <Stack.Screen name="InvoiceHome" component={InvoiceHome} />
+      <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} />
+
       <Stack.Screen name="InvoiceHistoryChart" component={InvoiceHistoryChart} />
       
    </Stack.Navigator>

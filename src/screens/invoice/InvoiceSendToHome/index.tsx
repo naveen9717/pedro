@@ -158,9 +158,9 @@ export function InvoiceSendToHome({route}) {
                 <View style={{ paddingBottom: height * 0.0324, }}>
                   <Title paddingBottom={height * 0.0216}>Endereço de entrega</Title>
                   { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
-                  <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.localizacao+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
-                  </>
-                 }
+                   <Text style={styles.mediumtext}>{tab.data?.endereco.logradouro+','+tab.data?.endereco.localizacao+' - '+tab.data?.endereco.bairro+tab.data?.endereco.municipio+'/'+tab.data?.endereco.uf+' - CEP '+tab.data?.endereco.cep}</Text>
+                   </>
+                  }
                 </View>
                 
                 <ContainerViewButton>

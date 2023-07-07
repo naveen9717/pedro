@@ -115,6 +115,13 @@ export function Screen3() {
 
   const handleClickPagar = () => {
     // toggleModalPix()
+    const handlePagar = () => {
+      navigation.navigate('PaymentInvoice', {
+        itemId: 86,
+        otherParam: 'anything you want here',
+      });
+      // navigation.navigate('PaymentInvoice', {CardData:dataSource.debitos});
+    };
     navigation.navigate('Meus dados')
   };
 
@@ -266,7 +273,6 @@ export function Screen3() {
                 </View>
               <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
-
                   <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
                       <View style={styles.container}>
@@ -277,10 +283,7 @@ export function Screen3() {
                       </View>
                     </Card.Content>
                   </Card>
-
-                  
                 </TouchableWithoutFeedback>
-
 
                 <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
                     <Card.Content>
@@ -320,7 +323,6 @@ export function Screen3() {
                   </Card>
 
                 </TouchableWithoutFeedback>
-
 
                 <Card style={{ backgroundColor: '#fff', flex: 2, margin:5 }}>
                     <Card.Content>

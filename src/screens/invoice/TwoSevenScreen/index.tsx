@@ -119,7 +119,7 @@ export function TwoSevenScreen() {
         />
         {step === 0 ? (
           <>
-            {/* <HeaderCustom
+            <HeaderCustom
               marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}
               hideMessage={true}
               onBackPress={async () => goBack()}
@@ -127,13 +127,9 @@ export function TwoSevenScreen() {
               isPrimaryColorDark
               isFocused={false}
               leftOnPress={handleHome}
-              leftAction={'menu'}
-            /> */}
-            {/* <AccessibilityWidget
-            // marginTop={
-            //   Platform.OS === 'android' ? StatusBar.currentHeight : 0
-            // }
-            /> */}
+              leftAction={'back'}
+            />
+           
 
             <ScrollView>
               <MainGenericContainer
@@ -148,9 +144,7 @@ export function TwoSevenScreen() {
 
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
-
                     <Card.Content>
-
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View>
                           <Text style={styles.smalltext}>Pagmenta da conta</Text>
@@ -165,7 +159,6 @@ export function TwoSevenScreen() {
                         </View>
                       </View>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-
                         <View>
                           <Text style={styles.title}>Vencida</Text>
                         </View>
@@ -334,7 +327,7 @@ export function TwoSevenScreen() {
           </>
         ) : (
           <>
-            <HeaderCustom
+            {/* <HeaderCustom
               marginTop={
                 Platform.OS === 'android' ? StatusBar.currentHeight : 0
               }
@@ -345,7 +338,7 @@ export function TwoSevenScreen() {
               isFocused={false}
               leftOnPress={handleHome}
               leftAction={'login'}
-            />
+            /> */}
           </>
         )}
       </SafeAreaView>
