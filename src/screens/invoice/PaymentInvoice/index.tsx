@@ -217,7 +217,7 @@ export function PaymentInvoice({ route, navigation }) {
   };
 
   const CodigoBarra = (props)=>{
-    console.log('propsnew',props.dataCodigoMain?.data);
+    // console.log('propsnew',props.dataCodigoMain?.data);
     return (
       <View
       style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
