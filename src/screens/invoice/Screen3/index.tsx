@@ -39,6 +39,7 @@ import FeatherIcon from 'react-native-vector-icons/Feather';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FontIcon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import ContaServices from '../../../shared/services/ContaServices';
 
 export function Screen3() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -46,6 +47,7 @@ export function Screen3() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(true);
+  const [dataSource, setDataSource] = useState([])
 
   const [isModalVisible, setModalVisible] = useState(false);
   const [isModalVisiblePop, setModalVisiblePop] = useState(false);
@@ -90,7 +92,11 @@ export function Screen3() {
     }
   };
   useEffect(() => {
-  
+   //Get Conat Data List
+   ContaServices.getDataContaList().then((res) => {
+    setDataSource(res.data.debitos);
+    // setLoading(false); 
+});
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -114,15 +120,7 @@ export function Screen3() {
   }
 
   const handleClickPagar = () => {
-    // toggleModalPix()
-    const handlePagar = () => {
-      navigation.navigate('PaymentInvoice', {
-        itemId: 86,
-        otherParam: 'anything you want here',
-      });
-      // navigation.navigate('PaymentInvoice', {CardData:dataSource.debitos});
-    };
-    navigation.navigate('Meus dados')
+    navigation.navigate('PaymentInvoice', {CardData:dataSource});
   };
 
   const handleClickDeta = () => {
