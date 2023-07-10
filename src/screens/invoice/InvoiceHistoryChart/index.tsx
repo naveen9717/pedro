@@ -10,7 +10,7 @@ import {
   StyleSheet,
   Text,
   TouchableWithoutFeedback,
-  FlatList
+  ActivityIndicator
 
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
@@ -37,6 +37,7 @@ export function InvoiceHistoryChart() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
+  const[Loading,setLoading] = useState(true);
 
   const [dataSource, setDataSource] = useState([])
   const { height } = Dimensions.get('window');
@@ -79,6 +80,7 @@ export function InvoiceHistoryChart() {
     //Get History Data List
     HistoryDataServices.getHistoryData().then((res) => {
       setDataSource(res.data.historicoContas);
+      setLoading(false); 
   });
   }, []);
 
@@ -135,6 +137,8 @@ export function InvoiceHistoryChart() {
             />
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
+              { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
+
                 <View style={{ paddingBottom: height * 0.0324, flexDirection: 'column', justifyContent: 'space-evenly' }}>
                   <Title paddingBottom={height * 0.0216}> Histórico de consumo</Title>
                     <Text style={styles.smalltext}>Lorem ipsum</Text>
@@ -264,7 +268,9 @@ export function InvoiceHistoryChart() {
                </Card>
               </View>
 
-                {ModalLoading(isLoading)}
+                {/* {ModalLoading(isLoading)} */}
+                </>
+                }
               </MainGenericContainer>
             </ScrollView>
           </>
