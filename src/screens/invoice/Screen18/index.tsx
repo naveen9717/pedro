@@ -150,8 +150,8 @@ export function Screen18() {
 
                 <View style={{ marginVertical:5}}>
                   { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
-                   <Text style={styles.mediumtextbold}>{dataMain.data?.enderecoInstalacao}</Text>
-                    </>
+                    <Text style={styles.mediumtextbold}>{dataMain.data?.enderecoInstalacao}</Text>
+                  </>
                   }
                 </View>
                 
@@ -173,16 +173,15 @@ export function Screen18() {
                          </View>
                         <View style={{flexShrink:4,marginLeft:25}}>
                          <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
+                           <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
+                           <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
                          <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
-                          <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                          <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
+                           <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
+                           <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
                          </View>
                          <View>
-                          
-                          <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Paulista, 1000, Bela Vista, São Paulo - SP</Text>
+                           <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Paulista, 1000, Bela Vista, São Paulo - SP</Text>
                          </View>
                        </View>
                       </View>
@@ -198,19 +197,19 @@ export function Screen18() {
                          </View>
                         <View style={{flexShrink:4,marginLeft:25}}>
                          <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa</Text>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
+                            <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa</Text>
+                            <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
                          <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
-                          <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                          <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                            <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
+                            <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
                          </View>
                          <View>
-                          <Text style={[styles.smalltext,{marginVertical:5}]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
+                            <Text style={[styles.smalltext,{marginVertical:5}]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
                          </View>
                        </View>
                       </View>
-                      </Card.Content>
+                    </Card.Content>
                 </Card>
               </View>
 
@@ -222,19 +221,19 @@ export function Screen18() {
                          </View>
                         <View style={{flexShrink:4,marginLeft:25}}>
                          <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Dois irmãos construções</Text>
-                          <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#ed2125',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Inativa</Text>
+                            <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Dois irmãos construções</Text>
+                            <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#ed2125',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Inativa</Text>
                          </View>
                          <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
-                          <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                          <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                            <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
+                            <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
                          </View>
                          <View>
-                          <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
+                           <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
                          </View>
                        </View>
                       </View>
-                      </Card.Content>
+                   </Card.Content>
                 </Card>
               </View>
 
@@ -246,7 +245,7 @@ export function Screen18() {
                 color="#FFFFFF"
                 mode="elevated"
                 style={styles.fab}
-                onPress={() => console.log('Pressed')}
+                onPress={() => console.log('FAB icon Pressed')}
               />
             </ScrollView>
           </>

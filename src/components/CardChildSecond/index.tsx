@@ -75,10 +75,9 @@ export default function CardChildSecond({
     }
    }
 
-  return (
-   
+  return ( 
        <View style={styles.checkboxContainer}>
-                <Card style={{backgroundColor:'#FFFFFF'}}>
+            <Card style={{backgroundColor:'#FFFFFF'}}>
                 <Card.Title
                   // title=""
                   subtitle={title}
@@ -97,8 +96,8 @@ export default function CardChildSecond({
                     <View style={styles.borderBottom} >
                       {renderConditionalText()}
                     <View>
-                      <Text style={styles.first}>Vencimento</Text>
-                      <Text style={styles.second}>{Moment(dataVencimento).format('DD/MM/YYYY')}</Text>
+                       <Text style={styles.first}>Vencimento</Text>
+                       <Text style={styles.second}>{Moment(dataVencimento).format('DD/MM/YYYY')}</Text>
                     </View>
                   <View>
                      <Text style={styles.first}>Referente à</Text>
@@ -106,8 +105,8 @@ export default function CardChildSecond({
                    </View>
                  </View>
                 </Card.Content>
-               </Card>
-            </View>
+            </Card>
+      </View>
   );
 }
 

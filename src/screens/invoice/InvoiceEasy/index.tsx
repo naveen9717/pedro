@@ -4,7 +4,7 @@ import React, { useState,useContext,useEffect } from 'react'
 import {
   Platform,
   StatusBar,
-  Image,
+  ActivityIndicator,
   SafeAreaView,
   View,
   Dimensions,
@@ -39,7 +39,8 @@ export function InvoiceEasy() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState([]);
- 
+  const[Loading,setLoading] = useState(true);
+
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
   };
@@ -67,6 +68,7 @@ console.log('tab',tab);
   useEffect(() => {
     HistoryDataServices.getTabBarData().then((res) => {
       setTab(res.data.historicoContas);
+      setLoading(false); 
    });
   }, []);
   // {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
@@ -344,12 +346,15 @@ const renderHorizontalItem2 = (data) => {
                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                   </View>
+                  { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
                     <FlatList
                     data={stringybarData}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderHorizontalItem(item)}
                     keyExtractor={item => item.value.toString()}
                    /> 
+                   </>
+                }
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>Seu consumo aumentou comparado ao més passado.</Text>
                 </View>
 
@@ -1015,6 +1020,12 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     width:'100%',
     marginVertical:5
+  },
+    activity:{
+    flex: 1,
+    marginTop:240,
+    justifyContent: 'center',
+    alignItems:'center'
   },
   viewvalor:{
     flexDirection:'row',

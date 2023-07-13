@@ -158,8 +158,8 @@ export function InvoiceMinPayment() {
                   <Text style={styles.smalltext}>O valor deste mês não atingiuo valor de R$70,00 e será acumulado sem encargos na próxima conta.</Text>
                 </View>
                 <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
-                  <Text style={styles.smalltext}>Para gerar código para pagamento. </Text>
-                  <Text style={styles.label}>Clique aqui{'>'} </Text>
+                   <Text style={styles.smalltext}>Para gerar código para pagamento. </Text>
+                   <Text style={styles.label}>Clique aqui{'>'} </Text>
                 </View>
                 <ContainerViewButton>
                   <Button

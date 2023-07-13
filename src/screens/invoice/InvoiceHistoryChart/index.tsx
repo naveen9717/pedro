@@ -244,23 +244,22 @@ export function InvoiceHistoryChart() {
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                    <FontAwesome name="circle" color="#02ade1" size={15} />
-
-                  <Text style={styles.bartext}>Valor de consumo</Text>
+                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={{flexDirection:'row',alignItems:'flex-start'}}>
-                  <FontAwesome name="circle" color="#0058a0" size={15} />
-                  <Text style={styles.bartext}>Média de consuma</Text>
+                   <FontAwesome name="circle" color="#0058a0" size={15} />
+                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
                  </View>
 
                  <View style={styles.bottomtext}>
                  <View style={{flexDirection:'column',marginTop:5}}>
-                  <Text style={styles.smalltext}>Última fatura</Text>
-                  <Text style={styles.mediumtextbold}>{dataSource[0]?.consumoKwh}kWh</Text>
+                   <Text style={styles.smalltext}>Última fatura</Text>
+                   <Text style={styles.mediumtextbold}>{dataSource[0]?.consumoKwh}kWh</Text>
                   </View>
                   <View style={{flexDirection:'column'}}>
-                  <Text style={styles.smalltext}>Média de consumo</Text>
-                  <Text style={styles.mediumtextbold}>{dataSource[0]?.mediaConsumo}kWh</Text>
+                   <Text style={styles.smalltext}>Média de consumo</Text>
+                   <Text style={styles.mediumtextbold}>{dataSource[0]?.mediaConsumo}kWh</Text>
                   </View>
                  </View>
                   
@@ -364,6 +363,12 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#02ade1',
     flexShrink: 1
+  },
+  activity:{
+    flex: 1,
+    marginTop:240,
+    justifyContent: 'center',
+    alignItems:'center'
   },
   bartext: {
     fontWeight: '500',

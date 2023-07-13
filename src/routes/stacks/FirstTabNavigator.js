@@ -17,9 +17,7 @@ function FirstTabNavigator() {
       <Stack.Screen name="Screen3" component={Screen3} />
       <Stack.Screen name="InvoiceHome" component={InvoiceHome} />
       <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} />
-
       <Stack.Screen name="InvoiceHistoryChart" component={InvoiceHistoryChart} />
-      
    </Stack.Navigator>
   );
 }
