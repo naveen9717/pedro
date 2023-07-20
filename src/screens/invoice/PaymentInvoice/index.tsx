@@ -196,6 +196,7 @@ export function PaymentInvoice({ route, navigation }) {
     navigation.navigate('Ajuda')
   }
 
+
   const DataSecondary = () => {
     return route.params.CardData?.map(element => {
       return (
@@ -613,6 +614,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1.5,
   },
+  
   cardSecondStyle:{
     alignItems: 'center',
     backgroundColor: '#02ade1',
@@ -636,11 +638,11 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontWeight: '600'
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 24,
-    fontWeight: '600'
-  },
+  // amount: {
+  //   marginBottom: 10,
+  //   fontSize: 24,
+  //   fontWeight: '600'
+  // },
   smalltext: {
     fontSize: 13,
     color: 'black',
@@ -657,26 +659,26 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginVertical: 15,
   },
-  title: {
-    fontSize: 13,
-    fontWeight: '600',
-    marginTop: 10,
-    backgroundColor: '#f8b1ab',
-    color: '#c0151c',
-    paddingVertical: 2,
-    paddingHorizontal: 15,
-    borderRadius: 5
-  },
-  onpress: {
-    paddingVertical: 2,
-    paddingHorizontal: 5,
-    backgroundColor: '#c0151c',
-    borderRadius: 4
-  },
-  first: {
-    color: 'black',
-    fontSize:11
-  },
+  // title: {
+  //   fontSize: 13,
+  //   fontWeight: '600',
+  //   marginTop: 10,
+  //   backgroundColor: '#f8b1ab',
+  //   color: '#c0151c',
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 15,
+  //   borderRadius: 5
+  // },
+  // onpress: {
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 5,
+  //   backgroundColor: '#c0151c',
+  //   borderRadius: 4
+  // },
+  // first: {
+  //   color: 'black',
+  //   fontSize:11
+  // },
   white: {
     color: 'white',
     textAlign: 'center'
@@ -701,47 +703,47 @@ const styles = StyleSheet.create({
     height: 20,
     marginTop:-10
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8,
@@ -749,10 +751,10 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+  // scanicons: {
+  //   height: 120,
+  //   width: 120,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }
 });

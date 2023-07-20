@@ -32,6 +32,7 @@ type Props = {
   code_install: string;
   mesReferencia: string;
   dataVencimento:string;
+  periodoConsumo:string;
   contaMinima:Boolean;
   valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
@@ -44,6 +45,7 @@ export default function CardChild({
   title,
   code_install,
   dataVencimento,
+  periodoConsumo,
   mesReferencia,
   contaMinima,
   valorContaAtual,

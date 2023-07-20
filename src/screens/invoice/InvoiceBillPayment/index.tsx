@@ -224,10 +224,10 @@ const styles = StyleSheet.create({
     marginHorizontal:10,
     borderRadius:3
   },
-  checkboxContainer: {
-    flexDirection: 'row',
-    marginVertical: 40,
-  },
+  // checkboxContainer: {
+  //   flexDirection: 'row',
+  //   marginVertical: 40,
+  // },
   checkbox: {
     alignSelf: 'center',
   },
@@ -237,11 +237,11 @@ const styles = StyleSheet.create({
   mTop:{
     marginVertical:20
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 22,
-    fontWeight:'600'
-  },
+  // amount: {
+  //   marginBottom: 10,
+  //   fontSize: 22,
+  //   fontWeight:'600'
+  // },
   smalltext: {
     fontSize: 13,
     color:'black',
@@ -257,14 +257,14 @@ const styles = StyleSheet.create({
     color:'black',
     fontWeight:'700'
   },
-  bullettext: {
-    fontSize: 12,
-    color:'black',
-    marginTop:-8,
-    paddingVertical:5,
-    marginLeft:10
-  },
-   mediumtext: {
+  // bullettext: {
+  //   fontSize: 12,
+  //   color:'black',
+  //   marginTop:-8,
+  //   paddingVertical:5,
+  //   marginLeft:10
+  // },
+  mediumtext: {
     fontSize: 18,
     color:'black',
     fontWeight:'500',
@@ -281,34 +281,34 @@ const styles = StyleSheet.create({
     marginBottom:15,
     justifyContent:'flex-start'
   },
-  title: {
-    fontSize:13,
-    fontWeight:'600',
-    marginTop:10,
-    backgroundColor:'#f8b1ab',
-    color:'maroon',
-    paddingVertical: 2,
-    paddingHorizontal: 15,
-    borderRadius:5
-  },
-  onpress:{
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    backgroundColor:'maroon',
-    borderRadius:5
-  },
-  first:{
-    color:'black'
-  },
+  // title: {
+  //   fontSize:13,
+  //   fontWeight:'600',
+  //   marginTop:10,
+  //   backgroundColor:'#f8b1ab',
+  //   color:'maroon',
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 15,
+  //   borderRadius:5
+  // },
+  // onpress:{
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 10,
+  //   backgroundColor:'maroon',
+  //   borderRadius:5
+  // },
+  // first:{
+  //   color:'black'
+  // },
   white:{
     color:'white',
     textAlign:'center'
   },
-  second:{
-    fontWeight:'500',
-    color:'#02ade1',
-    flexShrink: 1 
-  },
+  // second:{
+  //   fontWeight:'500',
+  //   color:'#02ade1',
+  //   flexShrink: 1 
+  // },
   bartext:{
     fontWeight:'500',
     color:'#02ade1',
@@ -323,47 +323,47 @@ const styles = StyleSheet.create({
     width:40,
     height: 30,
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom:{
     marginVertical:20,
     fontSize:8
@@ -371,20 +371,19 @@ const styles = StyleSheet.create({
   boxcontainer:{
     paddingHorizontal:50
   },
-  listcontainer: {
-    flex: 1,
-    paddingTop: 22,
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
-  },
-  bullets:{
-    width: 10,
-    height:10,
-    backgroundColor:'#02ade1',
-    borderRadius:10
-  }
- 
+  // listcontainer: {
+  //   flex: 1,
+  //   paddingTop: 22,
+  // },
+  // item: {
+  //   padding: 10,
+  //   fontSize: 18,
+  //   height: 44,
+  // },
+  // bullets:{
+  //   width: 10,
+  //   height:10,
+  //   backgroundColor:'#02ade1',
+  //   borderRadius:10
+  // }
 });

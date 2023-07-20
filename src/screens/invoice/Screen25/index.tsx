@@ -4,7 +4,7 @@ import React, { useState,useContext,useEffect } from 'react'
 import {
   Platform,
   StatusBar,
-  Image,
+  ActivityIndicator,
   SafeAreaView,
   View,
   Dimensions,
@@ -27,14 +27,17 @@ import { AlertModal } from '../../../components/Modal/AlertModal';
 import { PieChart } from "react-native-gifted-charts";
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
+import HistoryDataServices from '../../../shared/services/HistoryDataServices';
 
 
-export function Screen25() {
+export function Screen25({ route, navigation }){
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
- 
+  const [pie, setPie] = useState([]);
+  const[Loading,setLoading] = useState(true);
+
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
   };
@@ -60,7 +63,10 @@ export function Screen25() {
 
   
   useEffect(() => {
-  
+    HistoryDataServices.getPieData().then((res) => {
+      setPie(res.data);
+      setLoading(false); 
+   });
   }, []);
 
   const { height } = Dimensions.get('window');
@@ -108,6 +114,17 @@ const pieData = [
   {value: 40, name:"PIS:",color: '#02ade1', text: '30%',money:'47,69'},
   {value: 20, name:"ICMS:",color: '#f68b1f', text: '26%',money:'22,13'},
 ];
+
+const stringifyPieData = [
+  {value: 54,name:"COFINS:", color: '#ed1c25', text: '54%',money:pie?.cofins},
+  {value: 40, name:"PIS:",color: '#02ade1', text: '30%',money:pie?.pis},
+  {value: 20, name:"ICMS:",color: '#f68b1f', text: '26%',money:pie?.icms},
+  {value: 20, name:"ECE:",color: '#008000', text: '26%',money:pie?.ece},
+
+];
+console.log("piedata",pie);
+console.log("stringifyPieData",stringifyPieData);
+
 
 const HorizontalBarData = [
   {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
@@ -239,8 +256,12 @@ const renderHorizontalItem2 = (data) => {
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/04</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>17/04</Text>
+                    <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.datavalue ? route?.params.datavalue.split('-')[0] :'18/04'}
+                      </Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.datavalue ? route?.params.datavalue.split('-')[1] :'17/05'}
+                      </Text>
                     </View>
                   </View>
 
@@ -251,8 +272,12 @@ const renderHorizontalItem2 = (data) => {
                        <View style={{width:'85%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
                     </View>
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>16/03</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/03</Text>
+                    <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.datavalue ? route?.params.datavalue.split('-')[0] :'18/04'}
+                      </Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.datavalue ? route?.params.datavalue.split('-')[1] :'17/05'}
+                      </Text>
                     </View>
                   </View>
 
@@ -313,7 +338,7 @@ const renderHorizontalItem2 = (data) => {
                  <View style={{marginVertical:15}}>
                    <PieChart
                      donut
-                     data={pieData}
+                     data={stringifyPieData}
                      showText
                      textColor="black"
                      radius={120}
@@ -328,7 +353,7 @@ const renderHorizontalItem2 = (data) => {
                   </View>
                   <View style={{marginVertical:15}}>
                     <FlatList
-                    data={pieData}
+                    data={stringifyPieData}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.value.toString()}
@@ -343,7 +368,7 @@ const renderHorizontalItem2 = (data) => {
                  <View style={{marginVertical:15}}>
                    <PieChart
                      donut
-                     data={pieData}
+                     data={stringifyPieData}
                      showText
                      textColor="black"
                      radius={120}
@@ -358,7 +383,7 @@ const renderHorizontalItem2 = (data) => {
                   </View>
                   <View style={{marginVertical:15}}>
                     <FlatList
-                    data={pieData}
+                    data={stringifyPieData}
                     // ItemSeparatorComponent={FlatListSeparator}
                     renderItem={item => renderItem(item)}
                     keyExtractor={item => item.value.toString()}
@@ -574,11 +599,11 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontWeight:'500'
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 22,
-    fontWeight: '600'
-  },
+  // amount: {
+  //   marginBottom: 10,
+  //   fontSize: 22,
+  //   fontWeight: '600'
+  // },
   smalltext: {
     fontSize: 12.5,
     color: 'black',
@@ -595,12 +620,12 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginVertical: 10,
   },
-  mediumtextboldblue: {
-    fontSize: 15,
-    color: '#02ade1',
-    fontWeight: '500',
-    marginVertical: 10,
-  },
+  // mediumtextboldblue: {
+  //   fontSize: 15,
+  //   color: '#02ade1',
+  //   fontWeight: '500',
+  //   marginVertical: 10,
+  // },
   largetextbold: {
     fontSize: 18,
     color: 'black',
@@ -623,9 +648,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'maroon',
     borderRadius: 5
   },
-  first: {
-    color: 'black'
-  },
   throughone: {
     color: 'black',
     textDecorationLine:'line-through'
@@ -638,12 +660,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     color: '#02ade1',
     flexShrink: 1,
-  },
-  throughtwo: {
-    fontWeight: '500',
-    color: '#02ade1',
-    flexShrink: 1,
-    textDecorationLine:'line-through'
   },
   bartext: {
     fontWeight: '500',
@@ -661,46 +677,10 @@ const styles = StyleSheet.create({
     height: 14,
     borderRadius:7
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
   },
   bottom: {
     marginVertical: 20,
@@ -708,24 +688,5 @@ const styles = StyleSheet.create({
   },
   boxcontainer: {
     paddingHorizontal: 50
-  },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tabContent: {
-    color: '#444444',
-    fontSize: 18,
-    margin: 24,
-  },
-  bottomtext: {
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-around',
-    marginTop:20,
-    borderTopWidth:1,
-    borderTopColor:'lightgrey'
-  },
+  }
 });

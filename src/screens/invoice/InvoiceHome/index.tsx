@@ -67,7 +67,7 @@ export function InvoiceHome() {
   const netInfo = useNetInfo();
 
 
-console.log('text',text);
+// console.log('text',text);
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -78,8 +78,8 @@ console.log('text',text);
     msg: '',
   });
 
-  console.log('dataSource:', dataSource);
-  console.log('dataMain:', dataMain);
+  // console.log('dataSource:', dataSource);
+  // console.log('dataMain:', dataMain);
 
 
   const isLoading: boolean = useSelector(
@@ -131,8 +131,13 @@ console.log('text',text);
     navigation.navigate('PaymentInvoice', {CardData:dataSource});
   };
 
-  function handleChild2() {
-    navigation.navigate('Ajuda')
+  function handleChild2(value){
+    console.log('datavalue',value)
+    // navigation.navigate('Ajuda',{datavalue:value})
+    navigation.navigate({
+      name: 'InvoiceEasy',
+      params: { post: value },
+    });
   }
   const handleClick = () => {
     toggleModalPix()
@@ -144,9 +149,9 @@ console.log('text',text);
     toggleModalPix()
 
     const result = dataSource.filter(d=>d.mesReferencia == moment(selectedRange?.secondDate).format('YYYY/MM'));
-    console.log("resultremaining",result);
-    console.log("dateselectedsecond", moment(selectedRange?.secondDate).format('YYYY/MM'));
-    console.log("status", status);
+    // console.log("resultremaining",result);
+    // console.log("dateselectedsecond", moment(selectedRange?.secondDate).format('YYYY/MM'));
+    // console.log("status", status);
 
     setDataSource(result);
   }
@@ -169,8 +174,9 @@ const list = () => {
       // parcelamentoD={element?.parcelamentoDisponivel}
       contaMinima={element?.contaMinima}
       valorContaAtual={element?.valor}
+      periodoConsumo={element?.periodoConsumo}
       onPress={handlePagar}
-      onPress2={handleChild2}
+      onPress2={ () => handleChild2(element?.periodoConsumo) }
     />        
      
     );
@@ -445,11 +451,11 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center'
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 22,
-    fontWeight: '600'
-  },
+  // amount: {
+  //   marginBottom: 10,
+  //   fontSize: 22,
+  //   fontWeight: '600'
+  // },
   smalltext: {
     fontSize: 13,
     color: 'black',
@@ -476,12 +482,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 5
   },
-  onpress: {
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    backgroundColor: 'maroon',
-    borderRadius: 5
-  },
+  // onpress: {
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 10,
+  //   backgroundColor: 'maroon',
+  //   borderRadius: 5
+  // },
   first: {
     color: 'black'
   },
@@ -494,57 +500,57 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontSize:12
   },
-  bartext: {
-    fontWeight: '500',
-    color: '#02ade1',
-    fontSize: 10
-  },
+  // bartext: {
+  //   fontWeight: '500',
+  //   color: '#02ade1',
+  //   fontSize: 10
+  // },
   bar: {
     width: 30,
     height: 20,
     marginTop:-10
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8
@@ -552,10 +558,10 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+  // scanicons: {
+  //   height: 120,
+  //   width: 120,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }
 });

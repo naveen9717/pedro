@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
 
-import {Label, Title, ContainerViewButton, ContainerViewLogo} from './styles';
+import {Title, ContainerViewButton} from './styles';
 
 import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../../components/Containers/index';
@@ -29,7 +29,6 @@ import {AlertModal} from '../../../components/Modal/AlertModal';
 import OtherDataServices from '../../../shared/services/OtherDataServices';
 
 import RNShareFile from 'react-native-share-pdf';
-import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
 
 export function InvoicePaymentInfoSuccess() {
@@ -199,13 +198,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  checkboxContainer: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
-  checkbox: {
-    alignSelf: 'center',
-  },
+  // checkboxContainer: {
+  //   flexDirection: 'row',
+  //   marginBottom: 20,
+  // },
+  // checkbox: {
+  //   alignSelf: 'center',
+  // },
   label: {
     margin: 8,
   },

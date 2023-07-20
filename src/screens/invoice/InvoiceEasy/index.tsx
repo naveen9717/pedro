@@ -31,15 +31,17 @@ import { PieChart } from "react-native-gifted-charts";
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import HistoryDataServices from '../../../shared/services/HistoryDataServices';
+import moment from 'moment'
 
 
-export function InvoiceEasy() {
+export function InvoiceEasy({ route, navigation }) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState([]);
   const[Loading,setLoading] = useState(true);
+  const [dataSource, setDataSource] = useState([])
 
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
@@ -51,6 +53,7 @@ export function InvoiceEasy() {
     customStyleIndex: 0,
   });
 
+  console.log('routenav',route)
 
   const netInfo = useNetInfo();
  
@@ -63,15 +66,29 @@ export function InvoiceEasy() {
     msg: '',
   });
 
-console.log('tab',tab);
+// console.log('tab',tab);
   
   useEffect(() => {
     HistoryDataServices.getTabBarData().then((res) => {
       setTab(res.data.historicoContas);
       setLoading(false); 
    });
+
+    //Get History Data List
+    HistoryDataServices.getHistoryData().then((res) => {
+      setDataSource(res.data.historicoContas);
+      setLoading(false); 
+  });
   }, []);
   // {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
+
+  const stringifyHorizontalData = dataSource.map((data,key) => {
+    return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
+  });
+
+  const stringifylineData = dataSource.map((data,key) => {
+    return {value: data?.mediaConsumo,dataPointText: `${data?.mediaConsumo}`}
+  });
 
   var arr = [];
 
@@ -79,7 +96,7 @@ console.log('tab',tab);
     arr.push(...[{value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}])
   });
 
-  console.log('arr',arr);
+  // console.log('arr',arr);
 
   const stringybarData = tab.map((data,key) => {
     return {value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}
@@ -118,6 +135,8 @@ console.log('tab',tab);
     {value: 3000,frontColor: '#02ade1',label:'May'}
   ];
 
+  
+
   const renderItem = (data) => {
     return (
       <View style={{marginVertical:5}}>
@@ -131,10 +150,10 @@ console.log('tab',tab);
 }
 
 const pieData = [
-  {value: 54,name:"Taxas e tributos", color: '#02ade1', text: '54%'},
-  {value: 40, name:"CPFL Paulista",color: '#80c342', text: '30%'},
-  {value: 20, name:"Energia gerada",color: '#f68b1f', text: '26%'},
-  {value: 21,  name:"Transmissäão",color: '#ed1c25', text: '26%'},
+  {value: 0.48,name:"Taxas e tributos", color: '#02ade1', text: '0,48%'},
+  {value: 0.15, name:"CPFL Paulista",color: '#80c342', text: '0,15%'},
+  {value: 0.32, name:"Energia gerada",color: '#f68b1f', text: '0,32%'},
+  {value: 0.039,  name:"Transmissäão",color: '#ed1c25', text: ' 0,039%'},
 ];
 
 const HorizontalBarData = [
@@ -386,9 +405,14 @@ const renderHorizontalItem2 = (data) => {
                     <View style={{flexDirection:'row',width:'100%',height:30}}>
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
+
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/04</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>17/04</Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                      </Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      </Text>
                     </View>
                   </View>
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>A bandeira tarifária vigente foi a verde e por isso, não houve acréscimo no valor.</Text>
@@ -407,30 +431,33 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
                   <BarChart 
-                   data={barData}   
-                   barWidth={30}
-                   initialSpacing={15}
-                   spacing={18}
+                   data={stringifyHorizontalData}   
+                   barWidth={26}
+                   initialSpacing={5}
+                   spacing={8}
                    barBorderRadius={4}
                    yAxisThickness={0}
-                   xAxisType={'dashed'}
-                   xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
-                   stepValue={1000}
-                   maxValue={6000}
-                   noOfSections={5}
-                   yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
-                   labelWidth={20}
-                   xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
+                   xAxisColor={'gray'}
+                   yAxisTextStyle={{color: 'gray',fontSize:10}}
+                   stepValue={300}
+                   maxValue={2700}
+                   noOfSections={9}
+                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   labelWidth={30}
+                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
-                         color: '#0058a0',
-                        //  thickness: 3,
-                        //  curved: true,
-                        //  hideDataPoints: true,
-                        //  shiftY: 20,
-                        //  initialSpacing: -30,
-                  }} 
-                 showLine/>
+                    color: '#0058a0',
+                    thickness: 2,
+                    textFontSize:10
+                   
+                   //  curved: true,
+                   //  hideDataPoints: true,
+                   //  shiftY: 20,
+                   //  initialSpacing: -30,
+                 }} 
+                showLine={true}
+                lineData={stringifylineData}
+                 />
                  <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
@@ -477,11 +504,11 @@ const renderHorizontalItem2 = (data) => {
                      showText
                      textColor="black"
                      radius={100}
-                     textSize={10}
+                     textSize={8}
                      focusOnPress
                      showValuesAsLabels
                      showTextBackground
-                     textBackgroundRadius={15}
+                     textBackgroundRadius={20}
                    />
                   <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Total: R$ 146,68</Text>
 
@@ -607,8 +634,12 @@ const renderHorizontalItem2 = (data) => {
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/04</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>17/04</Text>
+                    <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                      </Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      </Text>
                     </View>
                   </View>
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>A bandeira tarifária vigente foi a verde e por isso, não houve acréscimo no valor.</Text>
@@ -626,31 +657,34 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
-                  <BarChart 
-                   data={barData}   
-                   barWidth={30}
-                   initialSpacing={15}
-                   spacing={18}
+                 <BarChart 
+                   data={stringifyHorizontalData}   
+                   barWidth={26}
+                   initialSpacing={5}
+                   spacing={8}
                    barBorderRadius={4}
                    yAxisThickness={0}
-                   xAxisType={'dashed'}
-                   xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
-                   stepValue={1000}
-                   maxValue={6000}
-                   noOfSections={5}
-                   yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
-                   labelWidth={20}
-                   xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
+                   xAxisColor={'gray'}
+                   yAxisTextStyle={{color: 'gray',fontSize:10}}
+                   stepValue={300}
+                   maxValue={2700}
+                   noOfSections={9}
+                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   labelWidth={30}
+                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
-                         color: '#0058a0',
-                        //  thickness: 3,
-                        //  curved: true,
-                        //  hideDataPoints: true,
-                        //  shiftY: 20,
-                        //  initialSpacing: -30,
-                  }} 
-                 showLine/>
+                    color: '#0058a0',
+                    thickness: 2,
+                    textFontSize:10
+                   
+                   //  curved: true,
+                   //  hideDataPoints: true,
+                   //  shiftY: 20,
+                   //  initialSpacing: -30,
+                 }} 
+                showLine={true}
+                lineData={stringifylineData}
+                 />
                  <View style={styles.viewvalor}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
@@ -809,8 +843,12 @@ const renderHorizontalItem2 = (data) => {
                        <View style={styles.viewbana}/>
                     </View>
                     <View style={styles.viewdate}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/04</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>17/04</Text>
+                    <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                      </Text>
+                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      </Text>
                     </View>
                   </View>
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>A bandeira tarifária vigente foi a verde e por isso, não houve acréscimo no valor.</Text>
@@ -825,31 +863,34 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
-                  <BarChart 
-                   data={barData}   
-                   barWidth={30}
-                   initialSpacing={15}
-                   spacing={18}
+                 <BarChart 
+                   data={stringifyHorizontalData}   
+                   barWidth={26}
+                   initialSpacing={5}
+                   spacing={8}
                    barBorderRadius={4}
                    yAxisThickness={0}
-                   xAxisType={'dashed'}
-                   xAxisColor={'lightgray'}
-                   yAxisTextStyle={{color: 'lightgray',fontSize:10}}
-                   stepValue={1000}
-                   maxValue={6000}
-                   noOfSections={5}
-                   yAxisLabelTexts={['0', '1KWh', '2KWh', '3KWh', '4KWh', '5KWh']}
-                   labelWidth={20}
-                   xAxisLabelTextStyle={{color: 'lightgray', textAlign: 'center'}}
+                   xAxisColor={'gray'}
+                   yAxisTextStyle={{color: 'gray',fontSize:10}}
+                   stepValue={300}
+                   maxValue={2700}
+                   noOfSections={9}
+                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   labelWidth={30}
+                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
-                         color: '#0058a0',
-                        //  thickness: 3,
-                        //  curved: true,
-                        //  hideDataPoints: true,
-                        //  shiftY: 20,
-                        //  initialSpacing: -30,
-                  }} 
-                 showLine/>
+                    color: '#0058a0',
+                    thickness: 2,
+                    textFontSize:10
+                   
+                   //  curved: true,
+                   //  hideDataPoints: true,
+                   //  shiftY: 20,
+                   //  initialSpacing: -30,
+                 }} 
+                showLine={true}
+                lineData={stringifylineData}
+                 />
                  <View style={styles.viewconsumo}>
                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
@@ -1021,7 +1062,7 @@ const styles = StyleSheet.create({
     width:'100%',
     marginVertical:5
   },
-    activity:{
+  activity:{
     flex: 1,
     marginTop:240,
     justifyContent: 'center',
@@ -1093,10 +1134,10 @@ const styles = StyleSheet.create({
   first: {
     color: 'black'
   },
-  throughone: {
-    color: 'black',
-    textDecorationLine:'line-through'
-  },
+  // throughone: {
+  //   color: 'black',
+  //   textDecorationLine:'line-through'
+  // },
   white: {
     color: 'white',
     textAlign: 'center'
@@ -1106,12 +1147,12 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     flexShrink: 1,
   },
-  throughtwo: {
-    fontWeight: '500',
-    color: '#02ade1',
-    flexShrink: 1,
-    textDecorationLine:'line-through'
-  },
+  // throughtwo: {
+  //   fontWeight: '500',
+  //   color: '#02ade1',
+  //   flexShrink: 1,
+  //   textDecorationLine:'line-through'
+  // },
   bartext: {
     fontWeight: '500',
     color: '#02ade1',
@@ -1128,47 +1169,47 @@ const styles = StyleSheet.create({
     height: 14,
     borderRadius:7
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8
@@ -1176,17 +1217,17 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  tabContent: {
-    color: '#444444',
-    fontSize: 18,
-    margin: 24,
-  },
+  // scanicons: {
+  //   height: 120,
+  //   width: 120,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // },
+  // tabContent: {
+  //   color: '#444444',
+  //   fontSize: 18,
+  //   margin: 24,
+  // },
   bottomtext: {
     flexDirection:'row',
     alignItems:'center',

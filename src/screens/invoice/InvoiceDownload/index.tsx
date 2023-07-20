@@ -299,10 +299,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  checkboxContainer: {
-    flexDirection: 'row',
-    marginBottom: 20,
-  },
+  // checkboxContainer: {
+  //   flexDirection: 'row',
+  //   marginBottom: 20,
+  // },
   bluemediumtext:{
     fontSize:13,
     textAlign:'right',
@@ -310,35 +310,35 @@ const styles = StyleSheet.create({
     fontWeight:'500',
     marginBottom:5
   },
-  checkbox: {
-    alignSelf: 'center',
-  },
+  // checkbox: {
+  //   alignSelf: 'center',
+  // },
   label: {
     margin: 8,
   },
-  smalltext:{
-    fontSize:12,
-  },
-  smallertext:{
-    fontSize:12,
-    textAlign:'center'
-  },
-  largetext:{
-    fontSize:15,
-    fontWeight:'500',
-    color:'#02ade1',
-    textAlign:'center'
-  },
+  // smalltext:{
+  //   fontSize:12,
+  // },
+  // smallertext:{
+  //   fontSize:12,
+  //   textAlign:'center'
+  // },
+  // largetext:{
+  //   fontSize:15,
+  //   fontWeight:'500',
+  //   color:'#02ade1',
+  //   textAlign:'center'
+  // },
   mediumtext:{
     fontSize:13,
     textAlign:'center'
   },
-  mediumtextbold:{
-    fontSize:13,
-    textAlign:'center',
-    fontWeight:'500',
-    marginVertical:5
-  },
+  // mediumtextbold:{
+  //   fontSize:13,
+  //   textAlign:'center',
+  //   fontWeight:'500',
+  //   marginVertical:5
+  // },
   pdf: {
   // flex:1,
   width:Dimensions.get('window').width,

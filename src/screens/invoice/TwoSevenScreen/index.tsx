@@ -467,12 +467,12 @@ const styles = StyleSheet.create({
     height: 20,
     marginTop:-10
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
   modalView: {
     margin: 20,
     backgroundColor: 'white',
@@ -493,21 +493,21 @@ const styles = StyleSheet.create({
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8
@@ -515,11 +515,10 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 35
   },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  }
+  // scanicons: {
+  //   height: 120,
+  //   width: 120,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }
 });

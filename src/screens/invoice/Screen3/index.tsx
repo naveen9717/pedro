@@ -125,7 +125,7 @@ export function Screen3() {
 
   const handleClickDeta = () => {
     // toggleModalPix()
-    navigation.navigate('Ajuda')
+    navigation.navigate('Screen25',{datavalue:'17/05/2021-18/06/2022'})
   };
 
   const handleClickDebit = () => {
@@ -143,6 +143,7 @@ export function Screen3() {
         title={modalInfo.title}
       />
      
+
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -475,60 +476,60 @@ const styles = StyleSheet.create({
     height: 20,
     marginTop:-10
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  filtertexticon:{
-    backgroundColor:"#80c342",
-    width:22,
-    height:22,
-    borderRadius:22,
-    alignContent:'center',
-    alignItems:'center',
-    alignSelf:'center',
-    justifyContent:'center'
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // filtertexticon:{
+  //   backgroundColor:"#80c342",
+  //   width:22,
+  //   height:22,
+  //   borderRadius:22,
+  //   alignContent:'center',
+  //   alignItems:'center',
+  //   alignSelf:'center',
+  //   justifyContent:'center'
+  // },
   filtertext:{
     fontSize:12
   },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  // buttonOpen: {
+  //   backgroundColor: '#F194FF',
+  // },
+  // buttonClose: {
+  //   backgroundColor: '#2196F3',
+  // },
+  // textStyle: {
+  //   color: 'white',
+  //   fontWeight: 'bold',
+  //   textAlign: 'center',
+  // },
+  // modalText: {
+  //   marginBottom: 15,
+  //   textAlign: 'center',
+  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8
@@ -536,10 +537,10 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  scanicons: {
-    height: 120,
-    width: 120,
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+  // scanicons: {
+  //   height: 120,
+  //   width: 120,
+  //   alignItems: 'center',
+  //   justifyContent: 'center',
+  // }
 });

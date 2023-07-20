@@ -206,10 +206,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  checkboxContainer: {
-    flexDirection: 'row',
-    marginVertical: 40,
-  },
+  // checkboxContainer: {
+  //   flexDirection: 'row',
+  //   marginVertical: 40,
+  // },
   iconcenter:{
     backgroundColor:'#02ade1',
     width:26,
@@ -228,11 +228,11 @@ const styles = StyleSheet.create({
   mTop:{
     marginVertical:20
   },
-  amount: {
-    marginBottom: 10,
-    fontSize: 22,
-    fontWeight:'600'
-  },
+  // amount: {
+  //   marginBottom: 10,
+  //   fontSize: 22,
+  //   fontWeight:'600'
+  // },
   smalltext: {
     fontSize: 13,
     color:'black',
@@ -281,24 +281,24 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius:5
   },
-  onpress:{
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    backgroundColor:'maroon',
-    borderRadius:5
-  },
-  first:{
-    color:'black'
-  },
+  // onpress:{
+  //   paddingVertical: 2,
+  //   paddingHorizontal: 10,
+  //   backgroundColor:'maroon',
+  //   borderRadius:5
+  // },
+  // first:{
+  //   color:'black'
+  // },
   white:{
     color:'white',
     textAlign:'center'
   },
-  second:{
-    fontWeight:'500',
-    color:'#02ade1',
-    flexShrink: 1 
-  },
+  // second:{
+  //   fontWeight:'500',
+  //   color:'#02ade1',
+  //   flexShrink: 1 
+  // },
   bartext:{
     fontWeight:'500',
     color:'#02ade1',
@@ -313,27 +313,27 @@ const styles = StyleSheet.create({
     width:40,
     height: 30,
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: 'white',
-    borderRadius: 20,
-    padding: 35,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  // centeredView: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   marginTop: 22,
+  // },
+  // modalView: {
+  //   margin: 20,
+  //   backgroundColor: 'white',
+  //   borderRadius: 20,
+  //   padding: 35,
+  //   alignItems: 'center',
+  //   shadowColor: '#000',
+  //   shadowOffset: {
+  //     width: 0,
+  //     height: 2,
+  //   },
+  //   shadowOpacity: 0.25,
+  //   shadowRadius: 4,
+  //   elevation: 5,
+  // },
   button: {
     borderRadius: 20,
     padding: 10,
