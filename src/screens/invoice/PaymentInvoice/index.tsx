@@ -296,14 +296,7 @@ export function PaymentInvoice({ route, navigation }) {
                     <View
                       style={{height: '80%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
                       <View
-                        style={{
-                          flex: 1,
-                          marginTop: -30,
-                          borderTopRightRadius: 40,
-                          borderTopLeftRadius: 40,
-                          backgroundColor: 'white',
-                          paddingVertical: 5,
-                        }}>
+                        style={styles.bordercorner}>
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>
