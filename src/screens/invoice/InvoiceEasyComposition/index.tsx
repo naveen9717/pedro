@@ -39,26 +39,10 @@ export function InvoiceEasyComposition() {
   const [step, setStep] = useState(0);
 
  const DATA =[
-	{
-    name:"Taxas e tributos",
-		color: "#02ade1",
-		value: 71.05
-	},
-	{
-    name:"CPFL Paulista",
-		color: "#80c342",
-		value: 23.13
-	},
-	{
-    name:"Energia gerada",
-		color: "#f68b1f",
-		value: 47.69
-	},
-	{
-    name:"Transmissäão",
-		color: "#ed1c25",
-		value: 7
-	}
+  {value: 0.48,name:"Taxas e tributos", color: '#02ade1', text: '0,48%'},
+  {value: 0.15, name:"CPFL Paulista",color: '#80c342', text: '0,15%'},
+  {value: 0.32, name:"Energia gerada",color: '#f68b1f', text: '0,32%'},
+  {value: 0.039,  name:"Transmissäão",color: '#ed1c25', text: ' 0,039%'},
 ]
   const netInfo = useNetInfo();
 
@@ -221,7 +205,6 @@ export function InvoiceEasyComposition() {
                   <Button
                     title="Voltar"
                     type="secondary"
-                    // onPress={handleSignIn}
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
@@ -258,29 +241,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginBottom: 20,
-  // },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
-  // label: {
-  //   margin: 8,
-  // },
   smalltext:{
     fontSize:12,
   },
-  // smallertext:{
-  //   fontSize:12,
-  //   textAlign:'center'
-  // },
-  // largetext:{
-  //   fontSize:15,
-  //   fontWeight:'500',
-  //   color:'#02ade1',
-  //   textAlign:'center'
-  // },
   mediumtext:{
     fontSize:13,
     textAlign:'center'

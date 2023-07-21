@@ -457,36 +457,6 @@ export function PaymentInvoice({ route, navigation }) {
                 </View>
                 <View style={styles.checkboxContainer}>
                 {DataSecondary()}
-                  {/* <Card style={{ backgroundColor: 'white' }}>
-                    <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <View>
-                          <Text style={[styles.smalltext,{fontSize:10,fontWeight:'600'}]}>Parcelamento em código de barras</Text>
-                          <Text style={styles.amount}>R$ 124.153,58</Text>
-                        </View>
-                        <View>
-                          <TouchableOpacity
-                            onPress={toggleModalPop}
-                            style={styles.onpress}>
-                            <Text style={[styles.smalltext,{ fontSize:10,color: 'white' }]}>Risco de corte </Text>
-                          </TouchableOpacity>
-                        </View>
-                      </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderTopColor:'#f1f1f1',borderTopWidth:1,paddingVertical:10 }}>
-                        <View>
-                          <Text style={styles.title}>Vencida</Text>
-                        </View>
-                        <View>
-                          <Text style={styles.first}>Vencimento</Text>
-                          <Text style={styles.second}>13/03/2022</Text>
-                        </View>
-                        <View>
-                          <Text style={styles.first}>Referente à</Text>
-                          <Text style={styles.second}>Fevereiro/2022</Text>
-                        </View>
-                      </View>
-                    </Card.Content>
-                  </Card> */}
                 </View>
                 
                 <View style={styles.checkboxContainer}>
@@ -605,7 +575,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1.5,
   },
-  
   cardSecondStyle:{
     alignItems: 'center',
     backgroundColor: '#02ade1',
@@ -629,11 +598,6 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontWeight: '600'
   },
-  // amount: {
-  //   marginBottom: 10,
-  //   fontSize: 24,
-  //   fontWeight: '600'
-  // },
   smalltext: {
     fontSize: 13,
     color: 'black',
@@ -650,26 +614,6 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginVertical: 15,
   },
-  // title: {
-  //   fontSize: 13,
-  //   fontWeight: '600',
-  //   marginTop: 10,
-  //   backgroundColor: '#f8b1ab',
-  //   color: '#c0151c',
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 15,
-  //   borderRadius: 5
-  // },
-  // onpress: {
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 5,
-  //   backgroundColor: '#c0151c',
-  //   borderRadius: 4
-  // },
-  // first: {
-  //   color: 'black',
-  //   fontSize:11
-  // },
   white: {
     color: 'white',
     textAlign: 'center'
@@ -689,52 +633,6 @@ const styles = StyleSheet.create({
     height: 40,
     color: '#02ade1',
   },
-  bar: {
-    width: 30,
-    height: 20,
-    marginTop:-10
-  },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  // modalView: {
-  //   margin: 20,
-  //   backgroundColor: 'white',
-  //   borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: 'center',
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  //   },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 4,
-  //   elevation: 5,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  // modalText: {
-  //   marginBottom: 15,
-  //   textAlign: 'center',
-  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8,
@@ -742,10 +640,4 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  // scanicons: {
-  //   height: 120,
-  //   width: 120,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }
 });

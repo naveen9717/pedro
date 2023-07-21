@@ -37,6 +37,8 @@ type Props = {
   valorContaAtual:number;
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
   onPress2: ((event: GestureResponderEvent) => void) | undefined;
+  share: ((event: GestureResponderEvent) => void) | undefined;
+
 
 };
 
@@ -50,7 +52,8 @@ export default function CardChild({
   contaMinima,
   valorContaAtual,
   onPress,
-  onPress2
+  onPress2,
+  share
 }: Props) {
   const {height} = Dimensions.get('window');
 
@@ -117,10 +120,12 @@ export default function CardChild({
                     <View>
                     <TouchableWithoutFeedback onPress={onPress2}>
                       <Text style={styles.second}>Detalhamento</Text>
-                      </TouchableWithoutFeedback>
+                    </TouchableWithoutFeedback>
                     </View>
                     <View>
+                    <TouchableWithoutFeedback onPress={share}>
                       <Feather name="share-2" color="#02ade1" size={18} />
+                    </TouchableWithoutFeedback>
                     </View>
                 </View>
                 </Card.Content>

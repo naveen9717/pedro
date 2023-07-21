@@ -181,18 +181,7 @@ export function InvoicePixPayment() {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+           
           </>
         )}
       </SafeAreaView>
@@ -206,10 +195,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginVertical: 40,
-  // },
   iconcenter:{
     backgroundColor:'#02ade1',
     width:26,
@@ -219,23 +204,8 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     alignItems:'center'
   },
-  checkbox: {
-    alignSelf: 'center',
-  },
-  label: {
-    margin: 8,
-  },
   mTop:{
     marginVertical:20
-  },
-  // amount: {
-  //   marginBottom: 10,
-  //   fontSize: 22,
-  //   fontWeight:'600'
-  // },
-  smalltext: {
-    fontSize: 13,
-    color:'black',
   },
   viewflex:{
     flexDirection:'row',
@@ -281,94 +251,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius:5
   },
-  // onpress:{
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 10,
-  //   backgroundColor:'maroon',
-  //   borderRadius:5
-  // },
-  // first:{
-  //   color:'black'
-  // },
-  white:{
-    color:'white',
-    textAlign:'center'
-  },
-  // second:{
-  //   fontWeight:'500',
-  //   color:'#02ade1',
-  //   flexShrink: 1 
-  // },
   bartext:{
     fontWeight:'500',
     color:'#02ade1',
     fontSize:10
-  },
-  icon:{
-    width:25,
-    height: 25,
-    color:'#02ade1',
-  },
-  bar:{
-    width:40,
-    height: 30,
-  },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  // modalView: {
-  //   margin: 20,
-  //   backgroundColor: 'white',
-  //   borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: 'center',
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  //   },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 4,
-  //   elevation: 5,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-    textAlign: 'center',
-  },
-  bottom:{
-    marginVertical:20,
-    fontSize:8
-  },
-  boxcontainer:{
-    paddingHorizontal:50
-  },
-  listcontainer: {
-    flex: 1,
-    paddingTop: 22,
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
   },
   bullets:{
     width: 6,

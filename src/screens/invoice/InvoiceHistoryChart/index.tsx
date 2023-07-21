@@ -275,19 +275,7 @@ export function InvoiceHistoryChart() {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
-            {webViewRender(step)} */}
+          
           </>
         )}
       </SafeAreaView>
@@ -304,9 +292,6 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 15,
   },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
   label: {
     margin: 5,
     fontSize: 11,
@@ -346,69 +331,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 5
   },
-  // onpress: {
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 10,
-  //   backgroundColor: 'maroon',
-  //   borderRadius: 5
-  // },
-  // first: {
-  //   color: 'black'
-  // },
-  white: {
-    color: 'white',
-    textAlign: 'center'
-  },
-  // second: {
-  //   fontWeight: '500',
-  //   color: '#02ade1',
-  //   flexShrink: 1
-  // },
-  // activity:{
-  //   flex: 1,
-  //   marginTop:240,
-  //   justifyContent: 'center',
-  //   alignItems:'center'
-  // },
   bartext: {
     fontWeight: '500',
     fontSize: 10,
     marginHorizontal:2
   },
-  // bar: {
-  //   width: 14,
-  //   height: 14,
-  //   borderRadius:7
-  // },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  boxcontainer: {
-    paddingHorizontal: 50
-  },
-  // chart: {
-  //   padding: 10,
-  //   borderRadius: 15,
-  //   backgroundColor: 'white',
-  //   width: 290
-  // }
 });

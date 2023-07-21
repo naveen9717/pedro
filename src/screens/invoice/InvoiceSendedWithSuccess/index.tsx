@@ -184,18 +184,7 @@ export function InvoiceSendedWithSuccess({route}) {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+           
           </>
         )}
       </SafeAreaView>
@@ -209,16 +198,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginBottom: 20,
-  // },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
-  // label: {
-  //   margin: 8,
-  // },
   smalltext:{
     fontSize:12,
   },

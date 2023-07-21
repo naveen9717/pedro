@@ -175,18 +175,7 @@ export function InvoiceMinPayment() {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+            
           </>
         )}
       </SafeAreaView>
@@ -203,9 +192,6 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 20,
   },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
   label: {
     fontSize: 13,
     color: '#02ade1',
@@ -242,22 +228,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 5
   },
-  // onpress: {
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 10,
-  //   backgroundColor: 'maroon',
-  //   borderRadius: 5
-  // },
   first: {
     color: 'black'
   },
   throughone: {
     color: 'black',
     textDecorationLine:'line-through'
-  },
-  white: {
-    color: 'white',
-    textAlign: 'center'
   },
   second: {
     fontWeight: '500',
@@ -270,73 +246,4 @@ const styles = StyleSheet.create({
     flexShrink: 1,
     textDecorationLine:'line-through'
   },
-  bartext: {
-    fontWeight: '500',
-    color: '#02ade1',
-    fontSize: 10
-  },
-  // icon: {
-  //   width: 40,
-  //   height: 40,
-  //   color: '#02ade1',
-  // },
-  bar: {
-    width: 30,
-    height: 20,
-    marginTop:-10
-  },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  // modalView: {
-  //   margin: 20,
-  //   backgroundColor: 'white',
-  //   borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: 'center',
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  //   },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 4,
-  //   elevation: 5,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  // modalText: {
-  //   marginBottom: 15,
-  //   textAlign: 'center',
-  // },
-  bottom: {
-    marginVertical: 20,
-    fontSize: 8
-  },
-  // boxcontainer: {
-  //   paddingHorizontal: 50
-  // },
-  // scanicons: {
-  //   height: 120,
-  //   width: 120,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }
 });

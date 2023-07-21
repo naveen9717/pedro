@@ -591,19 +591,11 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between'
   },
-  checkbox: {
-    alignSelf: 'center',
-  },
   label: {
     fontSize: 13,
     color: '#02ade1',
     fontWeight:'500'
   },
-  // amount: {
-  //   marginBottom: 10,
-  //   fontSize: 22,
-  //   fontWeight: '600'
-  // },
   smalltext: {
     fontSize: 12.5,
     color: 'black',
@@ -620,33 +612,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginVertical: 10,
   },
-  // mediumtextboldblue: {
-  //   fontSize: 15,
-  //   color: '#02ade1',
-  //   fontWeight: '500',
-  //   marginVertical: 10,
-  // },
   largetextbold: {
     fontSize: 18,
     color: 'black',
     fontWeight: '500',
     marginVertical: 10,
-  },
-  title: {
-    fontSize: 13,
-    fontWeight: '600',
-    marginTop: 10,
-    backgroundColor: '#fed26c',
-    color: '#f36c3e',
-    paddingVertical: 2,
-    paddingHorizontal: 15,
-    borderRadius: 5
-  },
-  onpress: {
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    backgroundColor: 'maroon',
-    borderRadius: 5
   },
   throughone: {
     color: 'black',
@@ -672,21 +642,4 @@ const styles = StyleSheet.create({
     height: 20,
     color: '#02ade1',
   },
-  bar: {
-    width: 14,
-    height: 14,
-    borderRadius:7
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  bottom: {
-    marginVertical: 20,
-    fontSize: 8
-  },
-  boxcontainer: {
-    paddingHorizontal: 50
-  }
 });

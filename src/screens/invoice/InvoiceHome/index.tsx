@@ -36,7 +36,8 @@ import ContaServices from '../../../shared/services/ContaServices';
 import {AccessibilityWidget} from '../../../components/AccessibilityWidget';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-
+import RNShareFile from 'react-native-share-pdf';
+import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
 export function InvoiceHome() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -66,7 +67,17 @@ export function InvoiceHome() {
 
   const netInfo = useNetInfo();
 
-
+  const mockData = {
+    filename: 'InvoiceHome.pdf',
+    document: `text`
+  }
+  const SharePdf = async () => {
+    const showError = await RNShareFile.sharePDF(mockData.document, mockData.filename);
+  if (showError) {
+    // Do something with the error
+    console.log('showError',showError)
+  }
+}
 // console.log('text',text);
 
   const [showModal, setshowModal] = useState(false);
@@ -149,9 +160,7 @@ export function InvoiceHome() {
     toggleModalPix()
 
     const result = dataSource.filter(d=>d.mesReferencia == moment(selectedRange?.secondDate).format('MM/YYYY'));
-    // console.log("resultremaining",result);
-    // console.log("dateselectedsecond", moment(selectedRange?.secondDate).format('YYYY/MM'));
-    // console.log("status", status);
+   
 
     setDataSource(result);
   }
@@ -177,6 +186,7 @@ const list = () => {
       periodoConsumo={element?.periodoConsumo}
       onPress={handlePagar}
       onPress2={ () => handleChild2(element?.periodoConsumo) }
+      share={SharePdf}
     />        
      
     );
@@ -397,9 +407,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems:'center'
   },
-  checkbox: {
-    alignSelf: 'center',
-  },
   label: {
     margin: 5,
     fontSize: 10,
@@ -451,11 +458,6 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center'
   },
-  // amount: {
-  //   marginBottom: 10,
-  //   fontSize: 22,
-  //   fontWeight: '600'
-  // },
   smalltext: {
     fontSize: 13,
     color: 'black',
@@ -482,86 +484,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 5
   },
-  // onpress: {
-  //   paddingVertical: 2,
-  //   paddingHorizontal: 10,
-  //   backgroundColor: 'maroon',
-  //   borderRadius: 5
-  // },
-  first: {
-    color: 'black'
-  },
-  white: {
-    color: 'white',
-    textAlign: 'center'
-  },
   second: {
     fontWeight: '500',
     color: '#02ade1',
     fontSize:12
   },
-  // bartext: {
-  //   fontWeight: '500',
-  //   color: '#02ade1',
-  //   fontSize: 10
-  // },
-  bar: {
-    width: 30,
-    height: 20,
-    marginTop:-10
-  },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  // modalView: {
-  //   margin: 20,
-  //   backgroundColor: 'white',
-  //   borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: 'center',
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  //   },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 4,
-  //   elevation: 5,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  // modalText: {
-  //   marginBottom: 15,
-  //   textAlign: 'center',
-  // },
-  bottom: {
-    marginVertical: 20,
-    fontSize: 8
-  },
   boxcontainer: {
     paddingHorizontal: 50
   },
-  // scanicons: {
-  //   height: 120,
-  //   width: 120,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }
 });

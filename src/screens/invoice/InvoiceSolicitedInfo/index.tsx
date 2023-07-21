@@ -198,16 +198,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginBottom: 20,
-  // },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
-  // label: {
-  //   margin: 8,
-  // },
   smalltext:{
     fontSize:12,
   },

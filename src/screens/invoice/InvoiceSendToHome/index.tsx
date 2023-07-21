@@ -213,16 +213,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginVertical: 40,
-  // },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
-  // label: {
-  //   margin: 8,
-  // },
   mTop:{
     marginVertical:20
   },

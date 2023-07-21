@@ -46,18 +46,7 @@ export function InvoiceDownload() {
   //const source = {uri:'file:///sdcard/test.pdf'};
   const source64new = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
   const source64sample = {uri:`data:application/pdf;base64,${dataSource?.binarioPDF}`};
-  // console.log("source64sample",source64sample);
-  // console.log("dataSource",dataSource);
 
-  
-  //const source = {uri:"content://com.example.blobs/xxxxxxxx-...?offset=0&size=xxx"};
-  //const source = {uri:"blob:xxxxxxxx-...?offset=0&size=xxx"};
-//   var path = RNFetchBlob.fs.dirs.DocumentDir + "/bill.pdf";
-//   RNFetchBlob.fs.writeFile(path, `${dataSource?.binarioPDF}`, "base64").then(res => {
-//     console.log("FileDownload : ", res);
-// }
-
-// )
 
 const mockData = {
   filename: 'Invoice.pdf',
@@ -71,10 +60,7 @@ const SharePdf = async () => {
 }
 
 const DemoDownload = () => {
-  // if (!hasPermission) {
-  //   //* Handle Permission
-  //   return;
-  // }
+
  let options: FileSaveOptions = {
     url: `${dataSource?.binarioPDF}`,
     fileName: "Invoice.pdf",
@@ -88,39 +74,6 @@ const DemoDownload = () => {
     console.log("error", error);
   })
 };
-
-  const downloadImage = async () => {
-    let date = new Date();
-    const { config, fs } = RNFetchBlob
-    const dirPath = Platform.OS == 'ios' ? `${fs.dirs.PictureDir}/<folder-name>` : `${fs.dirs.PictureDir}`
-    const filePath = dirPath + '/' + Math.floor(date.getTime() + date.getSeconds() / 2) + '.pdf'
-    fs.writeFile(filePath,`${dataSource?.binarioPDF}`, 'base64').then(res => {
-    Platform.OS === 'ios' ?
-    RNFetchBlob.ios.previewDocument(filePath) :
-    RNFetchBlob.fs.scanFile([
-    { path: filePath, mime: 'application/pdf' },
-    ])
-    Platform.OS === 'android' && Alert.alert("File Successfully downloaded!!")
-    }).catch(err => console.log("err", err))
-}
-  
-
-
-// let fPath = Platform.select({
-//   ios: fs.dirs.DocumentDir,
-//   android: fs.dirs.DownloadDir,
-// });
-
-// fPath = `${fPath}/pdfFileName.pdf`;
-
-// if (Platform.OS === PlatformTypes.IOS) {
-//    await fs.createFile(fPath, base64Data, "base64");
-// } else {
-//    await fs.writeFile(fPath, base64Data, "base64");
-// }
-// RNFetchBlob can be used to open the file
-
-
   
   const netInfo = useNetInfo();
 
@@ -274,18 +227,7 @@ const DemoDownload = () => {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+           
           </>
         )}
       </SafeAreaView>
@@ -299,10 +241,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  // checkboxContainer: {
-  //   flexDirection: 'row',
-  //   marginBottom: 20,
-  // },
   bluemediumtext:{
     fontSize:13,
     textAlign:'right',
@@ -310,37 +248,7 @@ const styles = StyleSheet.create({
     fontWeight:'500',
     marginBottom:5
   },
-  // checkbox: {
-  //   alignSelf: 'center',
-  // },
-  label: {
-    margin: 8,
-  },
-  // smalltext:{
-  //   fontSize:12,
-  // },
-  // smallertext:{
-  //   fontSize:12,
-  //   textAlign:'center'
-  // },
-  // largetext:{
-  //   fontSize:15,
-  //   fontWeight:'500',
-  //   color:'#02ade1',
-  //   textAlign:'center'
-  // },
-  mediumtext:{
-    fontSize:13,
-    textAlign:'center'
-  },
-  // mediumtextbold:{
-  //   fontSize:13,
-  //   textAlign:'center',
-  //   fontWeight:'500',
-  //   marginVertical:5
-  // },
   pdf: {
-  // flex:1,
   width:Dimensions.get('window').width,
   height: 600,
 }
