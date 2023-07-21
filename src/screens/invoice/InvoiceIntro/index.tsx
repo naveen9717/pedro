@@ -93,7 +93,6 @@ export function InvoiceIntro() {
       />
      
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
-      
           <>
             <HeaderCustom
               // marginTop={Platform.OS === 'android' ? StatusBar.currentHeight : 0}

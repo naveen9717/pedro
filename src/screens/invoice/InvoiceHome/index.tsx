@@ -148,7 +148,7 @@ export function InvoiceHome() {
   function handlePix() {
     toggleModalPix()
 
-    const result = dataSource.filter(d=>d.mesReferencia == moment(selectedRange?.secondDate).format('YYYY/MM'));
+    const result = dataSource.filter(d=>d.mesReferencia == moment(selectedRange?.secondDate).format('MM/YYYY'));
     // console.log("resultremaining",result);
     // console.log("dateselectedsecond", moment(selectedRange?.secondDate).format('YYYY/MM'));
     // console.log("status", status);
@@ -250,7 +250,7 @@ function webViewRender(step: number) {
                  <View style={styles.filterInner}>
                  {/* let result = condition ? value1 : value2; */}
                  {/* moment(selectedRange?.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange?.secondDate, 'YYY-MM-DD').format('DD/MM') */}
-                   <Text style={styles.filtertext}>Período: {moment(selectedRange?.firstDate).format('MMM/YYYY')} - {moment(selectedRange?.secondDate).format('MMM/YYYY')}</Text>
+                   <Text style={styles.filtertext}>Período: {selectedRange.firstDate =="03" ? selectedRange?.firstDate+'/2021' +'-'+ selectedRange?.secondDate+'/2021' : <> {moment(selectedRange?.firstDate).format('MMM/YYYY')} - {moment(selectedRange?.secondDate).format('MMM/YYYY')}</>}</Text>
                  </View>
                    <View style={styles.iconouter}>
                      <TouchableWithoutFeedback onPress={handlePix}>

@@ -225,8 +225,7 @@ export function PaymentInvoice({ route, navigation }) {
       <TouchableWithoutFeedback onPress={toggleModal}>
         <View
           style={styles.bordercorner}>
-          <View
-            style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
+          <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
             <View style={[styles.boxcontainer]}>
               <View style={{ marginVertical: 12 }}>
                 <Text style={styles.mediumtextbold}>Pagamento via código de barras</Text>
@@ -295,8 +294,7 @@ export function PaymentInvoice({ route, navigation }) {
             <TouchableWithoutFeedback onPress={toggleModalPix}>
                     <View
                       style={{height: '80%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
-                      <View
-                        style={styles.bordercorner}>
+                      <View style={styles.bordercorner}>
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
                             <View style={{ marginVertical: 12 }}>

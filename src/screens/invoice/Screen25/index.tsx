@@ -408,12 +408,12 @@ const renderHorizontalItem2 = (data) => {
 
               <View style={{marginVertical:5}}>
                   <View>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',marginHorizontal:2}]}>ICMS:</Text>
+                    <Text style={[styles.mediumtextbold,{fontWeight:'600',marginHorizontal:2}]}>ICMS:</Text>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>As regras de cobrança do ICMS são definidas pelos Estados. A distribuidora faz apenas o repasse integralM desse imposto para Secretaria da Fazenda Estadual(SEFAZ).</Text>
-                 </View>
+                   <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>As regras de cobrança do ICMS são definidas pelos Estados. A distribuidora faz apenas o repasse integralM desse imposto para Secretaria da Fazenda Estadual(SEFAZ).</Text>
+              </View>
                  
-                 <View style={{marginVertical:5,}}>
+              <View style={{marginVertical:5,}}>
                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                      <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Mês de referência</Text>
                      <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Quantidade</Text>
@@ -427,9 +427,9 @@ const renderHorizontalItem2 = (data) => {
                       <Text style={[styles.smalltext,{color:'black'}]}>16/03</Text>
                       <Text style={[styles.smalltext,{color:'black'}]}>18/03</Text>
                     </View>
-                </View>
+              </View>
 
-                <View style={{marginVertical:5,}}>
+               <View style={{marginVertical:5,}}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
                     <View style={{flexDirection:'row',width:'100%',height:30}}>
                        <View style={{width:'55%',backgroundColor:'#f15e38',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>

@@ -177,9 +177,10 @@ const renderHorizontalItem = (data) => {
 }
 
 const HorizontalBarData2 = [
-  {value: 254,name:"ICMS", color: '#80c342',color2:'#fecd5b',color3: 'red',color4: '#eeeeee',  percentone: '25%',percenttwo:'35%',percentthree:'12%',percentfour:'28%'},
+  {value: dataSource[0]?.consumoKwh,name:"ICMS", color: '#80c342',color2:'#fecd5b',color3: 'red',color4: '#eeeeee',  percentone: (90*100)/dataSource[0]?.consumoKwh+'%',percenttwo:(dataSource[0]?.consumoKwh-90)*100/dataSource[0]?.consumoKwh+'%',percentthree:(dataSource[0]?.consumoKwh-199)*100/dataSource[0]?.consumoKwh+'%',percentfour:'0%'},
 ];
 
+console.log('dataSource',dataSource[0]?.consumoKwh);
 const renderHorizontalItem2 = (data) => {
   return (
     <View style={{marginVertical:5,}}>
