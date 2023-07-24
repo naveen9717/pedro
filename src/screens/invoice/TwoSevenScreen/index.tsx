@@ -467,12 +467,6 @@ const styles = StyleSheet.create({
     height: 20,
     marginTop:-10
   },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
   modalView: {
     margin: 20,
     backgroundColor: 'white',
@@ -488,37 +482,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 5,
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  // modalText: {
-  //   marginBottom: 15,
-  //   textAlign: 'center',
-  // },
-  bottom: {
-    marginVertical: 20,
-    fontSize: 8
-  },
   boxcontainer: {
     paddingHorizontal: 35
   },
-  // scanicons: {
-  //   height: 120,
-  //   width: 120,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }
 });

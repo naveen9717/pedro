@@ -148,6 +148,7 @@ export function InvoiceBillPayment() {
                   </View>
                 </View>
 
+
                 <View style={{ paddingBottom: height * 0.0324,paddingVertical:15 }}>
                   <Text style={styles.smalltext}>Atenção: Não se esqueça de pagar seu boleto até a</Text>
                   <Text style={styles.smalltext}>data de vencimento original de sua fatura para evitar</Text>

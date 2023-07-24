@@ -393,15 +393,6 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 20,
   },
-  checkbox: {
-    alignSelf: 'center',
-  },
-  label: {
-    margin: 5,
-    fontSize: 10,
-    color: '#02ade1',
-    fontWeight: '600'
-  },
   viewfull:{
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -443,18 +434,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     borderRadius: 5
   },
-  onpress: {
-    paddingVertical: 2,
-    paddingHorizontal: 10,
-    backgroundColor: 'maroon',
-    borderRadius: 5
-  },
   first: {
     color: 'black'
-  },
-  white: {
-    color: 'white',
-    textAlign: 'center'
   },
   second: {
     fontWeight: '500',
@@ -466,70 +447,9 @@ const styles = StyleSheet.create({
     color: '#02ade1',
     fontSize: 10
   },
-  icon:{
-    width:20,
-    height: 20,
-    color:'#02ade1',
-  },
-  bar: {
-    width: 30,
-    height: 20,
-    marginTop:-10
-  },
-  // centeredView: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   marginTop: 22,
-  // },
-  // filtertexticon:{
-  //   backgroundColor:"#80c342",
-  //   width:22,
-  //   height:22,
-  //   borderRadius:22,
-  //   alignContent:'center',
-  //   alignItems:'center',
-  //   alignSelf:'center',
-  //   justifyContent:'center'
-  // },
   filtertext:{
     fontSize:12
   },
-  // modalView: {
-  //   margin: 20,
-  //   backgroundColor: 'white',
-  //   borderRadius: 20,
-  //   padding: 35,
-  //   alignItems: 'center',
-  //   shadowColor: '#000',
-  //   shadowOffset: {
-  //     width: 0,
-  //     height: 2,
-  //   },
-  //   shadowOpacity: 0.25,
-  //   shadowRadius: 4,
-  //   elevation: 5,
-  // },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  // buttonOpen: {
-  //   backgroundColor: '#F194FF',
-  // },
-  // buttonClose: {
-  //   backgroundColor: '#2196F3',
-  // },
-  // textStyle: {
-  //   color: 'white',
-  //   fontWeight: 'bold',
-  //   textAlign: 'center',
-  // },
-  // modalText: {
-  //   marginBottom: 15,
-  //   textAlign: 'center',
-  // },
   bottom: {
     marginVertical: 20,
     fontSize: 8
@@ -537,10 +457,4 @@ const styles = StyleSheet.create({
   boxcontainer: {
     paddingHorizontal: 50
   },
-  // scanicons: {
-  //   height: 120,
-  //   width: 120,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  // }
 });

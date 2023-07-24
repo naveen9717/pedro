@@ -239,30 +239,19 @@ export function Screen18() {
 
               <View style={styles.checkboxContainer}></View>
                 </MainGenericContainer>
-                <FAB
-                icon="message"
-                animated={true}
-                color="#FFFFFF"
-                mode="elevated"
-                style={styles.fab}
-                onPress={() => console.log('FAB icon Pressed')}
-              />
+                  <FAB
+                   icon="message"
+                   animated={true}
+                   color="#FFFFFF"
+                   mode="elevated"
+                   style={styles.fab}
+                   onPress={() => console.log('FAB icon Pressed')}
+                 />
             </ScrollView>
           </>
         ) : (
           <>
-            <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
+           
           </>
         )}
       </SafeAreaView>
