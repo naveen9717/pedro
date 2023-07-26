@@ -170,7 +170,7 @@ const DemoDownload = () => {
                   <Title paddingBottom={height * 0.0216}>Segunda Via</Title>
                   <Text style={styles.bluemediumtext}>Procotocolo: 000000000</Text>
                   </View>
-                   <View style={{justifyContent: 'flex-start', alignItems: 'center',backgroundColor:'#fff'}}>
+                   <View style={styles.flexjustifyRow}>
                     <Pdf
                        trustAllCerts={false}
                        source={source64sample}
@@ -247,6 +247,11 @@ const styles = StyleSheet.create({
     color:'#02ade1',
     fontWeight:'500',
     marginBottom:5
+  },
+  flexjustifyRow:{
+    justifyContent: 'flex-start', 
+    alignItems: 'center',
+    backgroundColor:'#fff'
   },
   pdf: {
   width:Dimensions.get('window').width,

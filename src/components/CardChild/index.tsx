@@ -93,7 +93,7 @@ export default function CardChild({
                 >
                 </Card.Title>
                   <Card.Content>
-                    <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
+                    <View style={styles.flexjustify}>
                       <View>
                         {/* <Text style={styles.smalltext}>{title}</Text> */}
                         <Text style={styles.amount}>R$ {valorContaAtual}</Text>
@@ -111,7 +111,7 @@ export default function CardChild({
                    </View>
                  </View>
 
-                 <View style={{flexDirection: 'row',justifyContent: 'space-between',marginVertical:15}}>
+                 <View style={[styles.flexjustify,{marginVertical:15}]}>
                     <View>
                       <TouchableOpacity onPress={onPress}>
                         <Text style={styles.second}>Pagar sua Conta</Text>
@@ -140,6 +140,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start' 
+  },
+  flexjustify:{
+    flexDirection:'row',
+    justifyContent:'space-between'
   },
   borderBottom:{
      flexDirection: 'row', 

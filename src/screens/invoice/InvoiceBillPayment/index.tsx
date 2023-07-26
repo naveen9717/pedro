@@ -161,7 +161,7 @@ export function InvoiceBillPayment() {
                     <Card.Content>
                       <View>
                          <AntIcon name="barcode" color="#000000" size={25} />
-                         <Text style={[styles.bartext, {marginTop:15}]}>Pix</Text>
+                         <Text style={[styles.bartext, styles.mV_15]}>Pix</Text>
                       </View>
                     </Card.Content>
                   </Card>
@@ -170,7 +170,7 @@ export function InvoiceBillPayment() {
                  <Card.Content>
                       <View>
                         <AntIcon name="wallet" color="#02ade1" size={20} />
-                         <Text style={[styles.bartext, {marginTop:15}]}>Cartão</Text>
+                         <Text style={[styles.bartext, styles.mV_15]}>Cartão</Text>
                          <Text style={[styles.bartext, {marginVertical:5}]}>de crédito</Text>
                       </View>
                  </Card.Content>
@@ -263,4 +263,7 @@ const styles = StyleSheet.create({
     height: 25,
     color:'#02ade1',
   },
+  mV_15:{
+    marginVertical:15
+  }
 });

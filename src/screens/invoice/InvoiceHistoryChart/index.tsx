@@ -145,7 +145,7 @@ export function InvoiceHistoryChart() {
                 </View>
               <View style={styles.checkboxContainer}>
                 {/* Optional chaining used while api get data*/}
-               <Card style={{ backgroundColor: '#fff' }}>
+               <Card style={styles.bgColorWhite}>
                 <Card.Content>
                  <View style={styles.flexRowAlignSpace}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
@@ -208,7 +208,7 @@ export function InvoiceHistoryChart() {
 
               <View style={styles.checkboxContainer}>
                 {/* Optional chaining used while api get data*/}
-               <Card style={{ backgroundColor: '#fff' }}>
+               <Card style={styles.bgColorWhite}>
                 <Card.Content>
                 <View style={styles.flexRowAlignSpace}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
@@ -288,6 +288,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  bgColorWhite:{
+    backgroundColor:'white'
   },
   checkboxContainer: {
     marginBottom: 15,

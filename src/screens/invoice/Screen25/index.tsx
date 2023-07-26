@@ -243,7 +243,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={styles.mV_15}>
-                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                 <View style={styles.FlexNew}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
@@ -414,7 +414,7 @@ const renderHorizontalItem2 = (data) => {
               </View>
                  
               <View style={styles.mV_5}>
-                   <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                   <View style={styles.flexjustify}>
                      <Text style={[styles.smalltext,styles.FontColor]}>Mês de referência</Text>
                      <Text style={[styles.smalltext,styles.FontColor]}>Quantidade</Text>
                    </View>
@@ -441,12 +441,12 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                   </View>
 
-                  <View style={{marginVertical:10,flexDirection:'row',justifyContent:'flex-start'}}>
+                  <View style={styles.marginflexjustify}>
                     <View>
                        <Text style={{color:'#80c342',fontSize:20}}>0%</Text>
                     </View>
                     <View>
-                      <Text style={[styles.smalltext,{color:'black',marginHorizontal:10}]}>Não é cobrado o ICMS caso o consumo de energia seja de até 90 kWh.</Text>
+                      <Text style={[styles.smalltext,styles.BlackMargin]}>Não é cobrado o ICMS caso o consumo de energia seja de até 90 kWh.</Text>
                     </View>
                 </View>
 
@@ -456,7 +456,7 @@ const renderHorizontalItem2 = (data) => {
                        <Text style={styles.flexRowPerc}>12%</Text>
                     </View>
                     <View>
-                      <Text style={[styles.smalltext,{color:'black',marginHorizontal:10}]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
+                      <Text style={[styles.smalltext,styles.BlackMargin]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
                     </View>
                   </View>
 
@@ -465,7 +465,7 @@ const renderHorizontalItem2 = (data) => {
                        <Text style={styles.style25}>25%</Text>
                     </View>
                     <View>
-                      <Text style={[styles.smalltext,{color:'black',marginHorizontal:10}]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
+                      <Text style={[styles.smalltext,styles.BlackMargin]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
                     </View>
                 </View>
 
@@ -701,4 +701,23 @@ const styles = StyleSheet.create({
     height: 20,
     color: '#02ade1',
   },
+  FlexNew:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    width:'100%',
+    marginVertical:5
+  },
+  BlackMargin:{
+    color:'black',
+    marginHorizontal:10
+  },
+  marginflexjustify:{
+    marginVertical:10,
+    flexDirection:'row',
+    justifyContent:'flex-start'
+  },
+  flexjustify:{
+    flexDirection:'row',
+    justifyContent:'space-between'
+  }
 });

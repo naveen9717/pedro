@@ -246,7 +246,7 @@ const renderHorizontalItem2 = (data) => {
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
               <Text style={[styles.label,{textAlign:'right'}]}>Procotocolo: 000000000</Text>
 
-                <View style={{ marginVertical:10}}>
+                <View style={styles.mV_10}>
                   <Title>Conta fácil de entender</Title>
                 </View>
                 
@@ -260,7 +260,7 @@ const renderHorizontalItem2 = (data) => {
                    searchIcon={{color:'#02ade1',size:30,}}
                  />
               </View>
-              <View style={{ marginVertical:10}}>
+              <View style={styles.mV_10}>
                 <Card style={{ backgroundColor: '#80c342' }}>
                     <Card.Content>
                       <View style={styles.cardexc}>
@@ -288,7 +288,7 @@ const renderHorizontalItem2 = (data) => {
                   shadowRadius: 10,
                   elevation: 3, }}
                   activeTabStyle={{ backgroundColor: '#02ade1', }}
-                  tabTextStyle={{ color: '#717171', fontWeight: 'bold' }}
+                  tabTextStyle={styles.tabstyle}
                   activeTabTextStyle={{ color: '#FFFFFF' }}
                />
                {segment.customStyleIndex === 0
@@ -330,7 +330,7 @@ const renderHorizontalItem2 = (data) => {
                     </Card>
                   </View>
   
-                  <View style={{ marginVertical:15}}>
+                  <View style={styles.mV_15}>
                   <Card style={{ backgroundColor: '#04704e' }}>
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between',alignItems:'center' }}>
@@ -353,11 +353,11 @@ const renderHorizontalItem2 = (data) => {
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
-                  <View style={{ marginVertical:10}}>
-                    <Text style={[styles.largetextbold,{marginVertical:10}]}>Entenda sua conta</Text>
-                    <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Sua leitura</Text>
+                  <View style={styles.mV_10}>
+                    <Text style={[styles.largetextbold,styles.mV_10]}>Entenda sua conta</Text>
+                    <Text style={[styles.mediumtextbold,styles.mV_15]}>Sua leitura</Text>
                   </View>
-                  <View style={{ marginVertical:15}}>
+                  <View style={styles.mV_15}>
                   <Card style={{ backgroundColor: '#f68b1f' }}>
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -368,12 +368,12 @@ const renderHorizontalItem2 = (data) => {
                       </Card.Content>
                 </Card>
                </View>
-                <View style={{ marginVertical:10}}>
+                <View style={styles.mV_10}>
                     <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Sua leitura</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
                 </View> 
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                   <View style={styles.viewmes}>
                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
@@ -391,7 +391,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewtributos}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
@@ -409,7 +409,7 @@ const renderHorizontalItem2 = (data) => {
 
                 </View>
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewtarif}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
@@ -423,7 +423,7 @@ const renderHorizontalItem2 = (data) => {
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
 
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                    <View style={styles.viewmes}>
                       <Text style={[styles.smalltext,{color:'black'}]}>
                       { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[0] :'18/04'}
                       </Text>
@@ -475,8 +475,8 @@ const renderHorizontalItem2 = (data) => {
                 showLine={true}
                 lineData={stringifylineData}
                  />
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
-                 <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                 <View style={styles.viewstyles}>
+                 <View style={styles.RowFlex}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
@@ -488,7 +488,7 @@ const renderHorizontalItem2 = (data) => {
                  </View>
 
                  <View style={styles.bottomtext}>
-                 <View style={{flexDirection:'column',marginTop:5}}>
+                 <View style={styles.flexColumn}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
@@ -514,7 +514,7 @@ const renderHorizontalItem2 = (data) => {
               <View>
               <Text style={styles.mediumtextbold}>Composiçāo da sua conta</Text>
               <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_15}>
                    <PieChart
                      donut
                      data={pieData}
@@ -527,10 +527,10 @@ const renderHorizontalItem2 = (data) => {
                      showTextBackground
                      textBackgroundRadius={20}
                    />
-                  <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Total: R$ 146,68</Text>
+                  <Text style={[styles.mediumtextbold,styles.mV_15]}>Total: R$ 146,68</Text>
 
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <FlatList
                     data={pieData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -589,11 +589,11 @@ const renderHorizontalItem2 = (data) => {
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
-                  <View style={{ marginVertical:10}}>
-                    <Text style={[styles.largetextbold,{marginVertical:10}]}>Entenda sua conta</Text>
-                    <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Sua leitura</Text>
+                  <View style={styles.mV_10}>
+                    <Text style={[styles.largetextbold,styles.mV_10]}>Entenda sua conta</Text>
+                    <Text style={[styles.mediumtextbold,styles.mV_15]}>Sua leitura</Text>
                   </View>
-                  <View style={{ marginVertical:15}}>
+                  <View style={styles.mV_15}>
                   <Card style={{ backgroundColor: '#80c342' }}>
                     <Card.Content>
                       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -604,14 +604,14 @@ const renderHorizontalItem2 = (data) => {
                       </Card.Content>
                 </Card>
                </View>
-                <View style={{ marginVertical:10}}>
+                <View style={styles.mV_10}>
                     <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Sua leitura</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
                 </View> 
 
 
-                <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                <View style={styles.mV_15}>
+                 <View style={styles.viewmes}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                  </View>
@@ -623,7 +623,7 @@ const renderHorizontalItem2 = (data) => {
                    /> 
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>Seu consumo aumentou comparado ao més passado.</Text>
                 </View>
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
@@ -637,7 +637,7 @@ const renderHorizontalItem2 = (data) => {
 
                 </View>
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewtarif}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
@@ -650,7 +650,7 @@ const renderHorizontalItem2 = (data) => {
                     <View style={{flexDirection:'row',width:'100%',height:30}}>
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                    <View style={styles.viewmes}>
                     <Text style={[styles.smalltext,{color:'black'}]}>
                     { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[0] :'18/04'}
                       </Text>
@@ -703,11 +703,11 @@ const renderHorizontalItem2 = (data) => {
                 lineData={stringifylineData}
                  />
                  <View style={styles.viewvalor}>
-                 <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                 <View style={styles.RowFlex}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
-                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                  <View style={styles.RowFlex}>
                   <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
@@ -715,7 +715,7 @@ const renderHorizontalItem2 = (data) => {
                  </View>
 
                  <View style={styles.bottomtext}>
-                 <View style={{flexDirection:'column',marginTop:5}}>
+                 <View style={styles.flexColumn}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
@@ -741,7 +741,7 @@ const renderHorizontalItem2 = (data) => {
               <View>
               <Text style={styles.mediumtextbold}>Composiçāo da sua conta</Text>
               <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_15}>
                    <PieChart
                      donut
                      data={pieData}
@@ -754,10 +754,10 @@ const renderHorizontalItem2 = (data) => {
                      showTextBackground
                      textBackgroundRadius={15}
                    />
-                  <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Total: R$ 146,68</Text>
+                  <Text style={[styles.mediumtextbold,styles.mV_15]}>Total: R$ 146,68</Text>
 
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <FlatList
                     data={pieData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -800,14 +800,14 @@ const renderHorizontalItem2 = (data) => {
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
-                  <View style={{ marginVertical:10}}>
-                    <Text style={[styles.largetextbold,{marginVertical:10}]}>Entenda sua conta</Text>
-                    <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Sua leitura</Text>
+                  <View style={styles.mV_10}>
+                    <Text style={[styles.largetextbold,styles.mV_10]}>Entenda sua conta</Text>
+                    <Text style={[styles.mediumtextbold,styles.mV_15]}>Sua leitura</Text>
                   </View>
-                  <View style={{ marginVertical:15}}>
+                  <View style={styles.mV_15}>
                   <Card style={{ backgroundColor: '#80c342' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.RowJustify}>
                         <View>
                           <Text style={[styles.mediumtextbold,{marginVertical:1,color:'#FFFFFF'}]}>Obrigada por manter o acesso livre ao seu medidor (relógio). Nossa equipe esteve no seu imóvel no dia XX/XX para fazer a leitura..</Text>
                         </View>
@@ -815,12 +815,12 @@ const renderHorizontalItem2 = (data) => {
                       </Card.Content>
                 </Card>
                </View>
-                <View style={{ marginVertical:10}}>
+                <View style={styles.mV_10}>
                     <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Sua leitura</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>Confira abaixo os principais motivos que levaram ao aumento:</Text>
                 </View> 
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewmes}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
@@ -833,7 +833,7 @@ const renderHorizontalItem2 = (data) => {
                    /> 
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>Seu consumo aumentou comparado ao més passado.</Text>
                 </View>
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewtributos}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
@@ -846,7 +846,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>O consumo ultrapassou 200 quilowatt-hora e a alíquota de ICMS foi de 25%</Text>
                 </View>
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={styles.viewbanderia}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={styles.viewfeather}> 
@@ -921,7 +921,7 @@ const renderHorizontalItem2 = (data) => {
                  </View>
 
                  <View style={styles.bottomtext}>
-                 <View style={{flexDirection:'column',marginTop:5}}>
+                 <View style={styles.flexColumn}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
@@ -947,7 +947,7 @@ const renderHorizontalItem2 = (data) => {
               <View>
               <Text style={styles.mediumtextbold}>Composiçāo da sua conta</Text>
               <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_15}>
                    <PieChart
                      donut
                      data={pieData}
@@ -960,10 +960,10 @@ const renderHorizontalItem2 = (data) => {
                      showTextBackground
                      textBackgroundRadius={15}
                    />
-                  <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Total: R$ 146,68</Text>
+                  <Text style={[styles.mediumtextbold,styles.mV_15]}>Total: R$ 146,68</Text>
 
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <FlatList
                     data={pieData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -1007,6 +1007,28 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  flexColumn:{
+    flexDirection:'column',
+    marginTop:5
+  },
+  RowFlex:{
+    flexDirection:'row',
+    alignItems:'flex-start'
+  },
+  RowJustify:{
+    flexDirection: 'row', 
+    justifyContent: 'space-between'
+  },
+  viewstyles:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginTop:10
+  },
+  tabstyle:{
+    color: '#717171', 
+    fontWeight: 'bold'
   },
   cardfirst:{
     flexDirection:'row',
@@ -1192,4 +1214,10 @@ const styles = StyleSheet.create({
     borderTopWidth:1,
     borderTopColor:'lightgrey'
   },
+  mV_15:{
+    marginVertical:15
+  },
+  mV_10:{
+    marginVertical:10
+  }
 });

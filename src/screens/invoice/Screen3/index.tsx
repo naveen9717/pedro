@@ -289,7 +289,7 @@ export function Screen3() {
                       <View style={styles.container}>
                         <View>
                           <FontIcon name="files-o" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Histórico de contas</Text>
+                          <Text style={[styles.bartext,styles.mV_10]}>Histórico de contas</Text>
                         </View>
                       </View>
                     </Card.Content>
@@ -300,7 +300,7 @@ export function Screen3() {
                       <View style={styles.container}>
                         <View>
                           <Ionicons name="flash-off-outline" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Entenda sua conta</Text>
+                          <Text style={[styles.bartext, styles.mV_10]}>Entenda sua conta</Text>
                         </View>
                       </View>
                     </Card.Content>
@@ -315,7 +315,7 @@ export function Screen3() {
                       <View style={styles.container}>
                         <View>
                         <Ionicons name="flash-off-outline" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Falta de energia</Text>
+                          <Text style={[styles.bartext, styles.mV_10]}>Falta de energia</Text>
                         </View>
                       </View>
                     </Card.Content>
@@ -328,7 +328,7 @@ export function Screen3() {
                       <View style={styles.container}>
                         <View>
                           <AntIcon name="bars" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Meus pedidos</Text>
+                          <Text style={[styles.bartext, styles.mV_10]}>Meus pedidos</Text>
                         </View>
                       </View>
                     </Card.Content>
@@ -339,12 +339,11 @@ export function Screen3() {
                       <View style={styles.container}>
                         <View>
                           <FeatherIcon name="grid" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Ver mais serviços</Text>
+                          <Text style={[styles.bartext, styles.mV_10]}>Ver mais serviços</Text>
                         </View>
                       </View>
                     </Card.Content>
                 </Card>
-                
               </View>
 
                 <View style={styles.mV_10}>

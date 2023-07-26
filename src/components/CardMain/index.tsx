@@ -62,7 +62,7 @@ export default function CardMain({
          <View style={{marginBottom:20}}>
                 <Card style={{backgroundColor:'white'}}>
                     <Card.Content>
-                    <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
+                    <View style={styles.flexJustify}>
                       <View>
                         <Text style={styles.smalltext}>{title}</Text>
                         <Text style={styles.mediumtextbold}>{code_install}</Text>
@@ -75,7 +75,7 @@ export default function CardMain({
                       </TouchableOpacity>
                     </View>
                   </View>
-                    <View style={{flexDirection: 'row',  justifyContent: 'space-between'}}>
+                    <View style={styles.flexJustify}>
             
                     <View>
                     <Text style={styles.addressheading}>Endereço</Text>
@@ -181,6 +181,9 @@ const styles = StyleSheet.create({
   bar:{
     width:40,
     height: 30,
-
+  },
+  flexJustify:{
+    flexDirection: 'row',  
+    justifyContent: 'space-between'
   }
 });

@@ -97,7 +97,7 @@ export function InvoiceEasyComposition() {
   const renderItem = (data) => {
     return (
       <View style={{marginVertical:8}}>
-        <View style={{flexDirection:'row'}}>
+        <View style={styles.FlexRow}>
         <View style={{width:16,height:16,borderRadius:8,backgroundColor:data.item.color}}></View>
         <Text style={[styles.mediumtextbold,{marginTop:-2,marginLeft:2}]}>{data.item.name}</Text>
         </View>
@@ -150,7 +150,7 @@ export function InvoiceEasyComposition() {
                   <Text style={styles.mediumtextbold}>Composição da sua conta</Text>
                   <Text style={styles.smalltext}>Veja e entenda como é composta sua conta de energia.</Text>
                  </View>
-                <View style={{flexDirection:'row'}}>
+                <View style={styles.FlexRow}>
                    <View style={styles.mV_5}>
                     <PieChart
                      donut
@@ -243,6 +243,9 @@ const styles = StyleSheet.create({
   },
   mV_5:{
     marginVertical:15
+  },
+  FlexRow:{
+    flexDirection:'row'
   },
   smalltext:{
     fontSize:12,

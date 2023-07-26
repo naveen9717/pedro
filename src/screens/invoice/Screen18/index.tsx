@@ -165,7 +165,7 @@ export function Screen18() {
                     searchIcon={{color:'#02ade1',size:30,}}
                  />
               </View>
-              <View style={{ marginVertical:10}}>
+              <View style={styles.mV_10}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
@@ -173,12 +173,12 @@ export function Screen18() {
                          </View>
                         <View style={styles.cardflex_4}>
                          <View style={styles.cardflex}>
-                           <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
+                           <Text style={[styles.mediumtextbold,styles.mV_1]}>Casa da mãe</Text>
                            <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
                          <View style={styles.FlexRowsColor}>
-                           <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                           <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
+                           <Text style={[styles.smalltext,styles.mV_1]}>Número da Instalação: </Text>
+                           <Text style={[styles.label,styles.mV_1]}>0123453333</Text>
                          </View>
                          <View>
                            <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Paulista, 1000, Bela Vista, São Paulo - SP</Text>
@@ -189,7 +189,7 @@ export function Screen18() {
                 </Card>
               </View>
 
-              <View style={{ marginVertical:10}}>
+              <View style={styles.mV_10}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
@@ -197,12 +197,12 @@ export function Screen18() {
                          </View>
                         <View style={styles.cardflex_4}>
                          <View style={styles.cardflex}>
-                            <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa</Text>
+                            <Text style={[styles.mediumtextbold,styles.mV_1]}>Casa</Text>
                             <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
                          <View style={styles.FlexRowsColor}>
-                            <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                            <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                            <Text style={[styles.smalltext,styles.mV_1]}>Número da Instalação: </Text>
+                            <Text style={[styles.label,styles.mV_1]}>0123450943</Text>
                          </View>
                          <View>
                             <Text style={[styles.smalltext,{marginVertical:5}]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
@@ -213,7 +213,7 @@ export function Screen18() {
                 </Card>
               </View>
 
-              <View style={{ marginVertical:10}}>
+              <View style={styles.mV_10}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
@@ -221,12 +221,12 @@ export function Screen18() {
                          </View>
                         <View style={styles.cardbodyview}>
                          <View style={styles.cardflex}>
-                            <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Dois irmãos construções</Text>
+                            <Text style={[styles.mediumtextbold,styles.mV_1]}>Dois irmãos construções</Text>
                             <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#ed2125',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Inativa</Text>
                          </View>
                          <View style={styles.cardcontent}>
-                            <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
-                            <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
+                            <Text style={[styles.smalltext,styles.mV_1]}>Número da Instalação: </Text>
+                            <Text style={[styles.label,styles.mV_1]}>0123450943</Text>
                          </View>
                          <View>
                            <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
@@ -340,4 +340,10 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     marginVertical: 10,
   },
+  mV_1:{
+    marginVertical:1
+  },
+  mV_10:{
+    marginVertical:10
+  }
 });
