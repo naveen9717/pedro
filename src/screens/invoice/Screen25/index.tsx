@@ -99,7 +99,7 @@ export function Screen25({ route, navigation }){
 
   const renderItem = (data) => {
     return (
-      <View style={{marginVertical:5}}>
+      <View style={styles.mV_5}>
         <View style={{flexDirection:'row'}}>
         <View style={{width:14,height:14,borderRadius:7,backgroundColor:data.item.color}}></View>
         <Text style={[styles.mediumtextbold,{marginTop:-2,marginLeft:2}]}>{data.item.name}</Text>
@@ -133,14 +133,14 @@ const HorizontalBarData = [
 
 const renderHorizontalItem = (data) => {
   return (
-    <View style={{marginVertical:5,}}>
-      <View style={{flexDirection:'row',width:'100%',height:30}}>
+    <View style={styles.mV_5}>
+      <View style={styles.RowHeight}>
       <View style={{width:data.item.percentage,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
       <View style={{width:data.item.percent,backgroundColor:data.item.color2,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
       </View>
-      <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-      <Text style={[styles.smalltext,{color:'black'}]}>{data.item.date}</Text>
-      <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
+      <View style={styles.RowSpace}>
+      <Text style={[styles.smalltext,styles.colorBlack]}>{data.item.date}</Text>
+      <Text style={[styles.smalltext,styles.colorBlack]}>KWh {data.item.value}</Text>
       </View>
     </View>
   )
@@ -152,8 +152,8 @@ const HorizontalBarData2 = [
 
 const renderHorizontalItem2 = (data) => {
   return (
-    <View style={{marginVertical:5,}}>
-      <View style={{flexDirection:'row',width:'100%',height:30}}>
+    <View style={styles.mV_5}>
+      <View style={styles.RowHeight}>
       <View style={{width:data.item.percentone,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
       <View style={{width:data.item.percenttwo,backgroundColor:data.item.color2}}/>
       <View style={{width:data.item.percentthree,backgroundColor:data.item.color3}}/>
@@ -161,9 +161,9 @@ const renderHorizontalItem2 = (data) => {
 
 
       </View>
-      <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-      <Text style={[styles.smalltext,{color:'black'}]}>{data.item.name}</Text>
-      <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
+      <View style={styles.RowSpace}>
+      <Text style={[styles.smalltext,styles.colorBlack]}>{data.item.name}</Text>
+      <Text style={[styles.smalltext,styles.colorBlack]}>KWh {data.item.value}</Text>
       </View>
     </View>
   )
@@ -206,27 +206,27 @@ const renderHorizontalItem2 = (data) => {
               <MainGenericContainer style={{ paddingTop: height * 0.02 }}>
               <Text style={[styles.label,{textAlign:'right'}]}>Procotocolo: 000000000</Text>
 
-                <View style={{ marginVertical:10}}>
+                <View style={styles.mV_10}>
                   <Title>Conta fácil de entender</Title>
                 </View>
               
               <View style={styles.checkboxContainer}>
-                  <View style={{ marginVertical: 10 }}>
+                  <View style={styles.mV_10}>
                     <Text style={[styles.largetextbold,{marginVertical:5}]}>Entenda sua conta</Text>
                   </View>
                  
-                <View style={{ marginVertical:5}}>
-                    <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Sua leitura</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>O consumo ultrapassou 200 quilowatt-hora e a alíquota de ICMS foi de 25%</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>AQui voce pode comparar e conterr os principais itens presenres na sua coara de me na promo</Text>
+                <View style={styles.mV_5}>
+                    <Text style={[styles.mediumtextbold,styles.mV_5]}>Sua leitura</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>O consumo ultrapassou 200 quilowatt-hora e a alíquota de ICMS foi de 25%</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>AQui voce pode comparar e conterr os principais itens presenres na sua coara de me na promo</Text>
 
                 </View> 
-                <View style={{ marginVertical:10}}>
-                    <Text style={[styles.mediumtextbold,{marginVertical:5}]}>Seu consumo</Text>
+                <View style={styles.mV_10}>
+                    <Text style={[styles.mediumtextbold,styles.mV_5]}>Seu consumo</Text>
                 </View> 
 
-                <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+                <View style={styles.mV_15}>
+                 <View style={styles.RowSpace}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
                  </View>
@@ -236,13 +236,13 @@ const renderHorizontalItem2 = (data) => {
                     renderItem={item => renderHorizontalItem(item)}
                     keyExtractor={item => item.value.toString()}
                    /> 
-                  <View style={{ marginVertical:10}}>
-                    <Text style={[styles.mediumtextbold,{marginVertical:5}]}>O que é consumo?</Text>
-                    <Text style={[styles.smalltext,{marginVertical:10}]}>E a quantidade de energia gasta em quilowatt-hora(KVvI durante seu periodo de consumo</Text>
+                  <View style={styles.mV_10}>
+                    <Text style={[styles.mediumtextbold,styles.mV_5]}>O que é consumo?</Text>
+                    <Text style={[styles.smalltext,styles.mV_10]}>E a quantidade de energia gasta em quilowatt-hora(KVvI durante seu periodo de consumo</Text>
                 </View> 
                 </View>
 
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_15}>
                  <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
@@ -250,81 +250,81 @@ const renderHorizontalItem2 = (data) => {
                   </View>
 
                  </View>
-                 <View style={{marginVertical:5,}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                 <View style={styles.mV_5}>
+                   <Text style={[styles.smalltext,styles.FontColor]}>Período de consumo: 29 dias</Text>
+                    <View style={styles.RowHeight}>
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                    <Text style={[styles.smalltext,{color:'black'}]}>
+                    <View style={styles.RowSpace}>
+                    <Text style={[styles.smalltext,styles.colorBlack]}>
                       { route.params?.datavalue ? route?.params.datavalue.split('-')[0] :'18/04'}
                       </Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>
                       { route.params?.datavalue ? route?.params.datavalue.split('-')[1] :'17/05'}
                       </Text>
                     </View>
                   </View>
 
-                  <View style={{marginVertical:5,}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 33 dias</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                  <View style={styles.mV_5}>
+                   <Text style={[styles.smalltext,styles.FontColor]}>Período de consumo: 33 dias</Text>
+                    <View style={styles.RowHeight}>
                        <View style={{width:'15%',backgroundColor:'#80c342',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
                        <View style={{width:'85%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                    <Text style={[styles.smalltext,{color:'black'}]}>
+                    <View style={styles.RowSpace}>
+                    <Text style={[styles.smalltext,styles.colorBlack]}>
                       { route.params?.datavalue ? route?.params.datavalue.split('-')[0] :'18/04'}
                       </Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>
                       { route.params?.datavalue ? route?.params.datavalue.split('-')[1] :'17/05'}
                       </Text>
                     </View>
                   </View>
 
-                  <View style={{marginVertical:15}}>
-                   <View style={{marginVertical:5}}>
+                  <View style={styles.mV_15}>
+                   <View style={styles.mV_5}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira</Text>
                    <View style={{ backgroundColor: '#04704e',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black'}]}>A tarifa não tem acréscimo.</Text>
+                  <Text style={[styles.smalltext,styles.colorBlack]}>A tarifa não tem acréscimo.</Text>
                  </View>
 
-                 <View style={{marginVertical:5}}>
+                 <View style={styles.mV_5}>
                    <View >
                    <View style={{ backgroundColor: '#fbcd5b',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
                    <FeatherIcon name="flag" color="#f15e38" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'#f15e38',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black'}]}>A tarifa tem um acréscimo de R$ 1,50 a cada 100 kWh conumidos.</Text>
+                  <Text style={[styles.smalltext,styles.colorBlack]}>A tarifa tem um acréscimo de R$ 1,50 a cada 100 kWh conumidos.</Text>
                  </View>
 
-                 <View style={{marginVertical:5}}>
+                 <View style={styles.mV_5}>
                    <View >
                    <View style={{ backgroundColor: '#ed2125',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black'}]}>A tarifa tem um acréscimo de R$ 4,00 a cada 100 kWh consumidos.</Text>
+                  <Text style={[styles.smalltext,styles.colorBlack]}>A tarifa tem um acréscimo de R$ 4,00 a cada 100 kWh consumidos.</Text>
                  </View>
 
-                 <View style={{marginVertical:5}}>
+                 <View style={styles.mV_5}>
                    <View >
                    <View style={{ backgroundColor: '#ed2125',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black'}]}>A tarifa tem um acréscimo de R$ 6,00 a cada 100 kWh consumidos.</Text>
+                  <Text style={[styles.smalltext,styles.colorBlack]}>A tarifa tem um acréscimo de R$ 6,00 a cada 100 kWh consumidos.</Text>
                  </View>
 
-                 <View style={{marginVertical:5}}>
+                 <View style={styles.mV_5}>
                    <View >
                    <View style={{ backgroundColor: '#c0181b',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Escassez hídrica</Text>
                    </View>
                   </View>
-                  <Text style={[styles.smalltext,{color:'black'}]}>A tarifa tem um acréscimo de R$ 14.20 a cada 100kWh consumidos (exceto para clientes baixa renda).</Text>
+                  <Text style={[styles.smalltext,styles.colorBlack]}>A tarifa tem um acréscimo de R$ 14.20 a cada 100kWh consumidos (exceto para clientes baixa renda).</Text>
                  </View>
 
                  <View style={{marginVertical:5,backgroundColor: '#1d58a0',padding:15,borderTopRightRadius:35}}>
@@ -335,7 +335,7 @@ const renderHorizontalItem2 = (data) => {
               <View>
               <Text style={styles.mediumtextbold}>Tributos</Text>
               <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_15}>
                    <PieChart
                      donut
                      data={stringifyPieData}
@@ -351,7 +351,7 @@ const renderHorizontalItem2 = (data) => {
                    />
 
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <FlatList
                     data={stringifyPieData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -365,7 +365,7 @@ const renderHorizontalItem2 = (data) => {
 
 
               <View style={{flexDirection:'row'}}>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_15}>
                    <PieChart
                      donut
                      data={stringifyPieData}
@@ -381,7 +381,7 @@ const renderHorizontalItem2 = (data) => {
                    />
 
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <FlatList
                     data={stringifyPieData}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -394,50 +394,50 @@ const renderHorizontalItem2 = (data) => {
             </View>
             </View>
 
-              <View style={{marginVertical:5}}>
+              <View style={styles.mV_5}>
                   <View>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',marginHorizontal:2}]}>Os tributos são compostos por:</Text>
                   </View>
-                   <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>Programas de Integração Social (PIS): Tributo Federal que assegura recursos voltados ao trabalhador e programas sociais do Governo Federal. De modo geral, tem a finalidade de melhorar a distribuicão da renda nacional.</Text>
+                   <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Programas de Integração Social (PIS): Tributo Federal que assegura recursos voltados ao trabalhador e programas sociais do Governo Federal. De modo geral, tem a finalidade de melhorar a distribuicão da renda nacional.</Text>
 
-                   <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>Contribuição para Financiamento da Seguridade Social (COFINS): Também é um tributo Federal e incide sobre a receita bruta das empresas em geral, se destinando a financiar a seguridade social (previdência social, a saúde e a assistência social).</Text>
+                   <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Contribuição para Financiamento da Seguridade Social (COFINS): Também é um tributo Federal e incide sobre a receita bruta das empresas em geral, se destinando a financiar a seguridade social (previdência social, a saúde e a assistência social).</Text>
 
-                   <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>Importo sobre Circulação de Mercadorias e Serviços (ICMS): Esse é um tributo Estadual aplicado sobre qualquer produto ou serviço, como por exemplo, a energia elétrica fornecida. Cada Estado estabelece uma alíquota para esse imposto que pode ser variável de acordo com o seu consumo.</Text>
+                   <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Importo sobre Circulação de Mercadorias e Serviços (ICMS): Esse é um tributo Estadual aplicado sobre qualquer produto ou serviço, como por exemplo, a energia elétrica fornecida. Cada Estado estabelece uma alíquota para esse imposto que pode ser variável de acordo com o seu consumo.</Text>
                  </View>
             </View>
 
-              <View style={{marginVertical:5}}>
+              <View style={styles.mV_5}>
                   <View>
                     <Text style={[styles.mediumtextbold,{fontWeight:'600',marginHorizontal:2}]}>ICMS:</Text>
                   </View>
                    <Text style={[styles.smalltext,{color:'black',marginVertical:5}]}>As regras de cobrança do ICMS são definidas pelos Estados. A distribuidora faz apenas o repasse integralM desse imposto para Secretaria da Fazenda Estadual(SEFAZ).</Text>
               </View>
                  
-              <View style={{marginVertical:5,}}>
+              <View style={styles.mV_5}>
                    <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Mês de referência</Text>
-                     <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Quantidade</Text>
+                     <Text style={[styles.smalltext,styles.FontColor]}>Mês de referência</Text>
+                     <Text style={[styles.smalltext,styles.FontColor]}>Quantidade</Text>
                    </View>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                    <View style={styles.RowHeight}>
                        <View style={{width:'55%',backgroundColor:'#f15e38',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
                        <View style={{width:'45%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>16/03</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/03</Text>
+                    <View style={styles.RowSpace}>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>16/03</Text>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>18/03</Text>
                     </View>
               </View>
 
-               <View style={{marginVertical:5,}}>
+               <View style={styles.mV_5}>
                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                    <View style={styles.RowHeight}>
                        <View style={{width:'55%',backgroundColor:'#f15e38',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
-                       <View style={{width:'45%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
+                       <View style={[styles.viewstyle,{width:'45%'}]}/>
                     </View>
-                    <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
-                      <Text style={[styles.smalltext,{color:'black'}]}>16/03</Text>
-                      <Text style={[styles.smalltext,{color:'black'}]}>18/03</Text>
+                    <View style={styles.RowSpace}>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>16/03</Text>
+                      <Text style={[styles.smalltext,styles.colorBlack]}>18/03</Text>
                     </View>
                   </View>
 
@@ -451,33 +451,33 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
 
-                <View style={{marginVertical:10,flexDirection:'row',justifyContent:'flex-start'}}>
+                <View style={styles.flexRow}>
                     <View>
-                       <Text style={{color:'#fecd5b',fontSize:20}}>12%</Text>
+                       <Text style={styles.flexRowPerc}>12%</Text>
                     </View>
                     <View>
                       <Text style={[styles.smalltext,{color:'black',marginHorizontal:10}]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
                     </View>
                   </View>
 
-                  <View style={{marginVertical:10,flexDirection:'row',justifyContent:'flex-start'}}>
+                  <View style={styles.flexRow25}>
                     <View>
-                       <Text style={{color:'#f15e38',fontSize:20}}>25%</Text>
+                       <Text style={styles.style25}>25%</Text>
                     </View>
                     <View>
                       <Text style={[styles.smalltext,{color:'black',marginHorizontal:10}]}>É o percentual do ICMS caso o consumo de energia seja entre 91 kWh e 200 kWh.</Text>
                     </View>
                 </View>
 
-                <View style={{marginVertical:5,}}>
-                   <Text style={[styles.mediumtext,{fontWeight:'600',color:'black',marginVertical:2,}]}>Taxas</Text>
+                <View style={styles.mV_5}>
+                   <Text style={[styles.mediumtext,styles.mediumtextBlack]}>Taxas</Text>
                   </View>
                   <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Encargos Setoriais</Text>
                     </View>
                     <View>
-                      <Text style={[styles.largetextbold,{color:'black',marginVertical:0}]}>R$12,78</Text>
+                      <Text style={[styles.largetextbold,styles.ColorVertical]}>R$12,78</Text>
                     </View>
                 </View>
 
@@ -486,7 +486,7 @@ const renderHorizontalItem2 = (data) => {
                        <Text style={styles.smalltext}>Perdas</Text>
                     </View>
                     <View>
-                      <Text style={[styles.largetextbold,{color:'black',marginVertical:0}]}>R$8,75</Text>
+                      <Text style={[styles.largetextbold,styles.ColorVertical]}>R$8,75</Text>
                     </View>
                 </View>
 
@@ -495,20 +495,20 @@ const renderHorizontalItem2 = (data) => {
                        <Text style={styles.smalltext}>Total de taxas</Text>
                     </View>
                     <View>
-                      <Text style={[styles.largetextbold,{color:'#02ade1',marginVertical:0}]}>R$21,53</Text>
+                      <Text style={[styles.largetextbold,styles.ColorVertical]}>R$21,53</Text>
                     </View>
                 </View>
                   <Text style={[styles.mediumtextbold,{textAlign:'center'}]}>Vencimento: 13/05/2022</Text>
 
-                <View style={{marginVertical:5,}}>
-                   <Text style={[styles.mediumtext,{fontWeight:'600',color:'black',marginVertical:2,}]}>Taxas</Text>
+                <View style={styles.mV_5}>
+                   <Text style={[styles.mediumtext,styles.FontColor]}>Taxas</Text>
                   </View>
                   <View style={styles.viewenc}>
                     <View>
                        <Text style={styles.smalltext}>Encargos Setoriais</Text>
                     </View>
                     <View>
-                      <Text style={[styles.largetextbold,{color:'black',marginVertical:0}]}>R$12,78</Text>
+                      <Text style={[styles.largetextbold,styles.ColorVertical]}>R$12,78</Text>
                     </View>
                 </View>
 
@@ -517,7 +517,7 @@ const renderHorizontalItem2 = (data) => {
                        <Text style={styles.smalltext}>Perdas</Text>
                     </View>
                     <View>
-                      <Text style={[styles.largetextbold,{color:'black',marginVertical:0}]}>R$8,75</Text>
+                      <Text style={[styles.largetextbold,styles.ColorVertical]}>R$8,75</Text>
                     </View>
                 </View>
 
@@ -577,8 +577,67 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'flex-start'
   },
+  mediumtextBlack:{
+    fontWeight:'600',
+    color:'black',
+    marginVertical:2,
+  },
+  ColorVertical:{
+    color:'black',
+    marginVertical:0
+  },
+  FontColor:{
+    fontWeight:'600',
+    color:'black',
+    marginVertical:2
+  },
+  colorBlack:{
+    color:'black'
+  },
+  RowHeight:{
+    flexDirection:'row',
+    width:'100%',
+    height:30
+  },
+  RowSpace:{
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'space-between'
+  },
+  style25:{
+    color:'#f15e38',
+    fontSize:20
+  },
+  mV_5:{
+    marginVertical:5
+  },
+  mV_10:{
+    marginVertical:10
+  },
+  flexRowPerc:{
+    color:'#fecd5b',
+    fontSize:20
+  },
+  viewstyle:{
+    backgroundColor:'#eeeeee',
+    borderBottomRightRadius:15,
+    borderTopRightRadius:15
+  },
+  flexRow:{
+    marginVertical:10,
+    flexDirection:'row',
+    justifyContent:'flex-start'
+  },
+  flexRow25:{
+    marginVertical:10,
+    flexDirection:'row',
+    justifyContent:'flex-start'
+  },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  mV_15:{
+   marginVertical:15
   },
   viewcfl:{
     marginVertical:15,

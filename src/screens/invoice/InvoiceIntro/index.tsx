@@ -112,11 +112,11 @@ export function InvoiceIntro() {
 
             <ScrollView>
               <MainGenericContainer style={{ paddingTop: height * 0.01, height: height }}>
-                <View style={{justifyContent: 'center', alignItems: 'center' }}>
+                <View style={styles.JAcenter}>
                   <Title paddingBottom={height * 0.01}>Tire sua segunda via aqui!</Title>
                   <Image
                     source={require('../../../assets/images/icQrCode.png')}
-                    style={{ width: 250, height: 250 }}
+                    style={styles.imageSize}
                   />
                   <Label>Se voce perdeu, nao recebeu sua conta ou precisa
                     de um comprovante de residência, solicite aqui a
@@ -157,6 +157,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  imageSize:{
+    width: 250,
+    height: 250
+  },
+  JAcenter:{
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   checkboxContainer: {
     flexDirection: 'row',

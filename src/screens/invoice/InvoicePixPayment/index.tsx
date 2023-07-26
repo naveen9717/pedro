@@ -159,13 +159,13 @@ export function InvoicePixPayment() {
                        {key: 'Não necessidade de abertura de NS para'},
                        {key: 'Paiva da Cantaa Palias'},
                       ]}
-                     renderItem={({item}) => <View style={{flexDirection:'row'}}><View style={styles.bullets}></View><Text style={styles.bullettext}>{item.key}</Text></View>}
+                     renderItem={({item}) => <View style={styles.flexRow}><View style={styles.bullets}></View><Text style={styles.bullettext}>{item.key}</Text></View>}
                    />
                 </View>
 
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
                 <View style={styles.mTop}>
-                <Card style={{ backgroundColor: '#fff', width: '30%' }}>
+                <Card style={styles.CardView}>
                   <Card.Content>
                       <View>
                          <AntIcon name="barcode" color="#000000" size={30} />
@@ -194,6 +194,13 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  flexRow:{
+    flexDirection:'row'
+  },
+  CardView:{
+    backgroundColor: '#fff',
+    width: '30%' 
   },
   iconcenter:{
     backgroundColor:'#02ade1',

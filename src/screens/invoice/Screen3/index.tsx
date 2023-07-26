@@ -171,7 +171,7 @@ export function Screen3() {
             <ScrollView>
               <MainGenericContainer>
 
-              <View style={{backgroundColor:"#02ade1",marginLeft:-40,marginRight:-40,paddingLeft:40,paddingRight:40,paddingVertical:20}}>
+              <View style={styles.flexViewTop}>
                       <View>
                         <Text style={[styles.filtertext,{color:'#FFFFFF'}]} > Olá. Gustavo Risonho</Text>
                         <Text style={[styles.filtertext,{color:'#FFFFFF'}]} > N° da instalação: 0123453333 </Text>
@@ -188,7 +188,7 @@ export function Screen3() {
                  <View>
                   <Title>Minhas contas</Title>
                 </View>
-                  <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
+                  <View style={styles.flexView}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
                   </View>
@@ -197,7 +197,7 @@ export function Screen3() {
               <View style={{ marginVertical:15}}>
                   <Card style={{ backgroundColor: '#fecd5b' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',alignItems:'center',paddingHorizontal:12 }}>
+                      <View style={styles.flexRows}>
                         <View style={{ marginHorizontal:2}}>
                         <AntIcon name="exclamationcircleo" color="#ed1c25" size={17} />
                         </View>
@@ -210,8 +210,8 @@ export function Screen3() {
                 </Card>
               </View>
 
-              <View style={{flexDirection:'row',justifyContent:'space-between',marginVertical:15}}>
-                  <View style={{ flexDirection: 'row', }}>
+              <View style={styles.flexRowJus}>
+                  <View style={styles.flexRow}>
                     <View>
                       <FeatherIcon name="dollar-sign" color="#02ade1" size={18} />
                       </View>
@@ -228,13 +228,13 @@ export function Screen3() {
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexJustify}>
                         <View>
                           <Text style={styles.smalltext}>Conta de energia</Text>
                           <Text style={styles.amount}>R$ 124.153,58</Text>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexJustify}>
 
                         <View>
                           <Text style={styles.title}>Alberta</Text>
@@ -267,24 +267,24 @@ export function Screen3() {
                   </Card>
                 </View>
 
-                <View style={{marginVertical:10}}>
+                <View style={styles.mV_10}>
                   <Title>Sugestões para você</Title>
                 </View>
-              <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <View style={styles.flexJustify}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
-                  <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
+                  <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
                           <FontIcon name="files-o" color="#02ade1" size={25} />
-                          <Text style={[styles.bartext, {marginTop:10}]}>Débitos e segunda via</Text>
+                          <Text style={[styles.bartext, styles.mV_10]}>Débitos e segunda via</Text>
                         </View>
                       </View>
                     </Card.Content>
                   </Card>
                 </TouchableWithoutFeedback>
 
-                <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
+                <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -295,7 +295,7 @@ export function Screen3() {
                     </Card.Content>
                 </Card>
 
-                <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
+                <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -310,7 +310,7 @@ export function Screen3() {
 
               <View style={styles.viewfull}>
                 <TouchableWithoutFeedback onPress={handleClickDebit}>
-                  <Card style={{ backgroundColor: '#fff', flex: 2,margin:5 }}>
+                  <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -323,7 +323,7 @@ export function Screen3() {
 
                 </TouchableWithoutFeedback>
 
-                <Card style={{ backgroundColor: '#fff', flex: 2, margin:5 }}>
+                <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -334,7 +334,7 @@ export function Screen3() {
                     </Card.Content>
                 </Card>
 
-                <Card style={{ backgroundColor: '#fff', flex: 2, margin:5 }}>
+                <Card style={styles.cardStyle}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -347,14 +347,14 @@ export function Screen3() {
                 
               </View>
 
-                <View style={{marginVertical:10}}>
+                <View style={styles.mV_10}>
                   <Title>Meus pedidos em aberto</Title>
                 </View>
 
                 <View style={styles.checkboxContainer}>
-                  <Card style={{ backgroundColor: 'white',padding:14 }}>
+                  <Card style={styles.cardStylewhite}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'center',alignContent:'center',alignItems:'center' }}>
+                      <View style={styles.flexCenter}>
                         <View>
                           <Text style={styles.smalltextbold}>Troca de nome na conta</Text>
                           <Text style={[styles.smalltext,{marginVertical:5}]}>Envie a sua selfie para finalizar a </Text>
@@ -362,7 +362,7 @@ export function Screen3() {
                           <Text style={styles.second}>Enviar selfie</Text>
                         </View>
                     
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexJustify}>
                         <View>
                           <Text style={styles.smalltext}>   28/05</Text>
                         </View>
@@ -390,8 +390,58 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'flex-start'
   },
+  flexView:{
+    backgroundColor: '#04704e',
+    padding:6,
+    borderRadius:3,
+    flexDirection:'row'
+  },
+  flexViewTop:{
+    backgroundColor:"#02ade1",
+    marginLeft:-40,
+    marginRight:-40,
+    paddingLeft:40,
+    paddingRight:40,
+    paddingVertical:20
+  },
+  flexRowJus:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    marginVertical:15
+  },
+  flexRows:{
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
+    alignItems:'center',
+    paddingHorizontal:12
+  },
+  flexRow:{
+    flexDirection: 'row'
+  },
+  cardStyle:{
+    backgroundColor: '#fff',
+    flex: 2, 
+    margin:5
+  },
+  cardStylewhite:{
+    backgroundColor: 'white',
+    padding:14 
+  },
+  flexCenter:{
+    flexDirection: 'row', 
+    justifyContent: 'center',
+    alignContent:'center',
+    alignItems:'center' 
+  },
+  flexJustify:{
+    flexDirection: 'row', 
+    justifyContent: 'space-between'
+  },
   checkboxContainer: {
     marginBottom: 20,
+  },
+  mV_10:{
+    marginVertical:10
   },
   viewfull:{
     flexDirection: 'row',

@@ -168,15 +168,15 @@ export function Screen18() {
               <View style={{ marginVertical:10}}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
-                         <View style={{ backgroundColor: '#80c342',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                      <View style={styles.cardviewouter}>
+                         <View style={styles.cardbodynew}>
                          </View>
-                        <View style={{flexShrink:4,marginLeft:25}}>
-                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                        <View style={styles.cardflex_4}>
+                         <View style={styles.cardflex}>
                            <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa da mãe</Text>
                            <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
-                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
+                         <View style={styles.FlexRowsColor}>
                            <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
                            <Text style={[styles.label,{marginVertical:1}]}>0123453333</Text>
                          </View>
@@ -192,15 +192,15 @@ export function Screen18() {
               <View style={{ marginVertical:10}}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
-                         <View style={{ backgroundColor: '#80c342',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                      <View style={styles.cardviewouter}>
+                         <View style={styles.cardbodynew}>
                          </View>
-                        <View style={{flexShrink:4,marginLeft:25}}>
-                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                        <View style={styles.cardflex_4}>
+                         <View style={styles.cardflex}>
                             <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Casa</Text>
                             <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#80c342',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Ativa</Text>
                          </View>
-                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
+                         <View style={styles.FlexRowsColor}>
                             <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
                             <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
                          </View>
@@ -216,15 +216,15 @@ export function Screen18() {
               <View style={{ marginVertical:10}}>
                 <Card style={{ backgroundColor: '#FFFFFF' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent:'flex-start'}}>
-                         <View style={{ backgroundColor: '#ed2125',flexShrink:2,width:10,marginHorizontal:-16,marginVertical:-15,borderTopStartRadius:14,borderBottomStartRadius:14}}>
+                      <View style={styles.cardviewouter}>
+                         <View style={styles.cardbody}>
                          </View>
-                        <View style={{flexShrink:4,marginLeft:25}}>
-                         <View style={{ flexDirection: 'row', justifyContent:'space-between' }}>
+                        <View style={styles.cardbodyview}>
+                         <View style={styles.cardflex}>
                             <Text style={[styles.mediumtextbold,{marginVertical:1}]}>Dois irmãos construções</Text>
                             <Text style={[styles.mediumtextbold,{marginVertical:1,backgroundColor: '#ed2125',color:'#FFFFFF',paddingHorizontal:15,borderRadius:10}]}>Inativa</Text>
                          </View>
-                         <View style={{ flexDirection: 'row', justifyContent: 'flex-start' ,marginVertical:4}}>
+                         <View style={styles.cardcontent}>
                             <Text style={[styles.smalltext,{marginVertical:1}]}>Número da Instalação: </Text>
                             <Text style={[styles.label,{marginVertical:1}]}>0123450943</Text>
                          </View>
@@ -268,12 +268,56 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 20,
   },
+  cardviewouter:{
+    flexDirection: 'row', 
+    justifyContent:'flex-start'
+  },
+  FlexRowsColor:{
+    fontWeight:'600',
+    color:'black',
+    marginVertical:2
+  },
+  cardbodyview:{
+    flexShrink:4,
+    marginLeft:25
+  },
+  cardbodynew:{
+    backgroundColor: '#80c342',
+    flexShrink:2,
+    width:10,
+    marginHorizontal:-16,
+    marginVertical:-15,
+    borderTopStartRadius:14,
+    borderBottomStartRadius:14
+  },
+  cardflex:{
+    flexDirection: 'row', 
+    justifyContent:'space-between'
+  },
+  cardcontent:{
+    flexDirection: 'row', 
+    justifyContent: 'flex-start' ,
+    marginVertical:4
+  },
+  cardbody:{
+    backgroundColor: '#ed2125',
+    flexShrink:2,
+    width:10,
+    marginHorizontal:-16,
+    marginVertical:-15,
+    borderTopStartRadius:14,
+    borderBottomStartRadius:14
+  },
   fab: {
     position: 'absolute',
     margin: 16,
     right: 0,
     bottom: 0,
     backgroundColor:'#2ea55e',
+  },
+  cardflex_4:{
+    flexShrink:4,
+    marginLeft:25
   },
   label: {
     fontSize: 13,

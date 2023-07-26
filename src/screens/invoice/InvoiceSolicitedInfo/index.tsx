@@ -136,14 +136,14 @@ export function InvoiceSolicitedInfo() {
                   <Title paddingBottom={height * 0.0216}>Informações do pagamento solicitada!</Title>
                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}
-                    style={{width: 250,height: 250}}
+                    style={styles.imageSize}
                   />
-                  <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
+                  <View style={styles.bpaddWidth}>
                   <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
                   <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
                   <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
                  </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_15}>
                     <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
                     <Text style={styles.mediumtext}>Estamos processando seu pagamento! Fique tranquilo que em breve será baixada! Caso receba ações de cobrança, elas serão automaticamente canceladas!</Text>
                  </View>
@@ -197,6 +197,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  mV_15:{
+    marginVertical:15
+  },
+  bpaddWidth:{
+    backgroundColor:'#f4f4f4',
+    padding:15,
+    width:'100%'
+  },
+  imageSize:{
+    width: 250,
+    height: 250
   },
   smalltext:{
     fontSize:12,

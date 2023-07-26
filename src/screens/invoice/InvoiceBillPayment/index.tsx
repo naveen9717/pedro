@@ -148,7 +148,6 @@ export function InvoiceBillPayment() {
                   </View>
                 </View>
 
-
                 <View style={{ paddingBottom: height * 0.0324,paddingVertical:15 }}>
                   <Text style={styles.smalltext}>Atenção: Não se esqueça de pagar seu boleto até a</Text>
                   <Text style={styles.smalltext}>data de vencimento original de sua fatura para evitar</Text>
@@ -158,7 +157,7 @@ export function InvoiceBillPayment() {
                 <Text style={styles.mediumtextbold}>Outros métodos de pagamentos</Text>
                  <View style={{flexDirection:'row'}}>
                   <View style={{ flex:2.5 }}>
-                   <Card style={{ backgroundColor: '#fff', marginHorizontal:10,borderRadius:3 }}>
+                   <Card style={styles.cardfirst}>
                     <Card.Content>
                       <View>
                          <AntIcon name="barcode" color="#000000" size={25} />
@@ -198,6 +197,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  cardfirst:{
+    backgroundColor: '#fff',
+    marginHorizontal:10,
+    borderRadius:3
   },
   iconcenter:{
     backgroundColor:'#02ade1',

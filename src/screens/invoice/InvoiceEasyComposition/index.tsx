@@ -151,7 +151,7 @@ export function InvoiceEasyComposition() {
                   <Text style={styles.smalltext}>Veja e entenda como é composta sua conta de energia.</Text>
                  </View>
                 <View style={{flexDirection:'row'}}>
-                   <View style={{marginVertical:15}}>
+                   <View style={styles.mV_5}>
                     <PieChart
                      donut
                      data={DATA}
@@ -167,7 +167,7 @@ export function InvoiceEasyComposition() {
 
                   <Text style={[styles.mediumtextbold,{marginVertical:15}]}>Vencimento: 13/06/2022</Text>
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_5}>
                     <FlatList
                     data={DATA}
                     // ItemSeparatorComponent={FlatListSeparator}
@@ -179,27 +179,27 @@ export function InvoiceEasyComposition() {
                 </View>
                 </View>
                   
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_5}>
                   <Text style={styles.mediumtextbold}>A conta é dividida em quatro grupos principais:</Text>
                   <Text style={styles.smalltext}>Geração de energia: Aqui entra o seu consumo e as bandeiras tarifárias. Esse valor é atribuido a geração de energia elétrica.</Text>
                  </View>
-                 <View style={{marginVertical:15}}>
+                 <View style={styles.mV_5}>
 
                   <Text style={styles.smalltext}>Taxas e tributos: São as taxas de juros, seguros e todos os impostos municipais, estaduais e federais</Text>
                   </View>
 
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_5}>
 
                   <Text style={styles.smalltext}>Distribuição: Esse éo valor arrecadado pela sua distribuidora. E com ele que as manutenções, reparos e melhorias são feitas.</Text>
                   </View>
 
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mV_5}>
 
                   <Text style={styles.smalltext}>Transmissão: Sabe aquelas grandes torres que cortam a cidade? Elas são as linhas de transmissão que levam a energia da usina até a subestação da distribuidora.</Text>
                   
                   </View>
                 </View>
-                <View style={{marginVertical:15}}>
+                <View style={styles.mV_5}>
 
                 <ContainerViewButton>
                   <Button
@@ -240,6 +240,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  mV_5:{
+    marginVertical:15
   },
   smalltext:{
     fontSize:12,

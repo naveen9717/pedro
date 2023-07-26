@@ -148,14 +148,14 @@ export function InvoiceSendedWithSuccess({route}) {
                   <Title paddingBottom={height * 0.0216}>Conta reenviada para o seu endreço!</Title>
                   <Image
                     source={require('../../../assets/images/icOnlineWorking.png')}
-                    style={{width: 250,height: 250}}
+                    style={styles.imageSize}
                   />
-                  <View style={{backgroundColor:'#f4f4f4',padding:15,width:'100%'}}>
+                  <View style={styles.backpadWidth}>
                     <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
                     <Text style={styles.largetext}>PROTOCOLO #{route.params?.dataSource.numeroProtocolo}</Text>
                     <Text style={styles.smallertext}>Serviço realizado às {Moment(route.params?.dataSource.dataEnvio).format('LT')} {Moment(route.params?.dataSource.dataEnvio).format('DD/MM/YYYY')}</Text>
                   </View>
-                  <View style={{marginVertical:15}}>
+                  <View style={styles.mv_15}>
                     <Text style={styles.mediumtextbold}>A sua conta foi reenviada para o endereços abaixo</Text>
                     { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
                     <Text style={[styles.smalltext,{textAlign: 'center',marginVertical:5}]}>{dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}</Text>
@@ -197,6 +197,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  imageSize:{
+    width: 250,
+    height: 250
+  },
+  mv_15:{
+    marginVertical:15
+  },
+  backpadWidth:{
+    backgroundColor:'#f4f4f4',
+    padding:15,
+    width:'100%'
   },
   smalltext:{
     fontSize:12,

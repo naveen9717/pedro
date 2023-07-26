@@ -174,11 +174,11 @@ const HorizontalBarData = [
 const renderHorizontalItem = (data) => {
   return (
     <View style={{marginVertical:5,}}>
-      <View style={{flexDirection:'row',width:'100%',height:30}}>
+      <View style={styles.cardfirst}>
       <View style={{width:data.item.percentage,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
       <View style={{width:data.item.percent,backgroundColor:data.item.color2,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
       </View>
-      <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+      <View style={styles.cardsecond}>
       <Text style={[styles.smalltext,{color:'black'}]}>{data.item.date}</Text>
       <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
       </View>
@@ -194,14 +194,14 @@ console.log('dataSource',dataSource[0]?.consumoKwh);
 const renderHorizontalItem2 = (data) => {
   return (
     <View style={{marginVertical:5,}}>
-      <View style={{flexDirection:'row',width:'100%',height:30}}>
+      <View style={styles.cardfirst}>
       <View style={{width:data.item.percentone,backgroundColor:data.item.color,borderTopStartRadius:15,borderBottomStartRadius:15}}/>
       <View style={{width:data.item.percenttwo,backgroundColor:data.item.color2}}/>
       <View style={{width:data.item.percentthree,backgroundColor:data.item.color3}}/>
       <View style={{width:data.item.percentfour,backgroundColor:data.item.color4,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
 
     </View>
-      <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
+      <View style={styles.cardsecond}>
       <Text style={[styles.smalltext,{color:'black'}]}>{data.item.name}</Text>
       <Text style={[styles.smalltext,{color:'black'}]}>KWh {data.item.value}</Text>
       </View>
@@ -253,7 +253,7 @@ const renderHorizontalItem2 = (data) => {
                 <View style={{ marginVertical:5}}>
                  <SearchBar
                    inputStyle={{backgroundColor: 'white'}}
-                   containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
+                   containerStyle={styles.borderStyle}
                    inputContainerStyle={{backgroundColor: 'white',height:40}}
                    placeholderTextColor={'#g5g5g5'}
                    placeholder={'Searching...'}
@@ -263,7 +263,7 @@ const renderHorizontalItem2 = (data) => {
               <View style={{ marginVertical:10}}>
                 <Card style={{ backgroundColor: '#80c342' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.cardexc}>
                         <View>
                         <AntIcon name="exclamationcircleo" color="yellow" size={17} />
                         </View>
@@ -297,26 +297,26 @@ const renderHorizontalItem2 = (data) => {
                     <View style={styles.checkboxContainer}>
                     <Card style={{ backgroundColor: 'white' }}>
                       <Card.Content>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={styles.cardexc}>
                           <View>
                             <Text style={styles.smalltext}>Parcelamento em código de barras</Text>
-                            <Text style={[styles.amount,{marginVertical:5}]}>R$ 124.153,58</Text>
+                            <Text style={[styles.amount,{marginVertical:5}]}>R$ { route.params?.post.valor}</Text>
                           </View>
                         </View>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderBottomColor:'#f3f3f3',borderTopColor:'#f3f3f3',borderBottomWidth:1,borderTopWidth:1,paddingVertical:5 }}>
+                        <View style={styles.vencida}>
                           <View>
-                            <Text style={styles.title}>Vencida</Text>
+                            <Text style={styles.title}>{route.params?.post.statusPagamento}</Text>
                           </View>
                           <View>
                             <Text style={styles.first}>Vencimento</Text>
-                            <Text style={styles.second}>13/03/2022</Text>
+                            <Text style={styles.second}>{moment(route.params?.post.dataVencimento).format('DD/MM/YYYY')}</Text>
                           </View>
                           <View>
                             <Text style={styles.first}>Consumo</Text>
-                            <Text style={styles.second}>10.000 kWh</Text>
+                            <Text style={styles.second}>{route.params?.post.consumo} kWh</Text>
                           </View>
                         </View>
-                        <View style={{flexDirection: 'row',  justifyContent: 'space-between',marginVertical:15}}>
+                        <View style={styles.viewreal}>
                          <View>
                           <Text style={styles.second}>Realizar pagamento</Text>
                         </View>
@@ -392,7 +392,7 @@ const renderHorizontalItem2 = (data) => {
 
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
+                 <View style={styles.viewtributos}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black'}]}>Tributos</Text>
                  </View>
                  { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
@@ -410,7 +410,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
 
                 <View style={{marginVertical:15}}>
-                 <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%',marginVertical:5}}>
+                 <View style={styles.viewtarif}>
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
@@ -425,10 +425,10 @@ const renderHorizontalItem2 = (data) => {
 
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
                       <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                      { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[0] :'18/04'}
                       </Text>
                       <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[1] :'17/05'}
                       </Text>
                     </View>
                   </View>
@@ -480,7 +480,7 @@ const renderHorizontalItem2 = (data) => {
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
-                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                  <View style={styles.viewbar}>
                   <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
@@ -652,10 +652,10 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                     <View style={{flexDirection:'row',width:'100%',justifyContent:'space-between'}}>
                     <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                    { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[0] :'18/04'}
                       </Text>
                       <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[1] :'18/04'}
                       </Text>
                     </View>
                   </View>
@@ -861,10 +861,10 @@ const renderHorizontalItem2 = (data) => {
                     </View>
                     <View style={styles.viewdate}>
                     <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[0] :'18/04'}
+                    { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[0] :'18/04'}
                       </Text>
                       <Text style={[styles.smalltext,{color:'black'}]}>
-                      { route.params?.post ? route?.params.post.split('-')[1] :'17/05'}
+                      { route.params?.post.periodoConsumo ? route?.params.post.periodoConsumo.split('-')[1] :'18/04'}
                       </Text>
                     </View>
                   </View>
@@ -909,11 +909,11 @@ const renderHorizontalItem2 = (data) => {
                 lineData={stringifylineData}
                  />
                  <View style={styles.viewconsumo}>
-                 <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                 <View style={styles.viewbar}>
                  <Text style={[styles.bar, {backgroundColor:'#02ade1'}]}></Text>
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
-                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                  <View style={styles.viewbar}>
                   <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
@@ -1008,6 +1008,39 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 20,
   },
+  cardfirst:{
+    flexDirection:'row',
+    width:'100%',
+    height:30
+  },
+  vencida:{
+    flexDirection: 'row',
+     justifyContent: 'space-between',
+     borderBottomColor:'#f3f3f3',
+     borderTopColor:'#f3f3f3',
+     borderBottomWidth:1,
+     borderTopWidth:1,
+     paddingVertical:5
+  },
+  cardsecond:{
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'space-between'
+  },
+  viewreal:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginVertical:15
+  },
+  borderStyle:{
+    backgroundColor: 'white', 
+    borderWidth: 1, 
+    borderRadius: 5
+  },
+  cardexc:{
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
   viewmes:{
     flexDirection:'row',
     width:'100%',
@@ -1017,6 +1050,10 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
     marginVertical:5
+  },
+  viewbar:{
+    flexDirection:'row',
+    alignItems:'flex-start'
   },
   innerview:{
     flexDirection:'column',

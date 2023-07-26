@@ -185,7 +185,7 @@ const list = () => {
       valorContaAtual={element?.valor}
       periodoConsumo={element?.periodoConsumo}
       onPress={handlePagar}
-      onPress2={ () => handleChild2(element?.periodoConsumo) }
+      onPress2={ () => handleChild2(element) }
       share={SharePdf}
     />        
      
@@ -270,7 +270,7 @@ function webViewRender(step: number) {
                  </View>
 
                  <View style={styles.viewicon}>
-                   <View style={{ flexDirection: 'row', }}>
+                   <View style={styles.flexRow}>
                     <View style={styles.filtertexticon}>
                       <MaterialIcons name="file-download" color="#FFFFFF" size={13} />
                     </View>
@@ -297,14 +297,14 @@ function webViewRender(step: number) {
 }
               </MainGenericContainer>
 
-              <View style={{ flex: 1 }}>
+              <View style={styles.flex1}>
                 <Modal isVisible={isModalPixVisible} style={{ margin: 0 }}>
                   <TouchableWithoutFeedback onPress={handlePix}>
                     <View style={styles.handlepixview}>
                       <View style={styles.bordercorner}>
-                        <View style={{ flex: 1 }}>
+                        <View style={styles.flex1}>
                           <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 3 }}>
+                            <View style={styles.mV_3}>
                               <Text style={styles.mediumtextbold}>Filtros</Text>
                               <Text style={styles.smalltext}>Selecione os filtros de instalação</Text>
                             </View>
@@ -316,7 +316,7 @@ function webViewRender(step: number) {
                              </View>
                             </ContainerViewButton>
 
-                            <View style={{ marginVertical: 3 }}>
+                            <View style={styles.mV_3}>
                               <Text style={styles.mediumtextbold}>Período de referência </Text>
                               <Text style={styles.smalltext}>Na opção período personalizado, você pode acessar as contas dos últimos 10 anos. Busque em intervalos de até 12 meses.</Text>
                             </View>
@@ -327,7 +327,7 @@ function webViewRender(step: number) {
                                <TouchableWithoutFeedback onPress={() => setText("Personalizado")}><Text style={styles.input}>Personalizado</Text></TouchableWithoutFeedback>
                             </View>
                             </ContainerViewButton>
-                            <View style={{ marginVertical: 3 }}>
+                            <View style={styles.mV_3}>
                               <Text style={styles.mediumtextbold}>ou Selecione o período </Text>
                             </View> 
                            <View>
@@ -373,6 +373,15 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  mV_3:{
+    marginVertical: 3 
+  },
+  flex1:{
+    flex: 1
+  },
+  flexRow:{
+    flexDirection: 'row',
   },
   viewtouch:{
     flexDirection: 'row',

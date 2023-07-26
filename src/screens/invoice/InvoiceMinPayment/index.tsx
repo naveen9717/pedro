@@ -130,15 +130,15 @@ export function InvoiceMinPayment() {
                 </View>
 
                 <View style={styles.checkboxContainer}>
-                  <Card style={{ backgroundColor: 'white' }}>
+                  <Card style={styles.bgWhite}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexRowSpace}>
                         <View>
                           <Text style={styles.smalltext}>Conta mínima</Text>
                           <Text style={[styles.amount,{ marginVertical: 5}]}>R$ 20,30</Text>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between',borderTopWidth:1,borderTopColor:'#f1f1f1',paddingVertical:10 }}>
+                      <View style={[styles.flexRowSpace,{borderTopWidth:1,borderTopColor:'#f1f1f1',paddingVertical:10 }]}>
                         <View>
                           <Text style={styles.title}>Alberta</Text>
                         </View>
@@ -188,6 +188,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
+  },
+  flexRowSpace:{
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  bgWhite:{
+    backgroundColor:'white'
   },
   checkboxContainer: {
     marginBottom: 20,

@@ -147,7 +147,7 @@ export function InvoiceHistoryChart() {
                 {/* Optional chaining used while api get data*/}
                <Card style={{ backgroundColor: '#fff' }}>
                 <Card.Content>
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                 <View style={styles.flexRowAlignSpace}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
@@ -165,7 +165,7 @@ export function InvoiceHistoryChart() {
                    noOfSections={9}
                    yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
                    labelWidth={30}
-                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
+                   xAxisLabelTextStyle={styles.XAxis}
                    lineConfig={{
                          color: '#0058a0',
                          thickness: 2,
@@ -179,13 +179,13 @@ export function InvoiceHistoryChart() {
                  showLine={true}
                  lineData={stringifylineData}
                  />
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
-                 <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                 <View style={styles.flexRow}>
+                 <View style={styles.flexRowAlign}>
                  <FontAwesome name="circle" color="#02ade1" size={15} />
 
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
-                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                  <View style={styles.flexRowAlign}>
                   <FontAwesome name="circle" color="#0058a0" size={15} />
 
                   <Text style={styles.bartext}>Média de consuma</Text>
@@ -193,11 +193,11 @@ export function InvoiceHistoryChart() {
                  </View>
 
                  <View style={styles.bottomtext}>
-                 <View style={{flexDirection:'column',marginTop:5}}>
+                 <View style={styles.flexColumnMT}>
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.totalDaFatura}</Text>
                   </View>
-                  <View style={{flexDirection:'column'}}>
+                  <View style={styles.flexColumn}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
                   <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.mediaFaturamento}</Text>
                   </View>
@@ -210,7 +210,7 @@ export function InvoiceHistoryChart() {
                 {/* Optional chaining used while api get data*/}
                <Card style={{ backgroundColor: '#fff' }}>
                 <Card.Content>
-                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                <View style={styles.flexRowAlignSpace}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
@@ -228,7 +228,7 @@ export function InvoiceHistoryChart() {
                    noOfSections={9}
                    yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
                    labelWidth={30}
-                   xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
+                   xAxisLabelTextStyle={styles.XAxis}
                    lineConfig={{
                          color: '#0058a0',
                          thickness: 2,
@@ -241,23 +241,23 @@ export function InvoiceHistoryChart() {
                  showLine={true}
                  lineData={stringifylineData}
                  />
-                 <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-around',marginTop:10}}>
-                 <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                 <View style={styles.flexRow}>
+                 <View style={styles.flexRowAlign}>
                    <FontAwesome name="circle" color="#02ade1" size={15} />
                    <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
-                  <View style={{flexDirection:'row',alignItems:'flex-start'}}>
+                  <View style={styles.flexRowAlign}>
                    <FontAwesome name="circle" color="#0058a0" size={15} />
                    <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
                  </View>
 
                  <View style={styles.bottomtext}>
-                 <View style={{flexDirection:'column',marginTop:5}}>
+                 <View style={styles.flexColumnMT}>
                    <Text style={styles.smalltext}>Última fatura</Text>
                    <Text style={styles.mediumtextbold}>{dataSource[0]?.consumoKwh}kWh</Text>
                   </View>
-                  <View style={{flexDirection:'column'}}>
+                  <View style={styles.flexColumn}>
                    <Text style={styles.smalltext}>Média de consumo</Text>
                    <Text style={styles.mediumtextbold}>{dataSource[0]?.mediaConsumo}kWh</Text>
                   </View>
@@ -291,6 +291,34 @@ const styles = StyleSheet.create({
   },
   checkboxContainer: {
     marginBottom: 15,
+  },
+  XAxis:{
+    color: 'gray', 
+    textAlign: 'center',
+    fontSize:11
+  },
+
+  flexColumn:{
+    flexDirection:'column'
+  },
+  flexColumnMT:{
+    flexDirection:'column',
+    marginTop:5
+  },
+  flexRowAlign:{
+    flexDirection:'row',
+    alignItems:'flex-start'
+  },
+  flexRow:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginTop:10
+  },
+  flexRowAlignSpace:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between'
   },
   label: {
     margin: 5,

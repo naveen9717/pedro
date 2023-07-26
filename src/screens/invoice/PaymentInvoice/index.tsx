@@ -236,7 +236,7 @@ export function PaymentInvoice({ route, navigation }) {
                 <Text style={[styles.smalltext, { textAlign: 'center' }]}>{props.dataCodigoMain?.data.pagamentoCodigoBarra}</Text>
               </View>
               <ContainerViewButton>
-                <View style={{ marginVertical: 10 }}></View>
+                <View style={styles.mV_10}></View>
                 <Button
                   title="Copiar código de barras"
                   type="secondary"
@@ -246,7 +246,7 @@ export function PaymentInvoice({ route, navigation }) {
                   onPress={handleClick}
                   isLoading={isLogging}
                 />
-                <View style={{ marginVertical: 10 }}></View>
+                <View style={styles.mV_10}></View>
                 <Button
                   title="Visualizar PDF"
                   type="secondary"
@@ -255,7 +255,7 @@ export function PaymentInvoice({ route, navigation }) {
                   onPress={handleClickPDF}
                   isLoading={isLogging}
                 />
-                <View style={{ marginVertical: 10 }}></View>
+                <View style={styles.mV_10}></View>
                 <Button
                   title="Compartilhar"
                   type="primary"
@@ -264,7 +264,7 @@ export function PaymentInvoice({ route, navigation }) {
                   onPress={SharePdf}
                   isLoading={isLogging}
                 />
-                <View style={{ marginVertical: 10 }}></View>
+                <View style={styles.mV_10}></View>
                 <Button
                   title="Enviar por correspondência"
                   type="primary"
@@ -292,18 +292,17 @@ export function PaymentInvoice({ route, navigation }) {
     return (
      
             <TouchableWithoutFeedback onPress={toggleModalPix}>
-                    <View
-                      style={{height: '80%', backgroundColor: 'white', marginTop: '80%',width: '100%'}}>
+                    <View style={styles.modalOuterStyle}>
                       <View style={styles.bordercorner}>
                         <View style={{ flex: 1 }}>
                           <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 12 }}>
+                            <View style={styles.mV_12}>
                               <Text style={styles.mediumtextbold}>Pagamento via PIX</Text>
                               <Text style={styles.smalltext}>Copie o código PIX ou leia o QR Code para pagar</Text>
                               <Text style={styles.smalltext}>su a conta! Tenha agilidade na baixa da conta no</Text>
                               <Text style={styles.smalltext}>mesmo dia!</Text>
                             </View>
-                            <View style={{marginVertical:15}}>
+                            <View style={styles.mV_12}>
                             <ContainerViewButton>
                               <Button
                                 title="Copiar código PIX"
@@ -318,10 +317,10 @@ export function PaymentInvoice({ route, navigation }) {
                             <View style={styles.checkboxContainer}>
                               <Text style={styles.mediumtext}>Ou ler o QR code</Text>
                               <View>
-                                <View style={{ justifyContent: 'center', alignItems: 'center', }}>
+                                <View style={styles.JACenter}>
                                 <QRCode value={props.dataPixMain?.data.pagamentoCodigoPix.pix}/>
                                 </View>
-                                <View style={[styles.bottom,{justifyContent: 'center', alignItems: 'center',marginVertical:50}]}>
+                                <View style={[styles.bottom,styles.bottomsecond]}>
                                 <TouchableOpacity onPress={handleClickPix}>
                                  <Text style={styles.second}>Como realizar seu pagamento via Pix?<AntIcon name="right" color="#02ade1" size={10} /></Text></TouchableOpacity>
                                 </View>
@@ -340,31 +339,31 @@ export function PaymentInvoice({ route, navigation }) {
     console.log('propsnew',props.dataMain?.data);
     return (
      
-      <View style={{height: '90%',backgroundColor: 'white',width: '100%'}}>
+      <View style={styles.ViewOuterStyle}>
         <TouchableWithoutFeedback onPress={toggleModalPix}>
-         <View style={{flex: 1,marginTop: -30,backgroundColor: 'white',}}>
-         <View style={{flexDirection: 'row',height: '100%',marginTop: 10,}}>
+         <View style={styles.viewTopStyle}>
+         <View style={styles.viewStyle}>
          <View style={[styles.boxcontainer]}>
-          <View style={{ marginVertical: 10 }}>
+          <View style={styles.mV_8}>
           <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
           <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
           <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
           <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
           <Text style={styles.smalltext}>elétrica.</Text>
          </View>
-         <View style={{ marginVertical: 10 }}>
+         <View style={styles.mV_8}>
           <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
           <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
           <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
          </View>
-         <View style={{ marginVertical: 10 }}>
+         <View style={styles.mV_8}>
           <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
           <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
           <Text style={styles.smalltext}>processamento</Text>
           <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
          </View>
 
-         <View style={{ marginVertical: 10 }}>
+         <View style={styles.mV_8}>
           <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
           <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
           <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
@@ -374,7 +373,7 @@ export function PaymentInvoice({ route, navigation }) {
         </View>
     
         <ContainerViewButton>
-         <View style={{ marginVertical: 8 }}></View>
+         <View style={styles.mV_8}></View>
          <Button
            title="Realizar pagamento"
            type="secondary"
@@ -382,7 +381,7 @@ export function PaymentInvoice({ route, navigation }) {
            onPress={toggleModalPop}
            isLoading={isLogging}
          />
-        <View style={{ marginVertical: 8 }}></View>
+        <View style={styles.mV_8}></View>
         <Button
          title="Já realizei o pagamento, preciso religar"
          type="secondary"
@@ -390,7 +389,7 @@ export function PaymentInvoice({ route, navigation }) {
          onPress={toggleModalPop}
          isLoading={isLogging}
        />
-       <View style={{ marginVertical: 8 }}></View>
+       <View style={styles.mV_8}></View>
        <Button
          title="Fechar"
          type="secondary"
@@ -398,14 +397,14 @@ export function PaymentInvoice({ route, navigation }) {
          onPress={toggleModalPop}
          isLoading={isLogging}
        />
-       <View style={[styles.checkboxContainer,{ flexDirection: 'row'}]}>
+       <View style={[styles.checkboxContainer,styles.flexRow]}>
           <CheckBox
            value={isSelected}
            onValueChange={setSelection}
            style={styles.checkbox}
            tintColors={{ true: '#02ade1', false: 'black' }}
         />
-        <Text style={[styles.smalltext,{ marginVertical: 8}]}>Não mostrar mais essa mensagem hoje</Text>
+        <Text style={[styles.smalltext,styles.mV_8]}>Não mostrar mais essa mensagem hoje</Text>
       </View>
      </ContainerViewButton>
    </View>
@@ -461,11 +460,11 @@ export function PaymentInvoice({ route, navigation }) {
                 
                 <View style={styles.checkboxContainer}>
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
-                  <View style={{ flexDirection: 'row' }}>
+                  <View style={styles.flexRow}>
                     <View style={styles.cardFirstStyle}>
-                      <Card style={{ backgroundColor: 'white', borderRadius: 10, borderBottomEndRadius: 0, borderTopEndRadius: 0, marginTop: 2, }}>
+                      <Card style={styles.cardStyle}>
                         <Card.Content>
-                          <View style={{ flexDirection: 'row' }}>
+                          <View style={styles.flexRow}>
                             <View>
                               <Text style={[styles.smalltext,{fontWeight:'500'}]}>Pagar</Text>
                               <Text style={[styles.smalltext, {marginBottom:10,fontWeight:'500'}]}>com Pix</Text>
@@ -481,15 +480,15 @@ export function PaymentInvoice({ route, navigation }) {
                     <View style={styles.cardSecondStyle}>
                       <Card.Content>
                         <View style={styles.container}>
-                          <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
-                            <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
+                          <View style={styles.flexJustify}>
+                            <View style={styles.toggleModalStyle}>
                             <View style={styles.container}>
                             <TouchableWithoutFeedback onPress={onToggleSnackBar}><Text style={styles.white}>{visible ? 'Copia e cola' : 'Copia e cola'}</Text></TouchableWithoutFeedback>
                              </View>
                             </View>
-                            <View style={{ borderBottomColor: '#4ec6ea', borderBottomWidth: 1, flex: 1, width: 220 }} />
+                            <View style={styles.ViewStyleSec} />
                             <TouchableOpacity onPress={toggleModalPix}>
-                              <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 20 }} >
+                              <View style={styles.toggleModalStyle} >
                                 <Text style={styles.white}>Ver QR code</Text>
                               </View>
                             </TouchableOpacity>
@@ -499,8 +498,8 @@ export function PaymentInvoice({ route, navigation }) {
                     </View>
                   </View>
                   <Snackbar
-                      wrapperStyle={{backgroundColor:'transparent',marginVertical:"90%"}}
-                      style={{backgroundColor:"#80c342",width:"100%"}}
+                      wrapperStyle={styles.SnackWrapperStyle}
+                      style={styles.SnackStyle}
                       duration={500}
                       visible={visible}
                       onDismiss={onDismissSnackBar}
@@ -510,12 +509,12 @@ export function PaymentInvoice({ route, navigation }) {
                             // Do something
                         },
                       }}>
-                        <Text style={{color:"#FFFFFF",fontSize:12,width:"100%"}}><AntIcon name="check" color="#FFFFFF" size={15} /> Código PIX copiado com sucesso</Text>
+                        <Text style={styles.AntText}><AntIcon name="check" color="#FFFFFF" size={15} /> Código PIX copiado com sucesso</Text>
                   </Snackbar>
                 </View>
 
                 <TouchableWithoutFeedback onPress={toggleModal}>
-                  <Card style={{ backgroundColor: '#fff', width: '28%' }}>
+                  <Card style={styles.CardBottom}>
                     <Card.Content>
                       <View style={styles.container}>
                         <View>
@@ -560,6 +559,74 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'flex-start'
+  },
+  ViewStyleSec:{
+    borderBottomColor: '#4ec6ea', 
+    borderBottomWidth: 1, 
+    flex: 1, 
+    width: 220
+  },
+  mV_10:{
+    marginVertical:10
+  },
+  flexJustify:{
+    flexDirection: 'column', 
+    justifyContent: 'space-around'
+  },
+  cardStyle:{
+    backgroundColor: 'white',
+    borderRadius: 10,
+    borderBottomEndRadius: 0,
+    borderTopEndRadius: 0,
+    marginTop: 2,
+  },
+  flexRow:{
+    flexDirection: 'row'
+  },
+  toggleModalStyle:{
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    marginTop: 20
+  },
+  AntText:{
+    color:"#FFFFFF",
+    fontSize:12,
+    width:"100%"
+  },
+  ViewOuterStyle:{
+    height: '90%',
+    backgroundColor: 'white',
+    width: '100%'
+  },
+  viewTopStyle:{
+    flex: 1,
+    marginTop: -30,
+    backgroundColor: 'white',
+  },
+  viewStyle:{
+    flexDirection: 'row',
+    height: '100%',
+    marginTop: 10,
+  },
+  CardBottom:{
+    backgroundColor: '#fff', 
+    width: '28%'
+  },
+  SnackStyle:{
+    backgroundColor:"#80c342",
+    width:"100%"
+  },
+  SnackWrapperStyle:{
+    backgroundColor:'transparent',
+    marginVertical:"90%"
+  },
+  mV_12:{
+    marginVertical:12
+  },
+  mV_8:{
+    marginVertical: 8
   },
   bordercorner:{
     flex: 1,
@@ -632,6 +699,21 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     color: '#02ade1',
+  },
+  modalOuterStyle:{
+    height: '80%', 
+    backgroundColor: 'white', 
+    marginTop: '80%',
+    width: '100%'
+  },
+  bottomsecond:{
+    justifyContent: 'center', 
+    alignItems: 'center',
+    marginVertical:50
+  },
+  JACenter:{
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   bottom: {
     marginVertical: 20,
