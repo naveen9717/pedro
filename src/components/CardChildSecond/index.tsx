@@ -13,13 +13,7 @@ import {
 import {boxShadowCard} from '../../helpers/functions/utils';
 import { Card,IconButton } from 'react-native-paper';
 import Moment from 'moment';
-import {
-  Menu,
-  MenuProvider,
-  MenuOptions,
-  MenuOption,
-  MenuTrigger,
-} from 'react-native-popup-menu';
+
 
 import { Tooltip } from 'react-native-elements';
 import AntIcon from 'react-native-vector-icons/AntDesign';

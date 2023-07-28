@@ -141,7 +141,7 @@ export function InvoiceSolicitedInfo() {
                   <View style={styles.bpaddWidth}>
                   <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
                   <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertext}>Serviço realizado às 10:05 12/10/2021</Text>
+                  <Text style={styles.smallertextgrey}>Serviço realizado às 10:05 12/10/2021</Text>
                  </View>
                   <View style={styles.mV_15}>
                     <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
@@ -216,6 +216,11 @@ const styles = StyleSheet.create({
   smallertext:{
     fontSize:12,
     textAlign:'center'
+  },
+  smallertextgrey:{
+    fontSize:12,
+    textAlign:'center',
+    color:'#778ca2'
   },
   largetext:{
     fontSize:15,

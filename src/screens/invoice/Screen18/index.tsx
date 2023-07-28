@@ -144,20 +144,20 @@ export function Screen18() {
                   <Title>Selecionar a instalação</Title>
                 </View>
 
-                <View style={{ marginVertical:5}}>
+                <View style={styles.mV_5}>
                   <Text style={styles.smalltext}>Qual instalação deseja acessar?</Text>
                 </View>
 
-                <View style={{ marginVertical:5}}>
+                <View style={styles.mV_5}>
                   { Loading ? <ActivityIndicator color="#000" size="large" /> :<>
                     <Text style={styles.mediumtextbold}>{dataMain.data?.enderecoInstalacao}</Text>
                   </>
                   }
                 </View>
                 
-                <View style={{ marginVertical:5}}>
+                <View style={styles.mV_5}>
                  <SearchBar
-                    inputStyle={{backgroundColor: 'white'}}
+                    inputStyle={styles.bgWhite}
                     containerStyle={{backgroundColor: 'white', borderWidth: 1, borderRadius: 5}}
                     inputContainerStyle={{backgroundColor: 'white',height:35}}
                     placeholderTextColor={'#g5g5g5'}
@@ -166,7 +166,7 @@ export function Screen18() {
                  />
               </View>
               <View style={styles.mV_10}>
-                <Card style={{ backgroundColor: '#FFFFFF' }}>
+                <Card style={styles.bgWhite}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
                          <View style={styles.cardbodynew}>
@@ -190,7 +190,7 @@ export function Screen18() {
               </View>
 
               <View style={styles.mV_10}>
-                <Card style={{ backgroundColor: '#FFFFFF' }}>
+                <Card style={styles.bgWhite}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
                          <View style={styles.cardbodynew}>
@@ -205,7 +205,7 @@ export function Screen18() {
                             <Text style={[styles.label,styles.mV_1]}>0123450943</Text>
                          </View>
                          <View>
-                            <Text style={[styles.smalltext,{marginVertical:5}]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
+                            <Text style={[styles.smalltext,styles.mV_5]}>Rua da Consolação, 198, Bela Vista, São Paulo - SP</Text>
                          </View>
                        </View>
                       </View>
@@ -214,7 +214,7 @@ export function Screen18() {
               </View>
 
               <View style={styles.mV_10}>
-                <Card style={{ backgroundColor: '#FFFFFF' }}>
+                <Card style={styles.bgWhite}>
                     <Card.Content>
                       <View style={styles.cardviewouter}>
                          <View style={styles.cardbody}>
@@ -229,7 +229,7 @@ export function Screen18() {
                             <Text style={[styles.label,styles.mV_1]}>0123450943</Text>
                          </View>
                          <View>
-                           <Text style={[styles.smalltext,{marginVertical:5}]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
+                           <Text style={[styles.smalltext,styles.mV_5]}>Avenida Norte Sul, 100, Taquaral, Campinas - SP</Text>
                          </View>
                        </View>
                       </View>
@@ -271,6 +271,9 @@ const styles = StyleSheet.create({
   cardviewouter:{
     flexDirection: 'row', 
     justifyContent:'flex-start'
+  },
+  bgWhite:{
+    backgroundColor: '#FFFFFF'
   },
   FlexRowsColor:{
     fontWeight:'600',
@@ -342,6 +345,9 @@ const styles = StyleSheet.create({
   },
   mV_1:{
     marginVertical:1
+  },
+  mV_5:{
+    marginVertical:5
   },
   mV_10:{
     marginVertical:10

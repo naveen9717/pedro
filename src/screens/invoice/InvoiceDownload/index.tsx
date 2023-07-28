@@ -219,7 +219,6 @@ const DemoDownload = () => {
                   />
                 </ContainerViewButton>
 
-                {/* <a href="data:application/pdf;base64,'+input+'" class="btn btn-success" download="document.pdf">Download As File...</a> */}
                 </View>
                 {ModalLoading(isLoading)}
               </MainGenericContainer>

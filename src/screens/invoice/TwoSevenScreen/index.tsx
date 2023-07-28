@@ -145,7 +145,7 @@ export function TwoSevenScreen() {
                 <View style={styles.checkboxContainer}>
                   <Card style={{ backgroundColor: 'white' }}>
                     <Card.Content>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexJustify}>
                         <View>
                           <Text style={styles.smalltext}>Pagmenta da conta</Text>
                           <Text style={styles.amount}>R$ 124.153,58</Text>
@@ -158,7 +158,7 @@ export function TwoSevenScreen() {
                           </TouchableOpacity>
                         </View>
                       </View>
-                      <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                      <View style={styles.flexJustify}>
                         <View>
                           <Text style={styles.title}>Vencida</Text>
                         </View>
@@ -252,26 +252,26 @@ export function TwoSevenScreen() {
                       <View style={styles.toggleview}>
                         <View style={styles.togglemodalview}>
                           <View style={[styles.boxcontainer]}>
-                            <View style={{ marginVertical: 10 }}>
+                            <View style={styles.mV_10}>
                               <Text style={[styles.mediumtextbold,{ textAlign: 'center'}]}>Aviso importante!</Text>
                               <Text style={styles.smalltext}>Não ldentificamos o pagamentos das suas</Text>
                               <Text style={styles.smalltext}>s contas, por este motivo seu imóvel</Text>
                               <Text style={styles.smalltext}>ujeito a suspensão de energia</Text>
                               <Text style={styles.smalltext}>elétrica.</Text>
                             </View>
-                            <View style={{ marginVertical: 10 }}>
+                            <View style={styles.mV_10}>
                               <Text style={styles.smalltext}>Para evitar que issO aconteça, pedimos que</Text>
                               <Text style={styles.smalltext}>regularize os débitos até a data do reaviso</Text>
                               <Text style={styles.smalltext}>Xx/XX/XXXX.</Text>
                             </View>
-                            <View style={{ marginVertical: 10 }}>
+                            <View style={styles.mV_10}>
                               <Text style={styles.smalltext}>Se voce ja efetuouo pagamento, pedimos</Text>
                               <Text style={styles.smalltext}>que desconsidere este aviso. O</Text>
                               <Text style={styles.smalltext}>processamento</Text>
                               <Text style={styles.smalltext}>do pagamento poderá ocorrer em até 72hs.</Text>
                             </View>
 
-                            <View style={{ marginVertical: 10 }}>
+                            <View style={styles.mV_10}>
                               <Text style={styles.smalltext}>Se o pagamento foi realizado após a data</Text>
                               <Text style={styles.smalltext}>do reavis0, pedimos que fique atento e</Text>
                               <Text style={styles.smalltext}>pacompanhe o processamento por aqui,</Text>
@@ -281,7 +281,7 @@ export function TwoSevenScreen() {
                             </View>
                            
                             <ContainerViewButton>
-                              <View style={{ marginVertical: 8 }}></View>
+                              <View style={styles.mV_8}></View>
                               <Button
                                 title="Realizar pagamento"
                                 type="secondary"
@@ -289,7 +289,7 @@ export function TwoSevenScreen() {
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
-                              <View style={{ marginVertical: 8 }}></View>
+                              <View style={styles.mV_8}></View>
                               <Button
                                 title="Já realizei o pagamento, preciso religar"
                                 type="secondary"
@@ -297,7 +297,7 @@ export function TwoSevenScreen() {
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
-                              <View style={{ marginVertical: 8 }}></View>
+                              <View style={styles.mV_8}></View>
                               <Button
                                 title="Fechar"
                                 type="secondary"
@@ -383,6 +383,16 @@ const styles = StyleSheet.create({
     borderBottomStartRadius: 0,
     borderTopLeftRadius: 0,
     marginTop: 2,
+  },
+  mV_8:{
+    marginVertical: 8
+  },
+  mV_10:{
+    marginVertical: 10
+  },
+  flexJustify:{
+    flexDirection: 'row', 
+    justifyContent: 'space-between'
   },
   cardsview:{
     backgroundColor: 'white',

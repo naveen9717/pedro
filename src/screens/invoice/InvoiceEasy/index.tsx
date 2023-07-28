@@ -154,7 +154,7 @@ export function InvoiceEasy({ route, navigation }) {
         <View style={{width:14,height:14,borderRadius:7,backgroundColor:data.item.color}}></View>
         <Text style={[styles.mediumtextbold,{marginTop:-2,marginLeft:2}]}>{data.item.name}</Text>
         </View>
-        <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>R$ {data.item.value}</Text>
+        <Text style={[styles.smalltext,styles.fontColor]}>R$ {data.item.value}</Text>
       </View>
     )
 }
@@ -375,8 +375,8 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                   <View style={styles.viewmes}>
-                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
-                    <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
+                    <Text style={[styles.smalltext,styles.fontColor]}>Mes de referência</Text>
+                    <Text style={[styles.smalltext,styles.fontColor]}>Quantidade</Text>
                   </View>
                   { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
                     <FlatList
@@ -393,7 +393,7 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewtributos}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black'}]}>Tributos</Text>
+                   <Text style={[styles.mediumtextbold,styles.fontColor]}>Tributos</Text>
                  </View>
                  { Loading ? <ActivityIndicator color="#000" size="large" style={styles.activity}/> :<>
                   <FlatList
@@ -411,15 +411,15 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewtarif}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                   <Text style={[styles.mediumtextbold,styles.fontColor,{marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
-                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,styles.fontColorWhite,{marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
 
                  </View>
                  <View style={{marginVertical:5,}}>
-                 <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                 <Text style={[styles.smalltext,styles.fontColor,{marginVertical:2}]}>Período de consumo: 29 dias</Text>
+                    <View style={styles.cardfirst}>
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
 
@@ -441,9 +441,9 @@ const renderHorizontalItem2 = (data) => {
               <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
 
                 {/* Optional chaining used while api get data*/}
-               <Card style={{ backgroundColor: '#fff' }}>
+               <Card style={styles.bgWhite}>
                 <Card.Content>
-                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                <View style={styles.viewCard}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
@@ -481,7 +481,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={styles.viewbar}>
-                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
+                  <Text style={[styles.bar, styles.Color00]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
@@ -492,7 +492,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
-                  <View style={{flexDirection:'column'}}>
+                  <View style={styles.viewColumn}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
                   <Text style={styles.mediumtextbold}>R$ 200,00</Text>
                   </View>
@@ -560,22 +560,22 @@ const renderHorizontalItem2 = (data) => {
                     <View style={styles.checkboxContainer}>
                     <View style={styles.viewlietura}>
                       <View style={styles.innerview}>
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura anterior</Text>
-                         <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>16/03/2022</Text>
+                         <Text style={[styles.smalltext,styles.colorMargin]}>Data da leitura anterior</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>16/03/2022</Text>
                       </View>
                       <View style={styles.innerview}>                         
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Dias consumidos</Text>
-                         <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>33 dias</Text>
+                         <Text style={[styles.smalltext,styles.colorMargin]}>Dias consumidos</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>33 dias</Text>
                       </View>
                     </View>
                     <View style={styles.viewlietura}>
                     <View style={styles.innerview}>                         
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura atual</Text>
-                         <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>18/04/2022</Text>
+                         <Text style={[styles.smalltext,styles.colorMargin]}>Data da leitura atual</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>18/04/2022</Text>
                       </View>
                       <View style={styles.innerview}>                         
-                        <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Mês referência</Text>
-                         <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>Abril</Text>
+                        <Text style={[styles.smalltext,styles.colorMargin]}>Mês referência</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>Abril</Text>
                       </View>
                     </View>
                   </View>
@@ -612,8 +612,8 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewmes}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Mes de referência</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Quantidade</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData}
@@ -625,7 +625,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
                 <View style={styles.mV_15}>
                  <View style={{flexDirection:'row',width:'100%',marginVertical:5}}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Tributos</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData2}
@@ -639,15 +639,15 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewtarif}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                   <Text style={[styles.mediumtextbold,styles.fontColor,{marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
-                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,styles.fontColorWhite,{marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
 
                  </View>
                  <View style={{marginVertical:5,}}>
-                 <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                 <Text style={[styles.smalltext,styles.fontColor,{marginVertical:2}]}>Período de consumo: 29 dias</Text>
+                    <View style={styles.cardfirst}>
                        <View style={{width:'100%',backgroundColor:'#80c342',borderRadius:15}}/>
                     </View>
                     <View style={styles.viewmes}>
@@ -668,9 +668,9 @@ const renderHorizontalItem2 = (data) => {
              <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
 
                 {/* Optional chaining used while api get data*/}
-               <Card style={{ backgroundColor: '#fff' }}>
+               <Card style={styles.bgWhite}>
                 <Card.Content>
-                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                <View style={styles.viewCard}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
@@ -708,7 +708,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={styles.RowFlex}>
-                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
+                  <Text style={[styles.bar, styles.Color00]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
@@ -719,7 +719,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
-                  <View style={{flexDirection:'column'}}>
+                  <View style={styles.viewColumn}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
                   <Text style={styles.mediumtextbold}>R$ 200,00</Text>
                   </View>
@@ -785,8 +785,8 @@ const renderHorizontalItem2 = (data) => {
                     <View style={styles.checkboxContainer}>
                     <View style={{flexDirection:'row',marginVertical:5}}>
                       <View style={styles.viewdata}>
-                         <Text style={[styles.smalltext,{color:'black',marginVertical:3}]}>Data da leitura anterior</Text>
-                         <Text style={[styles.mediumtextboldblue,{fontWeight:'600'}]}>17/05/2022</Text>
+                         <Text style={[styles.smalltext,styles.colorMargin]}>Data da leitura anterior</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>17/05/2022</Text>
                       </View>
                     </View>
                   </View>
@@ -822,8 +822,8 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewmes}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Mes de referência</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Quantidade</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData}
@@ -835,7 +835,7 @@ const renderHorizontalItem2 = (data) => {
                 </View>
                 <View style={styles.mV_15}>
                  <View style={styles.viewtributos}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Tributos</Text>
+                   <Text style={[styles.smalltext,styles.fontColor]}>Tributos</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData2}
@@ -848,15 +848,15 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.viewbanderia}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                   <Text style={[styles.mediumtextbold,styles.fontColor,{marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={styles.viewfeather}> 
-                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
+                   <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,styles.fontColorWhite,{marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
 
                  </View>
                  <View style={{marginVertical:5,}}>
-                 <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2}]}>Período de consumo: 29 dias</Text>
-                    <View style={{flexDirection:'row',width:'100%',height:30}}>
+                 <Text style={[styles.smalltext,styles.fontColor,{marginVertical:2}]}>Período de consumo: 29 dias</Text>
+                    <View style={styles.cardfirst}>
                        <View style={styles.viewbana}/>
                     </View>
                     <View style={styles.viewdate}>
@@ -874,9 +874,9 @@ const renderHorizontalItem2 = (data) => {
              <View style={styles.checkboxContainer}>
              <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
                 {/* Optional chaining used while api get data*/}
-               <Card style={{ backgroundColor: '#fff' }}>
+               <Card style={styles.bgWhite}>
                 <Card.Content>
-                <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
+                <View style={styles.viewCard}>
                   <Text style={styles.mediumtextbold}>Ultimas faturas</Text>
                   <Text style={styles.label}>Ultimos 7 meses</Text>
                  </View>
@@ -914,7 +914,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.bartext}>Valor de consumo</Text>
                   </View>
                   <View style={styles.viewbar}>
-                  <Text style={[styles.bar, {backgroundColor:'#0058a0'}]}></Text>
+                  <Text style={[styles.bar, styles.Color00]}></Text>
 
                   <Text style={styles.bartext}>Média de consuma</Text>
                   </View>
@@ -925,7 +925,7 @@ const renderHorizontalItem2 = (data) => {
                   <Text style={styles.smalltext}>Última fatura</Text>
                   <Text style={styles.mediumtextbold}>R$ 237,00</Text>
                   </View>
-                  <View style={{flexDirection:'column'}}>
+                  <View style={styles.viewColumn}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
                   <Text style={styles.mediumtextbold}>R$ 200,00</Text>
                   </View>
@@ -1008,6 +1008,17 @@ const styles = StyleSheet.create({
   checkboxContainer: {
     marginBottom: 20,
   },
+  fontColor:{
+    fontWeight:'600',
+    color:'black'
+  },
+  Color00:{
+    backgroundColor:'#0058a0'
+  },
+  fontColorWhite:{
+    fontWeight:'600',
+    color:'white'
+  },
   flexColumn:{
     flexDirection:'column',
     marginTop:5
@@ -1044,10 +1055,22 @@ const styles = StyleSheet.create({
      borderTopWidth:1,
      paddingVertical:5
   },
+  colorMargin:{
+    color:'black',
+    marginVertical:3  
+  },
   cardsecond:{
     flexDirection:'row',
     width:'100%',
     justifyContent:'space-between'
+  },
+  viewCard:{
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between'
+  },
+  bgWhite:{
+    backgroundColor: '#fff'
   },
   viewreal:{
     flexDirection: 'row',
@@ -1093,6 +1116,9 @@ const styles = StyleSheet.create({
     width:'100%',
     marginVertical:5
   },
+  fontweight600:{
+    fontWeight:'600'
+  },
   viewconsumo:{
     flexDirection:'row',
     alignItems:'center',
@@ -1114,6 +1140,9 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     width:'100%',
     justifyContent:'space-between'
+  },
+  viewColumn:{
+    flexDirection:'column',
   },
   viewdata:{
     flexDirection:'column',

@@ -104,7 +104,7 @@ export function Screen25({ route, navigation }){
         <View style={{width:14,height:14,borderRadius:7,backgroundColor:data.item.color}}></View>
         <Text style={[styles.mediumtextbold,{marginTop:-2,marginLeft:2}]}>{data.item.name}</Text>
         </View>
-        <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>R$ {data.item.money}</Text>
+        <Text style={[styles.smalltext,styles.fontWeightBlack]}>R$ {data.item.money}</Text>
       </View>
     )
 }
@@ -227,8 +227,8 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.RowSpace}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Mes de referência</Text>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black'}]}>Quantidade</Text>
+                   <Text style={[styles.smalltext,styles.fontWeightBlack]}>Mes de referência</Text>
+                   <Text style={[styles.smalltext,styles.fontWeightBlack]}>Quantidade</Text>
                  </View>
                     <FlatList
                     data={HorizontalBarData}
@@ -244,7 +244,7 @@ const renderHorizontalItem2 = (data) => {
 
                 <View style={styles.mV_15}>
                  <View style={styles.FlexNew}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira tarifária</Text>
+                   <Text style={[styles.mediumtextbold,styles.fontWeightBlack,{marginVertical: 1}]}>Bandeira tarifária</Text>
                   <View style={{ backgroundColor: '#04704e',padding:6,borderRadius:3,flexDirection:'row' }}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                   </View>
@@ -268,7 +268,7 @@ const renderHorizontalItem2 = (data) => {
                   <View style={styles.mV_5}>
                    <Text style={[styles.smalltext,styles.FontColor]}>Período de consumo: 33 dias</Text>
                     <View style={styles.RowHeight}>
-                       <View style={{width:'15%',backgroundColor:'#80c342',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
+                       <View style={[{width:'15%',backgroundColor:'#80c342'},styles.borderBootmTop]}/>
                        <View style={{width:'85%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
                     </View>
                     <View style={styles.RowSpace}>
@@ -283,8 +283,8 @@ const renderHorizontalItem2 = (data) => {
 
                   <View style={styles.mV_15}>
                    <View style={styles.mV_5}>
-                   <Text style={[styles.mediumtextbold,{fontWeight:'600',color:'black',marginVertical: 1}]}>Bandeira</Text>
-                   <View style={{ backgroundColor: '#04704e',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
+                   <Text style={[styles.mediumtextbold,styles.fontWeightBlack,{marginVertical: 1}]}>Bandeira</Text>
+                   <View style={[{ backgroundColor: '#04704e'},styles.ViewColorStyle ]}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'white',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
@@ -293,7 +293,7 @@ const renderHorizontalItem2 = (data) => {
 
                  <View style={styles.mV_5}>
                    <View >
-                   <View style={{ backgroundColor: '#fbcd5b',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
+                   <View style={[{ backgroundColor: '#fbcd5b'},styles.ViewColorStyle ]}> 
                    <FeatherIcon name="flag" color="#f15e38" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'#f15e38',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
@@ -302,7 +302,7 @@ const renderHorizontalItem2 = (data) => {
 
                  <View style={styles.mV_5}>
                    <View >
-                   <View style={{ backgroundColor: '#ed2125',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
+                   <View style={[{ backgroundColor: '#ed2125'},styles.ViewColorStyle ]}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
@@ -311,7 +311,7 @@ const renderHorizontalItem2 = (data) => {
 
                  <View style={styles.mV_5}>
                    <View >
-                   <View style={{ backgroundColor: '#ed2125',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
+                   <View style={[{backgroundColor: '#ed2125'},styles.ViewColorStyle ]}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Bandeira verde</Text>
                    </View>
                   </View>
@@ -320,7 +320,7 @@ const renderHorizontalItem2 = (data) => {
 
                  <View style={styles.mV_5}>
                    <View >
-                   <View style={{ backgroundColor: '#c0181b',width:'40%',padding:6,borderRadius:3,flexDirection:'row',marginVertical:10 }}> 
+                   <View style={[{ backgroundColor: '#c0181b'},styles.ViewColorStyle ]}> 
                    <FeatherIcon name="flag" color="yellow" size={18} /><Text style={[styles.smalltext,{fontWeight:'600',color:'yellow',marginHorizontal:2}]}>Escassez hídrica</Text>
                    </View>
                   </View>
@@ -418,9 +418,9 @@ const renderHorizontalItem2 = (data) => {
                      <Text style={[styles.smalltext,styles.FontColor]}>Mês de referência</Text>
                      <Text style={[styles.smalltext,styles.FontColor]}>Quantidade</Text>
                    </View>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
+                   <Text style={[styles.smalltext,styles.fontWeightBlack,{marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
                     <View style={styles.RowHeight}>
-                       <View style={{width:'55%',backgroundColor:'#f15e38',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
+                       <View style={[{width:'55%',backgroundColor:'#f15e38'},styles.borderBootmTop]}/>
                        <View style={{width:'45%',backgroundColor:'#eeeeee',borderBottomRightRadius:15,borderTopRightRadius:15}}/>
                     </View>
                     <View style={styles.RowSpace}>
@@ -430,9 +430,9 @@ const renderHorizontalItem2 = (data) => {
               </View>
 
                <View style={styles.mV_5}>
-                   <Text style={[styles.smalltext,{fontWeight:'600',color:'black',marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
+                   <Text style={[styles.smalltext,styles.fontWeightBlack,{marginVertical:2,textAlign:'center',width:'55%'}]}>25%</Text>
                     <View style={styles.RowHeight}>
-                       <View style={{width:'55%',backgroundColor:'#f15e38',borderBottomLeftRadius:15,borderTopLeftRadius:15}}/>
+                       <View style={[{width:'55%',backgroundColor:'#f15e38'},styles.borderBootmTop]}/>
                        <View style={[styles.viewstyle,{width:'45%'}]}/>
                     </View>
                     <View style={styles.RowSpace}>
@@ -582,9 +582,24 @@ const styles = StyleSheet.create({
     color:'black',
     marginVertical:2,
   },
+  fontWeightBlack:{
+    fontWeight:'600',
+    color:'black',
+  },
+  borderBootmTop:{
+    borderBottomLeftRadius:15,
+    borderTopLeftRadius:15
+  },
   ColorVertical:{
     color:'black',
     marginVertical:0
+  },
+  ViewColorStyle:{
+    width:'40%',
+    padding:6,
+    borderRadius:3,
+    flexDirection:'row',
+    marginVertical:10
   },
   FontColor:{
     fontWeight:'600',
