@@ -70,7 +70,6 @@ export function InvoiceSendToHome({route}) {
     }
   };
 
-  console.log('datas',dataSource);
   useEffect(() => {
 
   //Get btn Data Main getReenviarData
@@ -167,7 +166,6 @@ export function InvoiceSendToHome({route}) {
                   <Button
                     title="Reenviar por correspondência"
                     type="secondary"
-                    // onPress={handleSignIn}
                     onPress={handleClick}
                     isLoading={isLogging}
                   />
@@ -177,7 +175,6 @@ export function InvoiceSendToHome({route}) {
                   <Button
                    title="Alterar endereço de entrega"
                    type="primary"
-                   // onPress={handleSignIn}
                    onPress={handleAlterar}
                    isLoading={isLogging}
                  />
@@ -188,18 +185,7 @@ export function InvoiceSendToHome({route}) {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+            
           </>
         )}
       </SafeAreaView>

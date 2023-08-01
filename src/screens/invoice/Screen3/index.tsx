@@ -9,23 +9,16 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  Pressable,
-  TouchableHighlight,
   TouchableWithoutFeedback,
-  TouchableWithoutFeedbackComponent
 } from 'react-native';
-// Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 
-import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { Label, Title, ContainerViewLogo } from './styles';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../../components/HeaderCustom';
-import { Button } from '../../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
@@ -115,7 +108,6 @@ export function Screen3() {
     navigation.navigate('InvoiceHome')
   };
   function handleHome() {
-    console.log('clickdrawer');
     changeStep(0);
   }
 

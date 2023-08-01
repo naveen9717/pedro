@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import {
   Platform,
   StatusBar,
@@ -10,11 +10,8 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  Pressable,
-  TouchableHighlight,
   TouchableWithoutFeedback
 } from 'react-native';
-// Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 
@@ -22,7 +19,6 @@ import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../../components/HeaderCustom';
 import { Button } from '../../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
@@ -32,7 +28,6 @@ import { ContainerLoading } from '../Login/styles';
 import { Load } from '../../../components/Button/styles';
 import { RootState } from '../../../redux/reducer';
 import { AlertModal } from '../../../components/Modal/AlertModal';
-import ClipboardToast from 'react-native-clipboard-toast';
 import { Card, Snackbar } from 'react-native-paper';
 import Modal from "react-native-modal";
 import ContaServices from '../../../shared/services/ContaServices';
@@ -46,7 +41,6 @@ import RNShareFile from 'react-native-share-pdf';
 export function PaymentInvoice({ route, navigation }) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [isSelected, setSelection] = useState(true);
   const [dataMain, setDataMain] = useState(undefined)
@@ -66,7 +60,6 @@ export function PaymentInvoice({ route, navigation }) {
   };
 
   
-  // const { email, numeroProtocolo,dataEnvio } = route.params;
 
   const toggleModalPix = () => {
     setModalPixVisible(!isModalPixVisible)
@@ -207,18 +200,16 @@ export function PaymentInvoice({ route, navigation }) {
         code_install={element?.codigoParceiroNegocio}
         mesReferencia={element?.mesReferencia}
         dataVencimento={element?.dataVencimento}
-        // parcelamentoD={element?.parcelamentoDisponivel}
+       
         contaMinima={element?.contaMinima}
         valorContaAtual={element?.valor}
-        // onPress={handlePagar}
-        // onPress2={handleChild2}
+        
       />        
       );
     });
   };
 
   const CodigoBarra = (props)=>{
-    // console.log('propsnew',props.dataCodigoMain?.data);
     return (
       <View
       style={{height: '70%',backgroundColor: 'white',marginTop: '80%',width: '100%'}}>
@@ -288,7 +279,7 @@ export function PaymentInvoice({ route, navigation }) {
   }
 
   const ModalPix = (props)=>{
-    console.log('pixnew',props.dataPixMain?.data);
+    
     return (
      
             <TouchableWithoutFeedback onPress={toggleModalPix}>
@@ -336,7 +327,7 @@ export function PaymentInvoice({ route, navigation }) {
 
 
   const RiscodeCorte = (props)=>{
-    console.log('propsnew',props.dataMain?.data);
+  
     return (
      
       <View style={styles.ViewOuterStyle}>

@@ -13,10 +13,9 @@ import {
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 
-import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { Label, Title } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../../components/HeaderCustom';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 
@@ -92,7 +91,7 @@ export function InvoiceBillPayment() {
       <SafeAreaView
         style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
       />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
+    
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={

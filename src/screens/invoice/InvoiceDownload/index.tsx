@@ -40,10 +40,6 @@ export function InvoiceDownload() {
   const [step, setStep] = useState(0);
   const [dataSource, setDataSource] = useState('')
 
-  const source = { uri: 'http://samples.leanpub.com/thereactnativebook-sample.pdf', cache: true };
-  //const source = require('./test.pdf');  // ios only
-  //const source = {uri:'bundle-assets://test.pdf' };
-  //const source = {uri:'file:///sdcard/test.pdf'};
   const source64new = {uri:"data:application/pdf;base64,JVBERi0xLjcKJc..."};
   const source64sample = {uri:`data:application/pdf;base64,${dataSource?.binarioPDF}`};
 
@@ -75,7 +71,6 @@ const DemoDownload = () => {
   })
 };
   
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -109,7 +104,6 @@ const DemoDownload = () => {
 });
   }, []);
 
-// console.log("pdfactual",dataSource);
 
 
 
@@ -126,10 +120,6 @@ const DemoDownload = () => {
     changeStep(0);
   }
 
-  const handleClick = () => {
-    // navigation.navigate('login' as never);
-    // navigation.navigate('MinhaContaAtual');
-  };
 
   return (
     <>

@@ -37,7 +37,6 @@ import {AccessibilityWidget} from '../../../components/AccessibilityWidget';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import RNShareFile from 'react-native-share-pdf';
-import { FileSaveOptions, FileSaveSuccess, startDownloadAppSave } from 'react-native-ios-files-app-save';
 
 export function InvoiceHome() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
@@ -78,7 +77,7 @@ export function InvoiceHome() {
     console.log('showError',showError)
   }
 }
-// console.log('text',text);
+
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -88,9 +87,6 @@ export function InvoiceHome() {
     title: '',
     msg: '',
   });
-
-  // console.log('dataSource:', dataSource);
-  // console.log('dataMain:', dataMain);
 
 
   const isLoading: boolean = useSelector(
@@ -143,7 +139,7 @@ export function InvoiceHome() {
   };
 
   function handleChild2(value){
-    console.log('datavalue',value)
+    // console.log('datavalue',value)
     // navigation.navigate('Ajuda',{datavalue:value})
     navigation.navigate({
       name: 'InvoiceEasy',
@@ -249,7 +245,6 @@ function webViewRender(step: number) {
                     parcelamentoD={dataMain.data?.parcelamentoDisponivel}
                     valorContaAtual={dataMain.data?.valorContaAtual}
                     address={dataMain.data?.enderecoInstalacao}
-                    // address={dataMain.data?.endereco.logradouro+','+dataMain.data?.endereco.localizacao+' - '+dataMain.data?.endereco.bairro+dataMain.data?.endereco.municipio+'/'+dataMain.data?.endereco.uf+' - CEP '+dataMain.data?.endereco.cep}
                   />  
                
                  <View style={styles.filter}>
@@ -258,8 +253,6 @@ function webViewRender(step: number) {
                    <Text style={styles.filtertext}>Status: {status}</Text>
                  </View>
                  <View style={styles.filterInner}>
-                 {/* let result = condition ? value1 : value2; */}
-                 {/* moment(selectedRange?.firstDate, 'YYY-MM-DD').format('DD/MM')} - {moment(selectedRange?.secondDate, 'YYY-MM-DD').format('DD/MM') */}
                    <Text style={styles.filtertext}>Período: {selectedRange.firstDate =="03" ? selectedRange?.firstDate+'/2021' +'-'+ selectedRange?.secondDate+'/2021' : <> {moment(selectedRange?.firstDate).format('MMM/YYYY')} - {moment(selectedRange?.secondDate).format('MMM/YYYY')}</>}</Text>
                  </View>
                    <View style={styles.iconouter}>
@@ -292,7 +285,6 @@ function webViewRender(step: number) {
                  </View>
                 </View>
 
-                {/* {ModalLoading(isLoading)} */}
                 </>
 }
               </MainGenericContainer>

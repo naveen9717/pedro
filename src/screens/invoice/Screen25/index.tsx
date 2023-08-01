@@ -14,7 +14,6 @@ import {
   FlatList
 } from 'react-native';
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { ListItem, SearchBar } from "react-native-elements";
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
@@ -25,7 +24,6 @@ import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import { PieChart } from "react-native-gifted-charts";
-import AntIcon from 'react-native-vector-icons/AntDesign';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import HistoryDataServices from '../../../shared/services/HistoryDataServices';
 
@@ -33,7 +31,6 @@ import HistoryDataServices from '../../../shared/services/HistoryDataServices';
 export function Screen25({ route, navigation }){
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [pie, setPie] = useState([]);
   const[Loading,setLoading] = useState(true);
@@ -552,18 +549,7 @@ const renderHorizontalItem2 = (data) => {
           </>
         ) : (
           <>
-            <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            />
+       
           </>
         )}
       </SafeAreaView>

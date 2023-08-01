@@ -2,7 +2,6 @@ import React, {useState, useRef, useEffect, useContext} from 'react';
 import {
   Platform,
   StatusBar,
-  Image,
   SafeAreaView,
   View,
   Dimensions,
@@ -55,7 +54,6 @@ export function InvoiceEasyComposition() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
   const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
@@ -216,18 +214,7 @@ export function InvoiceEasyComposition() {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+            
           </>
         )}
       </SafeAreaView>

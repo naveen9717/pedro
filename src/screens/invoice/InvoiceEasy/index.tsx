@@ -77,7 +77,6 @@ export function InvoiceEasy({ route, navigation }) {
     console.log('showError',showError)
   }
 }
-// console.log('tab',tab);
   
   useEffect(() => {
     HistoryDataServices.getTabBarData().then((res) => {
@@ -90,7 +89,6 @@ export function InvoiceEasy({ route, navigation }) {
       setLoading(false); 
   });
   }, []);
-  // {value: 254,date:"05/2022", color: '#80c342',color2:'#eeeeee', percentage: '68%',percent:'32%'},
 
   const stringifyHorizontalData = dataSource.map((data,key) => {
     return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
@@ -106,7 +104,6 @@ export function InvoiceEasy({ route, navigation }) {
     arr.push(...[{value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}])
   });
 
-  // console.log('arr',arr);
 
   const stringybarData = tab.map((data,key) => {
     return {value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}
@@ -667,7 +664,6 @@ const renderHorizontalItem2 = (data) => {
              <View style={styles.checkboxContainer}>
              <Text style={styles.mediumtextbold}>Seu histórico de consumo</Text>
 
-                {/* Optional chaining used while api get data*/}
                <Card style={styles.bgWhite}>
                 <Card.Content>
                 <View style={styles.viewCard}>

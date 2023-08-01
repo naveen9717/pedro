@@ -9,7 +9,6 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableWithoutFeedback,
   ActivityIndicator
 
 } from 'react-native';
@@ -207,7 +206,7 @@ export function InvoiceHistoryChart() {
               </View>
 
               <View style={styles.checkboxContainer}>
-                {/* Optional chaining used while api get data*/}
+               
                <Card style={styles.bgColorWhite}>
                 <Card.Content>
                 <View style={styles.flexRowAlignSpace}>
@@ -267,7 +266,7 @@ export function InvoiceHistoryChart() {
                </Card>
               </View>
 
-                {/* {ModalLoading(isLoading)} */}
+               
                 </>
                 }
               </MainGenericContainer>

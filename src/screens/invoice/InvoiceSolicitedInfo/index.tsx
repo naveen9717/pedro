@@ -93,10 +93,6 @@ export function InvoiceSolicitedInfo() {
     changeStep(0);
   }
 
-  const handleClick = () => {
-    // navigation.navigate('login' as never);
-    // navigation.navigate('MinhaContaAtual');
-  };
 
   return (
     <>
@@ -172,18 +168,7 @@ export function InvoiceSolicitedInfo() {
           </>
         ) : (
           <>
-            {/* <HeaderCustom
-              marginTop={
-                Platform.OS === 'android' ? StatusBar.currentHeight : 0
-              }
-              hideMessage={true}
-              onBackPress={async () => goBack()}
-              backgroundColor={theme.COLORS.PRIMARY_800}
-              isPrimaryColorDark
-              isFocused={false}
-              leftOnPress={handleHome}
-              leftAction={'login'}
-            /> */}
+            
            
           </>
         )}

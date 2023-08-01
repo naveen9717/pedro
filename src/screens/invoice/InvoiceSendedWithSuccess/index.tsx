@@ -21,7 +21,7 @@ import {HeaderCustom} from '../../../components/HeaderCustom';
 import {Button} from '../../../components/Button';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import {useNetInfo} from '@react-native-community/netinfo';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {AuthContext, AuthContextProps} from '../../../contexts/useAuth';
 import {ContainerLoading} from '../Login/styles';
 import {Load} from '../../../components/Button/styles';
@@ -104,10 +104,7 @@ export function InvoiceSendedWithSuccess({route}) {
     changeStep(0);
   }
 
-  const handleClick = () => {
-    // navigation.navigate('login' as never);
-    // navigation.navigate('MinhaContaAtual');
-  };
+
 
   return (
     <>

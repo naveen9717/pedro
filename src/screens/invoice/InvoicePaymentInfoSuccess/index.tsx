@@ -34,7 +34,6 @@ import RNShareFile from 'react-native-share-pdf';
 export function InvoicePaymentInfoSuccess() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [dataSource, setDataSource] = useState('')
 
@@ -96,10 +95,7 @@ export function InvoicePaymentInfoSuccess() {
     changeStep(0);
   }
 
-  const handleClick = () => {
-    // navigation.navigate('login' as never);
-    // navigation.navigate('MinhaContaAtual');
-  };
+  
 
   return (
     <>

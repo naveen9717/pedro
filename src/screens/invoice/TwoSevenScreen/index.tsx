@@ -10,11 +10,8 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  Pressable,
-  TouchableHighlight,
   TouchableWithoutFeedback
 } from 'react-native';
-// Alert, Modal, StyleSheet, Text, Pressable, View
 import { useNavigation, useFocusEffect } from '@react-navigation/native';
 import CheckBox from '@react-native-community/checkbox';
 
@@ -23,7 +20,6 @@ import CheckBox from '@react-native-community/checkbox';
 import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
-// import Widget from '../../components/Widget';
 import { HeaderCustom } from '../../../components/HeaderCustom';
 import { Button } from '../../../components/Button';
 import { useNetInfo } from '@react-native-community/netinfo';
@@ -110,7 +106,7 @@ export function TwoSevenScreen() {
       <SafeAreaView
         style={{ flex: 0, backgroundColor: theme.COLORS.BACKGROUND }}
       />
-      {/* <SafeAreaView style={{ flex: 0, backgroundColor: theme.COLORS.PRIMARY_800 }} /> */}
+    
       <SafeAreaView style={{ flex: 1, backgroundColor: theme.COLORS.BACKGROUND }}>
         <StatusBar
           barStyle={
@@ -285,7 +281,6 @@ export function TwoSevenScreen() {
                               <Button
                                 title="Realizar pagamento"
                                 type="secondary"
-                                // onPress={handleSignIn}
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
@@ -293,7 +288,6 @@ export function TwoSevenScreen() {
                               <Button
                                 title="Já realizei o pagamento, preciso religar"
                                 type="secondary"
-                                // onPress={handleSignIn}
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />
@@ -301,7 +295,6 @@ export function TwoSevenScreen() {
                               <Button
                                 title="Fechar"
                                 type="secondary"
-                                // onPress={handleSignIn}
                                 onPress={handleClick}
                                 isLoading={isLogging}
                               />

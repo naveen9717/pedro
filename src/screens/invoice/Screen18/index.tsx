@@ -13,9 +13,9 @@ import {
   Text,
   ActivityIndicator
 } from 'react-native';
-import { useNavigation, useFocusEffect } from '@react-navigation/native';
-import { ListItem, SearchBar } from "react-native-elements";
-import { Label, Title, ContainerViewButton, ContainerViewLogo } from './styles';
+import { useNavigation} from '@react-navigation/native';
+import {  SearchBar } from "react-native-elements";
+import { Label, Title } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
 import { HeaderCustom } from '../../../components/HeaderCustom';
@@ -25,10 +25,7 @@ import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { AlertModal } from '../../../components/Modal/AlertModal';
 import { Card, Paragraph } from 'react-native-paper';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import FeatherIcon from 'react-native-vector-icons/Feather';
 import { FAB } from 'react-native-paper';
-import { AnimatedFAB } from 'react-native-paper';
 import ContaServices from '../../../shared/services/ContaServices';
 
 
