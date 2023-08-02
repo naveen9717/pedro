@@ -33,8 +33,6 @@ export function InvoiceIntro() {
   const navigation = useNavigation();
   const [isSelected, setSelection] = useState(true);
 
-  const netInfo = useNetInfo();
-
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);

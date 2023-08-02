@@ -69,7 +69,6 @@ export function PaymentInvoice({ route, navigation }) {
     setModalVisiblePop(!isModalVisiblePop)
   }
  
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -84,15 +83,6 @@ export function PaymentInvoice({ route, navigation }) {
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
 
-  const ModalLoading = (loading: boolean) => {
-    if (loading) {
-      return (
-        <ContainerLoading>
-          <Load />
-        </ContainerLoading>
-      );
-    }
-  };
 
   
   useEffect(() => {

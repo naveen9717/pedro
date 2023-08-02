@@ -34,13 +34,10 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export function InvoicePixPayment() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
-  const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
 
-  
-  const netInfo = useNetInfo();
- 
+   
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);

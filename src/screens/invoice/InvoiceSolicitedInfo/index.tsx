@@ -31,11 +31,10 @@ import RNShareFile from 'react-native-share-pdf';
 export function InvoiceSolicitedInfo() {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [dataSource, setDataSource] = useState('')
 
-  const netInfo = useNetInfo();
+  
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -46,7 +45,6 @@ export function InvoiceSolicitedInfo() {
     msg: '',
   });
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,

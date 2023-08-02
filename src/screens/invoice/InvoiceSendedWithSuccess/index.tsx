@@ -35,14 +35,12 @@ import RNShareFile from 'react-native-share-pdf';
 export function InvoiceSendedWithSuccess({route}) {
   const {b2cLogin} = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [dataMain, setDataMain] = useState({})
   const[Loading,setLoading] = useState(true);
   const[dataSource, setDataSource] = useState('')
 
  console.log('routedata',route.params)
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {

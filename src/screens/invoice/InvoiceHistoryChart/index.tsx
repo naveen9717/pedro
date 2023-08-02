@@ -33,19 +33,12 @@ import { BarChart } from "react-native-gifted-charts";
 
 export function InvoiceHistoryChart() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
-  const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const[Loading,setLoading] = useState(true);
 
   const [dataSource, setDataSource] = useState([])
   const { height } = Dimensions.get('window');
-
-  const screenWidth = Dimensions.get("window").width;
-
-
-
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {

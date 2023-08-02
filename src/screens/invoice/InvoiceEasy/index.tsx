@@ -37,7 +37,6 @@ import RNShareFile from 'react-native-share-pdf';
 export function InvoiceEasy({ route, navigation }) {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
   const [isLogging, setIsLogging] = useState(false);
-  // const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [tab, setTab] = useState([]);
   const[Loading,setLoading] = useState(true);
@@ -55,7 +54,6 @@ export function InvoiceEasy({ route, navigation }) {
 
   console.log('routenav',route)
 
-  const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -100,9 +98,7 @@ export function InvoiceEasy({ route, navigation }) {
 
   var arr = [];
 
-  const stringifybarData = tab.map((data,key) => {
-    arr.push(...[{value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}])
-  });
+ 
 
 
   const stringybarData = tab.map((data,key) => {
@@ -133,14 +129,6 @@ export function InvoiceEasy({ route, navigation }) {
     navigation.navigate('InvoiceDownload')
   };
   
-
-  const barData = [
-    {value: 2500,frontColor: '#02ade1',label:'Jan'}, 
-    {value: 3500,frontColor: '#02ade1',label:'Feb'}, 
-    {value: 4500,frontColor: '#02ade1',label:'Mar'}, 
-    {value: 5000,frontColor: '#02ade1',label:'Apr'},
-    {value: 3000,frontColor: '#02ade1',label:'May'}
-  ];
 
   
 

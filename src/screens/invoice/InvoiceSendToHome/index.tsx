@@ -38,11 +38,6 @@ export function InvoiceSendToHome({route}) {
   const [tab, setTab] = useState([]);
   const[Loading,setLoading] = useState(true);
 
-  const dispatch = useDispatch();
-  function handleSignIn() {
-    navigation.navigate('login' as never);
-  }
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -53,7 +48,6 @@ export function InvoiceSendToHome({route}) {
     msg: '',
   });
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,

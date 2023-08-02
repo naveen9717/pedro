@@ -31,7 +31,6 @@ import ContaServices from '../../../shared/services/ContaServices';
 
 export function Screen18() {
   const { b2cLogin } = useContext(AuthContext) as AuthContextProps;
-  const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const [dataMain, setDataMain] = useState({})
@@ -48,7 +47,6 @@ export function Screen18() {
   });
 
 
-  const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -97,8 +95,6 @@ export function Screen18() {
     {value: 5000,frontColor: '#02ade1',label:'Apr'},
     {value: 3000,frontColor: '#02ade1',label:'May'}
   ];
-
- 
 
   return (
     <>

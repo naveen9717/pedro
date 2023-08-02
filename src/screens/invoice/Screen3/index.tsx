@@ -39,7 +39,6 @@ export function Screen3() {
   const [isLogging, setIsLogging] = useState(false);
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
-  const [isSelected, setSelection] = useState(true);
   const [dataSource, setDataSource] = useState([])
 
   const [isModalVisible, setModalVisible] = useState(false);
@@ -59,7 +58,6 @@ export function Screen3() {
   }
 
  
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {

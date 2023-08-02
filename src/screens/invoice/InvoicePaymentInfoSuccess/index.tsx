@@ -38,8 +38,6 @@ export function InvoicePaymentInfoSuccess() {
   const [dataSource, setDataSource] = useState('')
 
  
-  const netInfo = useNetInfo();
-
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
     setshowModal(!showModal);
@@ -49,7 +47,6 @@ export function InvoicePaymentInfoSuccess() {
     msg: '',
   });
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,

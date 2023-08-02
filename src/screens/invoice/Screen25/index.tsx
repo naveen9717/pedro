@@ -33,7 +33,6 @@ export function Screen25({ route, navigation }){
   const [isLogging, setIsLogging] = useState(false);
   const [step, setStep] = useState(0);
   const [pie, setPie] = useState([]);
-  const[Loading,setLoading] = useState(true);
 
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
@@ -46,7 +45,6 @@ export function Screen25({ route, navigation }){
   });
 
 
-  const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -106,11 +104,6 @@ export function Screen25({ route, navigation }){
     )
 }
 
-const pieData = [
-  {value: 54,name:"COFINS):", color: '#ed1c25', text: '54%',money:'22,13'},
-  {value: 40, name:"PIS:",color: '#02ade1', text: '30%',money:'47,69'},
-  {value: 20, name:"ICMS:",color: '#f68b1f', text: '26%',money:'22,13'},
-];
 
 const stringifyPieData = [
   {value: 54,name:"COFINS:", color: '#ed1c25', text: '54%',money:pie?.cofins},

@@ -21,7 +21,6 @@ import {MainGenericContainer} from '../../../components/Containers/index';
 import {HeaderCustom} from '../../../components/HeaderCustom';
 import {Button} from '../../../components/Button';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
-import {useNetInfo} from '@react-native-community/netinfo';
 import {useDispatch, useSelector} from 'react-redux';
 import {AuthContext, AuthContextProps} from '../../../contexts/useAuth';
 import {ContainerLoading} from '../Login/styles';
@@ -81,7 +80,6 @@ const DemoDownload = () => {
     msg: '',
   });
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,

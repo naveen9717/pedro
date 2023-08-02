@@ -43,7 +43,6 @@ export function InvoiceEasyComposition() {
   {value: 0.32, name:"Energia gerada",color: '#f68b1f', text: '0,32%'},
   {value: 0.039,  name:"Transmissäão",color: '#ed1c25', text: ' 0,039%'},
 ]
-  const netInfo = useNetInfo();
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -54,7 +53,6 @@ export function InvoiceEasyComposition() {
     msg: '',
   });
 
-  const [freeInternetDate, setFreeInternetDate] = useState<Date | null>(null);
 
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,

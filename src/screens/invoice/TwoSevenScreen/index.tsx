@@ -48,9 +48,6 @@ export function TwoSevenScreen() {
   const toggleModalPix = () => {
     setModalPixVisible(!isModalPixVisible)
   }
-
-
-  const netInfo = useNetInfo();
   
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -61,18 +58,13 @@ export function TwoSevenScreen() {
     msg: '',
   });
 
-  console.log('Net Info:', netInfo);
 
-
-
- 
   useEffect(() => {
   
   }, []);
 
   const { height } = Dimensions.get('window');
 
- 
 
   const theme = useTheme();
   const changeStep = (s: number) => {
@@ -176,11 +168,11 @@ export function TwoSevenScreen() {
                 <View style={styles.checkboxContainer}>
 
                   <Text style={styles.mediumtext}>Método de pagamento</Text>
-                  <View style={{ flexDirection: 'row' }}>
+                  <View style={styles.flexRow}>
                     <View style={styles.cardcontent}>
                       <Card style={styles.cardsview}>
                         <Card.Content>
-                          <View style={{ flexDirection: 'row' }}>
+                          <View style={styles.flexRow}>
                             <View>
                               <Text style={styles.smalltext}>Pagar</Text>
                               <Text style={[styles.smalltext, {marginBottom:10}]}>com Pix</Text>
@@ -201,12 +193,12 @@ export function TwoSevenScreen() {
 
                           <View style={{ flexDirection: 'column', justifyContent: 'space-around' }}>
 
-                            <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignSelf: 'center', marginBottom: 20 }}>
+                            <View style={styles.flexAlignJustify}>
                               <Text style={styles.white}>Copia e cola</Text>
                             </View>
                             <View style={{ borderBottomColor: '#FCFCFC', borderBottomWidth: 1, flex: 1, width: 200 }} />
                             <TouchableOpacity onPress={handlePix}>
-                              <View style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 20 }} >
+                              <View style={styles.flexAlignJustify} >
                                 <Text style={styles.white}>Ver QR code</Text>
                               </View>
                             </TouchableOpacity>
@@ -345,10 +337,20 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'flex-start'
   },
+  flexRow:{
+    flexDirection:'row'
+  },
   toggleview:{
     flex: 1,
     marginTop: 30,
     backgroundColor: 'white',
+  },
+  flexAlignJustify:{
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
+    marginBottom: 20
   },
   togglemodalview:{
     flexDirection: 'row',

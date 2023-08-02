@@ -45,7 +45,6 @@ export function InvoiceHome() {
   const [step, setStep] = useState(0);
   const [text, setText] = useState("");
   const [status, setStatus] = useState("Todos");
-  const [active, setActive] = useState(false);
   const[Loading,setLoading] = useState(true);
 
 
@@ -94,16 +93,6 @@ export function InvoiceHome() {
   );
 
 
-
-  const ModalLoading = (loading: boolean) => {
-    if (loading) {
-      return (
-        <ContainerLoading>
-          <Load />
-        </ContainerLoading>
-      );
-    }
-  };
 
   useEffect(() => {
     //Get Conat Data List

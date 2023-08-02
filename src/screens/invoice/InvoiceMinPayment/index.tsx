@@ -42,8 +42,6 @@ export function InvoiceMinPayment() {
   const toggleModalPix = () => {
     setModalPixVisible(!isModalPixVisible)
   }
-
-  const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {

@@ -38,7 +38,6 @@ export function InvoiceBillPayment() {
   const [step, setStep] = useState(0);
 
 
-  const netInfo = useNetInfo();
  
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -74,7 +73,6 @@ export function InvoiceBillPayment() {
     setStep(s);
   };
   const { goBack } = useNavigation();
-  const [btnClick, setBtnClick] = useState(0);
 
   function handleHome() {
     changeStep(0);
