@@ -2,22 +2,13 @@ import React,{useState} from 'react';
 
 import {
   Dimensions,
-  GestureResponderEvent,
   Text,
-  TouchableOpacity,
   View,
   StyleSheet,
-  Image,
-  TouchableWithoutFeedback
 } from 'react-native';
-import {boxShadowCard} from '../../helpers/functions/utils';
 import { Card,IconButton } from 'react-native-paper';
 import Moment from 'moment';
-
-
 import { Tooltip } from 'react-native-elements';
-import AntIcon from 'react-native-vector-icons/AntDesign';
-import Feather from 'react-native-vector-icons/Feather';
 
 
 type Props = {
@@ -28,8 +19,6 @@ type Props = {
   dataVencimento:string;
   contaMinima:Boolean;
   valorContaAtual:number;
-  // onPress?: ((event: GestureResponderEvent) => void) | undefined;
-  // onPress2: ((event: GestureResponderEvent) => void) | undefined;
 
 };
 
@@ -64,7 +53,7 @@ export default function CardChildSecond({
       ;
     }
     else {
-      // return null;
+      
       return  <Tooltip popover={<View><Text style={styles.labels}>O que é conta mínima?</Text><Text style={styles.labels}>parcelamento</Text></View>} withOverlay={false} containerStyle={styles.popovershadow} backgroundColor="#efeded"><Text><IconButton icon="dots-vertical" containerColor="#02ade1" iconColor="#FFF"  /></Text></Tooltip>
     }
    }
@@ -103,6 +92,7 @@ export default function CardChildSecond({
       </View>
   );
 }
+
 
 
 const styles = StyleSheet.create({

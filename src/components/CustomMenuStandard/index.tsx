@@ -16,18 +16,6 @@ import {
 
 function CustomMenu() {
   const {navigate} = useNavigation();
-
-  // function hadleNavigatePagaments() {
-  //   // navigate('Pagaments');
-  // }
-
-  // function hadleNavigateSuporte() {
-  //   // navigate('Suporte')
-  // }
-
-  // function handleNavigatToConfiguration() {
-  //   navigate('configuration');
-  // }
   const navigation = useNavigation();
   return (
     <>

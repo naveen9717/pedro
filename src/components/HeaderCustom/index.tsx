@@ -1,7 +1,6 @@
 import React, {memo} from 'react';
 import {Dimensions, Image, Text, TouchableOpacity, View} from 'react-native';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
-// import { RectButton } from 'react-native-gesture-handler';
 
 import {Container, ContainerBadge, ContainerBadgeView} from './styles';
 import Feather from 'react-native-vector-icons/Feather';
@@ -12,7 +11,6 @@ import {
   // boxShadowStyle,
 } from '../../helpers/functions/utils';
 import {CleanButton} from '../ButtonClean';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 type Props = {

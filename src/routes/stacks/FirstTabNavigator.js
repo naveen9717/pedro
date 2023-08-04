@@ -20,11 +20,11 @@ const Stack = createNativeStackNavigator();
 function FirstTabNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Screen3" component={Screen3} />
+      {/* <Stack.Screen name="Screen3" component={Screen3} />
       <Stack.Screen name="Screen25" component={Screen25} />
       <Stack.Screen name="InvoiceHome" component={InvoiceHome} />
       <Stack.Screen name="InvoiceEasy" component={InvoiceEasy} />
-      <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} />
+      <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} /> */}
 
       <Stack.Screen name="InvoicePaymentInfoSuccess" component={InvoicePaymentInfoSuccess} />
       <Stack.Screen name="InvoiceDownload" tabBarVisible ={false} component={InvoiceDownload} />

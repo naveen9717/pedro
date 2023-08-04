@@ -560,7 +560,7 @@ const renderHorizontalItem2 = (data) => {
                       </View>
                       <View style={styles.innerview}>                         
                         <Text style={[styles.smalltext,styles.colorMargin]}>Mês referência</Text>
-                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>Abril</Text>
+                         <Text style={[styles.mediumtextboldblue,styles.fontweight600]}>{moment(route.params?.post.mesReferencia).format('MMM')}</Text>
                       </View>
                     </View>
                   </View>

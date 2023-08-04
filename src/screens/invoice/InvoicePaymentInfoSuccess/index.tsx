@@ -11,6 +11,7 @@ import {
   Text
 } from 'react-native';
 import {useNavigation, useFocusEffect} from '@react-navigation/native';
+import moment from 'moment'
 
 import {Title, ContainerViewButton} from './styles';
 
@@ -36,6 +37,7 @@ export function InvoicePaymentInfoSuccess() {
   const [isLogging, setIsLogging] = useState(false);
   const [step, setStep] = useState(0);
   const [dataSource, setDataSource] = useState('')
+  const [proto, setProto] = useState('')
 
  
   const [showModal, setshowModal] = useState(false);
@@ -76,8 +78,15 @@ export function InvoicePaymentInfoSuccess() {
     //Get History Data List
     OtherDataServices.getInvoiceData().then((res) => {
      setDataSource(res.data);
- });
+    });
+
+    //Put putBloquearData
+    OtherDataServices.putBloquearData().then((res) => {
+      setProto(res.data);
+  });
    }, []);
+
+   console.log('proto',proto);
 
   const {height} = Dimensions.get('window');
   
@@ -136,9 +145,9 @@ export function InvoicePaymentInfoSuccess() {
                     style={styles.imageSize}
                    />
                   <View style={styles.bpW}>
-                    <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                    <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                    <Text style={styles.smallertextgrey}>Serviço realizado às 10:05 12/10/2021</Text>
+                    <Text style={styles.mediumtext}>{proto?.mensagem}!</Text>
+                    <Text style={styles.largetext}>PROTOCOLO #{proto?.protocolo}</Text>
+                    <Text style={styles.smallertextgrey}>Serviço realizado às {moment(proto?.dataProtocolo).format('HH:MM DD/MM/YYYY')}</Text>
                  </View>
                   <View style={{marginVertical:15}}>
                     <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>

@@ -19,8 +19,6 @@ import { Label, Title } from './styles';
 import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
 import { HeaderCustom } from '../../../components/HeaderCustom';
-import { Button } from '../../../components/Button';
-import { useNetInfo } from '@react-native-community/netinfo';
 import { AccessibilityWidget } from '../../../components/AccessibilityWidget';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
 import { AlertModal } from '../../../components/Modal/AlertModal';

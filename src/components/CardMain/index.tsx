@@ -9,18 +9,11 @@ import {
   StyleSheet,
   Image
 } from 'react-native';
-import {boxShadowCard} from '../../helpers/functions/utils';
 import { Card, Paragraph } from 'react-native-paper';
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
 
 import {
-  StyledCardContent,
-  StyledViewStatus,
-  StyledContentStatus,
-  StyledCardBoxShadow,
-  StyledTextStatus,
-  StyledInstallCode,
   StyledAddress,
   StyledText,
 } from './styles';
@@ -82,12 +75,12 @@ export default function CardMain({
                     <StyledAddress numberOfLines={2}>{address}</StyledAddress>
                     </View>
                     
-                 </View>
-                 <View style={{alignItems:'center'}}>
+                  </View>
+                   <View style={{alignItems:'center'}}>
                    <Text style={styles.smalltext}>Total de débitos em aberto</Text>
                    <Text style={styles.amount}>R$ {valorContaAtual}</Text>
-                </View>
-                 {renderText()}
+                   </View>
+                    {renderText()}
                   </Card.Content>
                </Card>
 

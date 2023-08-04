@@ -18,7 +18,6 @@ import {useTheme} from 'styled-components/native';
 import {MainGenericContainer} from '../../../components/Containers/index';
 import {HeaderCustom} from '../../../components/HeaderCustom';
 import {Button} from '../../../components/Button';
-import {useNetInfo} from '@react-native-community/netinfo';
 import {useDispatch, useSelector} from 'react-redux';
 import {AuthContext, AuthContextProps} from '../../../contexts/useAuth';
 import {ContainerLoading} from '../Login/styles';
@@ -33,8 +32,8 @@ export function InvoiceSolicitedInfo() {
   const [isLogging, setIsLogging] = useState(false);
   const [step, setStep] = useState(0);
   const [dataSource, setDataSource] = useState('')
+  const [proto, setProto] = useState('')
 
-  
 
   const [showModal, setshowModal] = useState(false);
   const handleModal = () => {
@@ -75,6 +74,10 @@ export function InvoiceSolicitedInfo() {
     OtherDataServices.getInvoiceData().then((res) => {
      setDataSource(res.data);
  });
+  //Put putBloquearData
+  OtherDataServices.putBloquearData().then((res) => {
+    setProto(res.data);
+});
    }, []);
 
   const {height} = Dimensions.get('window');
@@ -133,9 +136,9 @@ export function InvoiceSolicitedInfo() {
                     style={styles.imageSize}
                   />
                   <View style={styles.bpaddWidth}>
-                  <Text style={styles.mediumtext}>Não esqueça de salvar seu protocolo!</Text>
-                  <Text style={styles.largetext}>PROTOCOLO #2019059128127</Text>
-                  <Text style={styles.smallertextgrey}>Serviço realizado às 10:05 12/10/2021</Text>
+                  <Text style={styles.mediumtext}>{proto?.mensagem}!</Text>
+                    <Text style={styles.largetext}>PROTOCOLO #{proto?.protocolo}</Text>
+                    <Text style={styles.smallertextgrey}>Serviço realizado às {moment(proto?.dataProtocolo).format('HH:MM DD/MM/YYYY')}</Text>
                  </View>
                   <View style={styles.mV_15}>
                     <Text style={styles.mediumtextbold}>Confira detalhes do seu pagamento:</Text>
