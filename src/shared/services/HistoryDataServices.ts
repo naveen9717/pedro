@@ -5,7 +5,6 @@ const baseUrl = "https://gateway-apimdevaz.cpfl.com.br/bff/mob/";
 class HistoryDataServices {
 
     getHistoryData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.get(
         `${baseUrl}conta/Grafico/codigoInstalacao/123/meses/7`,
         {
@@ -20,7 +19,6 @@ class HistoryDataServices {
 
 
      getTabData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.get(
         `${baseUrl}conta/Conta/conta-completa/123/instalacao/123`,
         {
@@ -34,7 +32,6 @@ class HistoryDataServices {
      }
 
      getTabBarData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.get(
         `${baseUrl}conta/Grafico/codigoInstalacao/123/meses/2`,
         {
@@ -48,7 +45,6 @@ class HistoryDataServices {
      }
 
      getPieData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.get(
         `${baseUrl}conta/taxa/codigoInstalacao/12312/10`,
         {

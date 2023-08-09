@@ -6,9 +6,8 @@ const codigoInstalacao='';
 class ContaServices {
 
     getDataConta(){
-      // return axios.get(`${baseUrl}/conta/conta-atual/123/listar-contas`);
       return axios.get(
-        `${baseUrl}/conta/Conta/conta-atual/4000039723`,
+        `${baseUrl}/conta/Conta/conta-atual/4000039777`,
         {
         headers: {
         'Content-Type': 'application/json',
@@ -19,9 +18,8 @@ class ContaServices {
         )
      }
     getDataContaList(){
-      // return axios.get(`${baseUrl}/conta/conta-atual/123/listar-contas`);
       return axios.get(
-        `${baseUrl}/conta/Conta/instalacao/4000039723/listar-contas?pagina=1`,
+        `${baseUrl}/conta/Conta/instalacao/4000039777/listar-contas?pagina=1`,
         {
         headers: {
         'Content-Type': 'application/json',

@@ -10,7 +10,6 @@ var vardata = {
 
 class OtherDataServices {
     getReenviarData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.post(
         `${baseUrl}conta/Conta/segunda-via-por-email`,
         vardata,
@@ -27,9 +26,8 @@ class OtherDataServices {
 
 
      putBloquearData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.put(
-        `${baseUrl}conta/conta/conta-minima/4000039723/bloquear`,
+        `${baseUrl}conta/conta/conta-minima/4000039777/bloquear`,
         vardata,
         {
         headers: {
@@ -43,7 +41,6 @@ class OtherDataServices {
 
 
      getInvoiceData(){
-      // https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Grafico/codigoInstalacao/123/meses/10
       return axios.get(
         `${baseUrl}conta/Conta/conta-completa/911852138022/instalacao/4000039723`,
         {
