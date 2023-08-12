@@ -19,7 +19,6 @@ import { useTheme } from 'styled-components/native';
 import { MainGenericContainer } from '../../../components/Containers/index';
 import { HeaderCustom } from '../../../components/HeaderCustom';
 import { Button } from '../../../components/Button';
-import { SmallButton } from '../../../components/SmallButton';
 import { useNetInfo } from '@react-native-community/netinfo';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthContext, AuthContextProps } from '../../../contexts/useAuth';
@@ -97,12 +96,13 @@ export function InvoiceHome() {
   useEffect(() => {
     //Get Conat Data List
     ContaServices.getDataContaList().then((res) => {
+      console.log('MainChild',res.data.debitos)
       setDataSource(res.data.debitos);
       // setLoading(false); 
   });
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
-    // console.log('Main',res.data)
+    console.log('Main',res.data)
     setDataMain({data: res.data});
     setLoading(false); 
   });
@@ -123,13 +123,12 @@ export function InvoiceHome() {
   }
 
  
-  const handlePagar = () => {
-    navigation.navigate('PaymentInvoice', {CardData:dataSource});
+  const handlePagar = (value) => {
+    navigation.navigate('PaymentInvoice', {CardData:dataSource, Codigo:value});
   };
 
   function handleChild2(value){
     // console.log('datavalue',value)
-    // navigation.navigate('Ajuda',{datavalue:value})
     navigation.navigate({
       name: 'InvoiceEasy',
       params: { post: value },
@@ -151,8 +150,8 @@ export function InvoiceHome() {
   }
 
   function handleClickHist() {
-    navigation.navigate('InvoiceHistoryChart')
-    }
+    navigation.navigate('InvoiceHistoryChart');
+  }
 
 
 const list = () => {
@@ -169,7 +168,7 @@ const list = () => {
       contaMinima={element?.contaMinima}
       valorContaAtual={element?.valor}
       periodoConsumo={element?.periodoConsumo}
-      onPress={handlePagar}
+      onPress={() => handlePagar(element)}
       onPress2={ () => handleChild2(element) }
       share={SharePdf}
     />        
@@ -233,7 +232,7 @@ function webViewRender(step: number) {
                     status={dataMain.data?.statusPagamento}
                     parcelamentoD={dataMain.data?.parcelamentoDisponivel}
                     valorContaAtual={dataMain.data?.valorContaAtual}
-                    address={dataMain.data?.enderecoInstalacao}
+                    address={dataMain.data?.endereco}
                   />  
                
                  <View style={styles.filter}>

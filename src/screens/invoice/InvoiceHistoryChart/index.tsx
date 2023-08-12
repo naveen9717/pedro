@@ -254,12 +254,10 @@ export function InvoiceHistoryChart() {
                    <Text style={styles.mediumtextbold}>{dataSource[0]?.mediaConsumo}kWh</Text>
                   </View>
                  </View>
-                  
                 </Card.Content>
                </Card>
               </View>
 
-               
                 </>
                 }
               </MainGenericContainer>
@@ -358,5 +356,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 10,
     marginHorizontal:2
+  },
+  activity:{
+    flex: 1,
+    marginTop:240,
+    justifyContent: 'center',
+    alignItems:'center'
   },
 });

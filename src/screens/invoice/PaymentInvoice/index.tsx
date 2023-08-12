@@ -214,7 +214,7 @@ export function PaymentInvoice({ route, navigation }) {
                 <Text style={styles.smalltext}>até 3 dias úteis para ser confırmado</Text>
               </View>
               <View style={{ backgroundColor: 'lightgrey', padding: 10 }}>
-                <Text style={[styles.smalltext, { textAlign: 'center' }]}>{props.dataCodigoMain?.data.pagamentoCodigoBarra}</Text>
+                <Text style={[styles.smalltext, { textAlign: 'center' }]}>{route.params.Codigo?.codigoBarras}</Text>
               </View>
               <ContainerViewButton>
                 <View style={styles.mV_10}></View>
@@ -267,11 +267,10 @@ export function PaymentInvoice({ route, navigation }) {
     </View>
     )
   }
-
   const ModalPix = (props)=>{
-    
+    console.log('invoice',props.dataPixMain?.data.pagamentoCodigoPix.pix);
+
     return (
-     
             <TouchableWithoutFeedback onPress={toggleModalPix}>
                     <View style={styles.modalOuterStyle}>
                       <View style={styles.bordercorner}>

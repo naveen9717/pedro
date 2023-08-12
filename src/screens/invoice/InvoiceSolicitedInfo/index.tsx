@@ -25,6 +25,7 @@ import {Load} from '../../../components/Button/styles';
 import {RootState} from '../../../redux/reducer';
 import {AlertModal} from '../../../components/Modal/AlertModal';
 import OtherDataServices from '../../../shared/services/OtherDataServices';
+import moment from 'moment'
 
 import RNShareFile from 'react-native-share-pdf';
 export function InvoiceSolicitedInfo() {

@@ -72,7 +72,10 @@ export default function CardMain({
             
                     <View>
                     <Text style={styles.addressheading}>Endereço</Text>
-                    <StyledAddress numberOfLines={2}>{address}</StyledAddress>
+                    <StyledAddress numberOfLines={2}>
+                    {address?.logradouro}, 100-  {address?.bairro}- {address?.municipio} - RS -CEP: {address?.cep}
+                     
+                      </StyledAddress>
                     </View>
                     
                   </View>
