@@ -53,11 +53,9 @@ export function InvoiceEasyComposition() {
     msg: '',
   });
 
-
   const isLoading: boolean = useSelector(
     (state: RootState) => state.BffAuthIsLoading.isLoading,
   );
-
 
   const ModalLoading = (loading: boolean) => {
     if (loading) {

@@ -73,11 +73,19 @@ export function InvoiceSolicitedInfo() {
   useEffect(() => {
     //Get History Data List
     OtherDataServices.getInvoiceData().then((res) => {
-     setDataSource(res.data);
+     if (res.status==200) {
+      setDataSource(res.data);
+    } else {
+      return {error: 'Internal Server Error'};
+    }
  });
   //Put putBloquearData
   OtherDataServices.putBloquearData().then((res) => {
-    setProto(res.data);
+    if (res.status==200) {
+      setProto(res.data);
+    } else {
+      return {error: 'Internal Server Error'};
+    }
 });
    }, []);
 

@@ -71,8 +71,12 @@ export function InvoiceHistoryChart() {
   useEffect(() => {
     //Get History Data List
     HistoryDataServices.getHistoryData().then((res) => {
-      setDataSource(res.data.historicoContas);
-      setLoading(false); 
+      if (res.status==200) {
+        setDataSource(res.data.historicoContas);
+        setLoading(false); 
+      } else {
+        return {error: 'Internal Server Error'};
+      }
   });
   }, []);
 

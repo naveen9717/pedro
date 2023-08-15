@@ -78,13 +78,21 @@ export function InvoiceEasy({ route, navigation }) {
   
   useEffect(() => {
     HistoryDataServices.getTabBarData().then((res) => {
-      setTab(res.data.historicoContas);
+      if (res.status==200) {
+        setTab(res.data.historicoContas);
+      } else {
+        return {error: 'Internal Server Error'};
+      }
    });
 
     //Get History Data List
     HistoryDataServices.getHistoryData().then((res) => {
-      setDataSource(res.data.historicoContas);
-      setLoading(false); 
+      if (res.status==200) {
+        setDataSource(res.data.historicoContas);
+        setLoading(false); 
+      } else {
+        return {error: 'Internal Server Error'};
+      }
   });
   }, []);
 
@@ -388,10 +396,8 @@ const renderHorizontalItem2 = (data) => {
                     keyExtractor={item => item.value.toString()}
                    /> 
                    </>
-                  }
-                    
+                  }     
                   <Text style={[styles.smalltext,{marginVertical:10,color:'black'}]}>O consumo ultrapassou 200 quilowatt-hora e a alíquota de ICMS foi de 25%</Text>
-
                 </View>
 
                 <View style={styles.mV_15}>

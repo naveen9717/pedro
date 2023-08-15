@@ -98,7 +98,11 @@ const DemoDownload = () => {
   useEffect(() => {
    //Get History Data List
    OtherDataServices.getInvoiceData().then((res) => {
-    setDataSource(res.data);
+    if (res.status==200) {
+      setDataSource(res.data);
+    } else {
+      return {error: 'Internal Server Error'};
+    }
 });
   }, []);
 

@@ -68,14 +68,22 @@ export function InvoiceSendToHome({route}) {
 
   //Get btn Data Main getReenviarData
   OtherDataServices.getReenviarData().then((res) => {
-      setDataSource(res.data);
+      if (res.status==200) {
+        setDataSource(res.data);
+      } else {
+        return {error: 'Internal Server Error'};
+      }
   });
 
  //Get Conat Data Main
  ContaServices.getDataConta().then((res) => {
   // console.log('Main',res.data)
-   setTab({data: res.data});
-   setLoading(false); 
+  if (res.status==200) {
+    setTab({data: res.data});
+     setLoading(false); 
+  } else {
+    return {error: 'Internal Server Error'};
+  }
  });
  
   }, []);

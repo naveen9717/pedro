@@ -33,6 +33,7 @@ export function Screen25({ route, navigation }){
   const [isLogging, setIsLogging] = useState(false);
   const [step, setStep] = useState(0);
   const [pie, setPie] = useState([]);
+  const[Loading,setLoading] = useState(true);
 
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
@@ -59,8 +60,12 @@ export function Screen25({ route, navigation }){
   
   useEffect(() => {
     HistoryDataServices.getPieData().then((res) => {
-      setPie(res.data);
-      setLoading(false); 
+      if (res.status==200) {
+        setPie(res.data);
+        setLoading(false); 
+      } else {
+        return {error: 'Internal Server Error'};
+      }
    });
   }, []);
 

@@ -60,8 +60,12 @@ export function Screen18() {
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
-    setDataMain({data: res.data});
-    setLoading(false); 
+    if (res.status==200) {
+      setDataMain({data: res.data});
+      setLoading(false); 
+    } else {
+      return {error: 'Internal Server Error'};
+    }
   });
   }, []);
 

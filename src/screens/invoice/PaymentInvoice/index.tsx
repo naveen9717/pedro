@@ -90,11 +90,19 @@ export function PaymentInvoice({ route, navigation }) {
   //Get Conat Data Main
   ContaServices.getDataConta().then((res) => {
     // console.log('Main',res.data)
-    setDataMain({data: res.data});
+    if (res.status==200) {
+      setDataMain({data: res.data});
+    } else {
+      return {error: 'Internal Server Error'};
+    }
   });
 
   OtherDataServices.getInvoiceData().then((res) => {
-    setDataSource(res.data);
+    if (res.status==200) {
+      setDataSource(res.data);
+    } else {
+      return {error: 'Internal Server Error'};
+    }
 });
 
   }, []);
