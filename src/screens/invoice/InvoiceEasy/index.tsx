@@ -115,7 +115,7 @@ export function InvoiceEasy({ route, navigation }) {
     console.log('newtemps',tmpArray);
   };
 
-  
+
   const stringifylineData = dataSource.map((data,key) => {
     return {value: data?.mediaConsumo,dataPointText: `${data?.mediaConsumo}`}
   });
@@ -142,14 +142,12 @@ export function InvoiceEasy({ route, navigation }) {
   }
 
   const handleClick = () => {
-    navigation.navigate('Screen25')
+    navigation.navigate('InvoiceEasyComposition')
   };
 
   const handleBaixar = () => {
     navigation.navigate('InvoiceDownload')
   };
-  
-
   
 
   const renderItem = (data) => {
