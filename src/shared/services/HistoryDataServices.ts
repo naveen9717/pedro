@@ -65,7 +65,7 @@ class HistoryDataServices {
 
         return axios({
           method: 'GET',
-          url:   `${baseUrl}conta/Grafico/codigoInstalacao/4000039777/meses/2`,
+          url:   `${baseUrl}conta/Grafico/codigoInstalacao/4000039777/meses/10`,
           headers: {
             'Content-Type': 'application/json',
             'Ocp-Apim-Subscription-Key': `91446917bfed4d1b93360901cb5913c7`, // auth token

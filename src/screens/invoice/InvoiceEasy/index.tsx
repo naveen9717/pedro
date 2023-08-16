@@ -116,17 +116,12 @@ export function InvoiceEasy({ route, navigation }) {
   };
 
   
-
   const stringifylineData = dataSource.map((data,key) => {
     return {value: data?.mediaConsumo,dataPointText: `${data?.mediaConsumo}`}
   });
 
-  
 
- 
-
-
-  const stringybarData = tab.map((data,key) => {
+  const stringybarData = tab.slice(0, 2).map((data,key) => {
     return {value: data?.mediaConsumo,color: '#02ade1',color2:'#eeeeee', percentage: '68%',percent:'32%'}
   });
 
@@ -147,7 +142,7 @@ export function InvoiceEasy({ route, navigation }) {
   }
 
   const handleClick = () => {
-    navigation.navigate('InvoiceEasyComposition')
+    navigation.navigate('Screen25')
   };
 
   const handleBaixar = () => {
