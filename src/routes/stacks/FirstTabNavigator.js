@@ -13,7 +13,7 @@ import { InvoiceDownload } from '../../screens/invoice/InvoiceDownload';
 import { InvoiceSendToHome } from '../../screens/invoice/InvoiceSendToHome';
 import { InvoiceBillPayment } from '../../screens/invoice/InvoiceBillPayment';
 import { InvoicePixPayment } from '../../screens/invoice/InvoicePixPayment';
-
+import { InvoiceEasyComposition } from '../../screens/invoice/InvoiceEasyComposition';
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +24,7 @@ function FirstTabNavigator() {
       <Stack.Screen name="Screen25" component={Screen25} />
       <Stack.Screen name="InvoiceHome" component={InvoiceHome} />
       <Stack.Screen name="InvoiceEasy" component={InvoiceEasy} />
+      <Stack.Screen name="InvoiceEasyComposition" component={InvoiceEasyComposition} />
       <Stack.Screen name="PaymentInvoice" component={PaymentInvoice} />
       <Stack.Screen name="InvoicePaymentInfoSuccess" component={InvoicePaymentInfoSuccess} />
       <Stack.Screen name="InvoiceDownload" tabBarVisible ={false} component={InvoiceDownload} />
