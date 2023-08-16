@@ -36,6 +36,7 @@ export function InvoiceHistoryChart() {
   const navigation = useNavigation();
   const [step, setStep] = useState(0);
   const[Loading,setLoading] = useState(true);
+  const [yaxis,setYaxis] = useState([])
 
   const [dataSource, setDataSource] = useState([])
   const { height } = Dimensions.get('window');
@@ -69,6 +70,7 @@ export function InvoiceHistoryChart() {
     }
   };
   useEffect(() => {
+    stringifyYAxisHorizontalData()
     //Get History Data List
     HistoryDataServices.getHistoryData().then((res) => {
       if (res.status==200) {
@@ -89,6 +91,15 @@ export function InvoiceHistoryChart() {
     navigation.navigate('')
   }
 
+  const stringifyYAxisHorizontalData = () => {
+    let tmpArray = [0]
+    for (var i = 0; i < dataSource.length; i++) {
+        tmpArray.push(dataSource[i].totalDaFatura)
+    }
+    tmpArray.sort((a, b) => a - b);
+    setYaxis(tmpArray)
+    console.log('newtemps',tmpArray);
+  };
 
   const stringifybarData = dataSource.map((data,key) => {
     return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
@@ -151,15 +162,15 @@ export function InvoiceHistoryChart() {
                    data={stringifybarData}   
                    barWidth={26}
                    initialSpacing={5}
-                   spacing={8}
+                   spacing={15}
                    barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisColor={'gray'}
                    yAxisTextStyle={{color: 'gray',fontSize:10}}
-                   stepValue={300}
-                   maxValue={2700}
-                   noOfSections={9}
-                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   stepValue={100}
+                   maxValue={137}
+                   noOfSections={5}
+                   yAxisLabelTexts={yaxis}
                    labelWidth={30}
                    xAxisLabelTextStyle={styles.XAxis}
                    lineConfig={{
@@ -195,7 +206,7 @@ export function InvoiceHistoryChart() {
                   </View>
                   <View style={styles.flexColumn}>
                   <Text style={styles.smalltext}>Média de consumo</Text>
-                  <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.mediaFaturamento}</Text>
+                  <Text style={styles.mediumtextbold}>R$ {dataSource[0]?.mediaConsumo}</Text>
                   </View>
                  </View>
                 </Card.Content>
@@ -214,15 +225,15 @@ export function InvoiceHistoryChart() {
                    data={stringifybarData}   
                    barWidth={26}
                    initialSpacing={5}
-                   spacing={8}
+                   spacing={15}
                    barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisColor={'gray'}
                    yAxisTextStyle={{color: 'gray',fontSize:10}}
-                   stepValue={300}
-                   maxValue={2700}
-                   noOfSections={9}
-                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   stepValue={100}
+                   maxValue={137}
+                   noOfSections={5}
+                   yAxisLabelTexts={yaxis}
                    labelWidth={30}
                    xAxisLabelTextStyle={styles.XAxis}
                    lineConfig={{

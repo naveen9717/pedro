@@ -41,7 +41,7 @@ export function InvoiceEasy({ route, navigation }) {
   const [tab, setTab] = useState([]);
   const[Loading,setLoading] = useState(true);
   const [dataSource, setDataSource] = useState([])
-
+  const [yaxis,setYaxis] = useState([])
   const [state, setState] = useState({search: ''});
   const updateSearch = search => {setState({ search });
   };
@@ -77,6 +77,7 @@ export function InvoiceEasy({ route, navigation }) {
 }
   
   useEffect(() => {
+    stringifyYAxisHorizontalData()
     HistoryDataServices.getTabBarData().then((res) => {
       if (res.status==200) {
         setTab(res.data.historicoContas);
@@ -100,11 +101,27 @@ export function InvoiceEasy({ route, navigation }) {
     return {value: data?.totalDaFatura,frontColor: '#02ade1',label:moment().month(key).format("MMM")}
   });
 
+// {['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+
+// var tmpArray = [];
+// tmpArraysu [32.76, 99.76, 66.96, 34.4, 137.29]
+  const stringifyYAxisHorizontalData = () => {
+    let tmpArray = [0]
+    for (var i = 0; i < dataSource.length; i++) {
+        tmpArray.push(dataSource[i].totalDaFatura)
+    }
+    tmpArray.sort((a, b) => a - b);
+    setYaxis(tmpArray)
+    console.log('newtemps',tmpArray);
+  };
+
+  
+
   const stringifylineData = dataSource.map((data,key) => {
     return {value: data?.mediaConsumo,dataPointText: `${data?.mediaConsumo}`}
   });
 
-  var arr = [];
+  
 
  
 
@@ -442,15 +459,15 @@ const renderHorizontalItem2 = (data) => {
                    data={stringifyHorizontalData}   
                    barWidth={26}
                    initialSpacing={5}
-                   spacing={8}
+                   spacing={15}
                    barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisColor={'gray'}
                    yAxisTextStyle={{color: 'gray',fontSize:10}}
-                   stepValue={300}
-                   maxValue={2700}
-                   noOfSections={9}
-                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   stepValue={100}
+                   maxValue={137}
+                   noOfSections={5}
+                   yAxisLabelTexts={yaxis}
                    labelWidth={30}
                    xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
@@ -668,15 +685,15 @@ const renderHorizontalItem2 = (data) => {
                    data={stringifyHorizontalData}   
                    barWidth={26}
                    initialSpacing={5}
-                   spacing={8}
+                   spacing={15}
                    barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisColor={'gray'}
                    yAxisTextStyle={{color: 'gray',fontSize:10}}
-                   stepValue={300}
-                   maxValue={2700}
-                   noOfSections={9}
-                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   stepValue={100}
+                   maxValue={137}
+                   noOfSections={5}
+                   yAxisLabelTexts={yaxis}
                    labelWidth={30}
                    xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
@@ -874,15 +891,15 @@ const renderHorizontalItem2 = (data) => {
                    data={stringifyHorizontalData}   
                    barWidth={26}
                    initialSpacing={5}
-                   spacing={8}
+                   spacing={15}
                    barBorderRadius={4}
                    yAxisThickness={0}
                    xAxisColor={'gray'}
                    yAxisTextStyle={{color: 'gray',fontSize:10}}
-                   stepValue={300}
-                   maxValue={2700}
-                   noOfSections={9}
-                   yAxisLabelTexts={['0', '300KWh', '600KWh', '900KWh', '1200KWh', '1500KWh','1800KWh','2100KWh','2400KWh','2700KWh']}
+                   stepValue={100}
+                   maxValue={137}
+                   noOfSections={5}
+                   yAxisLabelTexts={yaxis}
                    labelWidth={30}
                    xAxisLabelTextStyle={{color: 'gray', textAlign: 'center',fontSize:11}}
                    lineConfig={{
