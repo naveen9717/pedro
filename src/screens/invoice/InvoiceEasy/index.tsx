@@ -145,6 +145,10 @@ export function InvoiceEasy({ route, navigation }) {
     navigation.navigate('InvoiceEasyComposition')
   };
 
+  const handleClick25 = () => {
+    navigation.navigate('Screen25')
+  };
+
   const handleBaixar = () => {
     navigation.navigate('InvoiceDownload')
   };
@@ -546,7 +550,7 @@ const renderHorizontalItem2 = (data) => {
                       title="Ver todas as informações"
                       type="primary"
                       // onPress={handleSignIn}
-                      onPress={handleClick}
+                      onPress={handleClick25}
                       isLoading={isLogging}
                     />
                   </ContainerViewButton>
