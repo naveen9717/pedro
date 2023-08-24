@@ -164,7 +164,6 @@ export function InvoiceSendToHome({route}) {
                   }
                 </View>
                 
-                
                 <ContainerViewButton>
                   <Button
                     title="Reenviar por correspondência"

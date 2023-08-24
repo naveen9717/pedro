@@ -281,7 +281,7 @@ function webViewRender(step: number) {
                 </View>
 
                 </>
-}
+             }
               </MainGenericContainer>
 
               <View style={styles.flex1}>

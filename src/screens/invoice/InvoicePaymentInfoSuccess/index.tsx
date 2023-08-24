@@ -91,7 +91,7 @@ export function InvoicePaymentInfoSuccess() {
       } else {
         return {error: 'Internal Server Error'};
       }
-  });
+    });
    }, []);
 
    console.log('proto',proto);

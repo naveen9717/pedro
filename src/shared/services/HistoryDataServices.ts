@@ -86,9 +86,10 @@ class HistoryDataServices {
       //   },
       //   }
       //   ) 
+      https://gateway-apimdevaz.cpfl.com.br/bff/mob/conta/Conta/conta-facil/codigoInstalacao/4000039777/20/taxas
       return axios({
         method: 'GET',
-        url:  `${baseUrl}conta/taxa/codigoInstalacao/12312/10`,
+        url:  `${baseUrl}conta/Conta/conta-facil/codigoInstalacao/4000039777/20/taxas`,
         headers: {
           'Content-Type': 'application/json',
           'Ocp-Apim-Subscription-Key': `91446917bfed4d1b93360901cb5913c7`, // auth token

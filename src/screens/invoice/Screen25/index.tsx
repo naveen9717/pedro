@@ -61,8 +61,9 @@ export function Screen25({ route, navigation }){
   useEffect(() => {
     HistoryDataServices.getPieData().then((res) => {
       if (res.status==200) {
-        setPie(res.data);
+        setPie(res.data.historicoTaxas);
         setLoading(false); 
+        // console.log('historicoTaxas',res.data.historicoTaxas)
       } else {
         return {error: 'Internal Server Error'};
       }
@@ -117,8 +118,13 @@ const stringifyPieData = [
   {value: 20, name:"ECE:",color: '#008000', text: '26%',money:pie?.ece},
 
 ];
+
+// const stringifyPieData = pie.map((data,key) => {
+//   return {value: 54,name:data?.descricao, color: '#ed1c25', text: '54%',money:data?.valor}
+// });
+
 console.log("piedata",pie);
-console.log("stringifyPieData",stringifyPieData);
+console.log("stringifyPieDatas",stringifyPieData);
 
 
 const HorizontalBarData = [
@@ -153,7 +159,6 @@ const renderHorizontalItem2 = (data) => {
       <View style={{width:data.item.percenttwo,backgroundColor:data.item.color2}}/>
       <View style={{width:data.item.percentthree,backgroundColor:data.item.color3}}/>
       <View style={{width:data.item.percentfour,backgroundColor:data.item.color4,borderTopEndRadius:15,borderBottomEndRadius:15,}}/>
-
 
       </View>
       <View style={styles.RowSpace}>
@@ -358,7 +363,6 @@ const renderHorizontalItem2 = (data) => {
               </View>
               <Text style={[styles.mediumtextbold,{marginVertical:15,textAlign:'center'}]}>Vencimento: 13/05/2022</Text>
 
-
               <View style={{flexDirection:'row'}}>
                  <View style={styles.mV_15}>
                    <PieChart
@@ -374,7 +378,6 @@ const renderHorizontalItem2 = (data) => {
                      showTextBackground
                      textBackgroundRadius={15}
                    />
-
                   </View>
                   <View style={styles.mV_15}>
                     <FlatList
@@ -394,9 +397,7 @@ const renderHorizontalItem2 = (data) => {
                    <Text style={[styles.mediumtextbold,{fontWeight:'600',marginHorizontal:2}]}>Os tributos são compostos por:</Text>
                   </View>
                    <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Programas de Integração Social (PIS): Tributo Federal que assegura recursos voltados ao trabalhador e programas sociais do Governo Federal. De modo geral, tem a finalidade de melhorar a distribuicão da renda nacional.</Text>
-
                    <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Contribuição para Financiamento da Seguridade Social (COFINS): Também é um tributo Federal e incide sobre a receita bruta das empresas em geral, se destinando a financiar a seguridade social (previdência social, a saúde e a assistência social).</Text>
-
                    <Text style={[styles.smalltext,styles.colorBlack,styles.mV_5]}>Importo sobre Circulação de Mercadorias e Serviços (ICMS): Esse é um tributo Estadual aplicado sobre qualquer produto ou serviço, como por exemplo, a energia elétrica fornecida. Cada Estado estabelece uma alíquota para esse imposto que pode ser variável de acordo com o seu consumo.</Text>
                  </View>
             </View>
